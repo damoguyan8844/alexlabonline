@@ -1,0 +1,17 @@
+; EMX.def : Declares the module parameters for the DLL.
+
+LIBRARY      "EasyIF"
+DESCRIPTION  'EasyIF Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+xlAutoOpen
+xlAutoClose
+xlAddInManagerInfo
+EasyIFConfig
+EasyIF
+EasyIFMaint
+EasyEval
+EasyQuote
+EasyIFGridWiz
+EasyIFToggleGridPad

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\Labsystem\", "Labsystem\", "{278014B8-99AA-485A-B95D-8B847C0C1C39}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Labsystem"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Documents and Settings\Administrator\桌面\websystem2010\Labsystem\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Labsystem\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Labsystem"
+		Release.AspNetCompiler.PhysicalPath = "C:\Documents and Settings\Administrator\桌面\websystem2010\Labsystem\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Labsystem\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1577"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{278014B8-99AA-485A-B95D-8B847C0C1C39}.Debug|.NET.ActiveCfg = Debug|.NET
+		{278014B8-99AA-485A-B95D-8B847C0C1C39}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

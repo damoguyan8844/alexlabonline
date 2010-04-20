@@ -1,0 +1,9 @@
+LIBRARY ContainmentSample.dll
+DESCRIPTION Code by Dinesh Ahuja
+
+EXPORTS
+    DllRegisterServer   @1	PRIVATE
+    DllUnregisterServer @2	PRIVATE
+	DllCanUnloadNow		@3  PRIVATE
+	DllGetClassObject	@4  PRIVATE
+

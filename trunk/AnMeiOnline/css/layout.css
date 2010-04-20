@@ -1,0 +1,171 @@
+body{ margin:0px; font:9px/11px "Tahoma", Arial, Helvetica, sans-serif; color:#010000; background:#f3f6e1 url(../images/body_bg_1.gif) repeat-x 0 0}
+img{border:none}
+.clear{clear:both}
+*{margin:0; padding:0}
+
+
+#layout{ width:980px; margin:0 auto;}
+#inner_layout{float:left; width:980px; background:url(../images/banner_1_bg.gif) no-repeat center 0}
+#inner_layout1{float:left; width:980px; background:url(../images/banner_2_bg.gif) no-repeat center 0}
+#menu{float:right; width:580px; background:url(../images/menu_bg.gif) repeat-x 0 0; margin:0 13px 0 0; display:inline}
+#menu ul{float:left; width:580px; list-style:none; margin:0; padding:10px 0}
+#menu li{float:left; width:auto; font:bold 13px/15px "ZurichBT", Arial, Helvetica, sans-serif; color:#fff; padding:0 15px; background:url(../images/menu_border.gif) no-repeat 0 2px}
+#menu li a{color:#fff; text-decoration:none;}
+#menu li a:hover{color:#dece9c; text-decoration:none;}
+#menu li a.current{color:#dece9c; text-decoration:none}
+#menu li.first{ background:none; padding:0 15px 0 25px}
+
+#body_container{float:left; width:980px;}
+
+
+#container_1{float:left; width:313px}
+#container_1 .logo{float:left; width:313px}
+#container_1 .logo img{float:left; width:auto; margin:235px 0 0 46px; display:inline}
+
+#container_1 .dating_tips{float:left; width:230px; background:#c33c05 url(../images/dating_tips_background.gif) repeat-x 0 0; border:6px solid #c33c05; border-top:none; margin:26px 0 0 47px; display:inline}
+.dating_tips h2{float:left; width:218px; font:bold 13px/15px "ZurichBT", Arial, Helvetica, sans-serif; color:#fff; padding:13px 0 25px 12px ; margin:0; background:url(../images/bg.gif) no-repeat 90px 20px}
+.dating_tips ul{float:left; width:230px; list-style:none; margin:0; padding:0}
+.dating_tips li{float:left; width:195px; font-weight:bold; color:#f7e8bc; background:url(../images/1.gif) no-repeat 5px 0; padding:3px 0 20px 35px; margin:0}
+.dating_tips li.b{background:url(../images/2.gif) no-repeat 5px 0;}
+.dating_tips li.c{background:url(../images/3.gif) no-repeat 5px 0;}
+.dating_tips li.d{background:url(../images/4.gif) no-repeat 5px 0;}
+.dating_tips li.e{background:url(../images/5.gif) no-repeat 5px 0;}
+
+
+#container_2{float:left; width:377px}
+
+.welcome{float:left; width:377px; padding-top:340px}
+.welcome h2{float:left; width:317px; font:bold 20px/22px "ZurichBT", Arial, Helvetica, sans-serif; color:#221e21; padding:0 0 20px 15px ; margin:0; background:url(../images/welcome_border.gif) no-repeat right 15px}
+.welcome p{float:left; width:313px; padding:0 0 17px 20px; margin:0; text-align:justify}
+
+.join{float:left; width:377px;}
+.join h2{float:left; width:310px; font:bold 15px/17px "ZurichBT", Arial, Helvetica, sans-serif; color:#221e21; padding:0 0 20px 20px ; margin:0; background:url(../images/join_border.gif) no-repeat right 10px}
+.join ul{float:left; width:318px; list-style:none; margin:0; padding:0 0 15px 15px} 
+.join li{float:left; width:288px; font:bold 13px/15px "ZurichBT", Arial, Helvetica, sans-serif; color:#000; background:url(../images/li_border.gif) no-repeat 0 bottom; padding:10px 0 10px 0; margin:0}
+.join li img{float:none; vertical-align:middle; padding:0 13px 0 12px}
+.join p{float:left; width:313px; padding:0 0 17px 20px; margin:0; text-align:justify} 
+
+
+
+#container_3{float:left; width:290px; padding-top:95px}
+.partner_box{float:left; width:286px; padding:95px 4px 0 377px}
+.partner_search.inner{float:left; width:277px; border:1px solid #988461; padding:0; margin:0}
+
+.partner_search{float:left; width:277px; border:1px solid #988461; padding:0; margin:0}
+.partner_search .inner_border{float:left; width:269px; border:4px solid #fff; padding:0; margin:0}
+.partner_search .inner_border .form_container{float:left; width:265px; border:2px solid #930e02; background:#ba1105 url(../images/partner_search_bg.gif) repeat-x 0 0; padding:0; margin:0}
+.partner_search .inner_border .form_container h3{float:left; width:255px; font:bold 18px/20px "ZapfHumanist", "Myriad Pro", Arial, Helvetica, sans-serif; color:#fff; padding:20px 0 27px 10px; margin:0;}
+.form_container .search_row{float:left; width:264px; padding-bottom:7px}
+.form_container .search_row.last{float:left; width:264px; padding:5px 0 0 0}
+.form_container .search_row .search_column_1{float:left; width:72px; padding:0 0 0 10px}
+.form_container .search_row .search_column_2{float:left; width:182px}
+
+.form_container form{float:left; width:264px;}
+.form_container fieldset{float:left; width:262px; border:none; margin:0; padding:0 0 24px 0}
+.form_container label{float:left; width:auto; font-size:9px; line-height:11px; color:#fff; padding:5px 5px 0 5px}
+.form_container label.check{float:left; width:auto; font-size:9px; line-height:11px; color:#fff; padding:4px 8px 0 9px; margin:0}
+.form_container input{float:left; width:90px; font-size:11px; line-height:13px; color:#216588; margin:0; padding:0}
+.form_container input.checkbox{float:left; width:auto; border:none; height:15px; padding:0; margin:2px 0 0 0}
+.form_container input.search_btn{float:left; width:auto; padding:0; margin:0 0 0 0}
+.form_container select{float:left; width:60px; height:19px; font-size:9px}
+.form_container select.gender{float:left; width:60px;}
+.form_container select.date{float:left; width:171px;}
+.form_container select.dob{float:left; width:55px; font-size:10px; margin:0 3px 0 0}
+
+.recently_added{float:left; width:290px; padding-top:25px}
+.recently_added h2{float:left; width:275px; font:bold 15px/17px "ZurichBT", Arial, Helvetica, sans-serif; color:#352e33; padding:0 0 20px 10px ; margin:0; background:url(../images/recent_border.gif) no-repeat 200px 7px}
+.recently_added .profile_box{float:left; width:280px; background:url(../images/middle_border.gif) repeat-y 0 0; margin-bottom:17px}
+.recently_added .profile_box.last{margin:0}
+.recently_added .top_curve{float:left;width:280px; background:url(../images/top_curve.gif) no-repeat 0 0}
+.recently_added .profile_content{float:left; width:280px; background:url(../images/bottom_curve.gif) no-repeat 0 bottom}
+.recently_added .pro_photo{float:left; width:110px; padding:5px 0 5px 5px}
+.recently_added .pro_photo img{float:left; width:auto; padding:0;}
+
+.recently_added .outer{float:left; width:162px; padding:5px 0 5px 0}
+.recently_added .pro_detail_box{float:left; width:162px; background:url(../images/middle_border_inner.gif) repeat-y 0 0;}
+.recently_added .pro_top_curve{float:left;width:162px; background:url(../images/top_curve_inner.gif) no-repeat 0 0}
+.recently_added .pro_detail_content{float:left; width:162px; background:url(../images/bottom_curve_inner.gif) no-repeat 0 bottom; margin-top:14px}
+.recently_added .pro_detail_content .row{float:left; width:162px; padding:0 0 5px 0; margin:0}
+.recently_added .pro_detail_content .row p.left{float:left; width:56px; padding:0; margin:0; font-weight:bold; text-align:right}
+.recently_added .pro_detail_content .row p.right{float:left; width:80px; padding:0 0 0 10px; margin:0;}
+
+
+.recently_added .container{float:left; width:280px; padding-bottom:8px}
+.recently_added .container .top_curve{float:left; width:278px; background:url(../images/top_curve.gif) no-repeat 0 0}
+.recently_added .container .middle_box{float:left; width:278px; background:url(../images/middle_border.gif) repeat-y 0 0}
+.recently_added .container .middle_box .photo_box{float:left; width:110px;}
+.recently_added .container .middle_box .photo_box img{float:left; width:auto; padding:0 0 0 8px}
+
+.recently_added .container .middle_box .detail_box{float:left; width:162px;}
+.recently_added .container .middle_box .detail_box .top_border{float:left; width:162px; background:url(../images/top_curve_inner.gif) no-repeat 0 0}
+.recently_added .container .middle_box .detail_box .detail_box_inner{float:left; width:162px; background:url(../images/middle_border_inner.gif) repeat-y 0 0}
+.recently_added .container .middle_box .detail_box .detail_box_inner .row{float:left; width:162px; padding:0 0 5px 0; margin:0}
+
+.recently_added .container .middle_box .detail_box .detail_box_inner .row p.left{float:left; width:56px; padding:0; margin:0; font-weight:bold; text-align:right}
+.recently_added .container .middle_box .detail_box .detail_box_inner .row p.right{float:left; width:95px; padding:0 0 0 10px; margin:0;}
+
+.recently_added .container .middle_box .detail_box .bottom_border{float:left; width:162px; background:url(../images/bottom_curve_inner.gif) no-repeat 0 0}
+
+.recently_added .container .bottom_curve{float:left; width:278px; background:url(../images/bottom_curve.gif) no-repeat 0 0}
+
+
+
+
+
+
+
+
+#right_container{float:left; width:660px;}
+
+
+
+
+
+	/* inner pages css start */
+h1{font:24px/26px Georgia, "Times New Roman", Times, serif; color:#221E21; font-style:italic; padding:0 0 22px 0; margin:0}
+h1 span{color:#221E21}
+
+
+a{color:#a93404; text-decoration:none;}
+a:hover{color:#ff6f5f}
+a:hover.supports{color:#f7e8bc; text-decoration:none;}
+.aboutus-img{float:right; border:4px solid #dcdcda;	margin:0px 0px 10px 20px;}
+h5{font:15px Myriad Pro, Arial, Helvetica, sans-serif; color:#000; font-weight:100; padding:0px 0px 5px 0px;	border-bottom:1px dotted #000; margin:0px 0px 10px 0px; background:none }
+h6{font:17px Myriad Pro, Arial, Helvetica, sans-serif; color:#000; font-weight:100; padding:0px 0px 5px 0px;	margin:0px 0px 0px 0px; background:none; border:none }
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+.insidereadmore a{color:#5D2D23; font-size:14px; text-decoration:none}
+.insidereadmore a:hover{text-decoration:underline}
+
+a.projects{color:#5D2D23; font-size:14px; text-decoration:underline}
+a:hover.projects{text-decoration:none}
+
+input.button{color:#ffffff;	background:#414141;	font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #000;}
+input.button:hover{cursor:pointer; color:#cccccc;}
+.project-img{float:right; margin-left:20px;	border: 6px solid #dcdcda;}
+.whiteheading{font:30px Myriad Pro, Arial; color:#000; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #000; padding-bottom:10px;}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:5px; background:#ac9570;}
+
+.blog-posted-row a{color:#5D2D23; font-size:14px; text-decoration:underline; padding:0 0 0 8px}
+.blog-posted-row a:hover{text-decoration:none}
+/* inner pages css ends */
+
+
+
+
+
+#footer{width:100%; float:left; background:url(../images/footer_bg.gif) repeat-x 0 0; margin-top:20px }
+#footer .footer_link{width:980px; margin:0 auto; padding:13px 0 0 0;}
+#footer .footer_link ul{width:980px; text-align:center; list-style:none; margin:0; padding:0 0 22px 0}
+#footer .footer_link li{width:980px; font:bold 13px/15px "ZurichBT", Arial, Helvetica, sans-serif; color:#fff; background:url(../images/menu_border.gif) no-repeat 0 2px; display:inline; padding:0 8px 0 8px}
+#footer .footer_link li.first{background:none; padding:0 8px 0 8px}
+#footer .footer_link li a{color:#fff; text-decoration:none}
+#footer .footer_link li a:hover{color:#dece9c; text-decoration:none}
+#footer .footer_link li a.current{ color:#dece9c; text-decoration:none}
