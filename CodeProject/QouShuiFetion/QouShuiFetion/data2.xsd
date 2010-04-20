@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMessage" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMessage" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DSMessage" msprop:Generator_DataSetName="DSMessage">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Player" msprop:Generator_UserTableName="Player" msprop:Generator_RowDeletedName="PlayerRowDeleted" msprop:Generator_TableClassName="PlayerDataTable" msprop:Generator_RowChangedName="PlayerRowChanged" msprop:Generator_RowClassName="PlayerRow" msprop:Generator_RowChangingName="PlayerRowChanging" msprop:Generator_RowEvArgName="PlayerRowChangeEvent" msprop:Generator_RowEvHandlerName="PlayerRowChangeEventHandler" msprop:Generator_TablePropName="Player" msprop:Generator_TableVarName="tablePlayer" msprop:Generator_RowDeletingName="PlayerRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Uri" msprop:Generator_UserColumnName="Uri" msprop:Generator_ColumnPropNameInRow="Uri" msprop:Generator_ColumnVarNameInTable="columnUri" msprop:Generator_ColumnPropNameInTable="UriColumn" type="xs:string" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Message" msprop:Generator_UserTableName="Message" msprop:Generator_RowDeletedName="MessageRowDeleted" msprop:Generator_TableClassName="MessageDataTable" msprop:Generator_RowChangedName="MessageRowChanged" msprop:Generator_RowClassName="MessageRow" msprop:Generator_RowChangingName="MessageRowChanging" msprop:Generator_RowEvArgName="MessageRowChangeEvent" msprop:Generator_RowEvHandlerName="MessageRowChangeEventHandler" msprop:Generator_TablePropName="Message" msprop:Generator_TableVarName="tableMessage" msprop:Generator_RowDeletingName="MessageRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MessageID" msprop:Generator_UserColumnName="MessageID" msprop:Generator_ColumnPropNameInRow="MessageID" msprop:Generator_ColumnVarNameInTable="columnMessageID" msprop:Generator_ColumnPropNameInTable="MessageIDColumn" type="xs:string" />
+              <xs:element name="ReceiverUri" msprop:Generator_UserColumnName="ReceiverUri" msprop:Generator_ColumnPropNameInRow="ReceiverUri" msprop:Generator_ColumnVarNameInTable="columnReceiverUri" msprop:Generator_ColumnPropNameInTable="ReceiverUriColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ReceiverName" msdata:Caption="收信人" msprop:Generator_UserColumnName="ReceiverName" msprop:Generator_ColumnPropNameInRow="ReceiverName" msprop:Generator_ColumnVarNameInTable="columnReceiverName" msprop:Generator_ColumnPropNameInTable="ReceiverNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MessageBody" msprop:Generator_UserTableName="MessageBody" msprop:Generator_RowDeletedName="MessageBodyRowDeleted" msprop:Generator_TableClassName="MessageBodyDataTable" msprop:Generator_RowChangedName="MessageBodyRowChanged" msprop:Generator_RowClassName="MessageBodyRow" msprop:Generator_RowChangingName="MessageBodyRowChanging" msprop:Generator_RowEvArgName="MessageBodyRowChangeEvent" msprop:Generator_RowEvHandlerName="MessageBodyRowChangeEventHandler" msprop:Generator_TablePropName="MessageBody" msprop:Generator_TableVarName="tableMessageBody" msprop:Generator_RowDeletingName="MessageBodyRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="SenderUri" msprop:Generator_UserColumnName="SenderUri" msprop:Generator_ColumnPropNameInRow="SenderUri" msprop:Generator_ColumnVarNameInTable="columnSenderUri" msprop:Generator_ColumnPropNameInTable="SenderUriColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SenderName" msdata:Caption="发信人" msprop:Generator_UserColumnName="SenderName" msprop:Generator_ColumnPropNameInRow="SenderName" msprop:Generator_ColumnVarNameInTable="columnSenderName" msprop:Generator_ColumnPropNameInTable="SenderNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Body" msdata:Caption="信息" msprop:Generator_UserColumnName="Body" msprop:Generator_ColumnPropNameInRow="Body" msprop:Generator_ColumnVarNameInTable="columnBody" msprop:Generator_ColumnPropNameInTable="BodyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Extend" msprop:Generator_UserColumnName="Extend" msprop:Generator_ColumnPropNameInRow="Extend" msprop:Generator_ColumnVarNameInTable="columnExtend" msprop:Generator_ColumnPropNameInTable="ExtendColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MessageType" msprop:Generator_UserColumnName="MessageType" msprop:Generator_ColumnPropNameInRow="MessageType" msprop:Generator_ColumnVarNameInTable="columnMessageType" msprop:Generator_ColumnPropNameInTable="MessageTypeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Time" msdata:Caption="时间" msprop:Generator_UserColumnName="Time" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_ColumnPropNameInTable="TimeColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Player" />
+      <xs:field xpath="Uri" />
+    </xs:unique>
+    <xs:unique name="Message_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Message" />
+      <xs:field xpath="MessageID" />
+    </xs:unique>
+    <xs:unique name="MessageBody_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//MessageBody" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Message_MessageBody" msdata:parent="Message" msdata:child="MessageBody" msdata:parentkey="MessageID" msdata:childkey="ID" msprop:Generator_UserRelationName="Message_MessageBody" msprop:Generator_RelationVarName="relationMessage_MessageBody" msprop:Generator_UserChildTable="MessageBody" msprop:Generator_UserParentTable="Message" msprop:Generator_ParentPropName="MessageRow" msprop:Generator_ChildPropName="GetMessageBodyRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

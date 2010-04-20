@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<style type="text/css">
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+}
+
+a, a:visited{
+    display: block;
+    width: 10px;
+    height: 100%;    
+    text-decoration: none;
+    background-color: #A4B5D3;
+    background-position: left 200px;
+    background-repeat: no-repeat;
+}
+a.hide-left {
+    background-image: url("webgif/hide-left.gif");    
+}
+a.show-left {
+    background-image: url("webgif/show-left.gif");
+}
+a:hover {
+    text-decoration: none;
+    background-color: #96A4C3;
+}
+</style>
+<script language='JavaScript'>
+var hidemenu = true;
+function showMenu(obj)
+{
+	var winParent=window.top;
+	winParent.showMenu(hidemenu);
+	hidemenu = ! hidemenu;
+	obj.title = hidemenu ? "hide left menu" : "show left menu";
+	obj.className = hidemenu ? "hide-left" : "show-left";
+}
+</script></head>
+
+<body>
+<div style="height:1280px;">
+<a href="javascript:void(0)" class="hide-left" onclick="showMenu(this); return false;" title="hide left menu" >&nbsp;</a>
+</div>
+</body>
+</html>

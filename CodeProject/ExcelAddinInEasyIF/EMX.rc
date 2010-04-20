@@ -1,0 +1,901 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\EMX.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Excel Add-In For EasyIF Grid Processing\0"
+            VALUE "CompanyName", "Webogy Corporation\0"
+            VALUE "FileDescription", "EasyIF DLL\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "EasyIF\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002  Webogy Corporation.   All Rights Reserved.\0"
+            VALUE "LegalTrademarks", "Webogy Corporation\0"
+            VALUE "OriginalFilename", "EasyIF.XLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "EasyIF Dynamic Link Library\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG_OPTS DIALOG DISCARDABLE  0, 0, 229, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EasyIF Configuration Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Location Of Grid Files",IDC_STATIC,7,7,156,11,
+                    SS_SUNKEN
+    EDITTEXT        IDC_CONFIG_PATHNAME,7,17,144,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&...",IDC_CONFIG_BROWSEPATH,152,18,11,13
+    GROUPBOX        "Auto Recalculation Options",IDC_STATIC,7,40,216,40
+    LTEXT           " Workbook Recalculation Interval",IDC_STATIC,13,51,113,
+                    12,SS_SUNKEN
+    COMBOBOX        IDC_CONFIG_REFRESHINTERVAL,125,51,92,140,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Force &Recalculation Of Workbooks On Grid Edits",
+                    IDC_CONFIG_RECALCONCHANGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,66,169,10
+    DEFPUSHBUTTON   "OK",IDOK,172,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,172,24,50,14
+END
+
+IDD_MATRIX_SELECTOR DIALOGEX 0, 0, 245, 232
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EasyIF Grid Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Grid List",IDC_STATIC,7,7,174,12,0,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "Tree1",IDC_MATRIX_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,7,18,175,150,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "&Close",IDCANCEL,188,7,50,14
+    PUSHBUTTON      "&Add...",IDC_MATRIX_ADD,188,41,50,14
+    PUSHBUTTON      "&Properties...",IDC_MATRIX_PROPERTIES,188,64,50,14
+    PUSHBUTTON      "&Remove",IDC_MATRIX_REMOVE,188,87,50,14
+    PUSHBUTTON      "&Duplicate...",IDC_MATRIX_COPY,188,120,50,14
+    GROUPBOX        "Grid Description",IDC_STATIC,7,170,232,56
+    EDITTEXT        IDC_GRID_NOTES,11,179,224,43,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_MTXEDIT_GENERAL DIALOGEX 0, 0, 205, 207
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           " &Name",IDC_STATIC,11,13,38,14,SS_SUNKEN
+    EDITTEXT        IDC_GEN_NAME,48,13,145,14,ES_AUTOHSCROLL
+    LTEXT           " &Category",IDC_STATIC,11,31,38,12,SS_SUNKEN
+    COMBOBOX        IDC_GEN_CATEGORY,48,31,145,89,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " A&uthor",IDC_STATIC,11,47,38,14,SS_SUNKEN
+    EDITTEXT        IDC_GEN_AUTHOR,48,47,145,14,ES_AUTOHSCROLL
+    LTEXT           " File Path",IDC_STATIC,11,65,38,12,SS_SUNKEN
+    LTEXT           " <FilePath>",IDC_GEN_FILEPATH,48,65,145,12,0,
+                    WS_EX_CLIENTEDGE
+    GROUPBOX        "Identification",IDC_STATIC,7,3,192,81
+    GROUPBOX        "Access Control",IDC_STATIC,7,79,192,74
+    CONTROL         "&Require A Password In Order To Access This Grid",
+                    IDC_GEN_REQPSWACCESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,89,180,10
+    LTEXT           " &Password",IDC_GEN_PSWACCESS_LBL,27,102,44,14,
+                    SS_SUNKEN
+    EDITTEXT        IDC_GEN_PSWACCESS,70,102,123,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "R&equire A Password In Order To Modify This Grid",
+                    IDC_GEN_REQPSWMODIFY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,121,180,10
+    LTEXT           " P&assword",IDC_GEN_PSWMODIFY_LBL,27,133,44,14,
+                    SS_SUNKEN
+    EDITTEXT        IDC_GEN_PSWMODIFY,70,133,123,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Notes",IDC_STATIC,7,148,192,53
+    EDITTEXT        IDC_GEN_NOTES,11,160,183,37,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+IDD_MTXEDIT_COLUMNS DIALOGEX 0, 0, 228, 169
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Columns"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Grid Compare Columns",IDC_STATIC,7,3,215,131
+    CONTROL         "List1",IDC_COLS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,12,14,151,107,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Add...",IDC_COLS_ADD,167,14,50,14
+    PUSHBUTTON      "&Properties...",IDC_COLS_PROPERTIES,167,37,50,14
+    PUSHBUTTON      "&Remove",IDC_COLS_REMOVE,167,60,50,14
+    PUSHBUTTON      "Move &Up",IDC_COLS_MOVEUP,167,87,50,14
+    PUSHBUTTON      "Move &Down",IDC_COLS_MOVEDOWN,167,107,50,14
+    GROUPBOX        "Result Value",IDC_STATIC,7,129,215,34
+    LTEXT           " &Column Data Type",IDC_STATIC,14,143,70,12,SS_SUNKEN
+    COMBOBOX        IDC_COLS_RETURNTYPE,83,143,70,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MTXEDIT_DATAVALUES DIALOG DISCARDABLE  0, 0, 250, 207
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Data Values"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Grid Goes Here",IDC_GRID_PLACEHOLDER,8,13,235,187,
+                    WS_BORDER
+    PUSHBUTTON      "Insert Row",IDC_DATAVALUES_INSERTROW,182,2,11,11,
+                    BS_BITMAP
+    PUSHBUTTON      "Delete Row",IDC_DATAVALUES_DELETEROW,197,2,11,11,
+                    BS_BITMAP
+    PUSHBUTTON      "WildCard",IDC_DATAVALUES_WILDCARD,212,2,11,11,BS_BITMAP
+    PUSHBUTTON      "",IDC_DATAVALUES_FULLSCREEN,232,2,11,11,BS_BITMAP
+END
+
+IDD_PASSWORD_ENTRY DIALOG DISCARDABLE  0, 0, 126, 48
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please Enter Grid Password"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Password",IDC_STATIC,7,7,47,14,SS_SUNKEN
+    EDITTEXT        IDC_PSW_PASSWORD,53,7,66,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,27,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,27,46,14
+END
+
+IDD_COLEDIT_POSITION DIALOG DISCARDABLE  0, 0, 145, 118
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Position"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Choose Where To Add Column",IDC_STATIC,7,3,132,109
+    CONTROL         "&Append The Column To The End",IDC_COLEDIT_APPEND,
+                    "Button",BS_AUTORADIOBUTTON,12,15,117,10
+    CONTROL         "&Insert Column Before Selection",IDC_COLEDIT_INSERT,
+                    "Button",BS_AUTORADIOBUTTON,12,30,117,10
+    LISTBOX         IDC_COLEDIT_INSERTLIST,21,44,110,60,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_COLEDIT_GENERAL DIALOG DISCARDABLE  0, 0, 179, 142
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Column Name",IDC_STATIC,7,7,54,14,SS_SUNKEN
+    EDITTEXT        IDC_COLEDIT_COLNAME,60,7,113,14,ES_AUTOHSCROLL
+    GROUPBOX        "Processing",IDC_STATIC,7,24,166,63
+    LTEXT           " Column &Data Type",IDC_STATIC,11,36,65,12,SS_SUNKEN
+    COMBOBOX        IDC_COLEDIT_DATATYPE,75,36,93,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " C&ompare Operator",IDC_STATIC,11,55,65,12,SS_SUNKEN
+    COMBOBOX        IDC_COLEDIT_COMPAREOP,75,55,93,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Enable Column For Use In Comparison",
+                    IDC_COLEDIT_COMPARECOL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,73,137,10
+    GROUPBOX        "Comments",IDC_STATIC,7,90,166,46
+    EDITTEXT        IDC_COLEDIT_NOTES,11,101,158,30,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+IDD_COLEDIT_PICKLIST DIALOGEX 0, 0, 187, 142
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pick List"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Use Choice List",IDC_PICKLIST_USEPICKLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,9,70,10
+    CONTROL         "&Restrict Entered Values To The List",
+                    IDC_PICKLIST_RESTRICT2LIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,22,128,10
+    LTEXT           " &List Choices",IDC_PICKLIST_CHOICES_LBL,7,38,173,11,0,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_PICKLIST_CHOICES,7,48,174,87,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_COPY_MATRIX_NAME DIALOG DISCARDABLE  0, 0, 187, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Duplicate Grid"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Enter The New Grid Name",IDC_STATIC,7,7,116,11,
+                    SS_SUNKEN
+    EDITTEXT        IDC_COPYMATRIX_NAME,7,17,116,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+END
+
+IDD_MTXEDIT_DATAVALUESFULL DIALOG DISCARDABLE  0, 0, 292, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Grid Data Values"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Grid Goes Here",IDC_GRID_PLACEHOLDER,8,13,277,187,
+                    WS_BORDER
+    PUSHBUTTON      "Insert Row",IDC_DATAVALUES_INSERTROW,202,2,11,11,
+                    BS_BITMAP
+    PUSHBUTTON      "Delete Row",IDC_DATAVALUES_DELETEROW,217,2,11,11,
+                    BS_BITMAP
+    PUSHBUTTON      "WildCard",IDC_DATAVALUES_WILDCARD,232,2,11,11,BS_BITMAP
+    PUSHBUTTON      "&Close",IDCANCEL,251,2,29,11
+END
+
+IDD_WIZ_SELECTMATRIX DIALOGEX 0, 0, 275, 163
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Insert Grid Into Spreadsheet Wizard - Select Grid"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         1020,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,
+                    7,34,77,WS_EX_CLIENTEDGE
+    LTEXT           "Select the Grid that you would like to use to insert a template into the spreadsheet",
+                    IDC_STATIC,53,7,216,22,0,WS_EX_CLIENTEDGE
+    CONTROL         "Tree1",IDC_MATRIX_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,53,31,216,124,WS_EX_CLIENTEDGE
+END
+
+IDD_WIZ_INSERTPOS DIALOGEX 0, 0, 276, 163
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Insert Grid Into Spreadsheet Wizard - Target Cell"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         1022,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,
+                    7,34,77,WS_EX_CLIENTEDGE
+    LTEXT           "Select the cell position on the spreadsheet that the Grid template will be inserted at.  The starting cell is the upper left-hand corner of the Grid.",
+                    IDC_STATIC,53,7,216,32,0,WS_EX_CLIENTEDGE
+    LTEXT           "",IDC_STATIC,53,41,216,114,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "  &Insert Starting At Cell",IDC_STATIC,79,78,73,14,
+                    SS_SUNKEN
+    EDITTEXT        IDC_INSPOS_CELL,151,78,55,14,ES_AUTOHSCROLL
+END
+
+IDD_WIZGRID_RANGE DIALOGEX 0, 0, 275, 163
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Insert Grid Into Spreadsheet Wizard - Ranges"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         1021,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,
+                    7,34,77,WS_EX_CLIENTEDGE
+    LTEXT           "The following adjacent grid columns will be combined into ranges for a single cell:   (EX:  from/to, high/low, begin/end)",
+                    IDC_STATIC,53,7,216,22,0,WS_EX_CLIENTEDGE
+    LISTBOX         IDC_WIZRANGE_LIST,53,31,160,124,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Remove",IDC_WIZRANGE_REMOVE,218,32,50,14
+END
+
+IDD_GRIDWIZ_CHOOSER DIALOGEX 0, 0, 244, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Grid Wizard To Run"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Select Which Grid Wizard Would You Like To Use",
+                    IDC_STATIC,7,3,175,98
+    CONTROL         "&Create A New Grid, Based On The Surrounding Cell Column Headings and Column Types, To Solve The Current Cell",
+                    IDC_GRIDWIZ_CGCOLUMN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_TOP | BS_MULTILINE,13,16,162,27,WS_EX_STATICEDGE
+    CONTROL         "&Insert Columns Into The Spreadsheet Appropriate For Using An Existing Grid",
+                    IDC_GRIDWIZ_INSGRID,"Button",BS_AUTORADIOBUTTON | BS_TOP | 
+                    BS_MULTILINE,13,48,162,21,WS_EX_STATICEDGE
+    CONTROL         "C&reate A New Grid Based On The Currently Selected Set Of Cells In Your Spreadsheet.",
+                    IDC_GRIDWIZ_CGIMPORT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_TOP | BS_MULTILINE,13,74,162,21,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "OK",IDOK,187,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,24,50,14
+    CONTROL         1023,IDC_GRIDWIZ_INDICATOR,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE,195,50,33,51,WS_EX_CLIENTEDGE
+END
+
+IDD_WIZ_FIELDDEF DIALOGEX 0, 0, 231, 127
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Current Cell Grid Wizard - Field Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&This Field Is One Of The Keys In Determining The Grid Result",
+                    IDC_WIZFLD_KEYFIELD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,29,214,10
+    GROUPBOX        "",IDC_STATIC,23,37,202,84
+    LTEXT           " &Field Type",IDC_STATIC,28,47,91,12,SS_SUNKEN
+    COMBOBOX        IDC_WIZFLD_FIELDTYPE,118,47,102,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " &Relationship Operator",IDC_STATIC,28,65,91,12,
+                    SS_SUNKEN
+    COMBOBOX        IDC_WIZFLD_OPERATION,118,65,102,78,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " Field &Caption",IDC_STATIC,28,83,91,14,SS_SUNKEN
+    EDITTEXT        IDC_WIZFLD_CAPTION,118,83,101,14,ES_AUTOHSCROLL
+    LTEXT           " &Data Type",IDC_STATIC,28,103,91,12,SS_SUNKEN
+    COMBOBOX        IDC_WIZFLD_DATATYPE,118,103,102,71,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_WIZFLD_COLINDICATOR,"SysTabControl32",
+                    TCS_BUTTONS | TCS_FOCUSNEVER | WS_DISABLED,7,10,218,15,
+                    WS_EX_CLIENTEDGE
+    CTEXT           "Excel Columns Found",IDC_STATIC,7,0,218,11,0,
+                    WS_EX_DLGMODALFRAME
+END
+
+IDD_WIZ_MATRIXINFO DIALOG DISCARDABLE  0, 0, 226, 98
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Current Cell Grid Wizard - Grid Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Grid Details",IDC_STATIC,7,3,213,89
+    LTEXT           " &Grid Name",IDC_STATIC,14,13,97,14,SS_SUNKEN
+    EDITTEXT        IDC_WIZGRIDINFO_GRIDNAME,109,13,103,14,ES_AUTOHSCROLL
+    LTEXT           " Result &Column Data Type",IDC_STATIC,14,36,97,12,
+                    SS_SUNKEN
+    COMBOBOX        IDC_WIZGRIDINFO_RETURNTYPE,109,36,70,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           " &Default Grid Return Value",IDC_STATIC,14,57,97,14,
+                    SS_SUNKEN
+    EDITTEXT        IDC_WIZGRIDINFO_DEFVALUE,109,57,103,14,ES_AUTOHSCROLL
+    CONTROL         "&Launch The Editing Module For This Grid Upon Completion",
+                    IDC_WIZGRIDINFO_LAUNCHEDITOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,78,201,10
+END
+
+IDD_GRWZ_GRIDFROMRANGE DIALOG DISCARDABLE  0, 0, 226, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create A New Grid From Selected Range [%s]"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           " &Grid Name",IDC_STATIC,7,7,52,14,SS_SUNKEN
+    EDITTEXT        IDC_GWFR_MATRIXNAME,58,7,104,14,ES_AUTOHSCROLL
+    CONTROL         "&Use First Row [%s] As Column Headings",
+                    IDC_GWFR_FIRSTROWCOLHEADERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,27,157,10
+    DEFPUSHBUTTON   "OK",IDOK,169,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG_OPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_MATRIX_SELECTOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_MTXEDIT_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_MTXEDIT_COLUMNS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_MTXEDIT_DATAVALUES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_PASSWORD_ENTRY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_COLEDIT_POSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_COLEDIT_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_COLEDIT_PICKLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_COPY_MATRIX_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_MTXEDIT_DATAVALUESFULL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_WIZ_SELECTMATRIX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_WIZ_INSERTPOS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_WIZGRID_RANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_GRIDWIZ_CHOOSER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_WIZ_FIELDDEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_WIZ_MATRIXINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_GRWZ_GRIDFROMRANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREEICONS           BITMAP  DISCARDABLE     "bitmap1.bmp"
+IDB_WILDCARD            BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_INSERTROW           BITMAP  DISCARDABLE     "res\\insertro.bmp"
+IDB_DELETEROW           BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_FULLSCREEN          BITMAP  DISCARDABLE     "res\\fullscre.bmp"
+IDB_GRIDWIZ_SELECTGRID  BITMAP  DISCARDABLE     "res\\gridwiz_.bmp"
+IDB_GRIDWIZ_RANGES      BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_GRIDWIZ_INSERTPOS   BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
+IDB_GRIDWIZ_INSERTGRIDINTOSPREADSHEET BITMAP  DISCARDABLE     "res\\bmp00004.bmp"
+IDB_GRIDWIZ_CREATEGRIDFORCOLUMN BITMAP  DISCARDABLE     "res\\bmp00005.bmp"
+IDB_GRIDWIZ_CREATEGRIDFROMSPREADSHEET BITMAP  DISCARDABLE     "res\\bmp00006.bmp"
+IDB_FGNEW               BITMAP  DISCARDABLE     "res\\fgnew.bmp"
+IDB_FGREFRESH           BITMAP  DISCARDABLE     "res\\fgnew1.bmp"
+IDB_FGHIDE              BITMAP  DISCARDABLE     "res\\fghide.bmp"
+IDB_RECALCNOW           BITMAP  DISCARDABLE     "res\\recalcno.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MTXEDIT_COLUMNS DLGINIT
+BEGIN
+    IDC_COLS_RETURNTYPE, 0x403, 5, 0
+0x6554, 0x7478, "\000" 
+    IDC_COLS_RETURNTYPE, 0x403, 13, 0
+0x6857, 0x6c6f, 0x2065, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_COLS_RETURNTYPE, 0x403, 15, 0
+0x6544, 0x6963, 0x616d, 0x206c, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_COLS_RETURNTYPE, 0x403, 5, 0
+0x6144, 0x6574, "\000" 
+    IDC_COLS_RETURNTYPE, 0x403, 14, 0
+0x7845, 0x6563, 0x206c, 0x6f46, 0x6d72, 0x6c75, 0x0061, 
+    0
+END
+
+IDD_COLEDIT_GENERAL DLGINIT
+BEGIN
+    IDC_COLEDIT_DATATYPE, 0x403, 5, 0
+0x6554, 0x7478, "\000" 
+    IDC_COLEDIT_DATATYPE, 0x403, 13, 0
+0x6857, 0x6c6f, 0x2065, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_COLEDIT_DATATYPE, 0x403, 15, 0
+0x6544, 0x6963, 0x616d, 0x206c, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_COLEDIT_DATATYPE, 0x403, 5, 0
+0x6144, 0x6574, "\000" 
+    IDC_COLEDIT_COMPAREOP, 0x403, 7, 0
+0x7145, 0x6175, 0x736c, "\000" 
+    IDC_COLEDIT_COMPAREOP, 0x403, 10, 0
+0x654c, 0x7373, 0x5420, 0x6168, 0x006e, 
+    IDC_COLEDIT_COMPAREOP, 0x403, 22, 0
+0x654c, 0x7373, 0x5420, 0x6168, 0x206e, 0x724f, 0x4520, 0x7571, 0x6c61, 
+0x5420, 0x006f, 
+    IDC_COLEDIT_COMPAREOP, 0x403, 13, 0
+0x7247, 0x6165, 0x6574, 0x2072, 0x6854, 0x6e61, "\000" 
+    IDC_COLEDIT_COMPAREOP, 0x403, 25, 0
+0x7247, 0x6165, 0x6574, 0x2072, 0x6854, 0x6e61, 0x4f20, 0x2072, 0x7145, 
+0x6175, 0x206c, 0x6f54, "\000" 
+    IDC_COLEDIT_COMPAREOP, 0x403, 10, 0
+0x6f4e, 0x2074, 0x7145, 0x6175, 0x006c, 
+    0
+END
+
+IDD_WIZ_FIELDDEF DLGINIT
+BEGIN
+    IDC_WIZFLD_FIELDTYPE, 0x403, 16, 0
+0x7453, 0x6e61, 0x6164, 0x6472, 0x4320, 0x6c6f, 0x6d75, 0x006e, 
+    IDC_WIZFLD_FIELDTYPE, 0x403, 13, 0
+0x6152, 0x676e, 0x2065, 0x6f43, 0x756c, 0x6e6d, "\000" 
+    IDC_WIZFLD_FIELDTYPE, 0x403, 21, 0
+0x6552, 0x7473, 0x6972, 0x7463, 0x6465, 0x5420, 0x206f, 0x2041, 0x694c, 
+0x7473, "\000" 
+    IDC_WIZFLD_FIELDTYPE, 0x403, 21, 0
+0x6e49, 0x7570, 0x2074, 0x6150, 0x6172, 0x656d, 0x6574, 0x2072, 0x6e4f, 
+0x796c, "\000" 
+    IDC_WIZFLD_OPERATION, 0x403, 7, 0
+0x7145, 0x6175, 0x736c, "\000" 
+    IDC_WIZFLD_OPERATION, 0x403, 10, 0
+0x654c, 0x7373, 0x5420, 0x6168, 0x006e, 
+    IDC_WIZFLD_OPERATION, 0x403, 22, 0
+0x654c, 0x7373, 0x5420, 0x6168, 0x206e, 0x724f, 0x4520, 0x7571, 0x6c61, 
+0x5420, 0x006f, 
+    IDC_WIZFLD_OPERATION, 0x403, 13, 0
+0x7247, 0x6165, 0x6574, 0x2072, 0x6854, 0x6e61, "\000" 
+    IDC_WIZFLD_OPERATION, 0x403, 25, 0
+0x7247, 0x6165, 0x6574, 0x2072, 0x6854, 0x6e61, 0x4f20, 0x2072, 0x7145, 
+0x6175, 0x206c, 0x6f54, "\000" 
+    IDC_WIZFLD_OPERATION, 0x403, 10, 0
+0x6f4e, 0x2074, 0x7145, 0x6175, 0x006c, 
+    IDC_WIZFLD_DATATYPE, 0x403, 5, 0
+0x6554, 0x7478, "\000" 
+    IDC_WIZFLD_DATATYPE, 0x403, 13, 0
+0x6857, 0x6c6f, 0x2065, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_WIZFLD_DATATYPE, 0x403, 15, 0
+0x6544, 0x6963, 0x616d, 0x206c, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_WIZFLD_DATATYPE, 0x403, 5, 0
+0x6144, 0x6574, "\000" 
+    0
+END
+
+IDD_WIZ_MATRIXINFO DLGINIT
+BEGIN
+    IDC_WIZGRIDINFO_RETURNTYPE, 0x403, 5, 0
+0x6554, 0x7478, "\000" 
+    IDC_WIZGRIDINFO_RETURNTYPE, 0x403, 13, 0
+0x6857, 0x6c6f, 0x2065, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_WIZGRIDINFO_RETURNTYPE, 0x403, 15, 0
+0x6544, 0x6963, 0x616d, 0x206c, 0x754e, 0x626d, 0x7265, "\000" 
+    IDC_WIZGRIDINFO_RETURNTYPE, 0x403, 5, 0
+0x6144, 0x6574, "\000" 
+    IDC_WIZGRIDINFO_RETURNTYPE, 0x403, 14, 0
+0x7845, 0x6563, 0x206c, 0x6f46, 0x6d72, 0x6c75, 0x0061, 
+    0
+END
+
+IDD_CONFIG_OPTS DLGINIT
+BEGIN
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 17, 0
+0x7645, 0x7265, 0x2079, 0x2f31, 0x2032, 0x6553, 0x6f63, 0x646e, "\000" 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 13, 0
+0x7645, 0x7265, 0x2079, 0x6553, 0x6f63, 0x646e, "\000" 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 24, 0
+0x7645, 0x7265, 0x2079, 0x2031, 0x6e61, 0x2064, 0x2f31, 0x2032, 0x6553, 
+0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 16, 0
+0x7645, 0x7265, 0x2079, 0x2032, 0x6553, 0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 24, 0
+0x7645, 0x7265, 0x2079, 0x2032, 0x6e61, 0x2064, 0x2f31, 0x2032, 0x6553, 
+0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 16, 0
+0x7645, 0x7265, 0x2079, 0x2033, 0x6553, 0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 24, 0
+0x7645, 0x7265, 0x2079, 0x2033, 0x6e61, 0x2064, 0x2f31, 0x2032, 0x6553, 
+0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 16, 0
+0x7645, 0x7265, 0x2079, 0x2034, 0x6553, 0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 24, 0
+0x7645, 0x7265, 0x2079, 0x2034, 0x6e61, 0x2064, 0x2f31, 0x2032, 0x6553, 
+0x6f63, 0x646e, 0x0073, 
+    IDC_CONFIG_REFRESHINTERVAL, 0x403, 16, 0
+0x7645, 0x7265, 0x2079, 0x2035, 0x6553, 0x6f63, 0x646e, 0x0073, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR3             CURSOR  DISCARDABLE     "res\\arrow.cur"
+IDC_CURSOR2             CURSOR  DISCARDABLE     "res\\nsresize.cur"
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\weresize.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_FLOATCTXT_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "FloatingContextMenu"
+    BEGIN
+        MENUITEM "Open &Values Page",           1000
+        MENUITEM "Grid &Properties...",         2000
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete This Grid",           3000
+        MENUITEM SEPARATOR
+        MENUITEM "D&uplicate This Grid...",     4000
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NEWCOLUMN           "New Column"
+    IDS_NEWMATRIXNAME       "New - Untitled"
+    IDS_MATRIXCOPIED        "Copied"
+    IDS_NEWCOLUMNNAME       "New Column"
+    IDS_COLUMNNAMEBLANK     "Column Name May Not Be Blank!"
+    IDS_ENTRYERROR          "Entry Error"
+    IDS_DEFCATEGORY         "General"
+    IDS_ADDNEWGRIDTITLE     "EasyIF - Add New Grid"
+    IDS_EDITGRIDTITLE       "EasyIF - Edit Grid Properties"
+    IDS_DELETEGRIDPROMPT    "Permanently Remove '%s'.\nAre You Sure?"
+    IDS_CONFIRMDELETETITLE  "Confirm Delete"
+    IDS_UNCATEGORIZED       "(uncategorized)"
+    IDS_GRIDEXISTSHEADING   "Grid Exists"
+    IDS_GRIDEXISTSMESSAGE   "A Grid With This Name Already Exists!\nPlease ReEnter A Unique Name For This Grid."
+    IDS_PASSWORDERRHEADING  "Password Error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PASSWORDERRMESSAGE  "Invalid Password!\nPlease Try Again."
+    IDS_ADDGRIDCOLUMNTITLE  "EasyIF - Add Grid Column"
+    IDS_EDITGRIDCOLUMNTITLE "EasyIF - Grid Column Properties"
+    IDS_DELETECOLUMNMESSAGE "Are You Sure That You Wish\nTo Remove This Column?"
+    IDS_COLHEADNAME         "Name"
+    IDS_COLHEADTYPE         "Type"
+    IDS_COLHEADACTIVE       "Active"
+    IDS_COLTYPETEXT         "Text"
+    IDS_COLTYPEWHOLENUMBER  "Whole Number"
+    IDS_COLTYPEDECIMALNUMBER "Decimal Number"
+    IDS_COLTYPEDATE         "Date"
+    IDS_YES                 "Yes"
+    IDS_NO                  "No"
+    IDS_RESULTCOLNAME       "Result"
+    IDS_INVALIDMONTH        "Invalid Month!"
+    IDS_INVALIDDAY          "Invalid Day!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATAENTRYERRORTITLE "Data Entry Error"
+    IDS_INVALIDDATEMESSAGE  "%s\nPlease Enter A Valid Date."
+    IDS_GRIDEXISTSTITLE     "Grid Exists"
+    IDS_INVALIDGRIDNAMETITLE "Invalid Grid Name"
+    IDS_INVALIDGRIDNAMEMESSAGE 
+                            "Invalid Characters In Grid Name\nGrid Names May NOT Contain '.', '\\', '/'.\nPlease ReEnter The Name For This Grid."
+    IDS_PASSWORDNOTBLANKMSG "Passwords May Not Be Blank."
+    IDS_SELECTREPOSITORYHEADING 
+                            "Select the folder that contains the grid repository that you wish to work with."
+    IDS_CONFIRMDELETEROWS   "Delete These Rows.\nAre You Sure?"
+    IDS_DELETEROWSTOOLTIP   "Delete Selected Rows"
+    IDS_INSERTROWTOOLTIP    "Insert A New Row"
+    IDS_WILDCARDTOOLTIP     "Wildcard The Current Selection"
+    IDS_FULLSCREENTOOLTIP   "Edit Grid In Full Screen Mode"
+    IDS_GRIDWIZARDCAPTION   "Insert Grid Into Spreadsheet Wizard"
+    IDS_NORANGEITEMSDETECTED " (No Range Items Detected)"
+    IDS_UNSUPPORTEDACTIVECELLHDG "Unsupported Active Cell"
+    IDS_UNSUPPORTEDACTIVECELL 
+                            "Unsupported Active Region Selection Or Multiple Regions Selected!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UNSUPPORTEDSELECTIONHDG "Unsupported Selection Type"
+    IDS_UNSUPPORTEDSELECTION 
+                            "Missing Or Unsupported Region Selection\nOr Multiple Regions Are Selected!\n\nPlease Select A Single Rectangular\nRegion Before Invoking This Wizard."
+    IDS_CELLCANNOTBEBLANKHDG "Missing Cell Data"
+    IDS_CELLCANNOTBEBLANK   "The Cell [%s] Should Not Be Blank!\nIgnore And Treat As A Wildcard Anyway?"
+    IDS_NOGRIDSUSEDHDG      "Grid Usage"
+    IDS_NOGRIDSUSED         "No Grids Are Used In This Workbook!"
+    IDS_FLOATCREATENEWBTN   "Create New..."
+    IDS_FLOATREFRESHBTN     "Refresh"
+    IDS_FLOATHIDEBTN        "Hide this window"
+    IDS_FLOATVALUEPAGE_INSERTROWBTN "Insert Row"
+    IDS_FLOATVALUEPAGE_DELETEROWBTN "Delete Row(s)"
+    IDS_FLOATVALUEPAGE_WILDCARDBTN "Wildcard Selection"
+    IDS_FLOATVALUEPAGE_SAVEBTN "Save"
+    IDS_FLOATVALUEPAGE_CLOSEBTN "Close"
+    IDS_FLOATVALUEPAGE_REFRESHCHECKBOXBTN "Auto Recalculate Workbooks"
+    IDS_FLOATVALUEPAGE_CAPTION "Grid Data For %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FLOATVALUES_SAVEMODIFIEDCAPTION "Save Changes"
+    IDS_FLOATVALUES_SAVEMODIFIED 
+                            "You have made changes to the grid values.\nWould you like to save your changes?"
+    IDS_FLOATVALUEPAGE_RECALCNOWBTN "Recalculate Now"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\EMX.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
