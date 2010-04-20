@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ResizableLib - Win32 Release Static--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP113.tmp" with contents
+[
+/nologo /MT /W4 /GX /O2 /D "UNICODE" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"ReleaseUnicode/ResizableLib.pch" /Yu"stdafx.h" /Fo"ReleaseUnicode/" /Fd"ReleaseUnicode/" /FD /c 
+"D:\Projects\eMule\ResizableLib\ResizableDialog.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableFormView.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableFrame.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableGrip.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableLayout.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableMDIChild.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableMDIFrame.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableMinMax.cpp"
+"D:\Projects\eMule\ResizableLib\ResizablePage.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableSheet.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableState.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP113.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP114.tmp" with contents
+[
+/nologo /MT /W4 /GX /O2 /D "UNICODE" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"ReleaseUnicode/" /Fd"ReleaseUnicode/" /FD /c 
+"D:\Projects\eMule\ResizableLib\ResizablePageEx.cpp"
+"D:\Projects\eMule\ResizableLib\ResizableSheetEx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP114.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP115.tmp" with contents
+[
+/nologo /MT /W4 /GX /O2 /D "UNICODE" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"ReleaseUnicode/ResizableLib.pch" /Yc"stdafx.h" /Fo"ReleaseUnicode/" /Fd"ReleaseUnicode/" /FD /c 
+"D:\Projects\eMule\ResizableLib\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP115.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP116.tmp" with contents
+[
+/nologo /out:"ReleaseUnicode\ResizableLib.lib" 
+.\ReleaseUnicode\ResizableDialog.obj
+.\ReleaseUnicode\ResizableFormView.obj
+.\ReleaseUnicode\ResizableFrame.obj
+.\ReleaseUnicode\ResizableGrip.obj
+.\ReleaseUnicode\ResizableLayout.obj
+.\ReleaseUnicode\ResizableMDIChild.obj
+.\ReleaseUnicode\ResizableMDIFrame.obj
+.\ReleaseUnicode\ResizableMinMax.obj
+.\ReleaseUnicode\ResizablePage.obj
+.\ReleaseUnicode\ResizablePageEx.obj
+.\ReleaseUnicode\ResizableSheet.obj
+.\ReleaseUnicode\ResizableSheetEx.obj
+.\ReleaseUnicode\ResizableState.obj
+.\ReleaseUnicode\StdAfx.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP116.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+ResizableDialog.cpp
+ResizableFormView.cpp
+ResizableFrame.cpp
+ResizableGrip.cpp
+ResizableLayout.cpp
+ResizableMDIChild.cpp
+ResizableMDIFrame.cpp
+ResizableMinMax.cpp
+ResizablePage.cpp
+ResizableSheet.cpp
+ResizableState.cpp
+Generating Code...
+Compiling...
+ResizablePageEx.cpp
+ResizableSheetEx.cpp
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+ResizableLib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

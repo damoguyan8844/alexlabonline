@@ -1,0 +1,39 @@
+// IE2EM.idl : IE2EM 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(IE2EM.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(DE1A243C-C7CB-4543-AC32-A2D2CA879663),
+	dual,
+	nonextensible,
+	helpstring("IIE2EMUrlTaker Interface"),
+	pointer_default(unique)
+]
+interface IIE2EMUrlTaker : IDispatch{
+	[id(1), helpstring("SendUrl Method")] HRESULT SendUrl([in] BSTR strUrl, [in] BSTR strInfo, [in] BSTR strRef,[out,retval] VARIANT_BOOL* prVB);
+	[id(7), helpstring("GetEmuleVersion Method")] HRESULT GetEmuleVersion([out,retval] BSTR* pstrVer);
+	[propget, id(8), helpstring("Version Property")] HRESULT Version([out, retval] BSTR* pVal);
+};
+[
+	uuid(8F5497A2-6C8C-45EA-87BC-5A76F2F5E28B),
+	version(1.0),
+	helpstring("IE2EM 1.0 TypeLib")
+]
+library IE2EMLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(48618374-565F-4CA0-B8CD-6F496C997FAF),
+		helpstring("IE2EMUrlTaker Class")
+	]
+	coclass IE2EMUrlTaker
+	{
+		[default] interface IIE2EMUrlTaker;
+	};
+};

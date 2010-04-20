@@ -1,0 +1,1984 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "zh_TW.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ÖÐÎÄ(Ì¨Íå) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "zh_TW.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""..\\resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""..\\version.h""\r\n"
+    "#include ""lang.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_SOCKETS_INIT_FAILED "Socketªì©l¤Æ¥¢±Ñ."
+    IDS_ABOUTBOX            "Ãö©óeMule(&A) ..."
+    IDS_HTTPDOWNLOAD_FILESTATUS "%s±q%s"
+    IDS_HTTPDOWNLOAD_CONNECTED "³s½u¨ì%s"
+    IDS_HTTPDOWNLOAD_RESOLVING_NAME "¥¿¦b¸ÑªR°ì¦W:%s"
+    IDS_HTTPDOWNLOAD_RESOLVED_NAME "¦¨¥\¸ÑªR°ì¦W¬°%s"
+    IDS_HTTPDOWNLOAD_CONNECTING "¥¿¦b³s½u%s"
+    IDS_HTTPDOWNLOAD_REDIRECTING "­«©w¦V¨ì%s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HTTPDOWNLOAD_GETTING_FILE_INFORMATION "Àò¨úÀÉ®×°T®§"
+    IDS_HTTPDOWNLOAD_GENERIC_ERROR "¸Õ¹Ï¤U¸üÀÉ®×®É²£¥Í¿ù»~:%s"
+    IDS_HTTPDOWNLOAD_FAIL_CONNECT_SERVER "³s½u¦øªA¾¹®É²£¥Í¿ù»~:%s"
+    IDS_HTTPDOWNLOAD_INVALID_SERVER_RESPONSE "µLªk±q¦øªA¾¹Àò±o¥¿½Tªº¦^À³"
+    IDS_HTTPDOWNLOAD_INVALID_HTTP_RESPONSE "µLªk±q¦øªA¾¹Àò±o¥¿½TªºHTTP¦^À³"
+    IDS_HTTPDOWNLOAD_ERROR_READFILE "¤U¸üÀÉ®×®É²£¥Í¿ù»~:%s"
+    IDS_HTTPDOWNLOAD_PERCENTAGE "¥¿¦b¤U¸ü:¤w§¹¦¨ %s%%/%s"
+    IDS_HTTPDOWNLOAD_RETREIVEING_FILE "¥¿¦b±µ¦¬ÀÉ®×"
+    IDS_HTTPDOWNLOAD_OF     "%s/%s"
+    IDS_FILELINK            "ÀÉ®×³sµ²"
+    IDS_LD_BASICOPT         "°ò¥»¿ï¶µ"
+    IDS_LD_ADDSOURCE        "§â§AªºIP¦a§}§@¬°¨Ó·½²K¥[¶i³sµ²"
+    IDS_LD_EMULEHASH        "²K¥[ eMule AICH Hash ¥Î©ó°ª¯Å¿ù»~³B²z"
+    IDS_LD_ADVANCEDOPT      "°ª¯Å¿ï¶µ"
+    IDS_CANCEL              "¨ú®ø"
+    IDS_LD_ADDHTML          "²K¥[ HTML ¼ÐÅÒ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HTTP_CAPTION        "¥¿¦b§ó·s¦øªA¾¹¦Cªí"
+    IDS_HTTPDOWNLOAD_TIMELEFT "%s(¤w½Æ»s%s)"
+    IDS_LD_ADDHASHSET       "²K¥[§¹¾ã Hashset"
+    IDS_HSAV                "Hashset ¥i¥Î"
+    IDS_DL_SHOWED2KLINK     "Åã¥Ü ED2K ³sµ²..."
+    IDS_FD_CORR             "¤w·lÃa"
+    IDS_HTTPDOWNLOAD_OK_TO_OVERWRITE "ÀÉ®×'%s'¤w¦s¦b,\n¬O§_´À´«?"
+    IDS_FD_RECOV            "¤w«ì´_"
+    IDS_HTTPDOWNLOAD_FAIL_FILE_OPEN "¥´¶}¤U¸üÀÉ®×®É²£¥Í¿ù»~:%s"
+    IDS_HTTPDOWNLOAD_ABORTING_TRANSFER "¥¿¦b¤¤¤î¶Ç¿é"
+    IDS_FD_COMPR            "À£ÁY"
+    IDS_WIZARD_NETWORK      "¿ï¾Ü§A·Q­n¨Ï¥Îºô¸ô."
+    IDS_MAIN_READY          "eMuleª©¥»%s¤w¸g´Nºü"
+    IDS_WIZARD_ED2K         "ED2K³]¸m"
+    IDS_SEL_SKIN            "¿ï¾Ü¥~Æ[ ..."
+    IDS_MAIN_SOCKETERROR    "­P©R¿ù»~:µLªk¦bºÝ¤f %i¤W³Ð«ØSocket"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_BTN_DISCONNECT "Â_¶}³s½u(&C)"
+    IDS_ERR_WRONGFILEID     "µo°e¤F¿ù»~ªºÀÉ®×ID"
+    IDS_ERR_BADHASHSET      "¦¬¨ì·lÃa©ÎµL®ÄªºHashset"
+    IDS_ERR_BADDATABLOCK    "¦¬¨ì·lÃa©ÎµL®Äªº¼Æ¾Ú¶ô"
+    IDS_ERR_ILLFORMEDHASH   "¤£¥¿½TªºHash®æ¦¡"
+    IDS_ERR_BADED2KLINK     "«D³W½d®æ¦¡ªºED2K³sµ²"
+    IDS_ERR_NOSLLINK        "µL®ÄªºED2K¦øªA¾¹©ÎÀÉ®×³sµ²"
+    IDS_ERR_WRONGPACKAGESIZE "µL®ÄªºOP_FILEREQUEST¥]¤j¤p"
+    IDS_ERR_WRONGHPACKAGESIZE "µL®ÄªºOP_HASHSETREQUEST¥]¤j¤p"
+    IDS_ERR_UNKNOWNCLIENTACTION "¥¼ª¾«È¤áµo°e¤FÂX®i¨óÄ³¥]"
+    IDS_ERR_OPENMET         "¿ù»~:¥´¶}part.metÀÉ®×¥¢±Ñ!(%s => %s)"
+    IDS_ERR_BADMETVERSION   "¿ù»~:µL®Äpart.metÀÉ®×ª©¥»!(%s => %s)"
+    IDS_ERR_METCORRUPT      "¿ù»~:%s(%s)·lÃa,µLªk¥[¸üÀÉ®×"
+    IDS_ERR_FILEERROR       "Åª¨ú%s(%s):%s®É,µo¥Í·N¥~ÀÉ®×¿ù»~"
+    IDS_ERR_FILEOPEN        "¥´¶}%s(%s)¥¢±Ñ"
+    IDS_SEL_SKINDIR         "¿ï¾Ü¥~Æ[¥Ø¿ý ..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_HASHERRORWARNING "Äµ§i:µLªkHash¤w¤U¸üªºÀÉ®×¬q - Hashset¤£§¹¾ã(%s)"
+    IDS_ERR_INCOMPLETEHASH  "¿ù»~:µLªkHash¤w¤U¸üªºÀÉ®×¬q - Hashset¤£§¹¾ã(%s).¤£À³¸Óµo¥Í¦¹¿ù»~"
+    IDS_DOWNLOADING         "¤U¸ü¤¤"
+    IDS_WAITING             "µ¥«Ý¤¤"
+    IDS_HASHING             "Hash¤¤"
+    IDS_COMPLETING          "§¹¦¨¤¤"
+    IDS_COMPLETE            "¤w§¹¦¨"
+    IDS_PAUSED              "¼È°±"
+    IDS_ERRORLIKE           "¿ù»~"
+    IDS_ASSIGNED2K          "eMule¤£¬O·í«eÀq»{ªº³B²zED2K³sµ²ªºµ{§Ç.¬O§_±N¥¦³]¬°Àq»{(±ÀÂË)?"
+    IDS_ERR_EMPTYADRESSESDAT 
+                            "¦b'adresses.dat'¤¤¨S¦³§ä¨ìserverlistadress¶µ.½ÐÖß¶K¤@­Ó¦Xªkªºserverlist¦a§}¨ì¦¹ÀÉ®×¤¤,¨Ó¦Û°Ê§ó·s¦øªA¾¹¦Cªí"
+    IDS_ERR_BADSERVERMETVERSION "µo²{server.met¤¤¦s¦bµL®Äªºª©¥»¼Ð»x(0x%X)!"
+    IDS_SERVERSFOUND        "¦bserver.met¤¤§ä¨ì%i­Ó¦øªA¾¹"
+    IDS_SERVERSADDED        "²K¥[¤F%d­Ó¦øªA¾¹,%d­Ó¨S¦³²K¥[(¤w¦b¦Cªí¤¤©Î¦a§}µL®Ä)"
+    IDS_ERR_BADSERVERLIST   "¿ù»~:ÀÉ®×server.met¤w·lÃa,µLªk¥[¸ü¦øªA¾¹¦Cªí"
+    IDS_ERR_FILEERROR_SERVERMET 
+                            "Åª¨úserver.met®É²£¥Í·N¥~¿ù»~:%s,µLªkÅª¨ú¦øªA¾¹¦Cªí"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_SAVESERVERMET   "«O¦sserver.met¥¢±Ñ!"
+    IDS_PASSIVE             "³Q°Ê"
+    IDS_MAIN_BTN_CANCEL     "¨ú®ø(&C)"
+    IDS_AVAIL               "³¡¤À: %u, ¥iÀò±o: %u (%.1f%%)\n\n"
+    IDS_TYPE                "Ãþ«¬"
+    IDS_FILEID              "ÀÉ®×ID"
+    IDS_FILE                "ÀÉ®×"
+    IDS_DOWNLOAD            "¤U¸ü"
+    IDS_SL_SERVERNAME       "¦øªA¾¹¦W"
+    IDS_IP                  "IP"
+    IDS_DESCRIPTION         "´y­z"
+    IDS_PING                "Ping"
+    IDS_FILES               "ÀÉ®×¼Æ"
+    IDS_PREFERENCE          "Àu¥ýÅv"
+    IDS_PRIONOPREF          "µL¿ï¶µ"
+    IDS_CONNECTTHIS         "³s½u¨ì©Ò¿ïªº¦øªA¾¹"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_BTN_CONNECT    "³s½u(&C)"
+    IDS_ERR_SAVESERVERMET2  "«O¦sserver.met¥¢±Ñ!½Ð¹Á¸Õ§R°£server.met¨Ã±Nserver.met.old§ï¦W¬°server.met!"
+    IDS_NOTCONNECTED        "¥¼³s½u"
+    IDS_DISCONNECTED        "³s½uÂ_¶}"
+    IDS_USERS               "¥Î¤á¼Æ:%i"
+    IDS_UPDOWN              "¤W¶Ç:%.1f(%.1f) | ¤U¸ü:%.1f(%.1f)"
+    IDS_CONNECTED           "¤w³s½u"
+    IDS_LINKNOTADDED        "µLªk²K¥[³sµ²"
+    IDS_MAIN_EXIT           "¯uªº­n°h¥XeMule?"
+    IDS_MAIN_POPUP_RESTORE  "ÁÙ­ì"
+    IDS_CONNECTTOANYSERVER  "³s½u¨ì¥ô·N¦øªA¾¹"
+    IDS_EXIT                "°h¥X(&E)"
+    IDS_CONNECTING          "¥¿¦b³s½u"
+    IDS_FAILED              "¥¢±Ñ"
+    IDS_ERR_BADSERVERREPLY  "¦¬¨ì·lÃaªº©ÎµL®Äªº¦øªA¾¹µn³°ÅTÀ³"
+    IDS_NEWCLIENTID         "·sªº«È¤áID¬° %u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_REHASH          "Äµ§i:%s¥i¯à¤w¸g·lÃa,¥¿¦b­«·sHash¤w§¹¦¨ªºÀÉ®×³¡¤À"
+    IDS_SKIN_PROF           "¥~Æ[°t¸m"
+    IDS_ERR_PART_FNF        "¥¼§ä¨ì.partÀÉ®×"
+    IDS_KADOPEN             "¥´¶}"
+    IDS_ERR_SAVEMET         "«O¦s.partÀÉ®×®É¥X¿ù:%s(%s)"
+    IDS_ERR_FOUNDCORRUPTION "µo²{·lÃaªºÀÉ®×¬q(%i)¦b%s¤¤"
+    IDS_HASHINGDONE         "­«·sHash %s¤w§¹¦¨,ÀÉ®×À³¸Ó¬O¦nªº"
+    IDS_ERR_PARTCORRUPT     "¤U¸üªºÀÉ®×¬q %i ¤w¸g·lÃa :( (%s)"
+    IDS_ICHWORKED           "I.C.H:¤w«ì´_·lÃaªºÀÉ®×¬q%i (%s),«ì´_¤F: %s"
+    IDS_ERR_OUTOFSPACE      "µw½LªÅ¶¡¤£¨¬,µLªk¤U¸ü""%s""!"
+    IDS_SE                  "¨Ó·½¥æ´«"
+    IDS_ERR_WRITEERROR      "¼g¤JÀÉ®×%s®É,µo¥Í·N¥~ÀÉ®×¿ù»~:%s"
+    IDS_ERR_COMPLETIONFAILED 
+                            "§¹¦¨ÀÉ®×%s®É,µo¥Í·N¥~ÀÉ®×¿ù»~.ÀÉ®×¤w¼È°±,­«·s±Ò°ÊeMule¥H¹Á¸Õ¦A¦¸§¹¦¨."
+    IDS_ERR_DELETEFAILED    "µLªk§R°£ÀÉ®×%s,½Ð¤â°Ê§R°£."
+    IDS_DOWNLOADDONE        "§¹¦¨¤U¸ü:%s :-)"
+    IDS_ERR_DELETE          "µLªk§R°£%s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SHAREDFOLDERS       "¤À¨É¥Ø¿ý"
+    IDS_VIEW1               "¬d¬Ý "
+    IDS_VIEW2               "(¥¼¤À¨É)"
+    IDS_PRIOLOW             "§C"
+    IDS_PRIONORMAL          "´¶³q"
+    IDS_PRIOHIGH            "°ª"
+    IDS_DOWNLOADMENUTITLE   "¤U¸ü"
+    IDS_PRIORITY            "Àu¥ý¯Å"
+    IDS_NEWSERVERS          "¦¬¨ì %d ­Ó·s¦øªA¾¹"
+    IDS_DL_STOP             "°±¤î(&S)"
+    IDS_DL_PAUSE            "¼È°±(&P)"
+    IDS_DL_RESUME           "Ä~Äò(&R)"
+    IDS_DL_OPEN             "¥´¶}ÀÉ®×(&O)"
+    IDS_DL_INFO             "Åã¥ÜÀÉ®×¸Ô±¡(&D)"
+    IDS_DL_CLEAR            "²¾°£¤w§¹¦¨ªºÀÉ®×(&L)"
+    IDS_DL_LINK1            "½Æ»sED2K³sµ²¨ì°Å¶KªO(&L)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DL_LINK2            "½Æ»sED2K³sµ²(&HTML)¨ì°Å¶KªO"
+    IDS_SHOWDETAILS         "Åã¥Ü¸Ô±¡(&D)"
+    IDS_SEND_MSG            "µo°e°T®§(&M)"
+    IDS_ASKING              "¥¿¦b½Ð¨D"
+    IDS_CONNVIASERVER       "³q¹L¦øªA¾¹³s½u"
+    IDS_ONQUEUE             "±Æ¶¤¤¤"
+    IDS_TRANSFERRING        "¶Ç¿é¤¤"
+    IDS_RECHASHSET          "¥¿¦bÀò¨úHashset"
+    IDS_NONEEDEDPARTS       "µL»Ý­n³¡¤À"
+    IDS_NOCONNECTLOW2LOW    "µLªk±qLowID³s½u¨ìLowID"
+    IDS_UNKNOWN             "¥¼ª¾"
+    IDS_ASKED4ANOTHERFILE   "¤w½Ð¨D¥t¤@­ÓÀÉ®×"
+    IDS_Q_CANCELDL          "½T©w­n¨ú®ø¨Ã§R°£³o¨ÇÀÉ®×¶Ü?\n"
+    IDS_Q_CANCELDL2         "½T©w­n¨ú®ø¨Ã§R°£¦¹ÀÉ®×¶Ü?\n"
+    IDS_DL_FILENAME         "ÀÉ®×¦WºÙ"
+    IDS_DL_SIZE             "¤j¤p"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DL_TRANSF           "¤w¶Ç¿é"
+    IDS_DL_SPEED            "³t«×"
+    IDS_DL_PROGRESS         "¶iµ{"
+    IDS_DL_SOURCES          "¨Ó·½"
+    IDS_ERR_BADSERVERLISTRECEIVED "¦¬¨ìµL®Äªº¦øªA¾¹¦Cªí¼Æ¾Ú¥]"
+    IDS_STATUS              "ª¬ºA"
+    IDS_DL_REMAINS          "³Ñ¾l"
+    IDS_UPDATEFROM          "±q¦¹URL§ó·s: (filter.dat ©ÎªÌ PeerGuardian ®æ¦¡)"
+    IDS_QL_USERNAME         "¨Ï¥ÎªÌ¦WºÙ"
+    IDS_LOADURL             "¥[¸ü"
+    IDS_DELETEAFTERALLOC    "ÀÉ®× '%s' ¥¿¦b¤À°tºÏºÐªÅ¶¡,§¹¦¨¤§«á¦¹ÀÉ®×·|³Q§R°£."
+    IDS_QL_RATING           "µû¤À"
+    IDS_CONNECTINGTO        "¥¿¦b³s½u¨ì%s(%s:%i)..."
+    IDS_CLIENTS             "«È¤á"
+    IDS_SEARCH_ANY          "¥ô·N"
+    IDS_SEARCH_AUDIO        "­µÀW"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SEARCH_PICS         "¹Ï¹³"
+    IDS_SEARCH_PRG          "µ{§Ç"
+    IDS_SEARCH_VIDEO        "µøÀW"
+    IDS_SEARCH_CDIMG        "CDÃè¹³"
+    IDS_SEARCH_ARC          "À£ÁY¥]"
+    IDS_ERR_INVALIDLINK     "³o¬O¤@­ÓµL®ÄªºED2K³sµ²(%s)"
+    IDS_ERR_LINKERROR       "µL®Ä³sµ²:%s"
+    IDS_ERR_NOTCONNECTED    "¥¼³s½u¨ì¦øªA¾¹!"
+    IDS_REMOVETHIS          "§R°£©Ò¿ï¦øªA¾¹"
+    IDS_REMOVEALL           "§R°£©Ò¦³¦øªA¾¹"
+    IDS_SRV_ADDR            "½Ð¿é¤J¦øªA¾¹¦a§}"
+    IDS_SRV_PORT            "¤£§¹¾ãªº¦øªA¾¹ºÝ¤f:½Ð¿é¤J¦øªA¾¹ºÝ¤f"
+    IDS_SRV_NOTADDED        "¦øªA¾¹¥¼³Q²K¥[!"
+    IDS_SRV_NOURLAV         "µL¥i¥ÎURL"
+    IDS_INVALIDURL          "µL®ÄURL"
+    IDS_ERR_FAILEDDOWNLOADMET "µLªk±q%s¤U¸ü¦øªA¾¹¦Cªí"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PERMISSION          "Åv­­"
+    IDS_SHAREDFILES         "¤À¨ÉÀÉ®×"
+    IDS_PRIOVERYLOW         "«Ü§C"
+    IDS_PRIORELEASE         "µo§G"
+    IDS_TRAYDLG_SPEED       "eMule ³t«×"
+    IDS_FSTATUS_FRIENDSONLY "¶È¦n¤Í"
+    IDS_VIAPASSIVE          "³q¹L³Q°Ê"
+    IDS_ERR_RENAMESF        "­«©R¦W¥¢±Ñ\r\n    ""%s""\r\n¨ì\r\n    ""%s""\r\n\r\n%s"
+    IDS_AVAILABLE           "¥i¥Î"
+    IDS_FSTAT_TRANSFER      "¶Ç¿é"
+    IDS_FSTAT_CONNECTION    "³s½u"
+    IDS_FSTAT_SERVERS       "¦øªA¾¹"
+    IDS_FSTAT_WAITING       "µ¥«Ý ..."
+    IDS_TIME                "®É¶¡"
+    IDS_STATS_DDATA         "¤w¤U¸ü:%s"
+    IDS_STATS_UDATA         "¤w¤W¶Ç:%s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_AVGDL         "¥­§¡¤U¸ü³t«×:%s"
+    IDS_STATS_AVGUL         "¥­§¡¤W¶Ç³t«×:%s"
+    IDS_STATS_FOUNDSRC      "§ä¨ì¨Ó·½:%i"
+    IDS_STATS_ACTDL         "·í«e¤U¸ü¼Æ(ÀÉ®×¬q):%i"
+    IDS_STATS_ACTUL         "·í«e¤W¶Ç¼Æ:%i"
+    IDS_STATS_WAITINGUSERS  "µ¥«Ý¤W¶Ç:%i"
+    IDS_STATS_RECONNECTS    "­«·s³s½u:%i"
+    IDS_STATS_UNKNOWNCLIENT "¥¼ª¾:%i"
+    IDS_STATS_TOTAL         "Á`¦@:%i"
+    IDS_DISABLED            "¤w¸T¥Î"
+    IDS_STOPPED             "¤w°±¤î"
+    IDS_STATS_UPDATELABEL   "§ó·s¶¡¹j:%i¬í"
+    IDS_ASKEDFAF            "\n¤w½Ð¨D¥t¤@­ÓÀÉ®×"
+    IDS_WAITED              "¤wµ¥«Ý"
+    IDS_ERR_LOADCREDITFILE  "¥[¸üCreditfile¥¢±Ñ,·sÀÉ®×±N³Q³Ð«Ø"
+    IDS_ERR_CREDITFILEOLD   "Creditfile¤w¹L´Á¨Ã±N³Q´À´«"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CREDITFILELOADED    "Creditfile¤w¥[¸ü,%u­Ó«È¤á¤wª¾"
+    IDS_CREDITFILECORRUPT   "¿ù»~:Creditfile¤w·lÃa¨Ã±N³Q´À´«!"
+    IDS_ERR_CREDITFILEREAD  "Åª¨úCreditfile®Éµo¥Í·N¥~ÀÉ®×¿ù»~:%s"
+    IDS_ERR_FAILED_CREDITSAVE "«O¦sCreditfile¥¢±Ñ"
+    IDS_NOPARTSFOUND        "¨S¦³µo²{.partÀÉ®×"
+    IDS_FOUNDPARTS          "µo²{ %i­Ó.partÀÉ®×"
+    IDS_NEWDOWNLOAD         "·s¼W¤U¸ü:%s"
+    IDS_ERR_ALREADY_DOWNLOADING "¤w¦s¦b¤U¸ü:%s"
+    IDS_ERR_ALREADY_DOWNLOADED "¤w¤U¸ü¤FÀÉ®×:%s"
+    IDS_ERR_SERVERMET_BAD   "¿ù»~:ÀÉ®×known.met·lÃa,µLªk¥[¸ü¤wª¾ÀÉ®×"
+    IDS_ERR_SERVERMET_UNKNOWN 
+                            "Åª¨úknown.met®Éµo¥Í¥¼ª¾¿ù»~: %s,µLªk¥[¸ü¤wª¾ÀÉ®×"
+    IDS_ERR_CONNECTIONERROR "³s½u¨ì%s (%s:%i): %s®É¥X¿ù"
+    IDS_ERR_SOCKET          "¦øªA¾¹Socket¿ù»~:%s (%s:%i):%s"
+    IDS_SHAREDFOUND         "µo²{ %i­Ó¤wª¾ªº¤À¨ÉÀÉ®×"
+    IDS_SHAREDFOUNDHASHING  "µo²{ %i­Ó¤wª¾ªº¤À¨ÉÀÉ®×,¥¿¦bHashing %i­Ó·sÀÉ®×"
+    IDS_ERR_INCOMPLETEBLOCK "½Ð¨D¥¼§¹¦¨ªºÀÉ®×¶ô"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VERSIONCHECK        "ÀË¬dª©¥»(&V)"
+    IDS_VISITVERSIONCHECK   "\n\n­n³X°Ý°T®§­¶­±¶Ü?"
+    IDS_PW_VIDEOPLAYER      "µøÀW¼½©ñ¾¹"
+    IDS_VIDEOBACKUP         "¹wÄý®É«Ø¥ß³Æ¥÷"
+    IDS_MYINFO              "§Úªº°T®§"
+    IDS_ID                  "ID"
+    IDS_IDLOW               "LowID"
+    IDS_IDHIGH              "HighID"
+    IDS_UPSTATUS            "¤wÀò±o³¡¤À"
+    IDS_TOVERHEAD           "Á`¶}¾P(¥]):%s(%s)"
+    IDS_FROVERHEAD          "ÀÉ®×½Ð¨D¶}¾P(¥]):%s(%s)"
+    IDS_SSOVERHEAD          "¨Ó·½¥æ´«¶}¾P(¥]):%s(%s)"
+    IDS_SOVERHEAD           "¦øªA¾¹¶}¾P(¥]):%s(%s)"
+    IDS_ERR_FILECOMPLETIONTHREAD "³Ð«ØÀÉ®×§¹¦¨½uµ{¥¢±Ñ"
+    IDS_FILEBUFFERSIZE      "ÀÉ®×½w¦s¤j¤p"
+    IDS_QUEUESIZE           "¶¤¦C¤j¤p"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DAYS2               "¤Ñ"
+    IDS_ERR_MAKEBAKCREDITFILE "³Æ¥÷Creditfile¥¢±Ñ"
+    IDS_COMMENT             "µù¸Ñ"
+    IDS_IPFILTERED          "¤w¹LÂoIP:%s(%s)"
+    IDS_DL_TRANSFCOMPL      "¤w§¹¦¨"
+    IDS_DL_ACTIVE_TIME      "¤U¸ü®É¶¡"
+    IDS_STATS_FILTEREDCLIENTS "¤w¹LÂo:%i"
+    IDS_FILTERLABEL         "¹LÂo¥]§t¥H¤U¤º®eªº°T®§:(¤À¹j²Å¡y|  )"
+    IDS_ERR_LARGEREQBLOCK   "«È¤áºÝ½Ð¨D¤F¤Ó¤jªºÀÉ®×¶ô"
+    IDS_SHOWRATEONTITLE     "¦b¼ÐÃDÄæ¤¤Åã¥Ü¶Ç¿é¤ñ¨Ò"
+    IDS_TBN_NOMESSAGEHISTORY "µL¾ú¥v°T®§!"
+    IDS_PW_DAP              "·s¼W¤U¸ü®É¨Ï¥Î¦Û°ÊÀu¥ý¯Å"
+    IDS_FD_LASTCHANGE       "¤W¦¸±µ¦¬:"
+    IDS_STATS_RUNTIME       "°õ¦æ®É¶¡"
+    IDS_ALL                 "¥þ³¡"
+    IDS_CAT_ADD             "·s¼W¤ÀÃþ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CAT_EDIT            "½s¿è¤ÀÃþ"
+    IDS_CAT_REMOVE          "§R°£¤ÀÃþ"
+    IDS_CAT                 "¤ÀÃþ"
+    IDS_TITLE               "¼ÐÃD"
+    IDS_COLOR               "ÃC¦â"
+    IDS_DEFAULT             "Àq»{­È"
+    IDS_PW_DISPLAY          "Åã¥Ü"
+    IDS_INDICATERATINGS     "¥Î¹Ï¼ÐÅã¥Ü¨ã¦³µù¸Ñ/µû¤Àªº¤U¸ü"
+    IDS_ALLOTHERS           "©Ò¦³¨ä¥¦"
+    IDS_TOCAT               "«ü©w¨ì¤ÀÃþ"
+    IDS_CAT_UNASSIGN        "(¥¼«ü©w)"
+    IDS_ADDDOWNLOADSFROMCB  "±N³o¨ÇED2KÀÉ®×³sµ²²K¥[¨ì¤U¸ü¦Cªí?\n"
+    IDS_PF_WATCHCB          "ºÊµø°Å¶KªO¸ÌªºED2KÀÉ®×³sµ²"
+    IDS_SECURITY            "¦w¥þ"
+    IDS_IPFILTERLOADED      "¤w¥[¸ü%i±øIP¹LÂo³W«h"
+    IDS_IPFILTER            "IP¹LÂo"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_OPEN            "µLªk¥´¶}½Ð¨DªºÀÉ®×"
+    IDS_ERR_CLIENTERRORED   "«È¤á '%s' ³Ð«Ø¥] (%s) ®É²£¥Í¿ù»~ - ¥¿¦bÂ_¶}¸Ó¥Î¤á"
+    IDS_ERR_REQ_FNF         "µLªk§ä¨ì½Ð¨DªºÀÉ®×"
+    IDS_DESC                "´y­z:%s"
+    IDS_PORT                "ºÝ¤f"
+    IDS_ERR_NOVALIDSERVERSFOUND "¦b¦øªA¾¹¦Cªí¤¤¨S¦³µo²{¦³®Äªº¥i³s½u¦øªA¾¹"
+    IDS_CONNECTEDTOREQ      "³s½u¨ì%s(%s:%i),µo°eµn³°½Ð¨D"
+    IDS_ERR_FATAL           "¸Õ¹Ï³s½u®Éµo¥Í­P©R¿ù»~.Internet³s½u¥i¯à¤wÂ_¶}"
+    IDS_ERR_LOSTC           "¥¢¥h»P%s(%s:%i)ªº³s½u"
+    IDS_ERR_DEAD            "%s (%s:%i)¥i¯à¬OµLÅTÀ³"
+    IDS_ERR_FULL            "%s (%s:%i)¥i¯à¨ì¹F³Ì¤j«È¤á³s½u¼Æ¤F"
+    IDS_CONNECTEDTO         "³s½u«Ø¥ß©ó:%s"
+    IDS_DL_PREVIEW          "¹wÄý(&V)"
+    IDS_VIEWQUEUE           "Åã¥Ü¶¤¦C"
+    IDS_TW_UPLOADS          "¤W¶Ç"
+    IDS_TW_DOWNLOADS        "¤U¸ü"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TW_QUEUE            "«È¤á±Æ¶¤¤¤:"
+    IDS_SW_SEARCHBOX        "·j´M"
+    IDS_SW_NAME             "¦W¦r"
+    IDS_SW_GLOBAL           "¥þ§½·j´M(&G)"
+    IDS_SW_DIRECTDOWNLOAD   "Öß¶K ED2K ³sµ²"
+    IDS_SW_LINK             "ÀÉ®×³sµ²"
+    IDS_SW_START            "¶}©l"
+    IDS_SCHEDULER           "­p¹º¥ô°È"
+    IDS_IRC                 "&IRC"
+    IDS_SW_RESULT           "·j´Mµ²ªG"
+    IDS_SW_DOWNLOAD         "¤U¸ü©Ò¿ïÀÉ®×"
+    IDS_SV_SERVERLIST       "¦øªA¾¹¦Cªí"
+    IDS_SV_SERVERINFO       "¦øªA¾¹°T®§"
+    IDS_SV_LOG              "¤é»x"
+    IDS_SV_NEWSERVER        "·s¦øªA¾¹"
+    IDS_SV_ADDRESS          "IP©Î°ì¦W¦a§}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SV_PORT             "ºÝ¤f"
+    IDS_SV_ADD              "¥[¤J¦Cªí"
+    IDS_SV_MET              "±qURL§ó·sserver.met"
+    IDS_SV_UPDATE           "§ó·s"
+    IDS_SF_FILES            "¤À¨ÉÀÉ®×"
+    IDS_SF_STATISTICS       "²Î­p°T®§"
+    IDS_SF_RELOAD           "¨ê·s"
+    IDS_SF_CURRENT          "¥»¦¸·|¸Ü"
+    IDS_SF_TOTAL            "Á`¦@"
+    IDS_SF_TRANS            "¤w¶Ç¿é:"
+    IDS_SF_ACCEPTED         "±µ¨üªº¤W¶Ç:"
+    IDS_SF_REQUESTED        "½Ð¨D¼Æ:"
+    IDS_ST_DOWNLOAD         "¤U¸ü³t«×"
+    IDS_ST_UPLOAD           "¤W¶Ç³t«×"
+    IDS_ST_CURRENT          "·í«e"
+    IDS_ST_SESSION          "¥»¦¸·|¸Ü¥­§¡"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WS_PASS             "±K½X"
+    IDS_WS_ERR_LOADTEMPLATE "µLªk¥[¸ü¼ÒªO:¥Î§ó·sª©¥»´À´«ÀÉ®×%s!"
+    IDS_WEB_CONLIMITS       "³s½u­­¨î"
+    IDS_INFLST_USER_TOTALDOWNLOAD "Á`¦@¤w¤U¸ü"
+    IDS_INFLST_USER_TOTALUPLOAD "Á`¦@¤w¤W¶Ç"
+    IDS_SPEED_LIMITS        "³t«×­­¨î"
+    IDS_CAPACITY_LIMITS     "±a¼e­­¨î"
+    IDS_ADMIN               "ºÞ²z­û"
+    IDS_ACCESSDENIED        "³X°Ý³Q©Úµ´!"
+    IDS_WEB_LOWUSER         "«È¤H"
+    IDS_WEB_ERR_CANTLOAD    "µLªk¥[¸ü¼ÒªO:¤£¯à¥´¶}ÀÉ®×%s"
+    IDS_GLOBALSEARCH        "¥þ§½(¦øªA¾¹)"
+    IDS_METHOD              "¤èªk"
+    IDS_UNDO                "ºM¾P"
+    IDS_DAYLY               "¨C¤é"
+    IDS_DAY_MO_FR           "¶g¤@-¶g¤­"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DAY_SA_SO           "¶g¤»-¶g¤é"
+    IDS_MO                  "¬P´Á¤@"
+    IDS_DI                  "¬P´Á¤G"
+    IDS_MI                  "¬P´Á¤T"
+    IDS_DO                  "¬P´Á¥|"
+    IDS_FR                  "¬P´Á¤­"
+    IDS_SA                  "¬P´Á¤»"
+    IDS_SO                  "¬P´Á¤é"
+    IDS_WEB_ADMINLOGIN      "Web¦øªA¾¹-ºÞ²z­û-µn³°"
+    IDS_WEB_GUESTLOGIN      "Web¦øªA¾¹-«È¤H-µn³°"
+    IDS_WEB_SESSIONEND      "Web¦øªA¾¹:µù¾P"
+    IDS_DETAILS             "¸Ô²Ó¸ê®Æ"
+    IDS_ACTION              "°Ê§@"
+    IDS_REMOVE              "§R°£"
+    IDS_NEW                 "·s«Ø"
+    IDS_WEB_BADLOGINATTEMPT "Web¦øªA¾¹:µn³°¹Á¸Õ¥¢±Ñ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ST_ACTIVED          "·í«e¤U¸ü"
+    IDS_ST_ACTIVEU          "·í«e¤W¶Ç"
+    IDS_CW_MESSAGES         "°T®§"
+    IDS_CW_FRIENDS          "¦n¤Í"
+    IDS_CW_SEND             "µo°e"
+    IDS_CW_CLOSE            "Ãö³¬"
+    IDS_PW_GENERAL          "±`³W"
+    IDS_PW_DIR              "¸ê®Æ§¨"
+    IDS_PW_NICK             "¼ÊºÙ"
+    IDS_PW_INCOMING         "¤U¸üÀÉ®×"
+    IDS_PW_TEMP             "Á{®ÉÀÉ®×"
+    IDS_PW_BROWSE           "ÂsÄý"
+    IDS_PW_SHARED           "¤À¨É¥Ø¿ý(«öµÛCTRLÁäÂIÀ»¥H¿ï¾Ü¤l¥Ø¿ý)"
+    IDS_PW_CONNECTION       "³s½u"
+    IDS_PW_DOWNL            "¤U¸ü­­¨î"
+    IDS_PW_UPL              "¤W¶Ç­­¨î"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_MAXC             "³Ì¤j³s½u¼Æ"
+    IDS_PW_CLIENTPORT       "«È¤áºÝ¤f"
+    IDS_PW_AUTOCON          "±Ò°Ê®É¦Û°Ê³s½u"
+    IDS_PW_RECON            "Â_¶}®É¦Û°Ê­«·s³s½u"
+    IDS_PW_SERVER           "¦øªA¾¹"
+    IDS_PW_RDEAD            "²¾°£µLÅTÀ³¦øªA¾¹¦b"
+    IDS_PW_RETRIES          "¦¸­«¸Õ«á"
+    IDS_PW_SCORE            "±Ò¥ÎÀu¥ý¯Å¨t²Î"
+    IDS_PW_USC              "³s½u¨ì¦øªA¾¹®É§ó·s¦øªA¾¹¦Cªí"
+    IDS_PW_UCC              "³s½u¨ì¨ä¥L«È¤á®É§ó·s¦øªA¾¹¦Cªí"
+    IDS_PW_FILTER           "¹LÂo¤ººôIPªº¦øªA¾¹©M«È¤á"
+    IDS_PW_USS              "±Ò°Ê®É¦Û°Ê§ó·s¦øªA¾¹¦Cªí"
+    IDS_PW_MISC             "Âø¶µ"
+    IDS_PW_TRAY             "³Ì¤p¤Æ¬°¨t²Î¦«½L¹Ï¼Ð"
+    IDS_PW_BEEP             "¥X¿ù®É¹Ê¹Ê¥s"
+    IDS_PW_PROMPT           "°h¥X®É´£¥Ü½T»{"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_SPLASH           "Åã¥ÜÅwªïµ¡¤f"
+    IDS_PW_DBLCLICK         "ÂùÀ»®i¶}¤U¸ü¦Cªí"
+    IDS_PW_TOOL             "¤Í¦n´£¥Ü©µ®É(¬í)"
+    IDS_PW_FRONT            "ÂIÀ»³sµ²®É¤Á´«¨ì«e¥x"
+    IDS_PW_LANG             "»y¨¥"
+    IDS_PW_FILES            "ÀÉ®×"
+    IDS_PW_SHARE            "¬d¬Ý§Úªº¤À¨ÉÀÉ®×"
+    IDS_PW_EVER             "©Ò¦³¤H"
+    IDS_PW_FRIENDS          "¦n¤Í"
+    IDS_PW_NOONE            "¨S¦³¤H"
+    IDS_PW_RESET            "²M°£"
+    IDS_PW_APPLY            "À³¥Î"
+    IDS_EM_TRANS            "¶Ç¿é(&T)"
+    IDS_EM_SERVER           "¦øªA¾¹(&V)"
+    IDS_EM_SEARCH           "·j´M(&S)"
+    IDS_EM_FILES            "¤À¨ÉÀÉ®×(&F)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EM_MESSAGES         "°T®§(&M)"
+    IDS_EM_STATISTIC        "²Î­p°T®§(&A)"
+    IDS_EM_PREFS            "¿ï¶µ(&O)"
+    IDS_MB_LANGUAGEINFO     "Àq»{»y¨¥³Q¿ï¾Ü,§A¥i¥H¦b¿ï¶µ¼ÐÅÒ¤¤§ó§ï»y¨¥³]¸m."
+    IDS_FD_GENERAL          "±`³W"
+    IDS_FD_MET              "part.met ÀÉ®×:"
+    IDS_FD_HASH             "Hash:"
+    IDS_FD_SIZE             "¤j¤p:"
+    IDS_FD_TRANSFER         "¶Ç¿é"
+    IDS_FD_PARTS            "ÀÉ®×¬q"
+    IDS_FD_TRANS            "¤w¶Ç¿é:"
+    IDS_FD_DATARATE         "¼Æ¾Ú¶Ç¿é²v:"
+    IDS_FD_COMPSIZE         "¤w§¹¦¨¤j¤p:"
+    IDS_FD_CLOSE            "Ãö³¬"
+    IDS_FD_TITLE            "ÀÉ®×¸Ô±¡"
+    IDS_CD_GENERAL          "±`³W"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CD_UNAME            "¨Ï¥ÎªÌ¦WºÙ:"
+    IDS_CD_UHASH            "¥Î¤áHash:"
+    IDS_CD_CSOFT            "«È¤áºÝ³n¥ó"
+    IDS_CD_UIP              "IP¦a§}:"
+    IDS_CD_SIP              "¦øªA¾¹IP:"
+    IDS_CD_VERSION          "«È¤áºÝª©¥»:"
+    IDS_CD_SNAME            "¦øªA¾¹¦W:"
+    IDS_CD_CDOWN            "·í«e¤U¸ü¤¤:"
+    IDS_CD_DOWN             "¤w¤U¸ü(¥»¦¸·|¸Ü):"
+    IDS_CD_ADOWN            "¥­§¡¤U¸ü³t«×:"
+    IDS_CD_TDOWN            "Á`¦@¤U¸ü:"
+    IDS_CD_UP               "¤w¤W¶Ç(¥»¦¸·|¸Ü):"
+    IDS_CD_AUP              "¥­§¡¤W¶Ç³t«×:"
+    IDS_CD_TUP              "Á`¦@¤W¶Ç:"
+    IDS_CD_TRANS            "¶Ç¿é"
+    IDS_CD_SCORES           "±o¤À"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CD_MOD              "¤U¸ü/¤W¶Ç¤ñ¨Ò½Õ¾ã:"
+    IDS_CD_RATING           "µû¤À(Á`¦@):"
+    IDS_CD_USCORE           "¤W¶Ç¶¤¦C±o¤À:"
+    IDS_CD_TITLE            "«È¤á¸Ô±¡"
+    IDS_EMULEW              "ÂIÀ»"
+    IDS_EMULEW2             "ÀË¬d¬O§_¦³§ó·sª©¥»"
+    IDS_EMULEW3             "³o¸Ì"
+    IDS_PW_MAXSOURCES       "¨C­ÓÀÉ®×³Ì¤j¨Ó·½¼Æ"
+    IDS_SHAREDFILESCOUNT    "¤À¨ÉÀÉ®×¼Æ:%i"
+    IDS_SF_SIZE             "¤À¨ÉÀÉ®×Á`¤j¤p:%s"
+    IDS_ERR_BADPORT         "«DªkºÝ¤f¸¹"
+    IDS_ERR_NOHELLO         "³s½u©|¥¼§¹¥þ«Ø¥ß®É´N¶}©l¸ß°Ý"
+    IDS_ERR_INVALIDPACKAGE  "¦¬¨ìµL®Ä©Î·lÃaªº¼Æ¾Ú¥]"
+    IDS_ERR_CLIENTERROR     "«È¤á'%s'(IP:%s)¾É­P¤@­Ó¿ù»~:%s.¥¿¦bÂ_¶}¸Ó«È¤á!"
+    IDS_ERR_BADSIZE         "µL®ÄÀÉ®×¤j¤p(OP_QUEUERANKING)"
+    IDS_ERR_NOTAFILELINK    "¤£¬O¤@­ÓÀÉ®×³sµ²"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_CREATEPARTFILE  "¿ù»~:µLªk³Ð«ØPartfile"
+    IDS_CHAT_START          "*** ¹ï¸Ü¶}©l:"
+    IDS_FILEPRIO            "ÀÉ®×Àu¥ý¯Å"
+    IDS_SCORE               "±o¤À"
+    IDS_ASKED               "¤w½Ð¨D"
+    IDS_LASTSEEN            "¤W¦¸³s½u"
+    IDS_BANNED              "³Qªý¤î"
+    IDS_UUSERS              "¥Î¤á¼Æ"
+    IDS_UFAILED             "¥¢±Ñ"
+    IDS_OPENFILE            "¥´¶}ÀÉ®×(&O)"
+    IDS_DATE                "¤é´Á"
+    IDS_PARTINFOS           "PartÀÉ®×¦WºÙ:"
+    IDS_PARTINFOS2          "¤U¸ü¤¤(±q%d­Ó¨Ó·½)"
+    IDS_USERID              "¥Î¤áID"
+    IDS_CLIENT              "«È¤á"
+    IDS_SERVER              "¦øªA¾¹"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SOURCEINFO          "¤w½Ð¨D¼Æ:%d¦¸ - ¥i¥ÎÀÉ®×¬q¼Æ:%d"
+    IDS_CLIENTSOURCENAME    "\n¥Î¤áªºÀÉ®×¦WºÙ:"
+    IDS_USERINFO            "¼ÊºÙ:%s\n"
+    IDS_FILESTATS_SESSION   "¥»¦¸·|¸Üªº²Î­p°T®§:±µ¨ü %d ¦¸½Ð¨D(Á`¦@ %d ¦¸),¶Ç¿é %s ¦r¸`\n"
+    IDS_FILESTATS_TOTAL     "¥þ³¡²Î­p°T®§:±µ¨ü %d ¦¸½Ð¨D(Á`¦@ %d ¦¸),¶Ç¿é %s ¦r¸`"
+    IDS_REQ_UNKNOWNFILE     "½Ð¨D¤F¥¼ª¾ÀÉ®×"
+    IDS_SF_AVERAGESIZE      "¥­§¡ÀÉ®×¤j¤p:%s"
+    IDS_SF_REQUESTS         "½Ð¨D¼Æ"
+    IDS_SF_ACCEPTS          "±µ¨üªº½Ð¨D¼Æ"
+    IDS_SF_TRANSFERRED      "¤w¶Ç¿éªº¼Æ¾Ú"
+    IDS_REMOVESEARCHSTRING  "Ãö³¬¦¹¦¸·j´Mµ²ªG"
+    IDS_REMOVESELECTED      "²¾°£©Ò¿ï·j´Mµ²ªG"
+    IDS_REMOVEALLSEARCH     "²¾°£©Ò¦³·j´Mµ²ªG"
+    IDS_ENTERQUEUE          "¶i¤J¶¤¦C"
+    IDS_SF_FAIL             "¥¢®Äªº¦øªA¾¹"
+    IDS_SF_WUSER            "¦³®Ä¦øªA¾¹¥Î¤á¼Æ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SF_WFILE            "¦³®Ä¦øªA¾¹ÀÉ®×¼Æ"
+    IDS_SF_USER             "Á`¥Î¤á¼Æ"
+    IDS_SF_FILE             "Á`ÀÉ®×¼Æ"
+    IDS_UPLOADTIME          "¤W¶Ç®É¶¡"
+    IDS_LASTSEENCOMPL       "¤W¦¸§¹¦¨:"
+    IDS_YES                 "¬O"
+    IDS_NO                  "§_"
+    IDS_UNBAN               "¸Ñ°£ªý¤î"
+    IDS_SF_WORKING          "¦³®Ä¦øªA¾¹"
+    IDS_ADDTOSTATIC         "²K¥[¨ìÀRºA¦øªA¾¹¦Cªí"
+    IDS_ADDED2SSF           "¤w²K¥[¨ìÀRºA¦øªA¾¹¦Cªí"
+    IDS_STATICSERVER        "ÀRºA"
+    IDS_ERROR_SSF           "µLªk¥´¶}'staticservers.dat'ÀÉ®×"
+    IDS_SF_ACTIVECON        "·í«e³s½u¼Æ(¦ô­p­È)"
+    IDS_SF_MAXCONLIMITREACHED "¨ì¹F³Ì¤j³s½u¼Æ"
+    IDS_SF_AVGCON           "¥­§¡³s½u¼Æ(¦ô­p­È)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SF_PEAKCON          "³s½u¼Æ®p­È(¦ô­p­È)"
+    IDS_ST_ACTIVEC          "·í«e³s½u¼Æ"
+    IDS_NETWORK             "ºô¸ô"
+    IDS_SF_DELCOUNT         "¤w§R°£ªº¦øªA¾¹"
+    IDS_QUEUEFULL           "¶¤¦Cº¡¤F"
+    IDS_AVG                 "¥­§¡"
+    IDS_BYTES               "¦r¸`"
+    IDS_KBYTES              "KB"
+    IDS_MBYTES              "MB"
+    IDS_GBYTES              "GB"
+    IDS_TBYTES              "TB"
+    IDS_SECS                "¬í"
+    IDS_MINS                "¤ÀÄÁ"
+    IDS_HOURS               "¤p®É"
+    IDS_DAYS                "¤Ñ"
+    IDS_ED2KLINKFIX         "ÃöÁpED2K³sµ²"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RECONNECT           "%d¬í¤º±N·|­«¸Õ¦Û°Ê³s½u¨ì¦øªA¾¹"
+    IDS_SERVERADDED         "¦øªA¾¹¤w³Q²K¥[:%s"
+    IDS_IRC_IGNOREJOINMESSAGE "©¿²¤¡y¥[¤J°T®§  °T®§"
+    IDS_STATS_SUCCUPCOUNT   "Á`¦¨¥\¤W¶Ç¦¸¼Æ:%i (%.2f%%)"
+    IDS_IRC_IGNOREPARTMESSAGE "©¿²¤¡yPart°T®§  °T®§"
+    IDS_STATS_FAILUPCOUNT   "Á`¥¢±Ñ¤W¶Ç¦¸¼Æ:%i (%.2f%%)"
+    IDS_STATS_AVEUPTIME     "¥­§¡¤W¶Ç®É¶¡:%s"
+    IDS_SEARCHMINSIZE       "³Ì¤pÀÉ®×(¬q)¤j¤p(MB)"
+    IDS_SEARCHMAXSIZE       "³Ì¤jÀÉ®×(¬q)¤j¤p(MB)"
+    IDS_PREF_ONLINESIG      "±Ò¥Î¦b½uÃ±¦W"
+    IDS_ERROR_SAVEFILE      "«O¦s¥¢±Ñ"
+    IDS_REQ_SHAREDFILES     "¥Î¤á%s(%u)½Ð¨D¤F§Aªº¤À¨ÉÀÉ®×¦Cªí->%s"
+    IDS_ACCEPTED            "±µ¨ü"
+    IDS_DENIED              "©Úµ´"
+    IDS_PW_CON_DOWNLBL      "¤U¸ü"
+    IDS_PW_CON_UPLBL        "¤W¶Ç"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_AUTOCONNECTSTATICONLY "¶È¦Û°Ê³s½u¨ìÀRºA¦øªA¾¹"
+    IDS_PW_CON_LIMITFRM     "¤W­­"
+    IDS_STATS_AVGLABEL      "¹Ï§Î¥­§¡®É¶¡¶¡¹j: %i ¤ÀÄÁ"
+    IDS_GRAPHS              "¹Ï§Î"
+    IDS_STREE               "²Î­p°T®§¾ð"
+    IDS_IRC_IGNOREQUITMESSAGE "©¿²¤¡y°h¥X°T®§  °T®§"
+    IDS_STATSSETUPINFO      "³]¸m²Î­p°T®§Åã¥Ü"
+    IDS_IRC_SOUNDEVENTS     "¼½©ñÁn­µ¨Æ¥ó"
+    IDS_HARDLIMIT           "µw©Ê­­¨î"
+    IDS_COL_MORECOLORS      "§ó¦h ..."
+    IDS_TOOMANYCONNS        "³s½u¼Æ¤Ó¦h"
+    IDS_DOWNLOADRENAMED     "¦P¦WªºÀÉ®×¤w¦s¦b,³o­ÓÀÉ®×¤w³Q¥t¦s¬°%s"
+    IDS_TBN_DOWNLOADDONE    "§¹¦¨¤U¸ü:"
+    IDS_PW_TBN_USESOUND     "¨Ï¥ÎÁn­µ"
+    IDS_PW_TBN_ONLOG        "·s¤é»x°O¿ý"
+    IDS_PW_TBN_ONCHAT       "¶}±Ò·sªº¹ï¸Ü"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOG_FILE_SAVING     "°O¿ýÀÉ®×«O¦s°Ê§@"
+    IDS_DELETEIPFILTERS     "½T¹ê­n§R°£¿ï©wªºIP¹LÂo³W«h¶Ü?"
+    IDS_TOTAL_IPFILTER_LABEL "Á`IP¹LÂo³W«h:"
+    IDS_TOTAL_IPS_LABEL     "¦X­p¹LÂoIP¼Æ:"
+    IDS_RAU_WARNING         "³o­Ó³]¸m¥[±j¤FeMule©è§Ü§ðÀ»©M±½ºËªº¯à¤O,§Ú­Ì¹ªÀy§A¨Ï¥Î³o­Ó¿ï¶µ.\nµM¦Ó§Ú­Ì¤]±j¯P«ØÄ³§A¦b¿E¬¡³o­Ó¥\¯à«e¾\Åª»¡©ú¤â¥U!\n\n§ó§ï¦b­«±ÒeMule«á¥Í®Ä."
+    IDS_APPEND              "ªþ¥[ ..."
+    IDS_SAVE                "«O¦s"
+    IDS_IP_START            "¶}©l"
+    IDS_IP_END              "µ²§ô"
+    IDS_IP_LEVEL            "µ¥¯Å"
+    IDS_IP_DESC             "´y­z"
+    IDS_IP_HITS             "©R¤¤¼Æ"
+    IDS_IP_RULES            "IP¹LÂo:"
+    IDS_ERR_NOTCONNECTEDKAD "·í«e¨S¦³³s½u¨ìKadºô¸ô!"
+    IDS_IRC_NOSFS           "¥¼¿ï©w¤À¨ÉÀÉ®×"
+    IDS_RESETLABEL          "¦Û°Ê§¹¦¨(¾ú¥v¥\¯à)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_IRC_IGNOREMISCMESSAGE "©¿²¤Âø°T®§°T®§"
+    IDS_KNOWN               "¤wª¾"
+    IDS_RAU_RUNNING         "eMule¥¿¥H«D¯SÅv¥Î¤á¨­¥÷""%s""°õ¦æ"
+    IDS_RAU_FAILED          "¥H«D¯SÅv¥Î¤á¨­¥÷""eMule_Secure""±Ò°ÊeMule¥¢±Ñ.«O«ù·í«e¯SÅv¨­¥÷ªº¥Î¤á(""%ls"")."
+    IDS_KADCONTACTSREAD     "±qÀÉ®×Åª¨ú%ldÁpÃ´¤H."
+    IDS_ERR_KADCONTACTS     "¥¼µo²{ÁpÃ´¤H,½Ð¤Þ¾É©Î¤U¸ünodes.datÀÉ®×."
+    IDS_METATAGS            "Meta ¼ÐÅÒ¼Æ:"
+    IDS_FILEFORMAT          "ÀÉ®×®æ¦¡"
+    IDS_UDPREASKS           "UDPÀÉ®×­«·s¬d¸ß"
+    IDS_DYNUP_PINGTOLERANCE_MS "Ping ®e­­ (ms)"
+    IDS_DYNUP_RADIO_PINGTOLERANCE_HEADER "Ping ®e­­©Ò¨Ï¥Îªº¤èªk"
+    IDS_DYNUP_RADIO_PINGTOLERANCE_MS "²@¬í (ms)"
+    IDS_DYNUP_RADIO_PINGTOLERANCE_PERCENT "¦Ê¤À¤ñ (%)"
+    IDS_LOG_A4AF            "°O¿ý A4AF °Ê§@"
+    IDS_A4AF_SAVE_CPU       "¬°¸`¬ÙCPU¸ê·½¸T¥ÎA4AF"
+    IDS_SEARCH_DOC          "¤åÀÉ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CMT_POOR            "ÁV¿|"
+    IDS_CMT_GOOD            "¦n"
+    IDS_CMT_FAIR            "´¶³q"
+    IDS_CMT_EXCELLENT       "·¥¦n"
+    IDS_CMT_NOTRATED        "¨S¦³µû¤À"
+    IDS_KILO                "K"
+    IDS_MEGA                "M"
+    IDS_GIGA                "G"
+    IDS_TERRA               "T"
+    IDS_IRC_EMULEPROTO_IGNOREINFOMESSAGE "©¿²¤eMule¨óÄ³°T®§"
+    IDS_SMARTLOWIDCHECK     "³s½u®É±Ò¥Î´¼¯àLowIDÀË´ú"
+    IDS_SF_SRVOCC           "¦øªA¾¹¦û¥Î:%.2f%%"
+    IDS_3DDEP               "¶i«×±ø¼Ë¦¡"
+    IDS_AUTOTAKEED2KLINKS   "¶È¦b°õ¦æ®É¦Û°Ê±µ¨üED2K³sµ²"
+    IDS_ADDNEWFILESPAUSED   "·s²K¥[¤U¸üÀÉ®×¬°¼È°±¼Ò¦¡"
+    IDS_DOWNLOADMOVIECHUNKS "Àu¥ý¤U¸ü¹wÄý©Ò»Ý­nªºÀÉ®×¶ô"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UPDATEQUEUE         "¸T¤î¹ê®É§ó·s¶¤¦C¦Cªí"
+    IDS_RECOVER_SINGLE      "¤w«ì´_¤@­ÓÀÉ®×"
+    IDS_RECOVER_MULTIPLE    "¤w«ì´_%ld­ÓÀÉ®×"
+    IDS_ATTEMPTING_RECOVERY "¸Õ¹Ï«ì´_¦sÀÉ ..."
+    IDS_RECOVERY_SUCCESSFUL "¦sÀÉ«ì´_¦¨¥\"
+    IDS_RECOVERY_FAILED     "¦sÀÉ«ì´_¥¢±Ñ"
+    IDS_STARTNEXTFILE       "·íÀÉ®×§¹¦¨®É¶}©l¤U¸ü¤U¤@­Ó¼È°±ªºÀÉ®×"
+    IDS_FULLCHUNKTRANS      "¹Á¸Õ¹ï©Ò¦³¤W¶Ç¶i¦æ¾ãÀÉ®×¶ô¶Ç¿é"
+    IDS_MANUALSERVERHIGHPRIO "³]©w¤â°Ê²K¥[ªº¦øªA¾¹¬°°ªÀu¥ý¯Å"
+    IDS_VERBOSE             "¸Ô±¡(ÃB¥~ªºµ{§Ç¤ÏõX) - Verbose"
+    IDS_FLAT                "«ó¥­"
+    IDS_ROUND               "¶ê·Æ"
+    IDS_SAMEUSERHASH        "«È¤á'%s'©M'%s'¾Ö¦³¬Û¦Pªºuserhash©ÎIP - ²¾°£'%s'"
+    IDS_SEARCHEXTENTION     "ÂX®i¦W"
+    IDS_SEARCHAVAIL         "¥i¥Î·½¼Æ"
+    IDS_ERR_NOHELP          "½Ð³X°Ý§Ú­Ì¥D­¶¤Wªº¤U¸ü°Ï¨ÓÀò±o³Ì·sªº»¡©úÀÉ®×!\n\n§A·Q­n¥ß§YÂsÄý¦b½u»¡©ú¶Ü?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_TBN_POP_ALWAYS   "¦¬¨ì·sªº°T®§"
+    IDS_PW_TBN_ONDOWNLOAD   "¤@­Ó¤U¸ü¤w§¹¦¨"
+    IDS_PW_EKDEV_OPTIONS    "³qª¾"
+    IDS_PW_TASKBARNOTIFIER  "°T®§´£¥Ü"
+    IDS_PW_TBN_OPTIONS      "¼u¥X°T®§·í"
+    IDS_TBN_NEWCHATMSG      "°T®§¨Ó¦Û"
+    IDS_PW_CON_CAPFRM       "¯à¤O"
+    IDS_IRC_PRIVATECHANSTART "* ¨p¤H¹ï¸Ü¶}±Ò"
+    IDS_IRC_SLAPMSG         "* %s¥´¤F%s¤@¤Ú´x!"
+    IDS_IRC_PRIVMESSAGE     "¨p¤H°T®§"
+    IDS_WEB_REMOTE_LINK_ADDED "³sµ²¤w²K¥[:"
+    IDS_WEB_REMOTE_LINK_NOT_ADDED "³sµ²¥¼²K¥[.±K½X¿ù»~."
+    IDS_DL_TRY_TO_GET_PREVIEW_PARTS "Àu¥ý¤U¸ü¹wÄý©Ò»Ý­nªºÀÉ®×¶ô"
+    IDS_IRC_KICK            "½ð"
+    IDS_IRC_SLAP            "¥´¤Ú´x"
+    IDS_IRC_JOIN            "¥[¤J"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_IRC_CHANNELLIST     "ÀW¹D¦Cªí"
+    IDS_IRC_CONNECT         "³s½u"
+    IDS_IRC_DISCONNECT      "Â_¶}"
+    IDS_IRC_HASJOINED       "* %s¤w¸g¥[¤J¤F%s"
+    IDS_IRC_HASPARTED       "* %s¤w¸gÂ÷¶}¤F%s(%s)"
+    IDS_IRC_WASKICKEDBY     "* %s³Q%s½ð¤F(%s)"
+    IDS_DOWNLOAD_ALPHABETICAL "«ö·Ó¦r¥Àªí¶¶§Ç¤U¸ü"
+    IDS_IRC_HASQUIT         "* %s¤w¸g°h¥X(%s)"
+    IDS_IRC_NOWKNOWNAS      "* %s§ï¦W¬°%s"
+    IDS_IRC_SETSMODE        "* %s³]¸m¼Ò¦¡:%s %s"
+    IDS_IRC_NOTSUPPORTED    "** ³]¸m¤F¥¼³Q¤ä«ùªº¼Ò¦¡,§A¥i¯à»Ý­nÂ÷¶}¨Ã­«·s¥[¤JÀW¹D¥H§ó·s¦Cªí ..."
+    IDS_IRC_CHANNEL         "ÀW¹D"
+    IDS_IRC_NICK            "¼ÊºÙ"
+    IDS_IRC_SEND            "µo°e"
+    IDS_IRC_NAME            "¦W¦r"
+    IDS_IRC_SLAPMSGSEND     "PRIVMSG %s :\001ACTION ¥´¤F%s¤@¤Ú´x!\001"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INSTALL_SKIN        "¦w¸Ë eMule ¥~Æ["
+    IDS_INSTALL_SKIN_NODIR  "¦b¿ï¾Üªº¥Ø¿ý¤¤¨S¦³µo²{eMule¥~Æ[°t¸mÀÉ®×©ÎªÌ¿ï¾Üªº¥Ø¿ýµLªk³X°Ý!"
+    IDS_INSTALL_SKIN_DIR_ERROR 
+                            "³Ð«Ø¥Ø¿ý ""%s"" ¥¢±Ñ,¸Ó¥Ø¿ý¹ïÀ³ªºeMule¥~Æ[¬° %s"
+    IDS_INSTALL_SKIN_FILE_ERROR 
+                            "ÄÀ©ñÀÉ®× ""%s"" ¥¢±Ñ,±qeMule¥~Æ[ÀÉ®× ""%s"" ¨ì¥»¦aÀÉ®× %s"
+    IDS_INSTALL_SKIN_PKG_ERROR "³o¤£¬O¤@­Ó¦³®Äªº eMule ¥~Æ[ÀÉ®×¥]."
+    IDS_NEXT_REASK          "¤U¦¸¬d¸ß³o­Ó«È¤áºÝ"
+    IDS_A4AF_FILES          "A4AF ÀÉ®×"
+    IDS_FO_TEMPTCP_S        "¦b¥»¦¸eMule°õ¦æ®É,¦¨¥\¦a¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶} %u (TCP) ºÝ¤f"
+    IDS_FO_TEMPTCP_F        "¦b¥»¦¸eMule°õ¦æ®É,µLªk¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶} %u (TCP) ºÝ¤f"
+    IDS_FO_TEMPUDP_S        "¦b¥»¦¸eMule°õ¦æ®É,¦¨¥\¦a¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶} %u (UDP) ºÝ¤f"
+    IDS_FO_TEMPUDP_F        "¦b¥»¦¸eMule°õ¦æ®É,µLªk¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶} %u (UDP) ºÝ¤f"
+    IDS_FO_PREFBUTTON       "¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶}³o¨ÇºÝ¤f"
+    IDS_FO_PREF_SUCCCEEDED  "¦¨¥\¦a¦bWinXP¤º¸m¨¾¤õÀð¤¤¥´¶}©Ò¿ï¾ÜªººÝ¤f.\n½Ðª`·N,¨ä¥L²Ä¤T¤è¨¾¤õÀð©ÎªÌ¸ô¥Ñ¾¹¤£·|¨ü¦¹¿ï¶µ¼vÅT!"
+    IDS_FO_PREF_EXISTED     "eMuleÀË´ú¨ì³Q¿ïºÝ¤fªº¨¾¤õÀð³W«h¨Ã¨S¦³³Q§ï¼g©ÎªÌ´À¥N.­ì¨Ó¥¼²K¥[ªº³W«h¤w¸g³Q¦¨¥\²K¥[.\n½Ðª`·N,¨ä¥L²Ä¤T¤è¨¾¤õÀð©ÎªÌ¸ô¥Ñ¾¹¤£·|¨ü¦¹¿ï¶µ¼vÅT!"
+    IDS_FO_PREF_FAILED      "µLªk¬°³Q¿ïºÝ¤f°t¸mWinXP¤º¸m¨¾¤õÀð³W«h!"
+    IDS_FO_PREF_STARTUP     "¦b±Ò°Ê/°h¥XeMule®É,¥´¶}/Ãö³¬WinXP¤º¸m¨¾¤õÀð¤¤ªº¹ïÀ³ºÝ¤f"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOG_LEVEL           "°O¿ý¯Å§O"
+    IDS_DISABLEPEERACHE     "¸T¤î±q PeerCache ¤¤¤U¸ü"
+    IDS_NEWMSG              "·sªº°T®§¨Ó¦Û '%s' (IP:%s) "
+    IDS_PREF_STARTNEXTFILECATONLY "¶È¦b¬Û¦Pªº¤ÀÃþ¤¤"
+    IDS_LOG_ULDL_EVENTS     "°O¿ý¤W¶Ç/¤U¸ü¨Æ¥ó"
+    IDS_PEERCACHE_ENABLED   "§Aªº ISP ¤ä«ù PeerCache §Þ³N,±Ò¥Î PeerCache ¤U¸ü!"
+    IDS_IRC_EMULEPROTO_ALLOWADDFRIEND "¤¹³\¨ä¥L¥Î¤á²K¥[§A¬°¦n¤Í"
+    IDS_SOURCESWAPBLOCKED   "¤w¸T¤î¸m´«"
+    IDS_TRICKLING           "µ¥«Ý"
+    IDS_A4AF_CHECK_THIS_NOW "¥ß§YÀË¬d³o­Ó¨Ó·½ (debug)"
+    IDS_STATS_FRATIO        "¥»¦¸·|¸Üªº¤W¶Ç:¤U¸ü¤ñ²v (±Æ°£¹ï¦n¤Íªº¤W¶Ç):"
+    IDS_STATS_UDATA_FRIENDS "³q¹L¦n¤Í³q¹D¤W¶Ç(¥»¦¸·|¸Ü): %s"
+    IDS_IMP_ERR_BADFORMAT   "¥¼ª¾ªº©ÎªÌ·lÃaªºÁ{®ÉÀÉ®×®æ¦¡."
+    IDS_SEARCH_INVALIDCHAR  "·j´Mªí¹F¦¡¤¤§t¦³«Dªk¦r²Å.§A¥i¯à¿é¤J¤F'?'¦r²Å,¤]¥i¯à¿é¤J¤F¨ä¥LED2Kºô¸ô¤¤¤£¤¹³\¥X²{ªº¦r²Å."
+    IDS_PORTSCON            "ºÝ¤f©M³s½u"
+    IDS_PORTINFO            "eMule¦b»P¦øªA¾¹©M«È¤áºÝ³q°T®É,»Ý­n¨Ï¥Î¨â­ÓºÝ¤f.³o¨ÇºÝ¤f¥²¶·¥i³Q»·µ{«È¤áºÝ¦Û¥Ñªº¨Ï¥Î.TCPºÝ¤f¥Î©ó½T«OeMuleªº¥D­n¥\¯à.UDPºÝ¤f¥Î©ó Kad (µL¦øªA¾¹ºô¸ô) ¥H¤Î´î¤Öºô¸ôªº¨Ï¥Î¶q(Overhead).\n\n·í¨S¦³ºô¸ô³s½u±Ò°Ê®É,§A¤~¯à­×§ï³o¨ÇºÝ¤f¸¹."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_IRC_ADDTIMESTAMP    "¦b°T®§¤¤¥[¤J®É¶¡ÂW"
+    IDS_IRC_USEFILTER       "¨Ï¥ÎÀW¹D¦Cªí¹LÂo"
+    IDS_IRC_PERFORM         "°Ê§@"
+    IDS_IRC_USEPERFORM      "³s½u®É°õ¦æªº©R¥O"
+    IDS_IRC_ADDTOFRIENDLIST "¥[¤J¦n¤Í¦Cªí"
+    IDS_IRC_LOADCHANNELLISTONCON "³s½u®É¥[¸ü¦øªA¾¹ÀW¹D¦Cªí"
+    IDS_IRC_ADDASFRIEND     "§â§A¥[¬°¦n¤Í!"
+    IDS_PW_WARNING          "§A¬°""%s""¿ï©wªº¼Æ­È¶W¹L¤F¾Þ§@¨t²Îªº¤ä«ù½d³ò: %d\n³o¥i¯à¾É­P¨t²Î¤£Ã­©w.\n\n½T»{­n³]¸m¶Ü?"
+    IDS_TAKEOVER            "¨ú¥N"
+    IDS_CLEANUP             "²M°£"
+    IDS_RENAME              "§ï¦W"
+    IDS_IRC_ADDLINKTOIRC    "±N¦¹¥[¤JIRC°Å¶KªO¥Hµo°eµ¹¦n¤Í"
+    IDS_IRC_SENDLINK        "µo°eµ¹¦n¤Í:"
+    IDS_IRC_RECIEVEDLINK    "%sµo°e(%s)±N¦Û°Ê¶}±Ò"
+    IDS_IRC_ACCEPTLINKS     "¦bIRC¤¤±µ¨üED2K³sµ²(½ÐÂÔ·V¨Ï¥Î¦¹¥\¯à!)"
+    IDS_SHARED              "¤À¨Éªº"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DOWNLOADED          "¤U¸üªº"
+    IDS_SOURCENAMES         "­ì¦W"
+    IDS_PREF_STARTMIN       "±Ò°Ê®É³Ì¤p¤Æ"
+    IDS_PS_TBN_IMPORTANT    "ºò«æ:ºÏºÐªÅ¶¡¤£¨¬,¥¢¥h¦øªA¾¹³s½u"
+    IDS_COLORS              "ÃC¦â"
+    IDS_SP_BACKGROUND       "­I´º"
+    IDS_SP_GRID             "ºô®æ"
+    IDS_SP_DL1              "¤U¸ü ·í«e"
+    IDS_SP_DL2              "¤U¸ü ®É¶¡¥­§¡"
+    IDS_SP_DL3              "¤U¸ü ·|¸Ü¥­§¡"
+    IDS_SP_UL1              "¤W¶Ç ·í«e"
+    IDS_SP_UL2              "¤W¶Ç ®É¶¡¥­§¡"
+    IDS_SP_UL3              "¤W¶Ç ·|¸Ü¥­§¡"
+    IDS_SP_ACTCON           "·í«e³s½u¼Æ"
+    IDS_SP_ACTDL            "·í«e¤U¸ü"
+    IDS_SP_ACTUL            "·í«e¤W¶Ç"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_UNLIMITED        "µL­­¨î"
+    IDS_PW_MINREC           "³Ì¤p±ÀÂË­È\t%i "
+    IDS_PW_UA               "³]¸m³Ì¤j¤W¤U¸ü³t«×"
+    IDS_PW_PA               "¸`¬y½Õ¾ã¤W¤U¸ü³t«×"
+    IDS_IRC_IGNOREINFOMESSAGE "©¿²¤°T®§"
+    IDS_CONNECTIONLOST      "¥¢¥h³s½u"
+    IDS_WIZ_OS_FRAME        "¾Þ§@¨t²Î"
+    IDS_HASHINGFILE         "HashingÀÉ®×:"
+    IDS_WIZ_TRUEUPLOAD_TEXT "¯u¹ê¤W¶Ç±a¼e"
+    IDS_WIZ_TRUEDOWNLOAD_TEXT "¯u¹ê¤U¸ü±a¼e"
+    IDS_FRIENDLIST          "¦n¤Í"
+    IDS_CHATDISCONNECTED    "*** ¤wÂ_¶}³s½u"
+    IDS_WIZARD              "ÂQ¾É"
+    IDS_ADDFRIEND           "¥[¬°¦n¤Í(&A)"
+    IDS_REMOVEFRIEND        "§R°£¦n¤Í"
+    IDS_REMOVEFROMSTATIC    "±qÀRºA¦øªA¾¹¦Cªí¤¤§R°£"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LENGTH              "ªø«×"
+    IDS_VIDEO               "µøÀW"
+    IDS_AUDIO               "­µÀW"
+    IDS_FILEINFO            "ÀÉ®×°T®§"
+    IDS_CODEC               "½s½X¾¹"
+    IDS_BITRATE             "¤ñ¯S²v"
+    IDS_WIDTH               "¼e«×"
+    IDS_FPS                 "´V²v"
+    IDS_CHANNELS            "ÀW¹D"
+    IDS_SAMPLERATE          "±Ä¼Ë²v"
+    IDS_HEIGHT              "°ª«×"
+    IDS_SHAREDFILES_FAILED  "µLªk±q '%s' ±o¨ì¤À¨ÉÀÉ®×¦Cªí"
+    IDS_SHAREDFILES_REQUEST "¦V'%s'½Ð¨D¤À¨ÉÀÉ®×¦Cªí"
+    IDS_VIEWFILES           "¬d¬Ý¤À¨ÉÀÉ®×(&V)"
+    IDS_FRIENDSLOT          "«Ø¥ß¦n¤Í³q¹D"
+    IDS_FRIENDDETAIL        "(¦n¤Í³q¹D)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UDPDISABLED         "¸T¥Î"
+    IDS_WIZ_CTFRAME         "³s½uÃþ«¬"
+    IDS_CONCURDWL           "¦P®É¤U¸ü"
+    IDS_WIZARD_CUSTOM       "©w¨î"
+    IDS_WIZARD_ENTERBELOW   "(¤U¤è¿é¤J!)"
+    IDS_STATS_MAXAVGDL      "³Ì¤j¥­§¡¤U¸ü³t«×(¥»¦¸·|¸Ü):%s"
+    IDS_STATS_MAXDL         "³Ì¤j¤U¸ü³t«×:%s"
+    IDS_IRC_EMULEPROTO_IGNOREADDFRIEND "©¿²¤eMule²K¥[ªB¤Í¨óÄ³°T®§"
+    IDS_PW_FASTSRVCON       "¦w¥þ³s½u"
+    IDS_SOURCELINKFAILED    "§A»Ý­n¦³HighID¨Ó«Ø¥ß¦Xªkªº±a·½³sµ²"
+    IDS_ERR_LOADSERVERMET   "¥[¸üserver.met¥¢±Ñ!"
+    IDS_ERR_CORRUPTCOMPRPKG "¦¬¨ì%sªº¤w·lÃaªºÀ£ÁY¥](¿ù»~%i)"
+    IDS_ERR_EMFRIENDSINVALID "ÀÉ®×emfriends.metµL®Ä©ÎªÌ¤w·lÃa!"
+    IDS_ERR_READEMFRIENDS   "Åª¨úemfriends.met®Éµo¥Í¥¼ª¾¿ù»~:%s"
+    IDS_ERR_KNOWNSERVERINFOREC "¦¬¨ì¥¼ª¾¦øªA¾¹°T®§!"
+    IDS_WIZ_DOWN            "¤U¸ü(kbit/¬í)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WIZ_UP              "¤W¶Ç(kbit/¬í)"
+    IDS_SELECT_INCOMINGDIR  "¿ï¾Ü¤U¸üÀÉ®×¥Ø¿ý"
+    IDS_SELECT_TEMPDIR      "¿ï¾ÜÁ{®ÉÀÉ®×¥Ø¿ý"
+    IDS_PRIOAUTO            "¦Û°Ê"
+    IDS_PRIOAUTONORMAL      "¦Û°Ê[´¶³q]"
+    IDS_PRIOAUTOHIGH        "¦Û°Ê[°ª]"
+    IDS_PRIOAUTORELEASE     "¦Û°Ê[µo§G]"
+    IDS_PRIOAUTOLOW         "¦Û°Ê[§C]"
+    IDS_ERR_CONTIMEOUT      "¸Õ¹Ï³s½u¨ì""%s""(%s:%i)¤w¸g¶W®É"
+    IDS_OUTOFSERVERS        "³s½u¨ì©Ò¦³¦Cªí¤¤ªº¦øªA¾¹¥¢±Ñ,­«·s¹Á¸Õ¤@¦¸"
+    IDS_PW_CONLIMITS        "³s½u­­¨î"
+    IDS_MAXCON5SECLABEL     "³Ì¤j·s«Ø³s½u¼Æ(¨C5¬í)"
+    IDS_PW_UAP              "·s¼W¤À¨ÉÀÉ®×®É¨Ï¥Î¦Û°ÊÀu¥ý¯Å"
+    IDS_MAXCLIENT           "³Ì¤j¥Î¤á¼Æ"
+    IDS_PW_TWEAK            "ÂX®i³]¸m"
+    IDS_TWEAKS_WARNING      "Äµ§i:¤£­n§ï°Ê³o¨Ç³]¸m°£«D§Aª¾¹D¦Û¤v¦b¤z¤°  ,§_«heMule·|«Ü®e©ö³Q·dÁV.\n§Y¨Ï¤£½Õ¾ã³o¨Ç³]¸meMule¤]·|°õ¦æ±o«Ü¦n."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ADDAFRIEND          "²K¥[¦n¤Í"
+    IDS_PAF_REQINFO         "¥²»Ýªº°T®§"
+    IDS_PAF_MOREINFO        "ÃB¥~ªº°T®§"
+    IDS_ERR_NOVALIDFRIENDINFO "§A¥²¶·¿é¤J¤@­Ó¦³®ÄªºIP©ÎºÝ¤f!"
+    IDS_ADD                 "²K¥["
+    IDS_RECOVERED_PARTMET   "«ì´_¤F%sªºpart.metÀÉ®×"
+    IDS_CMT_QUEST           "²K¥[³o­ÓÀÉ®×ªºµù¸Ñ!(³o­Óµù¸Ñ±N³Q©Ò¦³¥Î¤á¬Ý¨ì)"
+    IDS_CMT_AIDE            "¹ï©ó¼v¤ù,§A¥i¥Hµû½×¥¦ªºªø«×,±¡¸`,»y¨¥ ... ¦pªGÀÉ®×¬O°²ªº,§A¤]¥i¥H³qª¾¨ä¥LeMule¥Î¤á ..."
+    IDS_CMT_ADD             "§ó§ï³o­ÓÀÉ®×ªºµù¸Ñ(&E) ..."
+    IDS_CMT_NONE            "¨S¦³µù¸Ñ"
+    IDS_CMT_READ            "ÀÉ®×µù¸Ñ:"
+    IDS_CMT_SHOWALL         "Åã¥Ü©Ò¦³µù¸Ñ(&N)"
+    IDS_CMT_READALL         "©Ò¦³µù¸Ñ"
+    IDS_CMT_RATEQUEST       "ÀÉ®×½è¶q"
+    IDS_CMT_RATEHELP        "µ¹ÀÉ®×µû¤À©ÎÀÉ®×µL®Ä®É´£¿ô¥Î¤á"
+    IDS_CMT_FAKE            "µL®Ä/·lÃa/°²ªº"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SHOWOVERHEAD        "Åã¥ÜÃB¥~¶}¾Pªº±a¼e"
+    IDS_UPDOWNSMALL         "¤W¶Ç:%.1f | ¤U¸ü:%.1f"
+    IDS_EDITLIST            "¦Cªí"
+    IDS_SP_ICONBAR          "¨t²Î¦«½L¹Ï¼Ð³t«×±ø"
+    IDS_RATINGRECV          "¦¬¨ìÀÉ®×'%s'ªºµû¤À:%i"
+    IDS_DESCRIPTIONRECV     "¦¬¨ìÀÉ®×'%s'ªº´y­z:%s"
+    IDS_WEBSERVICES         "&WebªA°È"
+    IDS_WEBSVEDIT           "½s¿èWebªA°È"
+    IDS_IRC_EMULEPROTO_IGNORESENDLINK "©¿²¤eMuleµo°e³sµ²¨óÄ³°T®§"
+    IDS_CHECK4UPDATE        "ÀË¬d·sª©¥»"
+    IDS_STARTUP             "±Ò°Ê"
+    IDS_NEWVERSIONAVL       "¤w¦³·sª©¥»ªºeMule¥i¤U¸ü!¬d¬Ý¥D­¶¤Wªº¸Ô²Ó°T®§."
+    IDS_NEWVERSIONAVLPOPUP  "¤w¦³·sª©¥»ªºeMule¥i¤U¸ü!³æÀ»³o¸Ì¬d¬Ý¬ÛÃö°T®§."
+    IDS_NEWVERSIONFAILED    "µLªkÀË¬d·sª©¥»."
+    IDS_CB_TBN_ONNEWVERSION "°»´ú¨ì·sª©¥»ªºeMule!"
+    IDS_NONEWERVERSION      "¥¼°»´ú¨ì§ó·sª©¥»ªºeMule."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDIT                "½s¿è..."
+    IDS_FILTERLEVEL         "¹LÂo¯Å§O"
+    IDS_FILTERSERVERBYIPFILTER "¦øªA¾¹¤]³Q¹LÂo"
+    IDS_FILTERCOMMENTSLABEL "©¿²¤¥]§t¥H¤U¤º®eªºµù¸Ñ:(¤À¹j²Å¡y|  )"
+    IDS_CLIENTLIST          "¤wª¾«È¤á"
+    IDS_FOLDER              "ÀÉ®×§¨"
+    IDS_CL_UPLOADSTATUS     "¤W¶Ç±¡ªp"
+    IDS_CL_TRANSFUP         "¤w¤W¶Ç"
+    IDS_CL_DOWNLSTATUS      "¤U¸ü±¡ªp"
+    IDS_CL_TRANSFDOWN       "¤w¤U¸ü"
+    IDS_CL_PENDING          "µ¥«Ý¨M©w¤¤"
+    IDS_CL_LOW2LOW          "LowID¨ìLowID"
+    IDS_ERROR               "¿ù»~"
+    IDS_OPENINC             "¥´¶}Incoming¥Ø¿ý(&O)"
+    IDS_HOTMENU             "§Ö±¶µæ³æ"
+    IDS_DISABLEKNOWNLIST    "¸T¥Î¤wª¾«È¤á¦Cªí"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DISABLEQUEUELIST    "¸T¥Î±Æ¶¤¦Cªí"
+    IDS_USECREDITSYSTEM     "±Ò¥ÎÃB«×¨t²Î - Credit System(¨ü¯q¤W¶ÇªÌ)"
+    IDS_FIRSTAUTODOWN       "¦pªG§A·QeMuleºÞ²z§Aªº¤U¸üÀu¥ý¯Å,½Ð±Ò°Ê³o­Ó¿ï¶µ.\n\n±Ò°Ê«á±N¤¹³\eMule«OÃÒ¨Ó·½«Ü¦hªº¤U¸ü¤£¼vÅT¨Ó·½¸û¤Öªº.\n\n³o­Ó¿ï¶µ¥u¼vÅT±N¨Óªº¤U¸ü.(Àq»{: ¶}±Ò)"
+    IDS_FIRSTAUTOUP         "¦pªG§A·QeMuleºÞ²z§Aªº¤W¶ÇÀu¥ý¯Å,½Ð±Ò°Ê³o­Ó¿ï¶µ.\n\n±Ò°Ê³o­Ó¿ï¶µ±N¤¹³\eMuleÀu¥ý¤W¶Çµ}¦³ÀÉ®×,·N¨ýµÛ¨ä¥L¤H¸ûÃø±o¨ì¨üÅwªïªºÀÉ®×.Ãö³¬³o­Ó¿ï¶µ±N¤¹³\eMule§ó¦h¦a¤W¶Ç¨üÅwªïªºÀÉ®×,·N¨ýµÛ¨ä¥L¤H¸ûÃø±o¨ìµ}¦³ÀÉ®×.\n\n³o­Ó¿ï¶µ¥u¼vÅT±N¨Ó¤À¨ÉªºÀÉ®×.(Àq»{:¶}±Ò)"
+    IDS_FIRSTFULLCHUNK      "¦pªG§A·Q¤W¶Ç¾ã­ÓÀÉ®×¶ô,½Ð±Ò°Ê³o­Ó¿ï¶µ.\n\n¶}±Ò³o­Ó¿ï¶µµ¹«È¤á¤@­Ó§ó¦nªº¾÷·|±o¨ì¾ã­ÓÀÉ®×¶ô.Ãö³¬³o­Ó¿ï¶µ¦³§U©ó§ó§Ö¦a´`Àô§Aªº¶¤¦C.­Y§Aªº±MªùªºÀÉ®×µo§GªÌ,§A·|·Q¶}±Ò³o­Ó¿ï¶µ.(Àq»{:¶}±Ò)"
+    IDS_FIRSTSAFECON        "±Ò°Ê³o­Ó¿ï¶µ­Y§A·QeMule³s½u®É¨Ï¥Î¦w¥þ³s½u.\n\nÃö³¬³o­Ó¥\¯à·|¨ÏeMule³s½u¦øªA¾¹®É§Ö¤@ÂI,¦ý¥i¯à·|¨Ï§A§ó¦h¦a±o¨ìµê°²ªº§CID.(Àq»{:Ãö³¬)"
+    IDS_FIRSTAUTOCON        "eMule±Ò°Ê®É¦Û°Ê³s½u¦øªA¾¹¡C(Àq»{¡G±Ò°Ê)"
+    IDS_FIRSTCOMPLETE       "§A¤w¸g§¹¦¨¤F­º¦¸°õ¦æÂQ¾É.\r\r©Ò¦³ªº³o¨Ç³]©wÁÙ¦³¨ä¥¦³]©w¥i¥H³q¹LÂIÀ»¿ï¶µ¹Ï¼Ð¨Ó§ó§ï.¦pªG§A·Q±o¨ì¬ÛÃöªº¸ÑÄÀ©M¤ä«ù,¥i¥H¦b°õ¦æeMule®É«öF1Áä¨Ó¥´¶}»¡©ú¤åÀÉ!"
+    IDS_ENTERUSERNAME       "½Ð¿é¤J§Aªº¨Ï¥ÎªÌ¦WºÙ:"
+    IDS_STATIC_CPUMEM       "¸`¬ÙCPU©M¤º¦sªº¨Ï¥Î¶q"
+    IDS_KAD_SEARCH_KEYWORD_TOO_SHORT 
+                            "ÃöÁä¦r¤Óµu.\r\n\r\n¦bKadªº·j´Mªí¹F¦¡¤¤,ÃöÁä¦rªº³Ì¤pªø«×¬O3­Ó¦r²Å."
+    IDS_LOG2DISK            "±N¤é»x«O¦s¨ìºÏºÐ"
+    IDS_KAD_SEARCH_KEYWORD_ALREADY_SEARCHING 
+                            "¤w¦s¦b¤@­Ó¥¿¦b¶i¦æ¤¤ªº¹ï©óÃöÁä¦r""%s""ªºKad·j´M.\r\n\r\n­n¹ï³o­ÓÃöÁä¦r­«·s·j´M,¥i¥Hµ¥¨ì³o­ÓÃöÁä¦r·j´Mµ²§ô©ÎªÌÃö³¬¬ÛÀ³ªº·j´Mµ²ªG®Ø."
+    IDS_KAD_SEARCH_KEYWORD_INVALID 
+                            "µL®ÄªºKadÃöÁä¦r.\r\n\r\nKad·j´Mªí¹F¦¡¥²¶·²Å¦X¥H¤U®æ¦¡:\r\n\r\n\t<KadÃöÁä¦r> [ <ed2k·j´Mªí¹F¦¡> ]\r\n\r\n<KadÃöÁä¦r>¤£¯à¥]§t¥H¤U¥ô¦ó¦r²Å:\r\n\r\n\t%s"
+    IDS_EDITCAT             "½s¿è¤ÀÃþÄÝ©Ê"
+    IDS_PW_WS               "Web¦øªA¾¹"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENABLED             "±Ò¥Î"
+    IDS_WEB_LOGIN           "µn³°"
+    IDS_WEB_ENTER_PASSWORD  "¦b³o¸Ì¿é¤J§Aªº±K½X"
+    IDS_WEB_LOGIN_NOW       "²{¦bµn³°"
+    IDS_WEB_CONFIRM_REMOVE_SERVER "½T©w­n§â³o­Ó¦øªA¾¹±q¦Cªí¤¤§R°£¶Ü?"
+    IDS_WEB_CONTROL         "Web±±¨î­±ªO"
+    IDS_WEB_LOGOUT          "µù¾P"
+    IDS_WEB_ACTIONS         "°Ê§@"
+    IDS_WEB_SHOW_UPLOAD_QUEUE "Åã¥Ü¶¤¦C"
+    IDS_WEB_GZIP_COMPRESSION "GzipÀ£ÁY"
+    IDS_WEB_GZIP_COMMENT    "¸`¬Ù³q«H¶q,¤×¨ä¬O¹Ïªí."
+    IDS_WEB_REFRESH_TIME    "­¶­±ªº§ó·s®É¶¡"
+    IDS_WEB_REFRESH_COMMENT "®É¶¡³æ¦ì¬°¬í(0 = ¸T¥Î):"
+    IDS_SV_URL              "URL"
+    IDS_WS_RELOAD_TMPL      "¼ÒªO"
+    IDS_SV_DEBUGLOG         "½Õ¸Õ¤é»x"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_TOOLARGEFILE    "ÀÉ®×ªº¤j¤p¶W¹LeDonkey¨óÄ³©Ò¯à¤ä«ùªº½d³ò(>=256GB)"
+    IDS_MSGONLYFRIENDS      "¶È±µ¨ü¨Ó¦Û¦n¤Í"
+    IDS_MSGONLYSEC          "¶È±µ¨ü¨Ó¦Û¦³®Ä«È¤á"
+    IDS_DAY_MO_SA           "¶g¤@-¶g¤»"
+    IDS_LIMITSOURCES        "­­¨î¨Ó·½¼Æ"
+    IDS_LIMITCONS5SEC       "­­¨î³s½u¼Æ/5¬í"
+    IDS_SCHED_CATSTOP       "¤ÀÃþ:°±¤îÀÉ®×¤U¸ü"
+    IDS_SCHED_CATRESUME     "¤ÀÃþ:Ä~ÄòÀÉ®×¤U¸ü"
+    IDS_S_DAYS              "¤Ñ"
+    IDS_STARTTIME           "¶}©l®É¶¡"
+    IDS_VALUE               "­È"
+    IDS_SCHED_ENTERDATARATELIMIT "¿é¤J¼Æ¾Ú¶Ç¿é²v­­¨î:"
+    IDS_SCHED_ENTERVAL      "½Ð¿é¤J·sªº­È:"
+    IDS_SCHED_ACTCONFIG     "³]¸m°Ê§@"
+    IDS_SELECTCAT           "¿ï¾Ü¤ÀÃþ"
+    IDS_ALLUNASSIGNED       "¨ú®ø©Ò¦³ªº«ü©w"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ACTSESSIONS         "¬¡°Ê·|¸Ü¼Æ"
+    IDS_WEBSRV              "Web¦øªA¾¹:"
+    IDS_SW_REFETCHRES       "­«·s±o¨ìµ²ªG"
+    IDS_FILEHASH            "ÀÉ®×Hash"
+    IDS_PW_PROXY            "¥N²z¦øªA¾¹"
+    IDS_PROXY_ENABLE        "±Ò¥Î¥N²z¦øªA¾¹"
+    IDS_PROXY_TYPE          "¦øªA¾¹Ãþ«¬:"
+    IDS_PROXY_HOST          "¦øªA¾¹¥D¾÷:"
+    IDS_PROXY_PORT          "¦øªA¾¹ºÝ¤f:"
+    IDS_PROXY_AUTH          "±Ò¥Î¨­¥÷ÅçÃÒ"
+    IDS_AUTH                "¨­¥÷ÅçÃÒ"
+    IDS_SHOWCATINFO         "¦b¤ÀÃþ¼ÐÅÒ¤WÅã¥Ü¤U¸ü°T®§"
+    IDS_SW_SEARCHINGINFO    "¥¿¦b¶i¦æ·j´M.°¨¤W´N·|­«·s±o¨ìµ²ªG!"
+    IDS_LOGENTRY            "¤é»x¶µ¥Ø"
+    IDS_COPY                "½Æ»s"
+    IDS_SELECTALL           "¥þ¿ï"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AUTOSCROLL          "¦Û°Êºu°Ê"
+    IDS_WIZ1_WELCOME_TITLE  "Åwªï¨Ï¥ÎeMule"
+    IDS_WIZ1_WELCOME_ACTIONS "¥»ÂQ¾É·|¤Þ¾É§A¹ïeMule¶i¦æªì¨Bªº³]¸m."
+    IDS_WIZ1_WELCOME_BTN_HINT "ÂIÀ»'¤U¤@¨B'Ä~Äò."
+    IDS_WIZ1_END_TITLE      "¥¿¦b§¹¦¨ÂQ¾É"
+    IDS_WIZ1                "eMule­º¦¸°õ¦æÂQ¾É"
+    IDS_WIZ1_END_BTN_HINT   "ÂIÀ»'§¹¦¨'Ãö³¬¦¹ÂQ¾É."
+    IDS_WIZ1_UPLOAD_SUBTITLE "¾ãÀÉ®×¶ô¶Ç¿é"
+    IDS_DL_RESUMENEXT       "Ä~Äò¤U¤@­Ó¼È°±ªºÀÉ®×"
+    IDS_STARTPRIO           "³o¤@¤ÀÃþªºÀu¥ý¯Å"
+    IDS_PREF_STARTNEXTFILECAT "¦P¤@¤ÀÃþÀu¥ý"
+    IDS_REPAINTGRAPHS       "§ó§ï¤Ø¤o«á¤£­««Ø²Î­p¹Ï§Î"
+    IDS_SOFTFILES           "³n©ÊÀÉ®×­­¨î"
+    IDS_HARDFILES           "µw©ÊÀÉ®×­­¨î"
+    IDS_FILTER              "¹LÂo"
+    IDS_LINKS               "³sµ²"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HM_SCHED_ON         "¥´¶}­p¹º¥ô°È"
+    IDS_HM_SCHED_OFF        "Ãö³¬­p¹º¥ô°È"
+    IDS_HM_LINKHP           "eMule¥D­¶"
+    IDS_HM_LINKFAQ          "eMule±`¨£°ÝÃD¸Ñµª"
+    IDS_HM_LINKVC           "eMuleª©¥»ÀË¬d"
+    IDS_DEBUG_SOURCE_EXCHANGE "°O¿ý¨Ó·½¥æ´«°T®§"
+    IDS_SHAREDREQ1          "¥Î¤á %s (%u, ip=%s) ½Ð¨D§Aªº¤À¨É¥Ø¿ý¦Cªí-> %s"
+    IDS_SHAREDREQ2          "¥Î¤á %s (%u) ½Ð¨D§A¦b¥Ø¿ý'%s'¤Uªº¤À¨ÉÀÉ®×¦Cªí-> %s"
+    IDS_SHAREDANSW          "¥Î¤á %s (%u) ¤À¨É¥Ø¿ý'%s'"
+    IDS_SHAREDANSW2         "¥Î¤á %s (%u) µo°e¤£½Ð¨D¤À¨É¥Ø¿ý¦Cªí - ©¿²¤"
+    IDS_SHAREDINFO1         "¥Î¤á %s (%u) µo°e¦b¥Ø¿ý'%s'¤Uªº¤À¨ÉÀÉ®×¦Cªí"
+    IDS_SHAREDINFO2         "¥Î¤á %s (%u) ¤w§¹¦¨µo°e¤À¨ÉÀÉ®×¦Cªí"
+    IDS_SHAREDANSW3         "¥Î¤á %s (%u) µo°e¤£½Ð¨D¦b¥Ø¿ý'%s'¤Uªº¤À¨ÉÀÉ®×¦Cªí - ©¿²¤"
+    IDS_SHAREDREQDENIED     "¥Î¤á %s (%u) ©Úµ´¹ï¤À¨É¥Ø¿ý/ÀÉ®×¦Cªíªº³X°Ý"
+    IDS_AUTOCLEANUPFN       "²M²zÀÉ®×¦WºÙ"
+    IDS_ONNEWDOWNLOAD       "ªì©l­È³]¸m"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILTERFILENAMEWORD  "¿é¤J­n¹LÂoªºÃöÁäµü,¥Î¡y|  ¤À¹j"
+    IDS_FNFILTERTITLE       "½s¿è©R¦W²M²z©Ò»ÝªºÀÉ®×¦WºÙ¥]§t¦r¹LÂo¾¹"
+    IDS_CHANGECATVIEW       "¿ï¾Ü¬d¬Ý¹LÂo"
+    IDS_STATUS_NOTCOMPLETED "¥¼§¹¦¨"
+    IDS_STATS_CUMULATIVE    "¿n²Ö"
+    IDS_STATS_OVRHD         "¶}¾P"
+    IDS_STATS_RECORDS       "°O¿ý"
+    IDS_STATS_COMPDL        "¤w§¹¦¨ªº¤U¸ü"
+    IDS_STATS_SVRECWORKING  "³Ì¤j¤u§@¦øªA¾¹¼Æ"
+    IDS_STATS_SVRECUSERS    "³Ì¤j¦b½u¥Î¤á¼Æ"
+    IDS_SEARCH_TEXT         "·j´M"
+    IDS_STATS_SVRECFILES    "³Ì¤j¦³®ÄÀÉ®×¼Æ"
+    IDS_STATS_SHRECNUM      "³Ì¤j¤À¨ÉÀÉ®×¼Æ"
+    IDS_SEARCH_COLUMN       "¦b¥H¤UÄæ¥Ø¤¤¬d§ä"
+    IDS_STATS_SHRECSIZE     "³Ì¤j¤À¨ÉÀÉ®×Á`¤j¤p"
+    IDS_STATS_SHRECASIZE    "³Ì¤j¥­§¡ÀÉ®×¤j¤p"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_SESSION       "·|¸Ü"
+    IDS_STATS_SRATIO        "¥»¦¸·|¸Üªº¤W¶Ç:¤U¸ü¤ñ²v:"
+    IDS_STATS_CRATIO        "¿n²Öªº¤W¶Ç:¤U¸ü¤ñ²v:"
+    IDS_SEARCH_NORESULT     "¥¼§ä¨ì²Å¦X±ø¥óªºÀÉ®×."
+    IDS_STATS_CURRSRVDUR    "·í«e¦øªA¾¹«ùÄò®É¶¡"
+    IDS_LONGSECS            "¬íÄÁ"
+    IDS_STATS_DLSES         "¤U¸ü·|¸Ü"
+    IDS_LONGMINS            "¤ÀÄÁ"
+    IDS_STATS_SDLSES        "¦¨¥\ªº¤U¸ü·|¸Ü"
+    IDS_STATS_FDLSES        "¥¢±Ñªº¤U¸ü·|¸Ü"
+    IDS_STATS_AVGDATADLSES  "¥­§¡¨C¦¸·|¸Ü¤U¸ü"
+    IDS_STATS_ULSES         "¤W¶Ç·|¸Ü"
+    IDS_STATS_GAINCOMP      "¨ü¯q©ó¼Æ¾ÚÀ£ÁY:%s"
+    IDS_STATS_LOSTCORRUPT   "¦]¼Æ¾Ú·lÃa¦Ó¥á¥¢:%s"
+    IDS_STATS_AVGDATAULSES  "¥­§¡¨C¦¸·|¸Ü¤W¶Ç"
+    IDS_STATS_ICHSAVED      "¥ÑI.C.H«ì´_ªºÀÉ®×³¡¤À: %u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_MBRESET_TXT   "§A½T©w­n­«¸m¿n²Ö²Î­p°T®§¶Ü?\n\n¦pªG§A§ïÅÜ¤F¥D·N,§A¥i¥HÂIÀ»¡y«ì´_²Î­p°T®§  ¨Ó°fÂà³o­Ó¾Þ§@."
+    IDS_STATS_MBRESTORE_TXT "§A½T©w·Q­n±q³Æ¥÷ÀÉ®×«ì´_¿n²Ö²Î­p°T®§¶Ü?\n\n¦AÂIÀ»¤@¦¸¡y«ì´_²Î­p°T®§  ·|­«·s¸ü¤J§Aªº·í«e²Î­p°T®§."
+    IDS_ERR_NOSTATBKUP      "¿ù»~:§ä¤£¨ì³Æ¥÷²Î­p°T®§ÀÉ®× ..."
+    IDS_STATS_NFOLOADEDBKUP "¤w¸ü¤J³Æ¥÷²Î­p¼Æ¾Ú ..."
+    IDS_STATS_NFORESET      "²Î­p°T®§¤w³Q­«¸m!"
+    IDS_STATS_BNRESET       "­«¸m²Î­p°T®§"
+    IDS_STATS_BNRESTORE     "«ì´_²Î­p°T®§"
+    IDS_PPGSTATS_YSCALE     "³s½u²Î­p°T®§ Y-¶b¤ñ¨Ò¤Ø:"
+    IDS_PPGSTATS_ACRATIO    "¬¡°Ê³s½u¤ñ²v:"
+    IDS_STATS_PROBLEMATIC   "¦³°ÝÃDªº"
+    IDS_LONGHRS             "¤p®É"
+    IDS_STATS_LARGESTFILE   "³Ì¤j¤À¨ÉÀÉ®×¤j¤p"
+    IDS_SPLIT_WINDOW        "¤À³Îµ¡¤f"
+    IDS_STATS_DSPF          "³¡¤ÀÀÉ®×"
+    IDS_STATS_DATASOURCE    "¼Æ¾Ú·½"
+    IDS_STATS_DSFILE        "§¹¦¨ÀÉ®×"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_GENERAL       "±`³W"
+    IDS_STATS_TRANSTIME     "¶Ç¿é®É¶¡"
+    IDS_STATS_DOWNTIME      "¤U¸ü®É¶¡"
+    IDS_STATS_UPTIME        "¤W¶Ç®É¶¡"
+    IDS_STATS_TOTALSRVDUR   "Á`¦øªA¾¹®É¶¡"
+    IDS_STATS_MAXAVGUL      "³Ì¤j¥­§¡¤W¶Ç³t«×"
+    IDS_STATS_MAXUL         "³Ì¤j¤W¶Ç³t«×"
+    IDS_STATS_AVGDLTIME     "¥­§¡¤U¸ü®É¶¡"
+    IDS_STATS_PRTDEF        "Àq»{"
+    IDS_STATS_PRTOTHER      "¨ä¥¦"
+    IDS_STATS_MNUTREETITLE  "²Î­p¾ð"
+    IDS_STATS_MNUTREECPYSEL "½Æ»s¿ï©wªº¤À¤ä"
+    IDS_STATS_MNUTREECPYALL "½Æ»s©Ò¦³²Î­p°T®§"
+    IDS_STATS_MNUTREEHTML   "HTML¥\¯à"
+    IDS_STATS_EXPORT2HTML   "¾É¥X©Ò¦³²Î­p°T®§"
+    IDS_CONDTCPACCEPT       "­­¨î§Ö³t³s½u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_MNUTREECPYVIS "½Æ»s©Ò¦³¥i¨£°T®§"
+    IDS_STATS_MNUTREEEXPANDALL "®i¶}©Ò¦³°Ï°ì"
+    IDS_STATS_MNUTREECOLLAPSEALL "§éÅ|©Ò¦³°Ï°ì"
+    IDS_STATS_MNUTREEEXPANDMAIN "®i¶}¥D­n°Ï°ì"
+    IDS_STATS_LASTRESETSTATIC "¶Z¤W¦¸­«¸mªº²Î­p°T®§:%s"
+    IDS_STATS_MONTHLY       "¨C¤ë"
+    IDS_STATS_YEARLY        "¨C¦~"
+    IDS_STATS_TIMESTATS     "®É¶¡²Î­p"
+    IDS_STATS_AVGANDPROJ    "­p¹º¥­§¡¼Æ"
+    IDS_STATS_TIMESINCERESET "¶Z¤W¦¸­«¸mªº®É¶¡:%s"
+    IDS_CRYPT_INITFAILED    "ªì©l¤Æ±KÆ_¥¢±Ñ - ¦w¥þ»{ÃÒ³Q¸T¤î"
+    IDS_CD_IDENT            "»{ÃÒ:"
+    IDS_IDENTOK             "¦¨¥\"
+    IDS_IDENTFAILED         "µL®Ä"
+    IDS_IDENTNOSUPPORT      "¤£¤ä«ù©Î³Q¸T¤î"
+    IDS_COMMITFILES         "¦w¥þ.met/.datÀÉ®×¼g¤J"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DWL_IPFILTERFILE    "¥¿¦b¤U¸ü IP ¹LÂo³W«hÀÉ®×"
+    IDS_DWLIPFILTERFAILED   "IP ¹LÂo³W«hÀÉ®×¤U¸ü¥¢±Ñ"
+    IDS_FINDBUDDY           "¬d§ä Buddy"
+    IDS_ERR_IPFILTERZIPEXTR "±q¤w¤U¸üªº IP ¹LÂo³W«h Zip ÀÉ®× ""%s"" ¤¤¸ÑÀ£ IP ¹LÂo³W«hÀÉ®×¥¢±Ñ."
+    IDS_ERR_IPFILTERCONTENTERR 
+                            "¤w¤U¸üªº IP ¹LÂo³W«hÀÉ®× ""%s"" ¬O¤@­Ó Zip ÀÉ®×,¦ý¬O¥]§t¥¼ª¾¤º®e."
+    IDS_STORENOTES          "Àx¦sµù¸Ñ"
+    IDS_NOTES               "µù¸Ñ"
+    IDS_KADSEARCHALREADY    "¥t¤@­Ó·j´M¥¿¦b¶i¦æ¤¤,½Ðµy­Ô­«¸Õ!"
+    IDS_WEB_SHUTDOWN        "Ãö³¬ eMule"
+    IDS_WEB_REBOOT          "­«°_¨t²Î"
+    IDS_WEB_SHUTDOWNSYSTEM  "Ãö³¬¨t²Î"
+    IDS_WEB_ADMINMENU       "ºÞ²z­ûµæ³æ"
+    IDS_WEB_MAIN_CLOSE      "§A¯uªº·Q°h¥XeMule?"
+    IDS_WEB_MAIN_REBOOT     "§A¯uªº·Q­«°_¨t²Î?"
+    IDS_WEB_MAIN_SHUTDOWN   "§A¯uªº·QÃö³¬¨t²Î  ?"
+    IDS_WEB_SHOW_UPLOAD_QUEUE_BANNED "¦b¶¤¦C¤¤Åã¥Ü³Qbanªº«È¤áºÝ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WEB_SHOW_UPLOAD_QUEUE_FRIEND "¦b¶¤¦C¤¤Åã¥ÜªB¤Í"
+    IDS_WEB_SESSIONTIMEOUT  "·|¸Ü¶W®É"
+    IDS_WEB_ALLOWHILEVFUNC  "°h¥XeMule,­«±Ò¨ÃÃö¾÷"
+    IDS_SETPFSLIMIT         "¨Ó·½­­¨î..."
+    IDS_SETPFSLIMITEXPLAINED 
+                            "½Ð¹ï·í«eÀÉ®×¿é¤J·sªº¨Ó·½­­¨î¼Æ(s) ! \n(³]¸m¬°0«h¨Ï¥Î¥þ§½³]©w)"
+    IDS_UPDATECATINCOMINGDIRS "§A·Q²{¦b§ó·s¥]¬AÂÂ¥Ø¿ýªº¤U¸üÀÉ®×¥Ø¿ý?"
+    IDS_USESPEECH           "®ÔÅª³qª¾°T®§"
+    IDS_ERR_FAILEDTOLOAD    "¸ü¤J %s: %s ¥¢±Ñ"
+    IDS_TCPIP_CONNS         "TCP/IP ³s½u"
+    IDS_MANUAL_FILENAMECLEANUP "§A­n²M²z·í«eÀÉ®×ªºÀÉ®×¦WºÙ?"
+    IDS_ERR_DELFILE         "§R°£""%s""ÀÉ®×¥¢±Ñ"
+    IDS_ERR_CONFIGCORRUPT   "%s¬Ý°_¨Ó¹³¬OÃaªº¨Ã±N·|³Q´À´«"
+    IDS_UPLOADING           "¤W¶Ç¤¤"
+    IDS_CANCELLED           "¤w¨ú®ø"
+    IDS_PW_REMEMBERDOWNLOADED "°O¦í¤U¸ü¹LªºÀÉ®×"
+    IDS_PW_REMEMBERCANCELLED "°O¦í¤w¨ú®øªºÀÉ®×"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_BADUNC          "µL®ÄªºUNC©R¦W"
+    IDS_NEVER               "±q¤£"
+    IDS_ALWAYS              "Á`¬O"
+    IDS_ONSHUTDOWN          "Ãö³¬®É"
+    IDS_UNCFOLDERS          "UNC¥Ø¿ý"
+    IDS_USESECIDENT         "¨Ï¥Î¦w¥þ»{ÃÒ"
+    IDS_ADVSPAMFILTER       "°ª¯Å©U§£°T®§¹LÂo"
+    IDS_CUT                 "°Å¤Á"
+    IDS_STATS_SECUREIDENT   "¦w¥þ»{ÃÒ(¦¨¥\:¥¢±Ñ)"
+    IDS_ONDISK              "¦bºÏºÐ¤Wªº¤j¤p:"
+    IDS_CLIENTCOL           "Äµ§i:§ä¨ì»P·í«e³s½uªº«È¤á¤Ç°tªº«È¤á:%s (%s) ©M %s (%s)"
+    IDS_SEARCH_UNTERMSTRING "¦r²Å¦ê¨S¦³²×µ²"
+    IDS_SEARCH_GENERALERROR "±`³W¿ù»~"
+    IDS_SEARCH_MISSINGORRIGHT "OR¹Bºâ²Å¯Ê¤Ö¥kÃäªº¾Þ§@¼Æ"
+    IDS_SEARCH_MISSINGNOTRIGHT "NOT¹Bºâ²Å¯Ê¤Ö¥kÃäªº¾Þ§@¼Æ"
+    IDS_SEARCH_MISSINGEXPRPARANT "'(' ')'¯Ê¤Öªí¹F¦¡"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SEARCH_MISSINGCLOSINGPARANT "¯Ê¤Ö²×¤î²Å ')'"
+    IDS_SEARCH_EXPRERROR    "¸ÑªR·j´Mªí¹F¦¡¥¢±Ñ"
+    IDS_SEARCH_TOOCOMPLEX   "ªí¹F¦¡¤Ó½ÆÂø"
+    IDS_VERSION             "ª©¥»"
+    IDS_OPTIONS             "³]¸m"
+    IDS_PASTE               "Öß¶K"
+    IDS_SEARCHAUTHORCOLLECTION "·j´M¸Ó§@ªÌªº¦¬ÂÃ"
+    IDS_ERR_DUPL_FILES      "­«½Æªº¤À¨ÉÀÉ®×: ""%s"" ©M ""%s"""
+    IDS_USS_TRACEROUTEOFTENFAILED "USS: ¸ô¥Ñ¸òÂÜ¦h¦¸¥¢±Ñ. Ãö³¬USS."
+    IDS_USS_STARTING        "USS: ·Ç³Æ´Nºü. ¶}©l±±¨î¤W¶Ç³t«×. (°_ªìªº60¬í¤º±N±Ä¨ú§Ö³t¤ÏÀ³¼Ò¦¡)"
+    IDS_A4AF                "¨Ó·½³B²z"
+    IDS_MOBILEMULE          "MobileMule"
+    IDS_ENABLEMM            "±Ò¥ÎMobileMule"
+    IDS_AUTOCAT_LABEL       "¦Û°Ê«ü©wÃþ§O(§Î¦¡,¥Î¡y|  ¤À¹j)"
+    IDS_SHOWEXTSETTINGS     "Åã¥Ü§ó¦h±±¨î(°ª¯Å¼Ò¦¡±±¨î)"
+    IDS_TREEOPTIONS_TRUE    "¯u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TREEOPTIONS_FALSE   "°²"
+    IDS_TREEOPTIONS_OK      "OK"
+    IDS_HYPERTEXT_FONT_HINT "¦øªA¾¹-,°T®§- ©M IRC-µ¡¤fªº¦rÅé"
+    IDS_SELECT_FONT         "¿ï¾Ü¦rÅé"
+    IDS_SERVER_LIMITS       "³n©Ê/µw©ÊÀÉ®×­­¨î"
+    IDS_KBITSSEC            "kBits/¬í"
+    IDS_KBYTESSEC           "kBytes/¬í"
+    IDS_ERR_CREATE_DIR      "³Ð«Ø¥Ø¿ý%s¥¢±Ñ""%s"" - %s"
+    IDS_WRN_INCFILE_RESERVED "Incoming¥Ø¿ý¸T¤î³Q³]¬°eMuleªº¦w¸Ë¥Ø¿ý."
+    IDS_WRN_TEMPFILES_RESERVED "Temporary¥Ø¿ý¸T¤î³Q³]¬°eMuleªº¦w¸Ë¥Ø¿ý."
+    IDS_WRN_INCTEMP_SAME    "Incoming¥Ø¿ý©MTemporary¥Ø¿ý¤£¯à¬Û¦P."
+    IDS_MMFAILED            "³Ð«ØMobileMule Socket¥¢±Ñ!"
+    IDS_MMSTARTED           "MobileMule¦øªA¾¹±Ò°Ê©óºÝ¤f %i.¨óÄ³ª©¥»:%s"
+    IDS_SHOWDWLPERCENTAGE   "¦b¶i«×±ø¤WÅã¥Ü¤U¸ü§¹¦¨¶qªº¦Ê¤À¤ñ"
+    IDS_TBN_ONNEWDOWNLOAD   "¤U¸ü¤w²K¥["
+    IDS_ARTIST              "ÃÀ³N®a"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ALBUM               "±M¿è"
+    IDS_MMGUIDELINK         "MobileMule¥Î¤á«ü«n"
+    IDS_CD_UPLOADREQ        "³Q½Ð¨Dªº¤W¶Ç:"
+    IDS_SETTINGCHANGED_RESTART "­n¨Ï§ó§ïªº³]¸m¥Í®Ä,½Ð­«±ÒeMule!"
+    IDS_CREDITSEXPIRED      ",%i ¥Î¤á³Q§R°£(®ø¥¢¤­­Ó¤ë)"
+    IDS_SOURCESINFO         "%i (¦³¥Î:%i,NNP:%i); A4AF:%i"
+    IDS_META_DATA           "Meta¼Æ¾Ú"
+    IDS_TIMEBEFORE          "(%s ¥H«e)"
+    IDS_FD_TIMEDATE         "¤é´Á"
+    IDS_FILEINFORMATION     "ÀÉ®×°T®§"
+    IDS_STATS_FREESPACE     "Á{®É¥Ø¿ý¤À°Ï¤Wªº¥i¥ÎªÅ¶¡"
+    IDS_IRC_HELPCHANNEL     "³s½u¨ì»¡©úÀW¹D."
+    IDS_IRC_HELPCHANNELPERFORM "/join #emule-chinese"
+    IDS_IRC_ACCEPTLINKSFRIENDS "¶È±qªB¤Í."
+    IDS_COMPLSOURCES        "§¹¦¨¨Ó·½"
+    IDS_CHECKNOENDTIME      "¨S¦³µ²§ô®É¶¡"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FD_DOWNLOADSTARTED  "¤U¸ü¤w²K¥[:"
+    IDS_FAILEDREOPEN        "­P©R¿ù»~:­«·s¥´¶}Partfile¥¢±Ñ¡y%s  (%s)!"
+    IDS_ERR_PREVIEWALREADY  "¦¹«È¤áªº¹wÄý½Ð¨D¥¿¦bµ¥«Ý"
+    IDS_ERR_PREVIEWFAILED   "¨Ó¦Û¥Î¤á'%s'ªº¹wÄý¥¢±Ñ"
+    IDS_DWTOT               "ºÏºÐªÅ¶¡"
+    IDS_DWTOT_NR            "¤U¸ü¼Æ¥Ø:%d"
+    IDS_DWTOT_TSD           "Á`¤U¸ü¤j¤p:%s"
+    IDS_DWTOT_TCS           "Á`§¹¦¨¤j¤p:%s (%.0f%%)"
+    IDS_DWTOT_TSL           "Á`¥¼§¹¦¨¤j¤p:%s"
+    IDS_DWTOT_TSN           "Á`©Ò»ÝºÏºÐªÅ¶¡:%s"
+    IDS_DWTOT_FS            "Á{®É¥Ø¿ý¤À°Ï¤Wªº¥i¥ÎªÅ¶¡: %s"
+    IDS_NEEDFREEDISKSPACE   "%s(»Ý­nÄÀ©ñ %s!)"
+    IDS_SERVERKEEPALIVETIMEOUT "¦øªA¾¹³s½u¨ê·s¶¡¹j[¤À]"
+    IDS_MORE                "§ó¦h(&M)"
+    IDS_TOOLS               "¤u¨ã"
+    IDS_SEARCHPARAMS        "·j´M°Ñ¼Æ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HASHINGFILESCOUNT   " (%u Hashing)"
+    IDS_CHECKDISKSPACE      "ÀË¬dºÏºÐªÅ¶¡"
+    IDS_YOURHOSTNAME        "¦Û¨­eD2K³sµ²ªº¥D¾÷¦W"
+    IDS_INSUFFICIENT        "ºÏºÐªÅ¶¡¤£¨¬"
+    IDS_MINFREEDISKSPACE    "³Ì¤p¥i¥ÎºÏºÐªÅ¶¡[MB]"
+    IDS_WARNING             "Äµ§i"
+    IDS_IMPORTSPLPF         "¾É¤J¥¼§¹¦¨¤U¸ü(eM,eD,ON)"
+    IDS_IMP_STEPREADPF      "¥¿¦bÅª¨úPartfileÀÉ®×§¨"
+    IDS_IMP_STEPBASICINF    "¥¿¦b±q·½Partfile¤¤Àò¨ú°ò¥»°T®§"
+    IDS_IMP_STEPCRDESTFILE  "¥¿¦b³Ð«Ø¥ØªºPartfile"
+    IDS_IMP_LOADDATA        "¥¿¦b±q·½Partfile¤¤¸ü¤J¼Æ¾Ú(%i/%i)"
+    IDS_IMP_SAVEDATA        "¥¿¦b§â¼Æ¾Ú¶ô«O¦s¨ì·sªºPartfile(%i/%i)"
+    IDS_IMP_IOERROR         "Âà´«¥¼§¹¦¨¤U¸ü®Éµo¥Í¿ù»~"
+    IDS_IMP_GETPFINFO       "¥¿¦bÀò¨ú·½Partfile°T®§"
+    IDS_IMP_ADDDWL          "¥¿¦b²K¥[¨Ã«O¦s·sªºPartfile"
+    IDS_IMP_FETCHSTATUS     "Àò¨úª¬ªp..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_IMP_INPROGR         "¥¿¦b¶i¦æ¤¤"
+    IDS_IMP_ERR_DISKSP      "¿ù»~:ºÏºÐªÅ¶¡¤£¨¬"
+    IDS_IMP_ERR_PARTMETIO   "¿ù»~:¥¼§ä¨ìPartmetÀÉ®×"
+    IDS_IMP_ERR_IO          "¿ù»~:IO¿ù»~!"
+    IDS_IMP_ERR_FAILED      "¿ù»~:¥¢±Ñ!"
+    IDS_IMP_STATUSQUEUED    "±Æ¶¤"
+    IDS_IMP_ALRDWL          "¤w¦b¤U¸ü"
+    IDS_IMP_ADDBTN          "²K¥[¾É¤J(&A)"
+    IDS_IMP_RETRYBTN        "­«¸Õ©Ò¿ï(&R)"
+    IDS_IMP_REMOVEBTN       "§R°£©Ò¿ï(&M)"
+    IDS_IMP_SELFOLDER       "½Ð¿ï¾Ü¤@­Ó«O¦s¦³¥¼§¹¦¨¤U¸üÀÉ®×ªºÀÉ®×§¨!(¤lÀÉ®×§¨¤]·|³Q¬d§ä)"
+    IDS_IMP_DELSRC          "§A·Q­n§R°£¤w¦¨¥\¾É¤Jªº¤U¸üªº·½Partfile¶Ü?"
+    IDS_IMP_SIZE            "%s(ºÏºÐ:%s)"
+    IDS_IMP_STATUS          "¥¿¦b¾É¤J%s:%s"
+    IDS_DYNUPENABLED        "¦Û°Ê³]¸m¤W¶Ç­­¨î"
+    IDS_DYNUP_PINGTOLERANCE "Ping ®e­­ (%³Ì§CPing)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DYNUP_GOINGUPDIVIDER "¦V¤W½wºC"
+    IDS_DYNUP_GOINGDOWNDIVIDER "¦V¤U½wºC"
+    IDS_DYNUP_NUMBEROFPINGS "¥­§¡³Ì¤jPing¦¸¼Æ"
+    IDS_DYNUP_MINUPLOAD     "³Ì§C¤¹³\ªº¤W¶Ç³t«×"
+    IDS_ESTTIMELEFT         "¦ô­p³Ñ¾l®É¶¡:"
+    IDS_TRANSFER_RATE_LABEL "¶Ç¿é¤ñ¨Ò:"
+    IDS_SAVELOG             "«O¦s¤é»x"
+    IDS_CMT_COPYCLIPBOARD   "½Æ»sµû»y¨ì°Å¶KªO"
+    IDS_ASKDOWNLOADLANG     "©Ò¿ïªº»y¨¥¨S¦³¦w¸Ë¦b§Aªº¨t²Î¸Ì.§A·Q­n±qemule-project.net¤U¸ü¶Ü?"
+    IDS_ASKDOWNLOADLANGCAP  "¤U¸ü»y¨¥ÀÉ®×"
+    IDS_DELETESELECTED      "§R°£"
+    IDS_ERR_FAILEDDOWNLOADLANG "±q%s¤U¸ü©M¦w¸Ë©Ò¿ïªº»y¨¥dll¥¢±Ñ!"
+    IDS_ERR_BADFOLDER       "µL®ÄÀÉ®×§¨.\n¤£¯à³Ð«ØÀÉ®×§¨.½ÐÀË¬d¦W¦r©M¦ì¸m."
+    IDS_AUTOREMOVEFD        "¦Û°Ê²M°£§¹¦¨ªº¤U¸ü"
+    IDS_MM_BLOCK            "µn¿ýMobileMule¥¢±Ñ¤wº¡3¦¸ - ¥ô¦ó¶i¤@¨Bªº¹Á¸Õ±N·|³Qªý¤î10¤ÀÄÁ!"
+    IDS_MM_NEWUSER          "·s¥Î¤á¦¨¥\µn³°MobileMule-Server"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TEXTLABELS          "¤å¥»¼ÐÅÒ"
+    IDS_ENABLETEXTLABELS    "¦b¹Ïªí¤U­±Åã¥Ü"
+    IDS_CUSTOMIZETOOLBAR    "©w¨î¤u¨ã±ø"
+    IDS_MINBITRATE          "³Ì¤p¤ñ¯S²v [kBit/s]"
+    IDS_KAD_RECHECKFW       "­«·sÀË¬d¨¾¤õÀð"
+    IDS_SHAREDTITLE         "¤À¨ÉED2K|Kad"
+    IDS_FIREWALLED          "³q¹L¨¾¤õÀð"
+    IDS_KADEMLIA            "Kad"
+    IDS_KADCONTACTLAB       "ÁpÃ´"
+    IDS_KADDISTANCE         "¶ZÂ÷"
+    IDS_KEY                 "ÃöÁäµü"
+    IDS_NUMBER              "¼Æ¶q"
+    IDS_KAD_SEARCHSRC       "·j´M¨Ó·½"
+    IDS_KAD_SEARCHKW        "·j´MÃöÁä¦r"
+    IDS_KAD_NODE            "¸`ÂI¬d§ä"
+    IDS_KAD_STOREFILE       "¦sÀxÀÉ®×"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_KAD_STOREKW         "¦sÀxÃöÁä¦r"
+    IDS_KAD_UNKNOWN         "¥¼ª¾"
+    IDS_SRV_TCPCOMPR        "TCPÀ£ÁY"
+    IDS_KADSEARCHLAB        "·í«e·j´M"
+    IDS_SRV_UDPSR           "¨Ó·½½Ð¨DªºÂX®iUDP¨óÄ³"
+    IDS_SRV_UDPFR           "ÀÉ®×½Ð¨DªºÂX®iUDP¨óÄ³"
+    IDS_MINLENGTH           "³Ì¤pªø«×[hh:mm:ss]"
+    IDS_EM_HELP             "»¡©ú(&H)"
+    IDS_WRN_FRIENDDUPLIPPORT 
+                            "ªB¤Í¨S¦³²K¥[.\r\n\r\n¤w¦s¦b¤@­Ó¦³µÛ¬Û¦PªºIP©MºÝ¤fªºªB¤Í."
+    IDS_DYNUP               "¤W¶Ç³t«×°»´ú(USS)"
+    IDS_KADOVERHEAD         "Kad¶}¾P(¥]):%s (%s)"
+    IDS_FIND                "¬d§ä ..."
+    IDS_LOG_BANNED_CLIENTS  "°O¿ý³Q¸T¤îªº«È¤á"
+    IDS_LOG_RATING_RECV     "°O¿ý¦¬¨ìÀÉ®×ªº´y­z©Mµû¤À"
+    IDS_LOG_SECURE_IDENT    "°O¿ý¦w¥þ¨­¥÷"
+    IDS_LOG_FILTERED_IPS    "°O¿ý¹LÂoªº©M/©Î©¿²¤IP"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RADCLIENTS          "¨Ó¦Û¤wª¾ªº«È¤á"
+    IDS_KADUDPPORTERR       "Kads UDPºÝ¤f»PeMuleªºExt UDPºÝ¤f©ÎeMuleªºServer UDPºÝ¤f½Ä¬ð.ºÝ¤f¤w³Q§ï¬°%u."
+    IDS_CONFIRM_FILEDELETE  "§A½T«H­n±qºÏºÐ§R°£©Ò¦³¿ï©wªºÀÉ®×¶Ü?"
+    IDS_OPENFOLDER          "¥´¶}ÀÉ®×§¨"
+    IDS_RUNASUSER           "¥H«D¯SÅv¥Î¤á¨­¥÷°õ¦æeMule"
+    IDS_DELETE              "±qºÏºÐ§R°£"
+    IDS_BOOTSTRAP           "¤Þ¾Éµ{§Ç"
+    IDS_VIAED2KSQ           "³q¹LED2K ¦øªA¾¹/¶¤¦C"
+    IDS_EM_KADEMLIA         "&Kad"
+    IDS_VIAKAD              "³q¹LKad"
+    IDS_VIASE               "³q¹L¨Ó·½¥æ´«"
+    IDS_SELECTTOOLBARBITMAP "¬°¤u¨ã±ø¿ï¾ÜBitmap"
+    IDS_SELECTTOOLBARBITMAPDIR "¿ï¾ÜBitmap¥Ø¿ý"
+    IDS_TOOLBARSKINS        "¤u¨ã±ø¥~Æ["
+    IDS_NOTEXTLABELS        "µL¼ÐÅÒ"
+    IDS_TEXTLABELSONRIGHT   "¦b¹Ïªí¥k°¼Åã¥Ü"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STARTTEST           "´ú¸ÕºÝ¤f"
+    IDS_TESTINFO            "¦b³o¸Ì§A¯à´ú¸Õ§Aªº TCP ©M UDP ºÝ¤f¯à§_³Q»·µ{³s½u¤W.·í¦øªA¾¹©M«È¤áºÝ³£¯à³s½u¨ì§A®É,´ú¸Õ´N·|¦¨¥\.TCPºÝ¤f¥²¶·´ú¸Õ¦¨¥\!"
+    IDS_CONNECTIONTEST      "³s½u´ú¸Õ"
+    IDS_NOPORTCHANGEPOSSIBLE 
+                            "·í§A³s½u¨ì§Oªº«È¤áºÝ©ÎªÌ³s½u¨ì¦øªA¾¹/Kad®É,§A¤£¯à§ïÅÜºÝ¤f¸¹.\n\n§A¥²¶·­«±ÒeMule¤~¯à§ïÅÜºÝ¤f³]¸m."
+    IDS_NETWORK_INFO        "ºô¸ô°T®§"
+    IDS_SP_TOTALUL          "¤W¶Ç³s½uÁ`¼Æ"
+    IDS_SP_ULFRIENDS        "¦n¤Í³q¹D¤W¶Ç¼Æ"
+    IDS_SP_ULSLOTSNOOVERHEAD "·í«e¤W¶Ç,±Æ°£ÃB¥~¶}¾P(¶È¤W¶Ç³q¹D)"
+    IDS_ST_ACTIVEU_ZZ       "¬¡°Êªº¤W¶Ç¼Æ"
+    IDS_ST_ULCURRENT        "¤W¶Ç+ÃB¥~¶}¾P"
+    IDS_ST_ULSLOTSNOOVERHEAD "¤W¶Ç"
+    IDS_ST_ULFRIEND         "µ¹¦n¤Í¤W¶Ç"
+    IDS_STATS_ACTUL_ZZ      "¥Rº¡±a¼e©Ò»Ýªº¬¡°Ê¤W¶Ç¼Æ: %i"
+    IDS_STATS_TOTALUL       "¤W¶ÇÁ`¼Æ: %i"
+    IDS_CHAT_DOWNLOADED     "¤w¤U¸ü:"
+    IDS_CHAT_UPLOADED       "¤w¤W¶Ç:"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CHAT_IDENT          "¨­¥÷ÅçÃÒ:"
+    IDS_MAXHALFOPENCONS     "³Ì¤j¥b¶}³s½u¼Æ"
+    IDS_WIZ_STARTWITHWINDOWS "¦bWindows±Ò°Ê®É¦Û°Ê°õ¦æeMule.(Àq»{¡G±Ò°Ê)"
+    IDS_KAD_WAITCBK         "µ¥«Ý Kad ªð¦^°T®§"
+    IDS_KAD_TOOMANDYKADLKPS "¹L¦hªº Kad ¬d§ä"
+    IDS_PCDS_CLIENTWAIT     "«È¤áºÝµ¥«Ý"
+    IDS_PCDS_CACHEWAIT      "½w¦sµ¥«Ý"
+    IDS_CACHE               "½w¦s"
+    IDS_INDEXED             "¯Á¤Þ"
+    IDS_KADINFO_SRC         "\t¨Ó·½: %u\r\n"
+    IDS_KADINFO_KEYW        "\tÃöÁä¦r: %u\r\n"
+    IDS_STARTWITHWINDOWS    "¦bWindows±Ò°Ê®É°õ¦æ"
+    IDS_ADDSRCMANUALLY      "¤â°Ê²K¥[¤@­Ó¨Ó·½"
+    IDS_BUDDY               "Buddy"
+    IDS_BUDDYNONE           "¨S¦³"
+    IDS_INFO                "°T®§"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HALF                "Half"
+    IDS_CONCOMPL            "Compl"
+    IDS_KADSTATUS_STOPPING  "°±¤î"
+    IDS_KADSTATUS_ACTIVE    "¬¡°Êªº"
+    IDS_FORMAT              "®æ¦¡"
+    IDS_META_COLLECTION     "¦¬ÂÃ"
+    IDS_META_PARTPATH       "PartÀÉ®×¸ô®|"
+    IDS_META_PARTHASH       "PartÀÉ®×Hash"
+    IDS_META_GAPSTART       "Gap ¶}©l"
+    IDS_META_GAPEND         "Gap µ²§ô"
+    IDS_FAIL                "¥¢±Ñ"
+    IDS_META_PREFERENCES    "¿ï¶µ"
+    IDS_META_VERSION        "ª©¥»"
+    IDS_META_TEMPFILE       "Á{®ÉÀÉ®×"
+    IDS_META_SERVERPORT     "¦øªA¾¹ºÝ¤f"
+    IDS_META_SERVERIP       "¦øªA¾¹ IP"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_META_SRCUDPPORT     "¨Ó·½ UDP ºÝ¤f"
+    IDS_META_SRCTCPPORT     "¨Ó·½ TCP ºÝ¤f"
+    IDS_META_SRCIP          "¨Ó·½ IP"
+    IDS_META_SRCTYPE        "¨Ó·½ºØÃþ"
+    IDS_SEARCH_UNICODE      "¨Ï¥Î Unicode ·j´M"
+    IDS_PF_ADVANCEDCALC     "¬°­pºâ³Ñ¾l®É¶¡¨Ï¥Î°ª¯Åªº­pºâ¤èªk"
+    IDS_LD_ED2KLINK         "ED2K ³sµ²"
+    IDS_LD_COPYCLIPBOARD    "½Æ»s¨ì°Å¶KªO"
+    IDS_LD_HOSTNAME         "¦b¥Í¦¨±a·½³sµ²®É,¨Ï¥Î¥D¾÷¦W(±q¿ï¶µ¤¤³]¸m)¥N´ÀIP¦a§}"
+    IDS_SAVEACFAILED        "«O¦s AICH Hashset ¥¢±Ñ!"
+    IDS_IACHHASH            "AICH Hash"
+    IDS_BYTESPERSEC         "B/s"
+    IDS_KBYTESPERSEC        "KB/s"
+    IDS_MBYTESPERSEC        "MB/s"
+    IDS_GBYTESPERSEC        "GB/s"
+    IDS_TBYTESPERSEC        "TB/s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATS_MINORCLIENTS  "¸û¤Ö¨Ï¥Îªº"
+    IDS_AICH_SYNCTOTAL      "µo²{ %i ­ÓÀÉ®×¨S¦³¦³®ÄªºAICH Hashset,²{¦b¥¿¦b­«·s Hash ³o¨ÇÀÉ®×"
+    IDS_AICH_CALCFILE       "­pºâÀÉ®× %s ªº AICH Hash"
+    IDS_AICH_WARNUSER       "¦Û±q 0.44a ª©¥»¶}©l,eMule ¨Ï¥Î¤@­Óªþ¥[ªºÀÉ®×Hash,¥¦¥i¥H¦bÀÉ®×·lÃaµo¥Í®É·¥¤j¦a´î¤Ö¼Æ¾Ú¥á¥¢.¦]¬°§A¬O±q¤@­Ó¸û¦­ªºª©¥»¤É¯Å¤W¨Ó,§Aªº¥þ³¡¤À¨ÉªºÀÉ®×¥²¶·³Q­«·sHash,¥Î©ó­pºâ·sªº AICH Hash.³o­Ó¹Lµ{·|¥Î¥h¤£¤Ö®É¶¡,¦ý¬O¥¦¥u°õ¦æ¤@¦¸."
+    IDS_AICH_WORKED         "AICH ¦¨¥\ªº«ì´_¤F %s/ %s ÀÉ®×¬q:%u ÀÉ®×: %s"
+    IDS_SOURCECLIENT        "«È¤áºÝ¨Ó·½"
+    IDS_USERSIP             "¥Î¤á IP"
+    IDS_FEATURES            "¯S©Ê"
+    IDS_IRC_NEWNICK         "¿ï¾Ü¤@­Ó IRC ¼ÊºÙ."
+    IDS_IRC_NEWNICKDESC     "¤@­Ó¼ÊºÙÀ³¸Ó¤Ö©ó20­Ó¦r²Å,¥i¥H¨Ï¥Î(A-Z,0-9).§A¥i¥H¦b ³]¸m->IRC ¤¤§ó§ï¥¦."
+    IDS_SPARSEPARTFILES     "«Ø¥ß·sªºPartÀÉ®×¬°""µ}²¨ÀÉ®×""(¶È­­ NTFS ¨Ï¥Î)"
+    IDS_ASPECTRATIO         "¬ù§ô¤ñ¨Ò"
+    IDS_NEGATEFILTER        "¨ú®ø¹LÂo"
+    IDS_SEENCOMPL           "´¿¸g¬Ý¨£§¹¾ãªº"
+    IDS_SELSKINPROFILEDIR   "¿ï¾Ü¦s©ñ¥~Æ[°t¸mÀÉ®×ªºÀÉ®×§¨"
+    IDS_ASKDLINCOMPLETE     "¥i¯à¬O¤£§¹¾ãÀÉ®×:\r\n\r\n%s\r\n\r\n³o­ÓÀÉ®×¦bºô¸ô¤¤³Q»{¬°¬O¤£§¹¾ãªºÀÉ®×,¦]¦¹«Ü¥i¯àµLªk¦¨¥\¤U¸ü!§A¯uªº­n¤U¸ü³o­ÓÀÉ®×?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEADSOURCES         "µL®Ä¨Ó·½"
+    IDS_LARGEICONS          "¤j¹Ï¼Ð"
+    IDS_SMALLICONS          "¤p¹Ï¼Ð"
+    IDS_SHORTTAGS           "µu¼ÐÅÒ"
+    IDS_THELOAD             "¸ü¤J"
+    IDS_PACKSENT            "¤wµo°e¥]"
+    IDS_RESPONSES           "¦^À³Á`¼Æ"
+    IDS_EXTRACT_META_DATA   "®i¶}Meta¼Æ¾Ú"
+    IDS_META_DATA_MEDIADET  "DirectShow (©Ò¦³¨ä¥L­µÀW/µøÀWÀÉ®×)"
+    IDS_META_DATA_ID3LIB    "ID3°ÊºA³sµ²®w (¶È­­MPEG­µÀWÀÉ®×)"
+    IDS_COMCTRL32_DLL_TOOOLD 
+                            "Windowsªº³q¥Î±±¥ó³sµ²®w(COMCTL32.DLL)ªºª©¥»¤ÓÂÂ¤F!\r\n\r\neMuleÀË´ú¨ì""Windowsªº³q¥Î±±¥ó³sµ²®w(COMCTL32.DLL)""ªºª©¥»¤ÓÂÂ,¥H¦Ü©ó¥¦¥i¯à¨Ï±oeMuleµLªk¥¿±`¤u§@.¬°¤F½T«OeMule§¹¾ã ¥¿½Tªº¹B§@,§Ú­Ì±j¯P«ØÄ³§A±N""Windowsªº³q¥Î±±¥ó³sµ²®w(COMCTL32.DLL)""¦Ü¤Ö§ó·s¨ì5.8ª©.\r\n\r\n¦bMicrosoft (R)¤U¸ü¤¤¤ß¥i¥H¤U¸ü©M¦w¸Ë³Ì·sª©¥»ªº""Windowsªº³q¥Î±±¥ó³sµ²®w(COMCTL32.DLL)"".§AÄ@·N³X°Ý¬ÛÀ³ªºURL¶Ü?"
+    IDS_ASREGEXPR           "¨Ï¥Î¥¿«hªí¹F¦¡«ü©w¤ÀÃþ"
+    IDS_STATIC_REGEXP       "¤U¸ü¦Cªí¨Ï¥Îªº¥¿«hªí¹F¦¡:"
+    IDS_CARE4ALL            "Åã¥Ü¯S©wªº«D¥»¤ÀÃþÀÉ®×"
+    IDS_REGEXPRESSION       "¥¿«hªí¹F¦¡"
+    IDS_SEARCHKAD           "·j´M Kad"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PW_EMAILNOTIFICATIONS "¶l¥ó³qª¾"
+    IDS_PW_SMTPSERVER       "SMTP¦øªA¾¹:"
+    IDS_PW_SENDERADDRESS    "µo°e¦a§}:"
+    IDS_AVAILABLEPARTS      "¦³®ÄªºÀÉ®×¬q"
+    IDS_NOSOUND             "µLÁn"
+    IDS_PW_RECEIVERADDRESS  "±µ¦¬¦a§}:"
+    IDS_PW_ENABLEEMAIL      "¶}±Ò¶l¥ó³qª¾"
+    IDS_EMULENOTIFICATION   "eMule³qª¾"
+    IDS_PW_SHOWTRANSTOOLBAR "¦b¶Ç¿éµ¡¤fÅã¥ÜÃB¥~ªº¤u¨ãÄæ"
+    IDS_SHARED_STATUS       "¤À¨ÉªºÀÉ®×¬q"
+    IDS_SEARCH_EMULECOLLECTION "¦¬ÂÃ¶°"
+    IDS_INCOMING_FILES      "¤U¸üªºÀÉ®×"
+    IDS_INCOMPLETE_FILES    "¥¼§¹¦¨ªºÀÉ®×"
+    IDS_SHARED_DIRECTORIES  "¤À¨Éªº¥Ø¿ý"
+    IDS_COLLECTIONLIST      "¦¬ÂÃ¶°¦Cªí"
+    IDS_SHAREDIR            "¤À¨É¦¹¥Ø¿ý"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SHAREDIRSUB         "³s¦P¤l¥Ø¿ý¦b¤º¤À¨É"
+    IDS_UNSHAREDIR          "¨ú®ø¤À¨É¦¹¥Ø¿ý"
+    IDS_UNSHAREDIRSUB       "³s¦P¤l¥Ø¿ý¦b¤º¨ú®ø¤À¨É"
+    IDS_ALLSHAREDFILES      "©Ò¦³¤À¨ÉªºÀÉ®×"
+    IDS_ALLDIRECTORIES      "©Ò¦³ªº¥Ø¿ý"
+    IDS_SEARCHRELATED       "¬d§ä¬ÛÃöªºÀÉ®×"
+    IDS_RELATED             "¬ÛÃöªº"
+    IDS_COLL_REPLACEEXISTING "§A¬O§_§Æ±æ´À´«²{¦³ÀÉ®×?"
+    IDS_COLL_ERR_DELETING   "¦b§R°£ÂÂÀÉ®×®Éµo¥Í¥¼ª¾¿ù»~. ¬O§_©ñ±ó«O¦s¨Ã°h¥X?"
+    IDS_CREATECOLLECTION    "³Ð«Ø¦¬ÂÃ¶°"
+    IDS_MODIFYCOLLECTION    "­×§ï¦¬ÂÃ¶°"
+    IDS_COLL_SIGN           "¥H¨Ï¥ÎªÌ¦WºÙ¤Î»{ÃÒ½X¼Ð°O¦¹¦¬ÂÃ¶°"
+    IDS_AUTHOR              "»s§@ªÌ"
+    IDS_AUTHORKEY           "»s§@ªÌªº»{ÃÒ½X"
+    IDS_COLL_ADDINCAT       "²K¥[·sªº¤U¸ü©ó¦¹¦¬ÂÃ¶°ªº¤ÀÃþ¤¤"
+    IDS_VIEWCOLLECTION      "¬d¬Ý¦¬ÂÃ¶°"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLL_TEXTFORMAT     "¥HÂ²³æ¤å¥»¤è¦¡«O¦s¦¬ÂÃ¶°"
+    IDS_RUNNINGRESTRICTED   "eMule°õ¦æ¦b¨ü­­ª¬ºA¤U"
+    IDS_USS_MANUALUPLOADLIMITDETECTED 
+                            "USS: ÀË´ú¨ì¿ï¶µ¤¤ªº¤W¶Ç³t«×­­¨î³Q´£°ª. ¶i¤J§Ö³t¤ÏÀ³¼Ò¦¡60¬í."
+    IDS_USS_STATE_PREPARING "¥¿¦b³B²z..."
+    IDS_USS_STATE_WAITING   "½Ðµy«á..."
+    IDS_USS_STATE_ERROR     "¿ù»~!"
+    IDS_SHAREWARNING        "(ÀÉ®×§¨±N³Q¤À¨É!)"
+    IDS_REMOVEALLSERVERS    "§A½T©w­n§R°£©Ò¦³ªº¦øªA¾¹?"
+    IDS_SEARCH_UNKATTR      "¥¼ª¾ªº·j´MÄÝ©Ê '%s'"
+    IDS_SEARCH_ATTRERR      "·j´MÄÝ©Ê '%s' ¤¤¦³»yªk¿ù»~"
+    IDS_SEARCH_MISSINGANDRIGHT "¥¼«ü©w AND ¾Þ§@²Åªº¥k°¼¾Þ§@¼Æ"
+    IDS_SEARCH_OPRERR       "¤ñ¸û¾Þ§@²Å '%s' ¤¤¦³»yªk¿ù»~"
+    IDS_DOWNLOAD_LANGFILE   "¥¿¦b¤U¸ü»y¨¥ÀÉ®×..."
+    IDS_DOWNLOADING_SERVERMET_FROM "¥¿¦b¤U¸ü¨Ó¦Û %s ªº server.met ÀÉ®×..."
+    IDS_DOWNLOADING_SERVERMET "¥¿¦b¤U¸ü server.met ÀÉ®×..."
+    IDS_FULLALLOC           "¬°«Dµ}²¨ÀÉ®×¤À°tµw½LªÅ¶¡"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_X_SHAREAZA_IMPORT_NO_HASH "Hash ¨S¦³§ä¨ì."
+    IDS_X_SHAREAZA_IMPORT_GAP_LIST_CORRUPT "Gap ¦Cªí¤w·lÃa."
+    IDS_X_SHAREAZA_IMPORT_NO_GAP_LIST "Gap ¦Cªí¥¼§ä¨ì."
+    IDS_X_SHAREAZA_IMPORT_HASH_SET_CORRUPT "Hash set ·lÃa."
+    IDS_X_SHAREAZA_IMPORT_NO_HASH_SET "Hash set ¥¼¯à§ä¨ì."
+    IDS_CONVERTINGKNOWN2MET "¥¿¦bÂà´« %s ¦Ü %s ¥H«K¤ä«ù¤jÀÉ®×..."
+    IDS_CONVERTINGKNOWN2FAILED "...Âà´« known2.met ¥¢±Ñ, ©¿²¤ÂÂªº°O¿ý"
+    IDS_CONVERTINGKNOWN2DONE "... §¹¦¨, Âà´«¦¨¥\!"
+    IDS_ERR_MET_BAD         "¿ù»~:ÀÉ®× %s ¬O·lÃaªº, ¤£¯àÅª¨ú¤wª¾ªºÀÉ®×"
+    IDS_SRV_LARGEFILES      "¤ä«ù¤jÀÉ®×"
+    IDS_ERR_FSCANTHANDLEFILE 
+                            "¦]¬°§Aªº¾Þ§@¨t²Î¤£¤ä«ù¶W¹L4GBªºÀÉ®×¡A©Ò¥H§A¤£¯à¤U¸ü¸Ó¡A½Ð¦Ò¼{±N¤À°Ï®æ¦¡Âà´«¦¨NTFS®æ¦¡ÀÉ®×"
+    IDS_NEWVERSIONAVLBETA   "This Beta version is out of date. Due to the nature of Beta versions, which often contain bugs it is very important that you update to a stable release as soon as possible!"
+    IDS_BOLD                "²ÊÅé"
+    IDS_UNDERLINE           "¤U¹º½u"
+    IDS_COLOUR              "Selects foreground text colour (optional background colour)¿ï¾Ü«e´º¤å¥»ÃC¦â(¥i¿ï­I´ºÃC¦â)"
+    IDS_RESETFORMAT         "­«¸m¥ý«eªº®æ¦¡(µo°e¤@­Ó­«¸m¼ÐÅÒ)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ARCPREV_UNKNOWNFORMAT "(¥¼ª¾/¤£¤ä«ù)"
+    IDS_KADSEARCHACTIVE     "(¥¿¦b¶i¦æKad·j´M...)"
+    IDS_OBFUSCATION         "¼Ò½k"
+    IDS_SUPPORTED           "¤ä«ù"
+    IDS_ESTIMATED           "¦ô­p"
+    IDS_MEDIAINFO_DLLMISSING 
+                            "©|¥¼¦w¸ËMediaInfo®w¡C ¦pªG§A·QÀò¨ú§ó¦hªºÃö©ó­µÀW/µøÀWÀÉ®×ªº°T®§¡A\r\n½Ð¨ìhttp://sourceforge.net/projects/mediainfo/¤U¸üMediaInfo®w¡A¨Ã¥B±NMediaInfo.dllÀÉ®×½Æ»s¨ì\r\neMule's¦w¸ËÀÉ®×§¨""%s"".\r\n"
+    IDS_WARNING_WRONGFILEEXTENTION 
+                            "Äµ§i¡G ""%s""ÀÉ®×ªºÂX®i¦W©M«ü©w¨Ï¥ÎªºÀÉ®×®æ¦¡¤£¤Ç°t¡C ¬°¤F¨Ï¥Î©M¬d¬ÝÀÉ®×®æ¦¡¡A§A¥i¥H¨Ï¥Î""%s""­«©R¦WÀÉ®×\r\n"
+    IDS_MEDIAINFO_DRMWARNING 
+                            "Warning: The file ""%s"" seems to be protected with Digital Rights Management.\r\nYou will most likely not be able to use that file without a license from the originator of that file.\r\n"
+    IDS_ARCHPREV_ATTRIBINFO "File attributes can contain:\r\n\r\nP\tfile is password protected\r\nD\tis a directory\r\nC\tComment\r\nLx\tCompression level x\r\nM\tcompressed data not completely downloaded yet\r\n<\tfile continued from previous volume\r\n>\tfile continues in next volume\r\n"
+    IDS_LOADFILTER_EMTOOLBAR "eMule¤u¨ã±ø¦ì¹ÏÀÉ®×"
+    IDS_LOADFILTER_EMSKINFILES "eMule¥Ö½§ÀÉ®×"
+    IDS_CONTENT_INFO        "¤º®e"
+    IDS_MESSAGESCOMMENTS    "°T®§©Mµù¸Ñ"
+    IDS_PROTOCOLOBFUSCATION "¼Ò½k¨óÄ³"
+    IDS_ONLYOBFUSCATED      "¥u¤¹³\¼Ò½k³s½u(¤£±ÀÂË)"
+    IDS_DISABLEOBFUSCATION  "¤£¨Ï¥Î¼Ò½k³s½u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RESTORESEARCHPARAMS "«O¦s¬d§ä°Ñ¼Æ"
+    IDS_COMMAND             "©R¥O"
+    IDS_ARGUMENTS           "°Ñ¼Æ"
+    IDS_ARCPREV_PLEASEWAIT  "¥¿¦b±½ºËÀ£ÁY¥]..."
+    IDS_AP_CREATEPREVCOPY   "³Ð«Ø¤@­Ó¹wÄýÀÉ®×"
+    IDS_ARCHIVEDETAILS      "¤åÀÉ²Ó¸`"
+    IDS_ARCHTYPE            "À£ÁY¥]Ãþ«¬"
+    IDS_ATTRIBUTES          "ÄÝ©Ê"
+    IDS_LASTMODIFIED        "¤W¦¸§ï°Ê"
+    IDS_RARFULLENCR         "ÀY°T®§³Q¥[±K - ¤£¯àÅª¨ú¤åÀÉ¡C"
+    IDS_ARCPARSED           "À£ÁY¤åÀÉ¤w±½ºË¡C"
+    IDS_ARCPREV_LISTMAYBEINCOMPL "ÀÉ®×¦Cªí¥i¯à¤£§¹¾ã¡C"
+    IDS_ARCPREV_DIRNOTFOUND "¥Ø¿ý¥¼µo²{."
+    IDS_ARCPREV_INSUFFDATA  "Insufficent data available."
+    IDS_PASSWPROT           "±K½X«OÅ@"
+    IDS_ARCPREV_DIRSUCCREAD "Table of contents successfully read.¦¨¥\ªºÅª¨ú¥Ø¿ý"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENABLEOBFUSCATION   "¨Ï¥Î¼Ò½k¨óÄ³"
+    IDS_CONNECTINGTOOBFUSCATED "¥¿¦b³s½u¨ì %s (%s:%i - ¥¿¦b¨Ï¥Î¼Ò½k¨óÄ³)..."
+    IDS_CONNECTEDTOOBFUSCATED "¼Ò½k³s½u¤w¸g«Ø¥ß¦b: %s"
+    IDS_VERIFIED            "¤wÅçÃÒ"
+    IDS_OBFUSCATED          "Obfuscated"
+    IDS_UNVERIFIED          "¥¼ÅçÃÒ"
+    IDS_INVALIDFILEEXT      "¤£§¹¾ãªºÀÉ®×ÂX®i¦W"
+    IDS_UNKNOWNFILEEXT      "¥¼ª¾ªºÀÉ®×ÂX®i¦W"
+    IDS_ENABLEMINIMULE      "¨Ï¥Î³Ì¤p¤ÆeMule"
+    IDS_DISABLE_AUTOARCHPREV "¤£¦bÀÉ®×²Ó¸`¤¤¦Û°Ê¨Ï¥Î¤åÀÉ¹wÄý"
+    IDS_US_STALLEDW4BR      "Stalled! Waiting for block request."
+    IDS_US_STALLEDREADINGFDISK "Stalled! Reading from disk."
+    IDS_SERVERFEATURE_INTTYPETAGS "Integer type tags"
+    IDS_BROWSER_BACK        "ªð¦^"
+    IDS_BROWSER_FORWARD     "«e¶i"
+    IDS_BROWSER_STOP        "°±¤î"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROWSER_REFRESH     "¨ê·s"
+    IDS_BROWSER_VERYCD      "VeryCD"
+    IDS_WEBBROWSER          "ÂsÄý¾¹"
+    IDS_ADDRESS             "¦a§}:"
+    IDS_EM_WEBBROWSER       "ÂsÄý¾¹(&B)"
+    IDS_PW_WEBBROWSER       "±Ò¥Î¤º¸mWebÂsÄý¾¹."
+    IDS_PREF_WEBBROWSER     "±Ò¥Î¤º¸mÂsÄý¾¹"
+    IDS_WEBBROSWERS         "ÂsÄý¾¹³]¸m§ïÅÜ¡A¸Ó³]¸m»Ý­n­«·s±Ò°ÊeMule«á¥Í®Ä¡I"
+    IDS_IP2LOCATION         "®Ú¾ÚIPÅã¥Ü¦a°Ï"
+    IDS_LOCATIONNAME_SHORT  "µu"
+    IDS_LOCATIONNAME_MID    "¤¤"
+    IDS_LOCATIONNAME_LONG   "ªø"
+    IDS_LOCATIONNAME_SHOWFLAG "Åã¥Ü¦a°ÏºX¼m"
+    IDS_RANDOMPORT          "ÀH¾÷ºÝ¤f"
+    IDS_DL_COMMENT          "µû½×"
+    IDS_UPLOADCLIENTS       "©T©w¤W¶Ç½uµ{"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TCPIPCHANGED        "¦¨¥\ªºÀ³¥Î¤F·sªº³Ì¤j¥b¶}³s½u¼Æ³]¸m\n§Ú­Ì±j¯P«ØÄ³±z­«·s±Ò°Ê¾Þ§@¨t²Î¥H¨Ï³]¸m¥Í®Ä(³æÀ»½T©w«ö¶s¤£·|­«·s±Ò°Ê¾÷¾¹)¡I"
+    IDS_USSCHANGED          "¥´¶}USS¥\¯à·|¼vÅT§Aªº¤U¸ü³t«×¡A¤£«ØÄ³¨Ï¥Î¡A¬O§_Ä~Äò¡H"
+    IDS_UPNP_MESSAGE        "§A¥²¶·­«·s±Ò°ÊeMule¡A¥H«K§ó§ï¥Í®Ä"
+    IDS_CN_UPNPNAT          "¨Ï¥ÎUPnP"
+    IDS_CN_UPNPTRYRANDOM    "¦bUPnP¤¤¡A¹Á¸Õ¨Ï¥ÎÀH¾÷ºÝ¤f"
+    IDS_VIRUS               "¦b½u¬d¬r"
+    IDS_WIZ1_DIR_SUBTITLE   "¥Ø¿ý¿ï¶µ¥i¥H»¡©ú±z¤è«K¦aºÞ²z¤w¤U¸üªºÀÉ®×©MÁ{®ÉÀÉ®×"
+    IDS_WIZ1_DIR_INC_DESC   "¤U¸ü§¹¦¨ªºÀÉ®×±N·|³Q©ñ¦b¡u¤U¸ü¥Ø¿ý¡v¸Ì"
+    IDS_ICFSUPPORTFIRST     "eMuleÀË´ú¨ìWindows¨¾¤õÀð¥¿¦b°õ¦æ¡A\r\n±z§Æ±æeMule¦Û°Ê°t¸m¥¦¶Ü¡H¡]±ÀÂË¡^"
+    IDS_WIZ1_DIR_TMP_DESC   "¥Î©óÁ{®É«O¦s¥¿¦b¤U¸ü¤¤ªºÀÉ®×¡A«ØÄ³©M¡u¤U¸ü¥Ø¿ý¡v³]¸m¦b¦P¤@½L²Å¤U"
+    IDS_WIZ1_DIR_INC_TITLE  "¤U¸ü¥Ø¿ý"
+    IDS_WIZ1_DIR_TMP_TITLE  "Á{®É¥Ø¿ý"
+    IDS_ERR_FILEOPEN2       "¥´¶}ÀÉ®× %s ¥¢±Ñ"
+    IDS_LOWTOLOWTRANSFERRING "Low2Low ¶Ç¿é¤¤"
+    IDS_WEBBROWSER_DISABLED "WebÂsÄý¾¹¤w¸g³Q¸T¥Î¡C§A¥i¥H¦b¡u¿ï¶µ¡v¸Ì¶}±Ò¸Ó¥\¯à¡C"
+    IDS_CREATE_WEBBROWSER_FAIL 
+                            "³Ð«ØWebÂsÄý¾¹¥¢±Ñ¡A§A¥i¥H¨Ï¥Î¨ä¥LWebÂsÄý¤u¨ã¥´¶} www.verycd.com/start ¥H¬d§ä¸ê·½¡C"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NOT_SUPPORTED       "¤£¤ä«ù"
+    IDS_LANTRANSFERRING     "Lan Transferring"
+    IDS_LAN                 "LAN"
+    IDS_UPDATE_NEWVERSION   "eMule µo²{·sª©¥»¡A¬O§_¶i¦æ§ó·s"
+    IDS_UPDATE_INSTALL      "±z¤w¤U¸ü¤F§ó·s¡A¦ý¥¼¦w¸Ë¡A ¬O§_²{¦b¦w¸Ë"
+    IDS_PW_CLEAR            "²M°£"
+    IDS_SHAREEMULELABEL     "©M¥»¹q¸£ªº¨ä¥L¨Ï¥ÎªÌ¦@¥Î eMule"
+    IDS_SHAREEMULEMULTI     "¨C­Ó¨Ï¥ÎªÌ¦³¦Û¤vªº³]©w¤Î¤U¸ü"
+    IDS_SHAREEMULEPUBLIC    "¨C­Ó¤H¨Ï¥Î¬Û¦Pªº³]©w¤Î¤U¸ü"
+    IDS_SHAREEMULEOLD       "Àx¦s³]©w¤Î¤U¸ü¦bµ{¦¡¸ê®Æ§¨"
+    IDS_SHAREEMULEWARNING   "¯à¨Ï¥Î³o­Ó¿ï¶µ¨Ó´«¦^±z¥Ø«eªº³]©w.\n\n±z»Ý­n­«·s±Ò°Ê eMule ¨Ó¨Ï³o­ÓÅÜ§ó¥Í®Ä."
+    IDS_ERROR_FILE_TYPE     "¤U¸üªº¦w¸Ë¥]¬°«Dªkªº¤å¥óÃþ«¬"
+    IDS_TBN_DOWNLOADBADFILE "ÏÂÝdÁËÒ»?²»°²È«µÄ™n°¸:"
+    IDS_UNSAFE              "²»°²È«"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ANTILEECH           "¤Ï§l¦å«OÅ@"
+    IDS_ANTILEECHER_CHECK   "±Ò¥Î¤Ï§l¦å«OÅ@"
+    IDS_ANTILEECHERNAME_CHECK "«ö¥Î¤á¦W«Ì½ª§l¦å"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ANTIGHOST           "«Ì½ªGhost-Mods"
+    IDS_ANTILEECHERBADHELLO_CHECK "«Ì½ª¿ù»~ªºHello¼ÐÅÒ"
+    IDS_ANTILEECHERSNAFU_CHECK "«Ì½ª¿ù»~ªº¼ÐÅÒ"
+    IDS_ANTILEECHERMOD_CHECK "«öMod¦r²Å¦ê«Ì½ª§l¦å"
+    IDS_ANTILEECHERTHIEF_CHECK "«Ì½ª¼ÊºÙ/Mod°½µsªÌ"
+    IDS_ANTILEECHERSPAMMER_CHECK "«Ì½ªSpammer"
+    IDS_ANTILEECHERXSEXPLOITER_CHECK "«Ì½ª·½¥æ´«¯}ÃaªÌ"
+    IDS_ANTILEECHEREMCRYPT_CHECK "«Ì½ªeMCrypt"
+    IDS_ANTILEECHERUSERHASH_CHECK "ÀË´úµL®Ä¥Î¤áHash"
+    IDS_STATIC_LEECHERCOMMUNITY "ÀÝ¥ÎªÀ°Ï¥[¤ÀMod"
+    IDS_STATIC_LEECHERTHIEF "¼ÊºÙ/ModµsÅÑ"
+    IDS_LEECHER_ACTION_BAN  "«Ê¸T"
+    IDS_LEECHER_ACTION_REDUCE "­°§C¤W¶Ç±o¤À"
+    IDS_DLP_NEWVERSION      "§ä¨ì·sª©¥»ªºantiLeech.dll"
+    IDS_DLP_LOADOLD         "µLªk½Æ»santiLeech.dll, ¼È®É¨Ï¥ÎÂÂª©¥»"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DLP_DLLLOADED       "¤w¥[¸ü°ÊºA¤Ï§l¦åÆj«OÅ@ ª©¥»¸¹ %u"
+    IDS_DLP_LOADFAILED      "µLªkªì©l¤ÆantiLeech.dll, ½Ð¨Ï¥Î³Ì·sª©ªºDLP"
+    IDS_DLP_LOADFAILED2     "µLªk¥[¸üantiLeech.dll"
+    IDS_DLP_ERRORCODE       "¿ù»~¥N½X: %u"
+    IDS_DLP_NO_NEWVER       "¨S¦³§ä¨ì·sª©antiLeech.dll. ¨Ï¥Î·í«eª©¥»"
+    IDS_DLP_UNBAN           "¸Ñ°£«Ê¸T - «È¤áºÝ %s"
+    IDS_DLP_BANUSER         "[%s](«Ê¸T)- «È¤áºÝ %s"
+    IDS_DLP_REDUCEUSER      "[%s](­°§C¤W¶Ç±o¤À)- «È¤áºÝ %s"
+    IDS_DLP_ANTICREDIT      "¤Ï¨ü«HHack"
+    IDS_DLP_MD4INOP         "opcode¤¤¥]§tmd4¦r²Å¦ê"
+    IDS_DLP_WRONGHELLOORDER "¿ù»~ªºhello½Ð¨D¶¶§Ç"
+    IDS_DLP_EXTRABYTES      "ÃB¥~¦r¸`"
+    IDS_DLP_WRONGHASHSIZE   "¿ù»~ªºHashªø«×"
+    IDS_DLP_APPLEJUICE      "Applejuice"
+    IDS_DLP_EMCRYPT         "emcrypt"
+    IDS_DLP_GHOSTMOD        "¼ÊºÙ/ModµsÅÑ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ANTILEECHER_GROUP   "Anti-Leecher"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LEERCHERLOGTITLE    "§l¦åÆj¹LÂo«H®§"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UPLOADTOOLESS       "¹qÆj¤W¶Ç³t«×­­¨î¤Ó¤p,¤£¯à¨ú®ø¤U¸ü­­³t¡C"
+END
+
+#endif    // ÖÐÎÄ(Ì¨Íå) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "..\version.h"
+#include "lang.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
