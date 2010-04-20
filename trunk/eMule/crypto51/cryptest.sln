@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptdll", "cryptdll.vcproj", "{6109E927-F4C1-4F55-8F15-3989050E0EBE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7072D579-224A-48BD-9ECA-EB80C573528E} = {7072D579-224A-48BD-9ECA-EB80C573528E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptest", "cryptest.vcproj", "{7072D579-224A-48BD-9ECA-EB80C573528E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8139A2A5-F160-45AE-8150-3A600FEF7911} = {8139A2A5-F160-45AE-8150-3A600FEF7911}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptlib", "cryptlib.vcproj", "{8139A2A5-F160-45AE-8150-3A600FEF7911}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dlltest", "dlltest.vcproj", "{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE} = {6109E927-F4C1-4F55-8F15-3989050E0EBE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		DLL-Import Debug = DLL-Import Debug
+		DLL-Import Release = DLL-Import Release
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.Debug.ActiveCfg = Debug|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.Debug.Build.0 = Debug|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.DLL-Import Debug.ActiveCfg = Debug|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.DLL-Import Debug.Build.0 = Debug|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.DLL-Import Release.ActiveCfg = Release|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.DLL-Import Release.Build.0 = Release|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.Release.ActiveCfg = Release|Win32
+		{6109E927-F4C1-4F55-8F15-3989050E0EBE}.Release.Build.0 = Release|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.Debug.ActiveCfg = Debug|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.Debug.Build.0 = Debug|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.DLL-Import Debug.ActiveCfg = DLL-Import Debug|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.DLL-Import Debug.Build.0 = DLL-Import Debug|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.DLL-Import Release.ActiveCfg = DLL-Import Release|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.DLL-Import Release.Build.0 = DLL-Import Release|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.Release.ActiveCfg = Release|Win32
+		{7072D579-224A-48BD-9ECA-EB80C573528E}.Release.Build.0 = Release|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.Debug.ActiveCfg = Debug|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.Debug.Build.0 = Debug|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.DLL-Import Debug.ActiveCfg = DLL-Import Debug|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.DLL-Import Debug.Build.0 = DLL-Import Debug|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.DLL-Import Release.ActiveCfg = DLL-Import Release|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.DLL-Import Release.Build.0 = DLL-Import Release|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.Release.ActiveCfg = Release|Win32
+		{8139A2A5-F160-45AE-8150-3A600FEF7911}.Release.Build.0 = Release|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.Debug.ActiveCfg = Debug|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.Debug.Build.0 = Debug|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.DLL-Import Debug.ActiveCfg = Debug|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.DLL-Import Debug.Build.0 = Debug|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.DLL-Import Release.ActiveCfg = Release|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.DLL-Import Release.Build.0 = Release|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.Release.ActiveCfg = Release|Win32
+		{413AE7A9-D1E3-48AD-B1F5-64562DA8E330}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
