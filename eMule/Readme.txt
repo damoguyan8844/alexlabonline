@@ -1,1 +1,0 @@
-使用Visual Studio .NET 2003 打开src\emule.sln编译即可。
