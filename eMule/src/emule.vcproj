@@ -1,213 +1,301 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.10"
+	Version="9.00"
 	Name="emule"
 	ProjectGUID="{584EA69D-3443-4197-8994-364880FC1B9B}"
-	Keyword="MFCProj">
+	RootNamespace="emule"
+	Keyword="MFCProj"
+	TargetFrameworkVersion="131072"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory=".\debug"
 			IntermediateDirectory=".\debug"
 			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="1"
 			CharacterSet="1"
-			DeleteExtensionsOnClean="*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;$(TargetPath)">
+			DeleteExtensionsOnClean="*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;$(TargetPath)"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="false"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories=".,..;..\id3lib\include"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;ID3LIB_LINKOPTION=1;SUPPORT_LARGE_FILES"
-				MinimalRebuild="TRUE"
+				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
-				BufferSecurityCheck="TRUE"
-				EnableFunctionLevelLinking="TRUE"
-				TreatWChar_tAsBuiltInType="TRUE"
-				UsePrecompiledHeader="3"
+				BufferSecurityCheck="true"
+				EnableFunctionLevelLinking="true"
+				TreatWChar_tAsBuiltInType="true"
+				UsePrecompiledHeader="2"
 				WarningLevel="4"
-				DebugInformationFormat="3"/>
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
-			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="version.lib winmm.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib ..\zlib\debug\zlib.lib ..\crypto51\debug\cryptlib.lib ..\id3lib\libprj\id3libD.lib .\CxImage\debug\cximage.lib ..\png\debug\pnglib.lib ..\ResizableLib\DebugUnicode\ResizableLib.lib"
-				LinkIncremental="2"
-				SuppressStartupBanner="TRUE"
-				IgnoreDefaultLibraryNames="msvcrtd.lib;nafxcwd.lib"
-				DelayLoadDLLs="oleacc.dll;gdiplus.dll"
-				GenerateDebugInformation="TRUE"
-				SubSystem="2"
-				TargetMachine="1"/>
-			<Tool
-				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
-				MkTypLibCompatible="FALSE"/>
-			<Tool
-				Name="VCPostBuildEventTool"/>
-			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="_DEBUG;_UNICODE;UNICODE"
 				Culture="1033"
-				AdditionalIncludeDirectories="$(IntDir)"/>
+				AdditionalIncludeDirectories="$(IntDir)"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLinkerTool"
+				AdditionalDependencies="version.lib winmm.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib ..\zlib\debug\zlib.lib ..\crypto51\debug\cryptlib.lib ..\id3lib\libprj\id3libD.lib .\CxImage\debug\cximage.lib ..\png\debug\pnglib.lib ..\ResizableLib\DebugUnicode\ResizableLib.lib"
+				LinkIncremental="2"
+				SuppressStartupBanner="true"
+				IgnoreDefaultLibraryNames="msvcrtd.lib;nafxcwd.lib"
+				DelayLoadDLLs="oleacc.dll;gdiplus.dll"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory=".\release"
 			IntermediateDirectory=".\release"
 			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="1"
 			CharacterSet="1"
 			DeleteExtensionsOnClean="*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;$(TargetPath)"
-			WholeProgramOptimization="TRUE">
+			WholeProgramOptimization="1"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="3"
-				GlobalOptimizations="TRUE"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="TRUE"
-				FavorSizeOrSpeed="1"
-				OmitFramePointers="FALSE"
-				EnableFiberSafeOptimizations="TRUE"
-				OptimizeForProcessor="2"
-				OptimizeForWindowsApplication="TRUE"
-				AdditionalIncludeDirectories=".,..;..\id3lib\include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;ID3LIB_LINKOPTION=1;SUPPORT_LARGE_FILES;_ENABLE_LAN_TRANSFER"
-				StringPooling="TRUE"
-				RuntimeLibrary="0"
-				BufferSecurityCheck="TRUE"
-				EnableFunctionLevelLinking="TRUE"
-				TreatWChar_tAsBuiltInType="TRUE"
-				ForceConformanceInForLoopScope="TRUE"
-				UsePrecompiledHeader="3"
-				WarningLevel="3"
-				DebugInformationFormat="3"/>
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="unicows.lib kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comdlg32.lib version.lib mpr.lib rasapi32.lib winmm.lib winspool.lib vfw32.lib secur32.lib oleacc.lib oledlg.lib sensapi.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib ..\zlib\release\zlib.lib ..\crypto51\release\cryptlib.lib ..\id3lib\libprj\id3lib.lib .\CxImage\Release\cximage.lib ..\png\Release\pnglib.lib ..\ResizableLib\ReleaseUnicode\ResizableLib.lib"
-				SuppressStartupBanner="TRUE"
-				IgnoreDefaultLibraryNames="kernel32.lib;advapi32.lib;user32.lib;gdi32.lib;shell32.lib;comdlg32.lib;version.lib;mpr.lib;rasapi32.lib;winmm.lib;winspool.lib;vfw32.lib;secur32.lib;oleacc.lib;oledlg.lib;sensapi.lib"
-				DelayLoadDLLs="oleacc.dll;gdiplus.dll;ws2_32.dll"
-				GenerateDebugInformation="TRUE"
-				SubSystem="2"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
-				TargetMachine="1"/>
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="FALSE"/>
+				MkTypLibCompatible="false"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCCLCompilerTool"
+				Optimization="3"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="false"
+				EnableFiberSafeOptimizations="true"
+				AdditionalIncludeDirectories=".,..;..\id3lib\include;..\ATLServer\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;ID3LIB_LINKOPTION=1;SUPPORT_LARGE_FILES;_ENABLE_LAN_TRANSFER"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				BufferSecurityCheck="true"
+				EnableFunctionLevelLinking="true"
+				TreatWChar_tAsBuiltInType="true"
+				ForceConformanceInForLoopScope="true"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG;_UNICODE;UNICODE"
 				Culture="1033"
-				AdditionalIncludeDirectories="$(IntDir)"/>
+				AdditionalIncludeDirectories="$(IntDir)"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLinkerTool"
+				AdditionalDependencies="unicows.lib kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comdlg32.lib version.lib mpr.lib rasapi32.lib winmm.lib winspool.lib vfw32.lib secur32.lib oleacc.lib oledlg.lib sensapi.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib zlib.lib cximage.lib id3lib.lib pnglib.lib cryptlib.lib ResizableLib.lib"
+				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories=" ..\libs"
+				IgnoreDefaultLibraryNames="kernel32.lib;advapi32.lib;user32.lib;gdi32.lib;shell32.lib;comdlg32.lib;version.lib;mpr.lib;rasapi32.lib;winmm.lib;winspool.lib;vfw32.lib;secur32.lib;oleacc.lib;oledlg.lib;sensapi.lib"
+				DelayLoadDLLs="oleacc.dll;gdiplus.dll;ws2_32.dll"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Beta|Win32"
 			OutputDirectory="Beta"
 			IntermediateDirectory="Beta"
 			ConfigurationType="1"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="1"
 			CharacterSet="1"
 			DeleteExtensionsOnClean="*.obj;*.ilk;*.pdb;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.bat;*.asm;$(TargetPath)"
-			WholeProgramOptimization="TRUE">
+			WholeProgramOptimization="1"
+			>
 			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="3"
-				GlobalOptimizations="TRUE"
-				InlineFunctionExpansion="2"
-				EnableIntrinsicFunctions="TRUE"
-				FavorSizeOrSpeed="1"
-				OmitFramePointers="TRUE"
-				EnableFiberSafeOptimizations="TRUE"
-				OptimizeForProcessor="2"
-				OptimizeForWindowsApplication="TRUE"
-				AdditionalIncludeDirectories=".,..;..\id3lib\include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;ID3LIB_LINKOPTION=1;_BETA;SUPPORT_LARGE_FILES"
-				StringPooling="TRUE"
-				RuntimeLibrary="0"
-				BufferSecurityCheck="TRUE"
-				EnableFunctionLevelLinking="TRUE"
-				TreatWChar_tAsBuiltInType="TRUE"
-				UsePrecompiledHeader="3"
-				WarningLevel="3"
-				DebugInformationFormat="3"/>
+				Name="VCPreBuildEventTool"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCCustomBuildTool"
+			/>
 			<Tool
-				Name="VCLinkerTool"
-				AdditionalDependencies="unicows.lib kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comdlg32.lib version.lib mpr.lib rasapi32.lib winmm.lib winspool.lib vfw32.lib secur32.lib oleacc.lib oledlg.lib sensapi.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib ..\zlib\release\zlib.lib ..\crypto51\release\cryptlib.lib ..\id3lib\libprj\id3lib.lib .\CxImage\Release\cximage.lib ..\png\Release\pnglib.lib ..\ResizableLib\ReleaseUnicode\ResizableLib.lib"
-				SuppressStartupBanner="TRUE"
-				IgnoreDefaultLibraryNames="kernel32.lib;advapi32.lib;user32.lib;gdi32.lib;shell32.lib;comdlg32.lib;version.lib;mpr.lib;rasapi32.lib;winmm.lib;winspool.lib;vfw32.lib;secur32.lib;oleacc.lib;oledlg.lib;sensapi.lib"
-				DelayLoadDLLs="oleacc.dll;gdiplus.dll"
-				GenerateDebugInformation="TRUE"
-				SubSystem="2"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
-				TargetMachine="1"/>
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="NDEBUG"
-				MkTypLibCompatible="FALSE"/>
+				MkTypLibCompatible="false"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCCLCompilerTool"
+				Optimization="3"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="true"
+				EnableFiberSafeOptimizations="true"
+				AdditionalIncludeDirectories=".,..;..\id3lib\include"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;ID3LIB_LINKOPTION=1;_BETA;SUPPORT_LARGE_FILES"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				BufferSecurityCheck="true"
+				EnableFunctionLevelLinking="true"
+				TreatWChar_tAsBuiltInType="true"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
-			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG;_UNICODE;UNICODE"
 				Culture="1033"
-				AdditionalIncludeDirectories="$(IntDir)"/>
+				AdditionalIncludeDirectories="$(IntDir)"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"/>
+				Name="VCLinkerTool"
+				AdditionalDependencies="unicows.lib kernel32.lib advapi32.lib user32.lib gdi32.lib shell32.lib comdlg32.lib version.lib mpr.lib rasapi32.lib winmm.lib winspool.lib vfw32.lib secur32.lib oleacc.lib oledlg.lib sensapi.lib ws2_32.lib gdiplus.lib ADSIId.lib crypt32.lib ..\zlib\release\zlib.lib ..\crypto51\release\cryptlib.lib ..\id3lib\libprj\id3lib.lib .\CxImage\Release\cximage.lib ..\png\Release\pnglib.lib ..\ResizableLib\ReleaseUnicode\ResizableLib.lib"
+				SuppressStartupBanner="true"
+				IgnoreDefaultLibraryNames="kernel32.lib;advapi32.lib;user32.lib;gdi32.lib;shell32.lib;comdlg32.lib;version.lib;mpr.lib;rasapi32.lib;winmm.lib;winspool.lib;vfw32.lib;secur32.lib;oleacc.lib;oledlg.lib;sensapi.lib"
+				DelayLoadDLLs="oleacc.dll;gdiplus.dll"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
 	<References>
@@ -215,2862 +303,3772 @@
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
+			>
 			<File
-				RelativePath="AbstractFile.cpp">
+				RelativePath="AbstractFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AICHSyncThread.cpp">
+				RelativePath="AICHSyncThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ArchiveRecovery.cpp">
+				RelativePath="ArchiveRecovery.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AsyncProxySocketLayer.cpp">
+				RelativePath="AsyncProxySocketLayer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AsyncSocketEx.cpp">
+				RelativePath="AsyncSocketEx.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AsyncSocketExLayer.cpp">
+				RelativePath="AsyncSocketExLayer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="BaseClient.cpp">
+				RelativePath="BaseClient.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\BetterSP2.cpp">
+				RelativePath=".\BetterSP2.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\BrowserToolbarCtrl.cpp">
+				RelativePath=".\BrowserToolbarCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CBase64Coding.cpp">
+				RelativePath="CBase64Coding.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ClientCredits.cpp">
+				RelativePath="ClientCredits.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ClientList.cpp">
+				RelativePath="ClientList.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ClientUDPSocket.cpp">
+				RelativePath="ClientUDPSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Collection.cpp">
+				RelativePath="Collection.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CollectionFile.cpp">
+				RelativePath="CollectionFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\ComboBoxEnter.cpp">
+				RelativePath=".\ComboBoxEnter.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CommentListCtrl.cpp">
+				RelativePath="CommentListCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CorruptionBlackBox.cpp">
+				RelativePath="CorruptionBlackBox.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DeadSourceList.cpp">
+				RelativePath="DeadSourceList.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\DLP.cpp">
+				RelativePath=".\DLP.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DownloadClient.cpp">
+				RelativePath="DownloadClient.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DownloadQueue.cpp">
+				RelativePath="DownloadQueue.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\DynamicLib.cpp">
+				RelativePath=".\DynamicLib.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ED2KLink.cpp">
+				RelativePath="ED2KLink.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EMSocket.cpp">
+				RelativePath="EMSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Emule.cpp">
+				RelativePath="Emule.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\EmuleUpdater.cpp">
+				RelativePath=".\EmuleUpdater.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EncryptedDatagramSocket.cpp">
+				RelativePath="EncryptedDatagramSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EncryptedStreamSocket.cpp">
+				RelativePath="EncryptedStreamSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FirewallOpener.cpp">
+				RelativePath="FirewallOpener.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FrameGrabThread.cpp">
+				RelativePath="FrameGrabThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Friend.cpp">
+				RelativePath="Friend.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FriendList.cpp">
+				RelativePath="FriendList.cpp"
+				>
 			</File>
 			<File
-				RelativePath="GZipFile.cpp">
+				RelativePath="GZipFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\HtmlCtrl.cpp">
+				RelativePath=".\HtmlCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="HttpClientReqSocket.cpp">
+				RelativePath="HttpClientReqSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="I18n.cpp">
+				RelativePath="I18n.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Ini2.cpp">
+				RelativePath="Ini2.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\IP2Country.cpp">
+				RelativePath=".\IP2Country.cpp"
+				>
 			</File>
 			<File
-				RelativePath="IPFilter.cpp">
+				RelativePath="IPFilter.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\JavaScriptEscape.cpp">
+				RelativePath=".\JavaScriptEscape.cpp"
+				>
 			</File>
 			<File
-				RelativePath="KnownFile.cpp">
+				RelativePath="KnownFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="KnownFileList.cpp">
+				RelativePath="KnownFileList.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\LastCommonRouteFinder.cpp">
+				RelativePath=".\LastCommonRouteFinder.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListenSocket.cpp">
+				RelativePath="ListenSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Log.cpp">
+				RelativePath="Log.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MD4.cpp">
+				RelativePath="MD4.cpp"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						ObjectFile="$(IntDir)/$(InputName)1.obj"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						ObjectFile="$(IntDir)/$(InputName)1.obj"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Beta|Win32">
+					Name="Beta|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						ObjectFile="$(IntDir)/$(InputName)1.obj"/>
+						ObjectFile="$(IntDir)/$(InputName)1.obj"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="MD4_asm.asm">
+				RelativePath="MD4_asm.asm"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Beta|Win32">
+					Name="Beta|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="MD5Sum.cpp">
+				RelativePath="MD5Sum.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\MediaInfo.cpp">
+				RelativePath=".\MediaInfo.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MfcStaticBinaryCompatible.cpp">
+				RelativePath="MfcStaticBinaryCompatible.cpp"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
+						UsePrecompiledHeader="0"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
+						UsePrecompiledHeader="0"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Beta|Win32">
+					Name="Beta|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
+						UsePrecompiledHeader="0"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="MMServer.cpp">
+				RelativePath="MMServer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MMSocket.cpp">
+				RelativePath="MMSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="OtherFunctions.cpp">
+				RelativePath="OtherFunctions.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Packets.cpp">
+				RelativePath="Packets.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Parser.cpp">
+				RelativePath="Parser.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Parser.y">
+				RelativePath="Parser.y"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Performing Custom Build Step"
-						CommandLine=""
-						Outputs=""/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Performing Custom Build Step"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Beta|Win32">
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="Performing Custom Build Step"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="PartFile.cpp">
-			</File>
-			<File
-				RelativePath="PartFileConvert.cpp">
-			</File>
-			<File
-				RelativePath="PeerCacheClient.cpp">
-			</File>
-			<File
-				RelativePath="PeerCacheFinder.cpp">
-			</File>
-			<File
-				RelativePath="PerfLog.cpp">
-			</File>
-			<File
-				RelativePath="Pinger.cpp">
-			</File>
-			<File
-				RelativePath=".\PlayerMgr.cpp">
-			</File>
-			<File
-				RelativePath=".\PopMule.cpp">
-			</File>
-			<File
-				RelativePath="Preferences.cpp">
-			</File>
-			<File
-				RelativePath="Preview.cpp">
-			</File>
-			<File
-				RelativePath="Quantize.cpp">
-			</File>
-			<File
-				RelativePath="RARFile.cpp">
-			</File>
-			<File
-				RelativePath="SafeFile.cpp">
-			</File>
-			<File
-				RelativePath="Scanner.cpp">
-				<FileConfiguration
-					Name="Debug|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Beta|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="Scanner.l">
-				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="Performing Custom Build Step"
 						CommandLine=""
-						Outputs=""/>
+						Outputs=""
+					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="Scheduler.cpp">
-			</File>
-			<File
-				RelativePath="SearchFile.cpp">
-			</File>
-			<File
-				RelativePath="SearchList.cpp">
-			</File>
-			<File
-				RelativePath="SecRunAsUser.cpp">
-			</File>
-			<File
-				RelativePath="SelfTest.cpp">
-			</File>
-			<File
-				RelativePath=".\SendGetUrlReqSocket.cpp">
-			</File>
-			<File
-				RelativePath="Server.cpp">
-			</File>
-			<File
-				RelativePath="ServerList.cpp">
-			</File>
-			<File
-				RelativePath="ServerSocket.cpp">
-			</File>
-			<File
-				RelativePath="SHA.cpp">
-			</File>
-			<File
-				RelativePath="SHA_asm.asm">
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						Description="Performing Custom Build Step"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Beta|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						Description="Performing Custom Build Step"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="PartFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath="PartFileConvert.cpp"
+				>
+			</File>
+			<File
+				RelativePath="PeerCacheClient.cpp"
+				>
+			</File>
+			<File
+				RelativePath="PeerCacheFinder.cpp"
+				>
+			</File>
+			<File
+				RelativePath="PerfLog.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Pinger.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PlayerMgr.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PopMule.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Preferences.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Preview.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Quantize.cpp"
+				>
+			</File>
+			<File
+				RelativePath="RARFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath="SafeFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Scanner.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Beta|Win32">
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Beta|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Scanner.l"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;
-"
-						Outputs="$(IntDir)\$(InputName).obj"/>
+						Description="Performing Custom Build Step"
+						CommandLine=""
+						Outputs=""
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="SHAHashSet.cpp">
+				RelativePath="Scheduler.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\ShareableFile.cpp">
+				RelativePath="SearchFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SharedFileList.cpp">
+				RelativePath="SearchList.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Sockets.cpp">
+				RelativePath="SecRunAsUser.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\SplashWndThread.cpp">
+				RelativePath="SelfTest.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\StatForServer.cpp">
+				RelativePath=".\SendGetUrlReqSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="StatisticFile.cpp">
+				RelativePath="Server.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Statistics.cpp">
+				RelativePath="ServerList.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Stdafx.cpp">
+				RelativePath="ServerSocket.cpp"
+				>
+			</File>
+			<File
+				RelativePath="SHA.cpp"
+				>
+			</File>
+			<File
+				RelativePath="SHA_asm.asm"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Beta|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml.exe /c /Cx /coff /Fo $(IntDir)\ &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(IntDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="SHAHashSet.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ShareableFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath="SharedFileList.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Sockets.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SplashWndThread.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StatForServer.cpp"
+				>
+			</File>
+			<File
+				RelativePath="StatisticFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Statistics.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Stdafx.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
+						UsePrecompiledHeader="1"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
+						UsePrecompiledHeader="1"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Beta|Win32">
+					Name="Beta|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
+						UsePrecompiledHeader="1"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="StringConversion.cpp">
+				RelativePath="StringConversion.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\ThreadsMgr.cpp">
+				RelativePath=".\ThreadsMgr.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\TimerOp_UrlClientRetry.cpp">
+				RelativePath=".\TimerOp_UrlClientRetry.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\TimerOpBase.cpp">
+				RelativePath=".\TimerOpBase.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TimeTick.cpp">
+				RelativePath="TimeTick.cpp"
+				>
 			</File>
 			<File
-				RelativePath="UDPSocket.cpp">
+				RelativePath="UDPSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\UpdateInfo.cpp">
+				RelativePath=".\UpdateInfo.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\UpdaterThread.cpp">
+				RelativePath=".\UpdaterThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath="UploadBandwidthThrottler.cpp">
+				RelativePath="UploadBandwidthThrottler.cpp"
+				>
 			</File>
 			<File
-				RelativePath="UploadClient.cpp">
+				RelativePath="UploadClient.cpp"
+				>
 			</File>
 			<File
-				RelativePath="UploadQueue.cpp">
+				RelativePath="UploadQueue.cpp"
+				>
 			</File>
 			<File
-				RelativePath="URLClient.cpp">
+				RelativePath="URLClient.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\UrlSrcFromSvrMgr.cpp">
+				RelativePath=".\UrlSrcFromSvrMgr.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\UrlSrcGetFromSvrSocket.cpp">
+				RelativePath=".\UrlSrcGetFromSvrSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Version.cpp">
+				RelativePath="Version.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\WebBrowserWnd.cpp">
+				RelativePath=".\WebBrowserWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="WebSocket.cpp">
+				RelativePath="WebSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ZIPFile.cpp">
+				RelativePath="ZIPFile.cpp"
+				>
 			</File>
 			<Filter
 				Name="Kademlia"
-				Filter="">
+				>
 				<File
-					RelativePath="kademlia\io\BufferedFileIO.cpp">
+					RelativePath="kademlia\io\BufferedFileIO.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\ByteIO.cpp">
+					RelativePath="kademlia\io\ByteIO.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\Contact.cpp">
+					RelativePath="kademlia\routing\Contact.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\DataIO.cpp">
+					RelativePath="kademlia\io\DataIO.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Entry.cpp">
+					RelativePath="kademlia\kademlia\Entry.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\FileIO.cpp">
+					RelativePath="kademlia\io\FileIO.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Indexed.cpp">
+					RelativePath="kademlia\kademlia\Indexed.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\IOException.cpp">
+					RelativePath="kademlia\io\IOException.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Kademlia.cpp">
+					RelativePath="kademlia\kademlia\Kademlia.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\net\KademliaUDPListener.cpp">
+					RelativePath="kademlia\net\KademliaUDPListener.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\LittleEndian.cpp">
+					RelativePath="kademlia\utils\LittleEndian.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\MiscUtils.cpp">
+					RelativePath="kademlia\utils\MiscUtils.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\net\PacketTracking.cpp">
+					RelativePath=".\kademlia\net\PacketTracking.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Prefs.cpp">
+					RelativePath="kademlia\kademlia\Prefs.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\RoutingBin.cpp">
+					RelativePath="kademlia\routing\RoutingBin.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\RoutingZone.cpp">
+					RelativePath="kademlia\routing\RoutingZone.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Search.cpp">
+					RelativePath="kademlia\kademlia\Search.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\SearchManager.cpp">
+					RelativePath="kademlia\kademlia\SearchManager.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\ThreadName.cpp">
+					RelativePath="kademlia\utils\ThreadName.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\kademlia\UDPFirewallTester.cpp">
+					RelativePath=".\kademlia\kademlia\UDPFirewallTester.cpp"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\UInt128.cpp">
+					RelativePath="kademlia\utils\UInt128.cpp"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="SMIRC"
-				Filter="">
+				>
 				<File
-					RelativePath="IrcMain.cpp">
+					RelativePath="IrcMain.cpp"
+					>
 				</File>
 				<File
-					RelativePath="IrcSocket.cpp">
+					RelativePath="IrcSocket.cpp"
+					>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc">
+			Filter="h;hpp;hxx;hm;inl;inc"
+			>
 			<File
-				RelativePath="AbstractFile.h">
+				RelativePath="AbstractFile.h"
+				>
 			</File>
 			<File
-				RelativePath="AICHSyncThread.h">
+				RelativePath="AICHSyncThread.h"
+				>
 			</File>
 			<File
-				RelativePath="ArchiveRecovery.h">
+				RelativePath="ArchiveRecovery.h"
+				>
 			</File>
 			<File
-				RelativePath="AsyncProxySocketLayer.h">
+				RelativePath="AsyncProxySocketLayer.h"
+				>
 			</File>
 			<File
-				RelativePath="AsyncSocketEx.h">
+				RelativePath="AsyncSocketEx.h"
+				>
 			</File>
 			<File
-				RelativePath="AsyncSocketExLayer.h">
+				RelativePath="AsyncSocketExLayer.h"
+				>
 			</File>
 			<File
-				RelativePath=".\BetterSP2.h">
+				RelativePath=".\BetterSP2.h"
+				>
 			</File>
 			<File
-				RelativePath=".\BrowserToolbarCtrl.h">
+				RelativePath=".\BrowserToolbarCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="CBase64Coding.hpp">
+				RelativePath="CBase64Coding.hpp"
+				>
 			</File>
 			<File
-				RelativePath="ClientCredits.h">
+				RelativePath="ClientCredits.h"
+				>
 			</File>
 			<File
-				RelativePath="ClientList.h">
+				RelativePath="ClientList.h"
+				>
 			</File>
 			<File
-				RelativePath=".\ClientStateDefs.h">
+				RelativePath=".\ClientStateDefs.h"
+				>
 			</File>
 			<File
-				RelativePath="ClientUDPSocket.h">
+				RelativePath="ClientUDPSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="ClientVersionInfo.h">
+				RelativePath="ClientVersionInfo.h"
+				>
 			</File>
 			<File
-				RelativePath="Collection.h">
+				RelativePath="Collection.h"
+				>
 			</File>
 			<File
-				RelativePath="CollectionFile.h">
+				RelativePath="CollectionFile.h"
+				>
 			</File>
 			<File
-				RelativePath=".\ComboBoxEnter.h">
+				RelativePath=".\ComboBoxEnter.h"
+				>
 			</File>
 			<File
-				RelativePath="CommentListCtrl.h">
+				RelativePath="CommentListCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="CorruptionBlackBox.h">
+				RelativePath="CorruptionBlackBox.h"
+				>
 			</File>
 			<File
-				RelativePath="DeadSourceList.h">
+				RelativePath="DeadSourceList.h"
+				>
 			</File>
 			<File
-				RelativePath="Debug_FileSize.h">
+				RelativePath="Debug_FileSize.h"
+				>
 			</File>
 			<File
-				RelativePath="DebugHelpers.h">
+				RelativePath="DebugHelpers.h"
+				>
 			</File>
 			<File
-				RelativePath=".\DLP.h">
+				RelativePath=".\DLP.h"
+				>
 			</File>
 			<File
-				RelativePath="DownloadQueue.h">
+				RelativePath="DownloadQueue.h"
+				>
 			</File>
 			<File
-				RelativePath=".\DynamicLib.h">
+				RelativePath=".\DynamicLib.h"
+				>
 			</File>
 			<File
-				RelativePath="ED2KLink.h">
+				RelativePath="ED2KLink.h"
+				>
 			</File>
 			<File
-				RelativePath="EMSocket.h">
+				RelativePath="EMSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Emule.h">
+				RelativePath="Emule.h"
+				>
 			</File>
 			<File
-				RelativePath=".\EmuleUpdater.h">
+				RelativePath=".\EmuleUpdater.h"
+				>
 			</File>
 			<File
-				RelativePath="EncryptedDatagramSocket.h">
+				RelativePath="EncryptedDatagramSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="EncryptedStreamSocket.h">
+				RelativePath="EncryptedStreamSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Exceptions.h">
+				RelativePath="Exceptions.h"
+				>
 			</File>
 			<File
-				RelativePath="fileformat.h">
+				RelativePath="fileformat.h"
+				>
 			</File>
 			<File
-				RelativePath="FirewallOpener.h">
+				RelativePath="FirewallOpener.h"
+				>
 			</File>
 			<File
-				RelativePath="FrameGrabThread.h">
+				RelativePath="FrameGrabThread.h"
+				>
 			</File>
 			<File
-				RelativePath="Friend.h">
+				RelativePath="Friend.h"
+				>
 			</File>
 			<File
-				RelativePath="FriendList.h">
+				RelativePath="FriendList.h"
+				>
 			</File>
 			<File
-				RelativePath=".\GapSpace.h">
+				RelativePath=".\GapSpace.h"
+				>
 			</File>
 			<File
-				RelativePath="GZipFile.h">
+				RelativePath="GZipFile.h"
+				>
 			</File>
 			<File
-				RelativePath=".\HtmlCtrl.h">
+				RelativePath=".\HtmlCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="HttpClientReqSocket.h">
+				RelativePath="HttpClientReqSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Ini2.h">
+				RelativePath="Ini2.h"
+				>
 			</File>
 			<File
-				RelativePath=".\IP2Country.h">
+				RelativePath=".\IP2Country.h"
+				>
 			</File>
 			<File
-				RelativePath="IPFilter.h">
+				RelativePath="IPFilter.h"
+				>
 			</File>
 			<File
-				RelativePath=".\JavaScriptEscape.h">
+				RelativePath=".\JavaScriptEscape.h"
+				>
 			</File>
 			<File
-				RelativePath="KnownFile.h">
+				RelativePath="KnownFile.h"
+				>
 			</File>
 			<File
-				RelativePath="KnownFileList.h">
+				RelativePath="KnownFileList.h"
+				>
 			</File>
 			<File
-				RelativePath="langids.h">
+				RelativePath="langids.h"
+				>
 			</File>
 			<File
-				RelativePath=".\LastCommonRouteFinder.h">
+				RelativePath=".\LastCommonRouteFinder.h"
+				>
 			</File>
 			<File
-				RelativePath="ListenSocket.h">
+				RelativePath="ListenSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Log.h">
+				RelativePath="Log.h"
+				>
 			</File>
 			<File
-				RelativePath="MapKey.h">
+				RelativePath="MapKey.h"
+				>
 			</File>
 			<File
-				RelativePath="MD4.h">
+				RelativePath="MD4.h"
+				>
 			</File>
 			<File
-				RelativePath="MD5Sum.h">
+				RelativePath="MD5Sum.h"
+				>
 			</File>
 			<File
-				RelativePath=".\MediaInfo.h">
+				RelativePath=".\MediaInfo.h"
+				>
 			</File>
 			<File
-				RelativePath="MMServer.h">
+				RelativePath="MMServer.h"
+				>
 			</File>
 			<File
-				RelativePath="MMSocket.h">
+				RelativePath="MMSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Opcodes.h">
+				RelativePath="Opcodes.h"
+				>
 			</File>
 			<File
-				RelativePath="OtherFunctions.h">
+				RelativePath="OtherFunctions.h"
+				>
 			</File>
 			<File
-				RelativePath="Packets.h">
+				RelativePath="Packets.h"
+				>
 			</File>
 			<File
-				RelativePath="PartFile.h">
+				RelativePath="PartFile.h"
+				>
 			</File>
 			<File
-				RelativePath="PartFileConvert.h">
+				RelativePath="PartFileConvert.h"
+				>
 			</File>
 			<File
-				RelativePath="PeerCacheClient.h">
+				RelativePath="PeerCacheClient.h"
+				>
 			</File>
 			<File
-				RelativePath="PeerCacheFinder.h">
+				RelativePath="PeerCacheFinder.h"
+				>
 			</File>
 			<File
-				RelativePath="PeerCacheSocket.h">
+				RelativePath="PeerCacheSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="PerfLog.h">
+				RelativePath="PerfLog.h"
+				>
 			</File>
 			<File
-				RelativePath="Pinger.h">
+				RelativePath="Pinger.h"
+				>
 			</File>
 			<File
-				RelativePath=".\PlayerMgr.h">
+				RelativePath=".\PlayerMgr.h"
+				>
 			</File>
 			<File
-				RelativePath=".\PopMule.h">
+				RelativePath=".\PopMule.h"
+				>
 			</File>
 			<File
-				RelativePath="Preferences.h">
+				RelativePath="Preferences.h"
+				>
 			</File>
 			<File
-				RelativePath="Preview.h">
+				RelativePath="Preview.h"
+				>
 			</File>
 			<File
-				RelativePath="QArray.h">
+				RelativePath="QArray.h"
+				>
 			</File>
 			<File
-				RelativePath="Quantize.h">
+				RelativePath="Quantize.h"
+				>
 			</File>
 			<File
-				RelativePath="Resource.h">
+				RelativePath="Resource.h"
+				>
 			</File>
 			<File
-				RelativePath="SafeFile.h">
+				RelativePath="SafeFile.h"
+				>
 			</File>
 			<File
-				RelativePath="Scheduler.h">
+				RelativePath="Scheduler.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchFile.h">
+				RelativePath="SearchFile.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchFrm.h">
+				RelativePath="SearchFrm.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchList.h">
+				RelativePath="SearchList.h"
+				>
 			</File>
 			<File
-				RelativePath="SecRunAsUser.h">
+				RelativePath="SecRunAsUser.h"
+				>
 			</File>
 			<File
-				RelativePath=".\SendGetUrlReqSocket.h">
+				RelativePath=".\SendGetUrlReqSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Server.h">
+				RelativePath="Server.h"
+				>
 			</File>
 			<File
-				RelativePath="ServerList.h">
+				RelativePath="ServerList.h"
+				>
 			</File>
 			<File
-				RelativePath="ServerSocket.h">
+				RelativePath="ServerSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="SHA.h">
+				RelativePath="SHA.h"
+				>
 			</File>
 			<File
-				RelativePath="SHAHashSet.h">
+				RelativePath="SHAHashSet.h"
+				>
 			</File>
 			<File
-				RelativePath=".\ShareableFile.h">
+				RelativePath=".\ShareableFile.h"
+				>
 			</File>
 			<File
-				RelativePath="SharedFileList.h">
+				RelativePath="SharedFileList.h"
+				>
 			</File>
 			<File
-				RelativePath="Sockets.h">
+				RelativePath="Sockets.h"
+				>
 			</File>
 			<File
-				RelativePath=".\SplashWndThread.h">
+				RelativePath=".\SplashWndThread.h"
+				>
 			</File>
 			<File
-				RelativePath=".\StatForServer.h">
+				RelativePath=".\StatForServer.h"
+				>
 			</File>
 			<File
-				RelativePath="StatisticFile.h">
+				RelativePath="StatisticFile.h"
+				>
 			</File>
 			<File
-				RelativePath="Statistics.h">
+				RelativePath="Statistics.h"
+				>
 			</File>
 			<File
-				RelativePath="Stdafx.h">
+				RelativePath="Stdafx.h"
+				>
 			</File>
 			<File
-				RelativePath="StringConversion.h">
+				RelativePath="StringConversion.h"
+				>
 			</File>
 			<File
-				RelativePath=".\SyncHelper.h">
+				RelativePath=".\SyncHelper.h"
+				>
 			</File>
 			<File
-				RelativePath=".\ThreadsMgr.h">
+				RelativePath=".\ThreadsMgr.h"
+				>
 			</File>
 			<File
-				RelativePath="ThrottledSocket.h">
+				RelativePath="ThrottledSocket.h"
+				>
 			</File>
 			<File
-				RelativePath=".\TimerOp_UrlClientRetry.h">
+				RelativePath=".\TimerOp_UrlClientRetry.h"
+				>
 			</File>
 			<File
-				RelativePath=".\TimerOpBase.h">
+				RelativePath=".\TimerOpBase.h"
+				>
 			</File>
 			<File
-				RelativePath="TimeTick.h">
+				RelativePath="TimeTick.h"
+				>
 			</File>
 			<File
-				RelativePath="Types.h">
+				RelativePath="Types.h"
+				>
 			</File>
 			<File
-				RelativePath="UDPSocket.h">
+				RelativePath="UDPSocket.h"
+				>
 			</File>
 			<File
-				RelativePath=".\UpdateInfo.h">
+				RelativePath=".\UpdateInfo.h"
+				>
 			</File>
 			<File
-				RelativePath=".\UpdaterThread.h">
+				RelativePath=".\UpdaterThread.h"
+				>
 			</File>
 			<File
-				RelativePath="UpdownClient.h">
+				RelativePath="UpdownClient.h"
+				>
 			</File>
 			<File
-				RelativePath="UploadBandwidthThrottler.h">
+				RelativePath="UploadBandwidthThrottler.h"
+				>
 			</File>
 			<File
-				RelativePath="UploadQueue.h">
+				RelativePath="UploadQueue.h"
+				>
 			</File>
 			<File
-				RelativePath="URLClient.h">
+				RelativePath="URLClient.h"
+				>
 			</File>
 			<File
-				RelativePath=".\UrlSrcFromSvrMgr.h">
+				RelativePath=".\UrlSrcFromSvrMgr.h"
+				>
 			</File>
 			<File
-				RelativePath=".\UrlSrcGetFromSvrSocket.h">
+				RelativePath=".\UrlSrcGetFromSvrSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="Version.h">
+				RelativePath="Version.h"
+				>
 			</File>
 			<File
-				RelativePath=".\WebBrowserWnd.h">
+				RelativePath=".\WebBrowserWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="WebServices.h">
+				RelativePath="WebServices.h"
+				>
 			</File>
 			<File
-				RelativePath="WebSocket.h">
+				RelativePath="WebSocket.h"
+				>
 			</File>
 			<File
-				RelativePath="ZIPFile.h">
+				RelativePath="ZIPFile.h"
+				>
 			</File>
 			<Filter
 				Name="Kademlia"
-				Filter="">
+				>
 				<File
-					RelativePath="kademlia\io\BufferedFileIO.h">
+					RelativePath="kademlia\io\BufferedFileIO.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\ByteIO.h">
+					RelativePath="kademlia\io\ByteIO.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\Contact.h">
+					RelativePath="kademlia\routing\Contact.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\DataIO.h">
+					RelativePath="kademlia\io\DataIO.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Defines.h">
+					RelativePath="kademlia\kademlia\Defines.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Entry.h">
+					RelativePath="kademlia\kademlia\Entry.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Error.h">
+					RelativePath="kademlia\kademlia\Error.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\FileIO.h">
+					RelativePath="kademlia\io\FileIO.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Indexed.h">
+					RelativePath="kademlia\kademlia\Indexed.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\io\IOException.h">
+					RelativePath="kademlia\io\IOException.h"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\utils\KadClientSearcher.h">
+					RelativePath=".\kademlia\utils\KadClientSearcher.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Kademlia.h">
+					RelativePath="kademlia\kademlia\Kademlia.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\net\KademliaUDPListener.h">
+					RelativePath="kademlia\net\KademliaUDPListener.h"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\utils\KadUDPKey.h">
+					RelativePath=".\kademlia\utils\KadUDPKey.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\LittleEndian.h">
+					RelativePath="kademlia\utils\LittleEndian.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\Maps.h">
+					RelativePath="kademlia\routing\Maps.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\MiscUtils.h">
+					RelativePath="kademlia\utils\MiscUtils.h"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\net\PacketTracking.h">
+					RelativePath=".\kademlia\net\PacketTracking.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Prefs.h">
+					RelativePath="kademlia\kademlia\Prefs.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\RoutingBin.h">
+					RelativePath="kademlia\routing\RoutingBin.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\routing\RoutingZone.h">
+					RelativePath="kademlia\routing\RoutingZone.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Search.h">
+					RelativePath="kademlia\kademlia\Search.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\SearchManager.h">
+					RelativePath="kademlia\kademlia\SearchManager.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\kademlia\Tag.h">
+					RelativePath="kademlia\kademlia\Tag.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\ThreadName.h">
+					RelativePath="kademlia\utils\ThreadName.h"
+					>
 				</File>
 				<File
-					RelativePath=".\kademlia\kademlia\UDPFirewallTester.h">
+					RelativePath=".\kademlia\kademlia\UDPFirewallTester.h"
+					>
 				</File>
 				<File
-					RelativePath="kademlia\utils\UInt128.h">
+					RelativePath="kademlia\utils\UInt128.h"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="SMIRC"
-				Filter="">
+				>
 				<File
-					RelativePath="IrcMain.h">
+					RelativePath="IrcMain.h"
+					>
 				</File>
 				<File
-					RelativePath="IrcSocket.h">
+					RelativePath="IrcSocket.h"
+					>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="Interface Source"
-			Filter="">
+			>
 			<File
-				RelativePath="3DPreviewControl.cpp">
+				RelativePath="3DPreviewControl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AddFriend.cpp">
+				RelativePath="AddFriend.cpp"
+				>
 			</File>
 			<File
-				RelativePath="AddSourceDlg.cpp">
+				RelativePath="AddSourceDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\ArchivePreviewDlg.cpp">
+				RelativePath=".\ArchivePreviewDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="BarShader.cpp">
+				RelativePath="BarShader.cpp"
+				>
 			</File>
 			<File
-				RelativePath="BtnST.cpp">
+				RelativePath="BtnST.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CatDialog.cpp">
+				RelativePath="CatDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ChatSelector.cpp">
+				RelativePath="ChatSelector.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ChatWnd.cpp">
+				RelativePath="ChatWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ClientDetailDialog.cpp">
+				RelativePath="ClientDetailDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ClosableTabCtrl.cpp">
+				RelativePath="ClosableTabCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CollectionCreateDialog.cpp">
+				RelativePath="CollectionCreateDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CollectionViewDialog.cpp">
+				RelativePath="CollectionViewDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ColorButton.cpp">
+				RelativePath="ColorButton.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ColorFrameCtrl.cpp">
+				RelativePath="ColorFrameCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ColourPopup.cpp">
+				RelativePath="ColourPopup.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ComboBoxEx2.cpp">
+				RelativePath="ComboBoxEx2.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CommentDialog.cpp">
+				RelativePath="CommentDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CommentDialogLst.cpp">
+				RelativePath="CommentDialogLst.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CreditsDlg.cpp">
+				RelativePath="CreditsDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CreditsThread.cpp">
+				RelativePath="CreditsThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath="CustomAutoComplete.cpp">
+				RelativePath="CustomAutoComplete.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DialogMinTrayBtn.cpp">
+				RelativePath="DialogMinTrayBtn.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DirectDownloadDlg.cpp">
+				RelativePath="DirectDownloadDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DirectoryTreeCtrl.cpp">
+				RelativePath="DirectoryTreeCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DropDownButton.cpp">
+				RelativePath="DropDownButton.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DropTarget.cpp">
+				RelativePath="DropTarget.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ED2kLinkDlg.cpp">
+				RelativePath="ED2kLinkDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EditDelayed.cpp">
+				RelativePath="EditDelayed.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EditX.cpp">
+				RelativePath="EditX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EmuleDlg.cpp">
+				RelativePath="EmuleDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="EnBitmap.cpp">
+				RelativePath="EnBitmap.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialog.cpp">
+				RelativePath="FileDetailDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialogInfo.cpp">
+				RelativePath="FileDetailDialogInfo.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialogName.cpp">
+				RelativePath="FileDetailDialogName.cpp"
+				>
 			</File>
 			<File
-				RelativePath="FileInfoDialog.cpp">
+				RelativePath="FileInfoDialog.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Flex.skl">
+				RelativePath="Flex.skl"
+				>
 			</File>
 			<File
-				RelativePath="GDIThread.cpp">
+				RelativePath="GDIThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath="HTRichEditCtrl.cpp">
+				RelativePath="HTRichEditCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="HttpDownloadDlg.cpp">
+				RelativePath="HttpDownloadDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="HyperTextCtrl.cpp">
+				RelativePath="HyperTextCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="IconStatic.cpp">
+				RelativePath="IconStatic.cpp"
+				>
 			</File>
 			<File
-				RelativePath="IESecurity.cpp">
+				RelativePath="IESecurity.cpp"
+				>
 			</File>
 			<File
-				RelativePath="InputBox.cpp">
+				RelativePath="InputBox.cpp"
+				>
 			</File>
 			<File
-				RelativePath="IPFilterDlg.cpp">
+				RelativePath="IPFilterDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="KadContactHistogramCtrl.cpp">
+				RelativePath="KadContactHistogramCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="KademliaWnd.cpp">
+				RelativePath="KademliaWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="LayeredWindowHelperST.cpp">
+				RelativePath="LayeredWindowHelperST.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListBoxST.cpp">
+				RelativePath="ListBoxST.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListCtrlEditable.cpp">
+				RelativePath="ListCtrlEditable.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListCtrlX.cpp">
+				RelativePath="ListCtrlX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListViewSearchDlg.cpp">
+				RelativePath="ListViewSearchDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ListViewWalkerPropertySheet.cpp">
+				RelativePath="ListViewWalkerPropertySheet.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MetaDataDlg.cpp">
+				RelativePath="MetaDataDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MeterIcon.cpp">
+				RelativePath="MeterIcon.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MiniMule.cpp">
+				RelativePath="MiniMule.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MuleStatusBarCtrl.cpp">
+				RelativePath="MuleStatusBarCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="MuleToolBarCtrl.cpp">
+				RelativePath="MuleToolBarCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="NetworkInfoDlg.cpp">
+				RelativePath="NetworkInfoDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="OScopeCtrl.cpp">
+				RelativePath="OScopeCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\PPgAntiLeech.cpp">
+				RelativePath=".\PPgAntiLeech.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgConnection.cpp">
+				RelativePath="PPgConnection.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgDebug.cpp">
+				RelativePath="PPgDebug.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgDirectories.cpp">
+				RelativePath="PPgDirectories.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgDisplay.cpp">
+				RelativePath="PPgDisplay.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgFiles.cpp">
+				RelativePath="PPgFiles.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgGeneral.cpp">
+				RelativePath="PPgGeneral.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgIRC.cpp">
+				RelativePath="PPgIRC.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgMessages.cpp">
+				RelativePath="PPgMessages.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgNotify.cpp">
+				RelativePath="PPgNotify.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgProxy.cpp">
+				RelativePath="PPgProxy.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgScheduler.cpp">
+				RelativePath="PPgScheduler.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgSecurity.cpp">
+				RelativePath="PPgSecurity.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgServer.cpp">
+				RelativePath="PPgServer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgStats.cpp">
+				RelativePath="PPgStats.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgTweaks.cpp">
+				RelativePath="PPgTweaks.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PPgWebServer.cpp">
+				RelativePath="PPgWebServer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PreferencesDlg.cpp">
+				RelativePath="PreferencesDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PreviewDlg.cpp">
+				RelativePath="PreviewDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ProgressCtrlX.cpp">
+				RelativePath="ProgressCtrlX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="PShtWiz1.cpp">
+				RelativePath="PShtWiz1.cpp"
+				>
 			</File>
 			<File
-				RelativePath="RichEditCtrlX.cpp">
+				RelativePath="RichEditCtrlX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="RichEditStream.cpp">
+				RelativePath="RichEditStream.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SearchDlg.cpp">
+				RelativePath="SearchDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SearchParamsWnd.cpp">
+				RelativePath="SearchParamsWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SearchResultsWnd.cpp">
+				RelativePath="SearchResultsWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ServerWnd.cpp">
+				RelativePath="ServerWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SharedDirsTreeCtrl.cpp">
+				RelativePath="SharedDirsTreeCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SharedFilesWnd.cpp">
+				RelativePath="SharedFilesWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SplashScreen.cpp">
+				RelativePath="SplashScreen.cpp"
+				>
 			</File>
 			<File
-				RelativePath="SplitterControl.cpp">
+				RelativePath="SplitterControl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="StatisticsDlg.cpp">
+				RelativePath="StatisticsDlg.cpp"
+				>
 			</File>
 			<File
-				RelativePath="StatisticsTree.cpp">
+				RelativePath="StatisticsTree.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TabCtrl.cpp">
+				RelativePath="TabCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TaskbarNotifier.cpp">
+				RelativePath="TaskbarNotifier.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TextToSpeech.cpp">
+				RelativePath="TextToSpeech.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TitleMenu.cpp">
+				RelativePath="TitleMenu.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ToolBarCtrlX.cpp">
+				RelativePath="ToolBarCtrlX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ToolTipCtrlX.cpp">
+				RelativePath="ToolTipCtrlX.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TransferWnd.cpp">
+				RelativePath="TransferWnd.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreeOptionsCtrl.cpp">
+				RelativePath="TreeOptionsCtrl.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreeOptionsCtrlEx.cpp">
+				RelativePath="TreeOptionsCtrlEx.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheet.cpp">
+				RelativePath="TreePropSheet.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheetPgFrame.cpp">
+				RelativePath="TreePropSheetPgFrame.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheetPgFrameDef.cpp">
+				RelativePath="TreePropSheetPgFrameDef.cpp"
+				>
 			</File>
 			<File
-				RelativePath="VisualStylesXP.cpp">
+				RelativePath="VisualStylesXP.cpp"
+				>
 			</File>
 			<File
-				RelativePath="WebServer.cpp">
+				RelativePath="WebServer.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Wizard.cpp">
+				RelativePath="Wizard.cpp"
+				>
 			</File>
 			<Filter
 				Name="Lists"
-				Filter="">
+				>
 				<File
-					RelativePath="ClientListCtrl.cpp">
+					RelativePath="ClientListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="CollectionListCtrl.cpp">
+					RelativePath="CollectionListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="DownloadClientsCtrl.cpp">
+					RelativePath="DownloadClientsCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="DownloadListCtrl.cpp">
+					RelativePath="DownloadListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="FriendListCtrl.cpp">
+					RelativePath="FriendListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="KadContactListCtrl.cpp">
+					RelativePath="KadContactListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="KadSearchListCtrl.cpp">
+					RelativePath="KadSearchListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="MuleListCtrl.cpp">
+					RelativePath="MuleListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="QueueListCtrl.cpp">
+					RelativePath="QueueListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="SearchListCtrl.cpp">
+					RelativePath="SearchListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="ServerListCtrl.cpp">
+					RelativePath="ServerListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="SharedFilesCtrl.cpp">
+					RelativePath="SharedFilesCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="UploadListCtrl.cpp">
+					RelativePath="UploadListCtrl.cpp"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="TrayMenu"
-				Filter="">
+				>
 				<File
-					RelativePath="GradientStatic.cpp">
+					RelativePath="GradientStatic.cpp"
+					>
 				</File>
 				<File
-					RelativePath="MuleSystrayDlg.cpp">
+					RelativePath="MuleSystrayDlg.cpp"
+					>
 				</File>
 				<File
-					RelativePath="TrayDialog.cpp">
+					RelativePath="TrayDialog.cpp"
+					>
 				</File>
 				<File
-					RelativePath="TrayMenuBtn.cpp">
+					RelativePath="TrayMenuBtn.cpp"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="SMIRC"
-				Filter="">
+				>
 				<File
-					RelativePath="IrcChannelListCtrl.cpp">
+					RelativePath="IrcChannelListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="IrcChannelTabCtrl.cpp">
+					RelativePath="IrcChannelTabCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="IrcNickListCtrl.cpp">
+					RelativePath="IrcNickListCtrl.cpp"
+					>
 				</File>
 				<File
-					RelativePath="IrcWnd.cpp">
+					RelativePath="IrcWnd.cpp"
+					>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="Interface Header"
-			Filter="">
+			>
 			<File
-				RelativePath="3DPreviewControl.h">
+				RelativePath="3DPreviewControl.h"
+				>
 			</File>
 			<File
-				RelativePath="AddFriend.h">
+				RelativePath="AddFriend.h"
+				>
 			</File>
 			<File
-				RelativePath="AddSourceDlg.h">
+				RelativePath="AddSourceDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="AfxBeginMsgMapTemplate.h">
+				RelativePath="AfxBeginMsgMapTemplate.h"
+				>
 			</File>
 			<File
-				RelativePath=".\ArchivePreviewDlg.h">
+				RelativePath=".\ArchivePreviewDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="BarShader.h">
+				RelativePath="BarShader.h"
+				>
 			</File>
 			<File
-				RelativePath="BtnST.h">
+				RelativePath="BtnST.h"
+				>
 			</File>
 			<File
-				RelativePath="CatDialog.h">
+				RelativePath="CatDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="ChatSelector.h">
+				RelativePath="ChatSelector.h"
+				>
 			</File>
 			<File
-				RelativePath="ChatWnd.h">
+				RelativePath="ChatWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="ClientDetailDialog.h">
+				RelativePath="ClientDetailDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="ClosableTabCtrl.h">
+				RelativePath="ClosableTabCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="CollectionCreateDialog.h">
+				RelativePath="CollectionCreateDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="CollectionViewDialog.h">
+				RelativePath="CollectionViewDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="ColorButton.h">
+				RelativePath="ColorButton.h"
+				>
 			</File>
 			<File
-				RelativePath="ColorFrameCtrl.h">
+				RelativePath="ColorFrameCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="ColourPopup.h">
+				RelativePath="ColourPopup.h"
+				>
 			</File>
 			<File
-				RelativePath="ComboBoxEx2.h">
+				RelativePath="ComboBoxEx2.h"
+				>
 			</File>
 			<File
-				RelativePath="CommentDialog.h">
+				RelativePath="CommentDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="CommentDialogLst.h">
+				RelativePath="CommentDialogLst.h"
+				>
 			</File>
 			<File
-				RelativePath="CreditsDlg.h">
+				RelativePath="CreditsDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="CreditsThread.h">
+				RelativePath="CreditsThread.h"
+				>
 			</File>
 			<File
-				RelativePath="CustomAutoComplete.h">
+				RelativePath="CustomAutoComplete.h"
+				>
 			</File>
 			<File
-				RelativePath="DialogMinTrayBtn.h">
+				RelativePath="DialogMinTrayBtn.h"
+				>
 			</File>
 			<File
-				RelativePath="DirectDownloadDlg.h">
+				RelativePath="DirectDownloadDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="DirectoryTreeCtrl.h">
+				RelativePath="DirectoryTreeCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="Drawgdix.h">
+				RelativePath="Drawgdix.h"
+				>
 			</File>
 			<File
-				RelativePath="DropDownButton.h">
+				RelativePath="DropDownButton.h"
+				>
 			</File>
 			<File
-				RelativePath="DropTarget.h">
+				RelativePath="DropTarget.h"
+				>
 			</File>
 			<File
-				RelativePath="ED2kLinkDlg.h">
+				RelativePath="ED2kLinkDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="EditDelayed.h">
+				RelativePath="EditDelayed.h"
+				>
 			</File>
 			<File
-				RelativePath="EditX.h">
+				RelativePath="EditX.h"
+				>
 			</File>
 			<File
-				RelativePath="EmuleDlg.h">
+				RelativePath="EmuleDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="EnBitmap.h">
+				RelativePath="EnBitmap.h"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialog.h">
+				RelativePath="FileDetailDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialogInfo.h">
+				RelativePath="FileDetailDialogInfo.h"
+				>
 			</File>
 			<File
-				RelativePath="FileDetailDialogName.h">
+				RelativePath="FileDetailDialogName.h"
+				>
 			</File>
 			<File
-				RelativePath="FileInfoDialog.h">
+				RelativePath="FileInfoDialog.h"
+				>
 			</File>
 			<File
-				RelativePath="GDIThread.h">
+				RelativePath="GDIThread.h"
+				>
 			</File>
 			<File
-				RelativePath="HelpIDs.h">
+				RelativePath="HelpIDs.h"
+				>
 			</File>
 			<File
-				RelativePath="HighColorTab.hpp">
+				RelativePath="HighColorTab.hpp"
+				>
 			</File>
 			<File
-				RelativePath="HTRichEditCtrl.h">
+				RelativePath="HTRichEditCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="HttpDownloadDlg.h">
+				RelativePath="HttpDownloadDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="HyperTextCtrl.h">
+				RelativePath="HyperTextCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="IconStatic.h">
+				RelativePath="IconStatic.h"
+				>
 			</File>
 			<File
-				RelativePath="IESecurity.h">
+				RelativePath="IESecurity.h"
+				>
 			</File>
 			<File
-				RelativePath="InputBox.h">
+				RelativePath="InputBox.h"
+				>
 			</File>
 			<File
-				RelativePath="IPFilterDlg.h">
+				RelativePath="IPFilterDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="KadContactHistogramCtrl.h">
+				RelativePath="KadContactHistogramCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="KademliaWnd.h">
+				RelativePath="KademliaWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="LayeredWindowHelperST.h">
+				RelativePath="LayeredWindowHelperST.h"
+				>
 			</File>
 			<File
-				RelativePath="ListBoxST.h">
+				RelativePath="ListBoxST.h"
+				>
 			</File>
 			<File
-				RelativePath="ListCtrlEditable.h">
+				RelativePath="ListCtrlEditable.h"
+				>
 			</File>
 			<File
-				RelativePath="ListCtrlItemWalk.h">
+				RelativePath="ListCtrlItemWalk.h"
+				>
 			</File>
 			<File
-				RelativePath="ListCtrlX.h">
+				RelativePath="ListCtrlX.h"
+				>
 			</File>
 			<File
-				RelativePath="ListViewSearchDlg.h">
+				RelativePath="ListViewSearchDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="ListViewWalkerPropertySheet.h">
+				RelativePath="ListViewWalkerPropertySheet.h"
+				>
 			</File>
 			<File
-				RelativePath="MemDC.h">
+				RelativePath="MemDC.h"
+				>
 			</File>
 			<File
-				RelativePath="MenuCmds.h">
+				RelativePath="MenuCmds.h"
+				>
 			</File>
 			<File
-				RelativePath="MetaDataDlg.h">
+				RelativePath="MetaDataDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="MeterIcon.h">
+				RelativePath="MeterIcon.h"
+				>
 			</File>
 			<File
-				RelativePath="MiniMule.h">
+				RelativePath="MiniMule.h"
+				>
 			</File>
 			<File
-				RelativePath="MuleStatusBarCtrl.h">
+				RelativePath="MuleStatusBarCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="MuleToolBarCtrl.h">
+				RelativePath="MuleToolBarCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="NetworkInfoDlg.h">
+				RelativePath="NetworkInfoDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="OScopeCtrl.h">
+				RelativePath="OScopeCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="Parser.hpp">
+				RelativePath="Parser.hpp"
+				>
 			</File>
 			<File
-				RelativePath=".\PPgAntiLeech.h">
+				RelativePath=".\PPgAntiLeech.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgConnection.h">
+				RelativePath="PPgConnection.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgDebug.h">
+				RelativePath="PPgDebug.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgDirectories.h">
+				RelativePath="PPgDirectories.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgDisplay.h">
+				RelativePath="PPgDisplay.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgFiles.h">
+				RelativePath="PPgFiles.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgGeneral.h">
+				RelativePath="PPgGeneral.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgIRC.h">
+				RelativePath="PPgIRC.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgMessages.h">
+				RelativePath="PPgMessages.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgNotify.h">
+				RelativePath="PPgNotify.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgProxy.h">
+				RelativePath="PPgProxy.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgScheduler.h">
+				RelativePath="PPgScheduler.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgSecurity.h">
+				RelativePath="PPgSecurity.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgServer.h">
+				RelativePath="PPgServer.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgStats.h">
+				RelativePath="PPgStats.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgTweaks.h">
+				RelativePath="PPgTweaks.h"
+				>
 			</File>
 			<File
-				RelativePath="PPgWebServer.h">
+				RelativePath="PPgWebServer.h"
+				>
 			</File>
 			<File
-				RelativePath="PreferencesDlg.h">
+				RelativePath="PreferencesDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="PreviewDlg.h">
+				RelativePath="PreviewDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="ProgressCtrlX.h">
+				RelativePath="ProgressCtrlX.h"
+				>
 			</File>
 			<File
-				RelativePath="RichEditCtrlX.h">
+				RelativePath="RichEditCtrlX.h"
+				>
 			</File>
 			<File
-				RelativePath="RichEditStream.h">
+				RelativePath="RichEditStream.h"
+				>
 			</File>
 			<File
-				RelativePath="Scanner.h">
+				RelativePath="Scanner.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchDlg.h">
+				RelativePath="SearchDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchExpr.h">
+				RelativePath="SearchExpr.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchParams.h">
+				RelativePath="SearchParams.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchParamsWnd.h">
+				RelativePath="SearchParamsWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="SearchResultsWnd.h">
+				RelativePath="SearchResultsWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="ServerWnd.h">
+				RelativePath="ServerWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="SharedDirsTreeCtrl.h">
+				RelativePath="SharedDirsTreeCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="SharedFilesWnd.h">
+				RelativePath="SharedFilesWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="SplashScreen.h">
+				RelativePath="SplashScreen.h"
+				>
 			</File>
 			<File
-				RelativePath="SplitterControl.h">
+				RelativePath="SplitterControl.h"
+				>
 			</File>
 			<File
-				RelativePath="StatisticsDlg.h">
+				RelativePath="StatisticsDlg.h"
+				>
 			</File>
 			<File
-				RelativePath="StatisticsTree.h">
+				RelativePath="StatisticsTree.h"
+				>
 			</File>
 			<File
-				RelativePath="TabCtrl.hpp">
+				RelativePath="TabCtrl.hpp"
+				>
 			</File>
 			<File
-				RelativePath="TaskbarNotifier.h">
+				RelativePath="TaskbarNotifier.h"
+				>
 			</File>
 			<File
-				RelativePath="TextToSpeech.h">
+				RelativePath="TextToSpeech.h"
+				>
 			</File>
 			<File
-				RelativePath="TitleMenu.h">
+				RelativePath="TitleMenu.h"
+				>
 			</File>
 			<File
-				RelativePath="ToolBarCtrlX.h">
+				RelativePath="ToolBarCtrlX.h"
+				>
 			</File>
 			<File
-				RelativePath="ToolTipCtrlX.h">
+				RelativePath="ToolTipCtrlX.h"
+				>
 			</File>
 			<File
-				RelativePath="TransferWnd.h">
+				RelativePath="TransferWnd.h"
+				>
 			</File>
 			<File
-				RelativePath="TreeOptionsCtrl.h">
+				RelativePath="TreeOptionsCtrl.h"
+				>
 			</File>
 			<File
-				RelativePath="TreeOptionsCtrlEx.h">
+				RelativePath="TreeOptionsCtrlEx.h"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheet.h">
+				RelativePath="TreePropSheet.h"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheetPgFrame.h">
+				RelativePath="TreePropSheetPgFrame.h"
+				>
 			</File>
 			<File
-				RelativePath="TreePropSheetPgFrameDef.h">
+				RelativePath="TreePropSheetPgFrameDef.h"
+				>
 			</File>
 			<File
-				RelativePath="UserMsgs.h">
+				RelativePath="UserMsgs.h"
+				>
 			</File>
 			<File
-				RelativePath=".\vcconfig.h">
+				RelativePath=".\vcconfig.h"
+				>
 			</File>
 			<File
-				RelativePath="VisualStylesXP.h">
+				RelativePath="VisualStylesXP.h"
+				>
 			</File>
 			<File
-				RelativePath="WebServer.h">
+				RelativePath="WebServer.h"
+				>
 			</File>
 			<File
-				RelativePath="Wizard.h">
+				RelativePath="Wizard.h"
+				>
 			</File>
 			<Filter
 				Name="Lists"
-				Filter="">
+				>
 				<File
-					RelativePath="ClientListCtrl.h">
+					RelativePath="ClientListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="CollectionListCtrl.h">
+					RelativePath="CollectionListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="DownloadClientsCtrl.h">
+					RelativePath="DownloadClientsCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="DownloadListCtrl.h">
+					RelativePath="DownloadListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="FriendListCtrl.h">
+					RelativePath="FriendListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="KadContactListCtrl.h">
+					RelativePath="KadContactListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="KadSearchListCtrl.h">
+					RelativePath="KadSearchListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="MuleListCtrl.h">
+					RelativePath="MuleListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="QueueListCtrl.h">
+					RelativePath="QueueListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="SearchListCtrl.h">
+					RelativePath="SearchListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="ServerListCtrl.h">
+					RelativePath="ServerListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="SharedFilesCtrl.h">
+					RelativePath="SharedFilesCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="UploadListCtrl.h">
+					RelativePath="UploadListCtrl.h"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="TrayMenu"
-				Filter="">
+				>
 				<File
-					RelativePath="GradientStatic.h">
+					RelativePath="GradientStatic.h"
+					>
 				</File>
 				<File
-					RelativePath="MuleSystrayDlg.h">
+					RelativePath="MuleSystrayDlg.h"
+					>
 				</File>
 				<File
-					RelativePath="TrayDialog.h">
+					RelativePath="TrayDialog.h"
+					>
 				</File>
 				<File
-					RelativePath="TrayMenuBtn.h">
+					RelativePath="TrayMenuBtn.h"
+					>
 				</File>
 			</Filter>
 			<Filter
 				Name="SMIRC"
-				Filter="">
+				>
 				<File
-					RelativePath="IrcChannelListCtrl.h">
+					RelativePath="IrcChannelListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="IrcChannelTabCtrl.h">
+					RelativePath="IrcChannelTabCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="IrcNickListCtrl.h">
+					RelativePath="IrcNickListCtrl.h"
+					>
 				</File>
 				<File
-					RelativePath="IrcWnd.h">
+					RelativePath="IrcWnd.h"
+					>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"
-			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest;gif">
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest;gif"
+			>
 			<File
-				RelativePath="res\all.ico">
+				RelativePath="res\all.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\ArchivePreview.ico">
+				RelativePath=".\res\ArchivePreview.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\bold.ico">
+				RelativePath="res\bold.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\BTBack.ico">
+				RelativePath=".\res\BTBack.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\BTForward.ico">
+				RelativePath=".\res\BTForward.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\BTRefresh.ico">
+				RelativePath=".\res\BTRefresh.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\BTStop.ico">
+				RelativePath=".\res\BTStop.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\BTVeryCD.ICO">
+				RelativePath=".\res\BTVeryCD.ICO"
+				>
 			</File>
 			<File
-				RelativePath="res\Cancel.ico">
+				RelativePath="res\Cancel.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Category.ico">
+				RelativePath="res\Category.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Chat.ico">
+				RelativePath="res\Chat.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\clear1.ico">
+				RelativePath="res\clear1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\clear2.ico">
+				RelativePath="res\clear2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Client0.ico">
+				RelativePath="res\Client0.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Client1.ico">
+				RelativePath="res\Client1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Client2.ico">
+				RelativePath="res\Client2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Client3.ico">
+				RelativePath="res\Client3.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Client4.ico">
+				RelativePath="res\Client4.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientaMule.ico">
+				RelativePath="res\ClientaMule.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientaMulePlus.ico">
+				RelativePath="res\ClientaMulePlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientCompatible.ico">
+				RelativePath="res\ClientCompatible.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientCompatiblePlus.ico">
+				RelativePath="res\ClientCompatiblePlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientDefault.ico">
+				RelativePath="res\ClientDefault.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientDefaultPlus.ico">
+				RelativePath="res\ClientDefaultPlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClienteDonkeyHybrid.ico">
+				RelativePath="res\ClienteDonkeyHybrid.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClienteDonkeyHybridPlus.ico">
+				RelativePath="res\ClienteDonkeyHybridPlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientlPhant.ico">
+				RelativePath="res\ClientlPhant.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientlPhantPlus.ico">
+				RelativePath="res\ClientlPhantPlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientMLDonkey.ico">
+				RelativePath="res\ClientMLDonkey.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientMLDonkeyPlus.ico">
+				RelativePath="res\ClientMLDonkeyPlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Clientobfuovl.ICO">
+				RelativePath="res\Clientobfuovl.ICO"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientSecureHashOvl.ico">
+				RelativePath="res\ClientSecureHashOvl.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Clientsecurehasobfuhovl.ICO">
+				RelativePath="res\Clientsecurehasobfuhovl.ICO"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientShareaza.ico">
+				RelativePath="res\ClientShareaza.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientShareazaPlus.ico">
+				RelativePath="res\ClientShareazaPlus.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientsKnown.ico">
+				RelativePath="res\ClientsKnown.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ClientsOnQueue.ico">
+				RelativePath="res\ClientsOnQueue.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Close.ico">
+				RelativePath="res\Close.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Collapse.ico">
+				RelativePath="res\Collapse.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\colour.ico">
+				RelativePath="res\colour.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Comments.ico">
+				RelativePath="res\Comments.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectDo.ico">
+				RelativePath="res\ConnectDo.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectDrop.ico">
+				RelativePath="res\ConnectDrop.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Connected.gif">
+				RelativePath="res\Connected.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighHigh.gif">
+				RelativePath="res\ConnectedHighHigh.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighHigh.ico">
+				RelativePath="res\ConnectedHighHigh.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighLow.gif">
+				RelativePath="res\ConnectedHighLow.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighLow.ico">
+				RelativePath="res\ConnectedHighLow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighNot.gif">
+				RelativePath="res\ConnectedHighNot.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedHighNot.ico">
+				RelativePath="res\ConnectedHighNot.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowHigh.gif">
+				RelativePath="res\ConnectedLowHigh.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowHigh.ico">
+				RelativePath="res\ConnectedLowHigh.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowLow.gif">
+				RelativePath="res\ConnectedLowLow.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowLow.ico">
+				RelativePath="res\ConnectedLowLow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowNot.gif">
+				RelativePath="res\ConnectedLowNot.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedLowNot.ico">
+				RelativePath="res\ConnectedLowNot.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotHigh.gif">
+				RelativePath="res\ConnectedNotHigh.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotHigh.ico">
+				RelativePath="res\ConnectedNotHigh.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotLow.gif">
+				RelativePath="res\ConnectedNotLow.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotLow.ico">
+				RelativePath="res\ConnectedNotLow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotNot.gif">
+				RelativePath="res\ConnectedNotNot.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectedNotNot.ico">
+				RelativePath="res\ConnectedNotNot.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Connection.ico">
+				RelativePath="res\Connection.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ConnectStop.ico">
+				RelativePath="res\ConnectStop.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Contact0.ico">
+				RelativePath="res\Contact0.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Contact1.ico">
+				RelativePath="res\Contact1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Contact2.ico">
+				RelativePath="res\Contact2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Contact3.ico">
+				RelativePath="res\Contact3.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Contact4.ico">
+				RelativePath="res\Contact4.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Convert.ico">
+				RelativePath="res\Convert.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Copy.ico">
+				RelativePath="res\Copy.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\CopySelected.ico">
+				RelativePath="res\CopySelected.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\CopyVisible.ico">
+				RelativePath="res\CopyVisible.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\CycleView.ico">
+				RelativePath="res\CycleView.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Delete.ico">
+				RelativePath="res\Delete.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\DeleteAll.ico">
+				RelativePath="res\DeleteAll.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\DeleteSelected.ico">
+				RelativePath="res\DeleteSelected.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\DirectDownload.ico">
+				RelativePath="res\DirectDownload.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Display.ico">
+				RelativePath="res\Display.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Download.gif">
+				RelativePath="res\Download.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\Download.ico">
+				RelativePath="res\Download.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\DownloadFiles.ico">
+				RelativePath="res\DownloadFiles.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\eD2kLink.ico">
+				RelativePath="res\eD2kLink.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\eD2kLinkPaste.ico">
+				RelativePath="res\eD2kLinkPaste.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Empty.ico">
+				RelativePath="res\Empty.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emule.manifest">
+				RelativePath="res\emule.manifest"
+				>
 			</File>
 			<File
-				RelativePath="emule.rc">
+				RelativePath="emule.rc"
+				>
 			</File>
 			<File
-				RelativePath="res\emule.rc2">
+				RelativePath="res\emule.rc2"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleColl.ico">
+				RelativePath="res\emuleColl.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleCollAdd.ico">
+				RelativePath="res\emuleCollAdd.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleCollectionFileType.ico">
+				RelativePath="res\emuleCollectionFileType.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleCollEdit.ico">
+				RelativePath="res\emuleCollEdit.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleCollSearch.ico">
+				RelativePath="res\emuleCollSearch.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\emuleCollView.ico">
+				RelativePath="res\emuleCollView.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Exit.ico">
+				RelativePath="res\Exit.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ExpandAll.ico">
+				RelativePath="res\ExpandAll.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ExpandAll2.ico">
+				RelativePath="res\ExpandAll2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ExportAll.ico">
+				RelativePath="res\ExportAll.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ExportSelected.ico">
+				RelativePath="res\ExportSelected.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\favicon.ico">
+				RelativePath=".\res\favicon.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileComments.ico">
+				RelativePath="res\FileComments.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileCommentsOvl.ico">
+				RelativePath="res\FileCommentsOvl.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileDonkey.ico">
+				RelativePath="res\FileDonkey.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileInfo.gif">
+				RelativePath="res\FileInfo.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\FileInfo.ico">
+				RelativePath="res\FileInfo.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileOpen.ico">
+				RelativePath="res\FileOpen.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FilePriority.ico">
+				RelativePath="res\FilePriority.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating0.ico">
+				RelativePath="res\FileRating0.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating1.ico">
+				RelativePath="res\FileRating1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating2.ico">
+				RelativePath="res\FileRating2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating3.ico">
+				RelativePath="res\FileRating3.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating4.ico">
+				RelativePath="res\FileRating4.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRating5.ico">
+				RelativePath="res\FileRating5.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileRename.ico">
+				RelativePath="res\FileRename.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileSharedKad.ico">
+				RelativePath="res\FileSharedKad.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileSharedServer.ico">
+				RelativePath="res\FileSharedServer.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeAny.ico">
+				RelativePath="res\FileTypeAny.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeArchive.ico">
+				RelativePath="res\FileTypeArchive.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeAudio.ico">
+				RelativePath="res\FileTypeAudio.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeCDImage.ico">
+				RelativePath="res\FileTypeCDImage.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeDocument.ico">
+				RelativePath="res\FileTypeDocument.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeEmuleCollection.ico">
+				RelativePath="res\FileTypeEmuleCollection.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypePicture.ico">
+				RelativePath="res\FileTypePicture.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeProgram.ico">
+				RelativePath="res\FileTypeProgram.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FileTypeVideo.ico">
+				RelativePath="res\FileTypeVideo.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FolderOpen.gif">
+				RelativePath="res\FolderOpen.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\FolderOpen.ico">
+				RelativePath="res\FolderOpen.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Folders.ico">
+				RelativePath="res\Folders.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Friend.ico">
+				RelativePath="res\Friend.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Friends1.ico">
+				RelativePath="res\Friends1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Friends2.ico">
+				RelativePath="res\Friends2.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Friends3.ico">
+				RelativePath="res\Friends3.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\FriendSlot.ico">
+				RelativePath="res\FriendSlot.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Global.ico">
+				RelativePath="res\Global.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\HardDisk.gif">
+				RelativePath="res\HardDisk.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\HardDisk.ico">
+				RelativePath="res\HardDisk.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Help.ico">
+				RelativePath="res\Help.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Import.ico">
+				RelativePath="res\Import.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Incoming.ico">
+				RelativePath="res\Incoming.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\incomplete.ico">
+				RelativePath="res\incomplete.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\InetDownload.avi">
+				RelativePath="res\InetDownload.avi"
+				>
 			</File>
 			<File
-				RelativePath="res\Info.ico">
+				RelativePath="res\Info.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\IPFilter.ico">
+				RelativePath="res\IPFilter.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\IRC.ico">
+				RelativePath="res\IRC.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\IRCClipboard.ico">
+				RelativePath="res\IRCClipboard.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Kad.ico">
+				RelativePath="res\Kad.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadBootstrap.ico">
+				RelativePath="res\KadBootstrap.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadContactList.ico">
+				RelativePath="res\KadContactList.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadCurrentSearches.ico">
+				RelativePath="res\KadCurrentSearches.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadFileSearch.ico">
+				RelativePath="res\KadFileSearch.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadNodeSearch.ico">
+				RelativePath="res\KadNodeSearch.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadStoreFile.ico">
+				RelativePath="res\KadStoreFile.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadStoreWord.ico">
+				RelativePath="res\KadStoreWord.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\KadWordSearch.ico">
+				RelativePath="res\KadWordSearch.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\leecher.ICO">
+				RelativePath=".\res\leecher.ICO"
+				>
 			</File>
 			<File
-				RelativePath="res\ListAdd.ico">
+				RelativePath="res\ListAdd.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ListRemove.ico">
+				RelativePath="res\ListRemove.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ListViewSortDown.bmp">
+				RelativePath="res\ListViewSortDown.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\ListViewSortDown2x.bmp">
+				RelativePath="res\ListViewSortDown2x.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\ListViewSortUp.bmp">
+				RelativePath="res\ListViewSortUp.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\ListViewSortUp2x.bmp">
+				RelativePath="res\ListViewSortUp2x.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\Log.ico">
+				RelativePath="res\Log.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Logo.jpg">
+				RelativePath="res\Logo.jpg"
+				>
 			</File>
 			<File
-				RelativePath="res\MediaInfo.ico">
+				RelativePath="res\MediaInfo.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Message.ico">
+				RelativePath="res\Message.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\MessagePending.ico">
+				RelativePath="res\MessagePending.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Messages.ico">
+				RelativePath="res\Messages.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\MetaData.ico">
+				RelativePath="res\MetaData.ico"
+				>
 			</File>
 			<File
 				RelativePath="res\MiniMule.htm"
-				DeploymentContent="TRUE">
+				DeploymentContent="true"
+				>
 			</File>
 			<File
-				RelativePath="res\MiniMuleBack.gif">
+				RelativePath="res\MiniMuleBack.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\Mule.ico">
+				RelativePath="res\Mule.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\mule_wiz.gif">
+				RelativePath="res\mule_wiz.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\mule_wiz_hdr.gif">
+				RelativePath="res\mule_wiz_hdr.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\NavigateBack.ico">
+				RelativePath="res\NavigateBack.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\NavigateForward.ico">
+				RelativePath="res\NavigateForward.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Notifications.ico">
+				RelativePath="res\Notifications.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Pause.ico">
+				RelativePath="res\Pause.ico"
+				>
 			</File>
 			<File
 				RelativePath=".\res\PopMule.htm"
-				DeploymentContent="TRUE">
+				DeploymentContent="true"
+				>
 			</File>
 			<File
-				RelativePath="res\Preferences.gif">
+				RelativePath="res\Preferences.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\Preferences.ico">
+				RelativePath="res\Preferences.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Preview.ico">
+				RelativePath="res\Preview.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Priority.ico">
+				RelativePath="res\Priority.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\PriorityAuto.ico">
+				RelativePath="res\PriorityAuto.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\PriorityHigh.ico">
+				RelativePath="res\PriorityHigh.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\PriorityLow.ico">
+				RelativePath="res\PriorityLow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\PriorityNormal.ico">
+				RelativePath="res\PriorityNormal.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Proxy.ico">
+				RelativePath="res\Proxy.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\queue.ico">
+				RelativePath="res\queue.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Rating.ico">
+				RelativePath="res\Rating.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\RatingBad.ico">
+				RelativePath="res\RatingBad.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Records.ico">
+				RelativePath="res\Records.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Rename.ico">
+				RelativePath="res\Rename.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\resetformat.ico">
+				RelativePath="res\resetformat.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Restore.ico">
+				RelativePath="res\Restore.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\RestoreWindow.gif">
+				RelativePath="res\RestoreWindow.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\RestoreWindow.ico">
+				RelativePath="res\RestoreWindow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Scheduler.ico">
+				RelativePath="res\Scheduler.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Search.ico">
+				RelativePath="res\Search.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchEdit.ico">
+				RelativePath="res\SearchEdit.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchGlobalActive.ico">
+				RelativePath="res\SearchGlobalActive.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchKad.ico">
+				RelativePath="res\SearchKad.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchKadActive.ico">
+				RelativePath="res\SearchKadActive.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchParams.ico">
+				RelativePath="res\SearchParams.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchResults.ico">
+				RelativePath="res\SearchResults.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SearchServerActive.ico">
+				RelativePath="res\SearchServerActive.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Security.ico">
+				RelativePath="res\Security.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Server.ico">
+				RelativePath="res\Server.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ServerAdd.ico">
+				RelativePath="res\ServerAdd.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ServerInfo.ico">
+				RelativePath="res\ServerInfo.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ServerList.ico">
+				RelativePath="res\ServerList.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ServerSearch.ico">
+				RelativePath="res\ServerSearch.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ServersUpdate.ico">
+				RelativePath="res\ServersUpdate.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SharedFiles.ico">
+				RelativePath="res\SharedFiles.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SharedFilesList.ico">
+				RelativePath="res\SharedFilesList.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Speed.ico">
+				RelativePath="res\Speed.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SpeedMax.ico">
+				RelativePath="res\SpeedMax.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SpeedMin.ico">
+				RelativePath="res\SpeedMin.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\SplitWindow.ico">
+				RelativePath="res\SplitWindow.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Start.ico">
+				RelativePath="res\Start.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Statistics.ico">
+				RelativePath="res\Statistics.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatisticsDetail.ico">
+				RelativePath="res\StatisticsDetail.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsCumulative.ico">
+				RelativePath="res\StatsCumulative.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsDay.ico">
+				RelativePath="res\StatsDay.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsGeneric.ico">
+				RelativePath="res\StatsGeneric.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsMonth.ico">
+				RelativePath="res\StatsMonth.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsProjected.ico">
+				RelativePath="res\StatsProjected.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsTime.ico">
+				RelativePath="res\StatsTime.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\StatsYear.ico">
+				RelativePath="res\StatsYear.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Stop.ico">
+				RelativePath="res\Stop.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\TaskbarNotifier.gif">
+				RelativePath="res\TaskbarNotifier.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\Tools.ico">
+				RelativePath="res\Tools.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Transfer.ico">
+				RelativePath="res\Transfer.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\transfers.ico">
+				RelativePath="res\transfers.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\TransferUpDown.ico">
+				RelativePath="res\TransferUpDown.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayBtnBlue.bmp">
+				RelativePath="res\TrayBtnBlue.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayBtnHomestead.bmp">
+				RelativePath="res\TrayBtnHomestead.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayBtnMetallic.bmp">
+				RelativePath="res\TrayBtnMetallic.bmp"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayConnected.ico">
+				RelativePath="res\TrayConnected.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayDisconnected.ico">
+				RelativePath="res\TrayDisconnected.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\TrayLowID.ico">
+				RelativePath="res\TrayLowID.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Tweak.ico">
+				RelativePath="res\Tweak.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\underline.ico">
+				RelativePath="res\underline.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Up0down0.ico">
+				RelativePath="res\Up0down0.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Up0down1.ico">
+				RelativePath="res\Up0down1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Up1down0.ico">
+				RelativePath="res\Up1down0.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Up1down1.ico">
+				RelativePath="res\Up1down1.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Upload.gif">
+				RelativePath="res\Upload.gif"
+				>
 			</File>
 			<File
-				RelativePath="res\Upload.ico">
+				RelativePath="res\Upload.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\User.ico">
+				RelativePath="res\User.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\UserAdd.ico">
+				RelativePath="res\UserAdd.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\UserDelete.ico">
+				RelativePath="res\UserDelete.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\UserDetails.ico">
+				RelativePath="res\UserDetails.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\UserFiles.ico">
+				RelativePath="res\UserFiles.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\UserMessage.ico">
+				RelativePath="res\UserMessage.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\veryearth.avi">
+				RelativePath=".\res\veryearth.avi"
+				>
 			</File>
 			<File
-				RelativePath="res\ViewDownload.ico">
+				RelativePath="res\ViewDownload.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ViewUpDown.ico">
+				RelativePath="res\ViewUpDown.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\ViewUpload.ico">
+				RelativePath="res\ViewUpload.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Web.ico">
+				RelativePath="res\Web.ico"
+				>
 			</File>
 			<File
-				RelativePath=".\res\webbrowser.ico">
+				RelativePath=".\res\webbrowser.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\WideCharLowerMap.bin">
+				RelativePath="res\WideCharLowerMap.bin"
+				>
 			</File>
 			<File
-				RelativePath="res\Wizard.ico">
+				RelativePath="res\Wizard.ico"
+				>
 			</File>
 			<File
-				RelativePath="res\Wizzard.ico">
+				RelativePath="res\Wizzard.ico"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Templates"
-			Filter="">
+			>
 			<File
-				RelativePath="..\setup\eMule Light.tmpl">
+				RelativePath="..\setup\eMule Light.tmpl"
+				>
 			</File>
 			<File
-				RelativePath="..\setup\eMule.tmpl">
+				RelativePath="..\setup\eMule.tmpl"
+				>
 			</File>
 			<File
-				RelativePath="..\setup\staticservers.dat">
+				RelativePath="..\setup\staticservers.dat"
+				>
 			</File>
 			<File
-				RelativePath="..\setup\Template.eMuleSkin.ini">
+				RelativePath="..\setup\Template.eMuleSkin.ini"
+				>
 			</File>
 			<File
-				RelativePath="..\setup\webservices.dat">
+				RelativePath="..\setup\webservices.dat"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Documents"
-			Filter="">
+			>
 			<File
-				RelativePath="..\docs\kademlia\changelog.txt">
+				RelativePath="..\docs\kademlia\changelog.txt"
+				>
 			</File>
 			<File
-				RelativePath="..\docs\readme.txt">
+				RelativePath="..\docs\readme.txt"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="WordFilter"
-			Filter="">
+			>
 			<File
-				RelativePath=".\WordFilter\GetHttp.cpp">
+				RelativePath=".\WordFilter\GetHttp.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\WordFilter\GetHttp.h">
+				RelativePath=".\WordFilter\GetHttp.h"
+				>
 			</File>
 			<File
-				RelativePath=".\WordFilter\WordFilter.cpp">
+				RelativePath=".\WordFilter\WordFilter.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\WordFilter\WordFilter.h">
+				RelativePath=".\WordFilter\WordFilter.h"
+				>
 			</File>
 			<Filter
 				Name="UPnP"
-				Filter="">
+				>
 				<File
-					RelativePath=".\UPnpAsynThreads.cpp">
+					RelativePath=".\UPnpAsynThreads.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpAsynThreads.h">
+					RelativePath=".\UPnpAsynThreads.h"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpError.h">
+					RelativePath=".\UPnpError.h"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpMgr.cpp">
+					RelativePath=".\UPnpMgr.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpMgr.h">
+					RelativePath=".\UPnpMgr.h"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNat.cpp">
+					RelativePath=".\UPnpNat.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNat.h">
+					RelativePath=".\UPnpNat.h"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNatMapping.cpp">
+					RelativePath=".\UPnpNatMapping.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNatMapping.h">
+					RelativePath=".\UPnpNatMapping.h"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNatMappingKey.cpp">
+					RelativePath=".\UPnpNatMappingKey.cpp"
+					>
 				</File>
 				<File
-					RelativePath=".\UPnpNatMappingKey.h">
+					RelativePath=".\UPnpNatMappingKey.h"
+					>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="IEFilter"
-			Filter="">
+			>
 			<File
-				RelativePath=".\IEFilter.cpp">
+				RelativePath=".\IEFilter.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\IEFilter.h">
+				RelativePath=".\IEFilter.h"
+				>
 			</File>
 			<File
-				RelativePath=".\IEFilterMgr.cpp">
+				RelativePath=".\IEFilterMgr.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\IEFilterMgr.h">
+				RelativePath=".\IEFilterMgr.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="MemPool"
-			Filter="">
+			>
 			<File
-				RelativePath=".\MemPool\MemPool.cpp">
+				RelativePath=".\MemPool\MemPool.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\MemPool\MemPool.h">
+				RelativePath=".\MemPool\MemPool.h"
+				>
 			</File>
 			<File
-				RelativePath=".\MemPool\MemPoolMgr.cpp">
+				RelativePath=".\MemPool\MemPoolMgr.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\MemPool\MemPoolMgr.h">
+				RelativePath=".\MemPool\MemPoolMgr.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="CrashReport"
-			Filter="">
+			>
 			<File
-				RelativePath=".\CheckConflict.cpp">
+				RelativePath=".\CheckConflict.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\CheckConflict.h">
+				RelativePath=".\CheckConflict.h"
+				>
 			</File>
 			<File
-				RelativePath="Mdump.cpp">
+				RelativePath="Mdump.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Mdump.h">
+				RelativePath="Mdump.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Internal"
-			Filter="">
+			>
 			<File
-				RelativePath=".\Internal\InternalSocket.cpp">
+				RelativePath=".\Internal\InternalSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\Internal\InternalSocket.h">
+				RelativePath=".\Internal\InternalSocket.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="natthread"
-			Filter="">
+			>
 			<File
-				RelativePath=".\NatTraversal\NatSocket.cpp">
+				RelativePath=".\NatTraversal\NatSocket.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\NatSocket.h">
+				RelativePath=".\NatTraversal\NatSocket.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\NatThread.cpp">
+				RelativePath=".\NatTraversal\NatThread.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\NatThread.h">
+				RelativePath=".\NatTraversal\NatThread.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\SourceExchangeNAT.cpp">
+				RelativePath=".\NatTraversal\SourceExchangeNAT.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\SourceExchangeNAT.h">
+				RelativePath=".\NatTraversal\SourceExchangeNAT.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseByBuddy.cpp">
+				RelativePath=".\NatTraversal\TraverseByBuddy.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseByBuddy.h">
+				RelativePath=".\NatTraversal\TraverseByBuddy.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseBySourceExchange.cpp">
+				RelativePath=".\NatTraversal\TraverseBySourceExchange.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseBySourceExchange.h">
+				RelativePath=".\NatTraversal\TraverseBySourceExchange.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseBySvr.cpp">
+				RelativePath=".\NatTraversal\TraverseBySvr.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseBySvr.h">
+				RelativePath=".\NatTraversal\TraverseBySvr.h"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseStrategy.cpp">
+				RelativePath=".\NatTraversal\TraverseStrategy.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\NatTraversal\TraverseStrategy.h">
+				RelativePath=".\NatTraversal\TraverseStrategy.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Debug"
-			Filter="">
+			>
 			<File
-				RelativePath=".\DebugLog.cpp">
+				RelativePath=".\DebugLog.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\DebugLog.h">
+				RelativePath=".\DebugLog.h"
+				>
 			</File>
 			<File
-				RelativePath=".\PreciseTime.cpp">
+				RelativePath=".\PreciseTime.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\PreciseTime.h">
+				RelativePath=".\PreciseTime.h"
+				>
 			</File>
 			<File
-				RelativePath=".\StackWalker.cpp">
+				RelativePath=".\StackWalker.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\StackWalker.h">
+				RelativePath=".\StackWalker.h"
+				>
 			</File>
 			<File
-				RelativePath=".\SWLogFile.cpp">
+				RelativePath=".\SWLogFile.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\SWLogFile.h">
+				RelativePath=".\SWLogFile.h"
+				>
 			</File>
 		</Filter>
 	</Files>
 	<Globals>
 		<Global
 			Name="RESOURCE_FILE"
-			Value="emule.rc"/>
+			Value="emule.rc"
+		/>
 	</Globals>
 </VisualStudioProject>
