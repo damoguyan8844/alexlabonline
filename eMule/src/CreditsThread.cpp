@@ -371,7 +371,7 @@ void CCreditsThread::InitFonts()
 	lf.lfHeight = 16;
 	lf.lfWeight = 700;
 	//lf.lfItalic = TRUE;
-	lf.lfQuality = afxData.bWin95 ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
+	lf.lfQuality = /*afxData.bWin95*/false ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
 	_tcscpy(lf.lfFaceName, _T("Arial"));
 	font2->CreateFontIndirect(&lf);
 	m_arFonts.Add(font2);
@@ -385,7 +385,7 @@ void CCreditsThread::InitFonts()
 	memset((void*)&lf, 0, sizeof(lf));
 	lf.lfHeight = 25;
 	lf.lfWeight = 900;
-	lf.lfQuality = afxData.bWin95 ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
+	lf.lfQuality = /*afxData.bWin95*/false ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
 	_tcscpy(lf.lfFaceName, _T("Arial"));
 	font3->CreateFontIndirect(&lf);
 	m_arFonts.Add(font3);
@@ -518,7 +518,7 @@ void CCreditsThread::InitText()
 	m_arCredits.Add(_T("S:05"));	
 	m_arCredits.Add(_T("01:06:Basque: TXiKi"));
 	m_arCredits.Add(_T("S:05"));	
-	m_arCredits.Add(_T("01:06:Breton: KAD-Korvigelloù an Drouizig"));
+	m_arCredits.Add(_T("01:06:Breton: KAD-Korvigello?an Drouizig"));
 	m_arCredits.Add(_T("S:05"));	
 	m_arCredits.Add(_T("01:06:Bulgarian: DapKo, Dumper"));
 	m_arCredits.Add(_T("S:05"));	

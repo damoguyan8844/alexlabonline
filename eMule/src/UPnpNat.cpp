@@ -703,7 +703,7 @@ BOOL CUPnpNat::IsLengthedHttpPacketComplete(const char *packet, int len)
 	
 	int iHeadLen = 0;
 	char *pDoubleNewLinePos = NULL;
-	pDoubleNewLinePos = strstr(packet, STR_DOUBLE_NEWLINE);
+	pDoubleNewLinePos = const_cast<char*>(strstr(packet, STR_DOUBLE_NEWLINE));
 	if (NULL == pDoubleNewLinePos)
 		return FALSE;
 

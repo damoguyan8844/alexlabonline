@@ -494,7 +494,7 @@ void CDownloadListCtrl::DrawFileItem(CDC *dc, int nColumn, LPCRECT lpRect, CtrlI
 			lf.lfHeight = 12;
 			//lf.lfWeight = FW_BOLD;
 			lf.lfUnderline = 1;
-			lf.lfQuality = afxData.bWin95 ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
+			lf.lfQuality = /*afxData.bWin95*/false ? NONANTIALIASED_QUALITY : ANTIALIASED_QUALITY;
 			_tcscpy(lf.lfFaceName, _T("ËÎÌו"));
 
 			

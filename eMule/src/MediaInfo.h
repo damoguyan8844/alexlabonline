@@ -71,6 +71,10 @@ _DEFINE_GUID(FORMAT_WaveFormatEx,0x05589f81, 0xc356, 0x11ce, 0xbf, 0x01, 0x00, 0
 //#define MMNOMMIO		// mmsystem: Multimedia file I/O support
 #define MMNOMMSYSTEM	// mmsystem: General MMSYSTEM functions
 // NOTE: If you get a compile error due to missing 'qedit.h', look at "emule_site_config.h" for further information.
+#define __IDxtCompositor_INTERFACE_DEFINED__
+#define __IDxtAlphaSetter_INTERFACE_DEFINED__
+#define __IDxtJpeg_INTERFACE_DEFINED__
+#define __IDxtKey_INTERFACE_DEFINED__
 #include <qedit.h>
 #else//HAVE_QEDIT_H
 #include <mmsystem.h>

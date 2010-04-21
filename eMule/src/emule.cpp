@@ -297,7 +297,7 @@ CemuleApp theApp(_T("eMule"));
 
 
 // Workaround for buggy 'AfxSocketTerm' (needed at least for MFC 7.0)
-#if _MFC_VER==0x0700 || _MFC_VER==0x0710 || _MFC_VER==0x0800
+#if _MFC_VER==0x0700 || _MFC_VER==0x0710 || _MFC_VER==0x0800 | _MFC_VER==0x0900
 void __cdecl __AfxSocketTerm()
 {
 #if defined(_AFXDLL) && (_MFC_VER==0x0700 || _MFC_VER==0x0710)
@@ -432,7 +432,7 @@ BOOL CemuleApp::InitInstance()
 		AfxMessageBox(GetResString(IDS_SOCKETS_INIT_FAILED));
 		return FALSE;
 	}
-#if _MFC_VER==0x0700 || _MFC_VER==0x0710 || _MFC_VER==0x0800
+#if _MFC_VER==0x0700 || _MFC_VER==0x0710 || _MFC_VER==0x0800 || _MFC_VER==0x0900
 	atexit(__AfxSocketTerm);
 #else
 #error "You are using an MFC version which may require a special version of the above function!"
@@ -1969,7 +1969,7 @@ void CemuleApp::UpdateDesktopColorDepth()
 		if (m_iDfltImageListColorFlags == ILC_COLOR32 && m_ullComCtrlVer < MAKEDLLVERULL(6,0,0,0))
 			m_iDfltImageListColorFlags = ILC_COLOR16;
 		// don't use >8bit color resources with OSs with restricted memory for GDI resources
-		if (afxData.bWin95)
+		if (/*afxData.bWin95*/false)
 			m_iDfltImageListColorFlags = ILC_COLOR8;
 	}
 
