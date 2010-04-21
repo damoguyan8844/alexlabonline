@@ -167,9 +167,9 @@
 #endif
 #endif//!defined(_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES) || (_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES==0)
 
-#ifndef _USE_32BIT_TIME_T
-#define _USE_32BIT_TIME_T
-#endif
+// #ifndef _USE_32BIT_TIME_T
+// #define _USE_32BIT_TIME_T
+// #endif
 
 #endif//_MSC_VER>=1400
 

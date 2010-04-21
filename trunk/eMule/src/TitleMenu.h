@@ -5,6 +5,8 @@
 //////////////////////////////////////////////////////////////////////
 #pragma once
 
+#if (WINVER < 0x0500)
+
 typedef struct tagMENUINFO
 {
     DWORD   cbSize;
@@ -15,6 +17,8 @@ typedef struct tagMENUINFO
     DWORD   dwContextHelpID;
     ULONG_PTR dwMenuData;
 }   MENUINFO, FAR *LPMENUINFO;
+#endif
+
 typedef MENUINFO CONST FAR *LPCMENUINFO;
 
 typedef BOOL (WINAPI* TSetMenuInfo)(

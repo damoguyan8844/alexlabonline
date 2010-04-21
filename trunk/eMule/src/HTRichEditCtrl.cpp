@@ -69,7 +69,7 @@ void CHTRichEditCtrl::Init(LPCTSTR pszTitle, LPCTSTR pszSkinKey)
 
 	VERIFY( SendMessage(EM_SETUNDOLIMIT, 0, 0) == 0 );
 	int iMaxLogBuff = thePrefs.GetMaxLogBuff();
-	if (afxData.bWin95)
+	if (/*afxData.bWin95*/false)
 		LimitText(iMaxLogBuff > 0xFFFF ? 0xFFFF : iMaxLogBuff);
 	else
 		LimitText(iMaxLogBuff ? iMaxLogBuff : 128*1024);
@@ -336,7 +336,7 @@ void CHTRichEditCtrl::ScrollToLastLine(bool bForceLastLineAtBottom)
 
 	// WM_VSCROLL does not work correctly under Win98 (or older version of comctl.dll)
 	SendMessage(WM_VSCROLL, SB_BOTTOM);
-	if (afxData.bWin95)
+	if (/*afxData.bWin95*/false)
 	{
 		// older version of comctl.dll seem to need this to properly update the display
 		int iPos = GetScrollPos(SB_VERT);
