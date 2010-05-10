@@ -16,17 +16,26 @@ Public Function GetExcelApp(Optional ByVal CreateNew As Boolean = False) As Obje
     End If
 End Function
 
-Public Sub OutPutToFile(ByVal filename As String, ByVal context As String)
-    Open filename For Output As #1
+Public Sub OutPutToFile(ByVal FileName As String, ByVal context As String)
+    Open FileName For Output As #1
     Print #1, context
     Close #1
 End Sub
-Public Sub AppendToFile(ByVal filename As String, ByVal context As String)
-    Open filename For Append As #1
+Public Sub AppendToFile(ByVal FileName As String, ByVal context As String)
+    Open FileName For Append As #1
     Print #1, context
     Close #1
 End Sub
-
+Public Function ReadFromFile(ByVal FileName As String) As String
+    Dim fs As New FileSystemObject
+    If fs.FileExists(FileName) Then
+        Dim txtf As TextStream
+        Set txtf = fs.OpenTextFile(FileName, ForReading, True)
+        Dim inXml As String
+        inXml = txtf.ReadAll
+        ReadFromFile = inXml
+    End If
+End Function
 Public Function FormExist(ByVal sName As String, _
         Optional ByRef vFrm As Variant, _
         Optional ByVal SetFocus As Boolean = True) As Boolean

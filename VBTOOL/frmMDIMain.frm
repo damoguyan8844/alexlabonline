@@ -52,6 +52,12 @@ Begin VB.MDIForm frmMDIMain
          Caption         =   "NetCommand"
       End
    End
+   Begin VB.Menu mnuCarolinaProject 
+      Caption         =   "Carolina Project"
+      Begin VB.Menu mnuRealTimeTaskCalculate 
+         Caption         =   "RealTimeTaskCalculate"
+      End
+   End
 End
 Attribute VB_Name = "frmMDIMain"
 Attribute VB_GlobalNameSpace = False
@@ -158,5 +164,13 @@ Private Sub mnuNetCommand_Click()
         Dim frm As New frmCommand
         frm.Show
         frm.Caption = GetFormCaption("frmCommand")
+    End If
+End Sub
+
+Private Sub mnuRealTimeTaskCalculate_Click()
+    If Not FormExist("frmRealTimeTask") Then
+        Dim frm As New frmRealTimeTask
+        frm.Show
+        frm.Caption = GetFormCaption("frmRealTimeTask")
     End If
 End Sub
