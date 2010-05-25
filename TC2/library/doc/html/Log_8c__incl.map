@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" href="$Log_8h.html" title="Public interface for the Log facility." alt="" coords="549,83,603,112"/>
+<area shape="rect" href="$Thread_8h.html" title="Public interface for class Thread." alt="" coords="627,83,699,112"/>
+<area shape="rect" href="$Time_8h.html" title="Public interface for the Time formatting facility." alt="" coords="723,83,784,112"/>
+</map>

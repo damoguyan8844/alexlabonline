@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" href="$config_8h.html" title="Common configuration options &amp; declarations." alt="" coords="5,83,72,112"/>
+<area shape="rect" href="$Message_8h.html" title="Public interface for class Message." alt="" coords="453,83,539,112"/>
+<area shape="rect" href="$Log_8h.html" title="Public interface for the Log facility." alt="" coords="643,83,717,112"/>
+</map>

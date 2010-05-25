@@ -10,6 +10,14 @@ Begin VB.Form frmRealTimeTask
    ScaleHeight     =   5205
    ScaleWidth      =   11655
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command2 
+      Caption         =   "Command2"
+      Height          =   615
+      Left            =   5520
+      TabIndex        =   13
+      Top             =   2040
+      Width           =   2055
+   End
    Begin VB.Frame fmDatabaseSettings 
       Caption         =   "Database Settings"
       Height          =   975
@@ -208,7 +216,16 @@ eh:
     MsgBox "Error: " & Err.Description
 End Sub
 
-Private Sub Form_Load()
+Private Sub Command2_Click()
+
+    Dim xml As String
+    xml = ReadFromFile("C:\\CreateReport.xml")
+    
+    Dim objCR As New TAnalysis.CCreateReport
+    
+    objCR.userId = 70
+    'objCR.CreateReportsAsSchedule xml, "G:\THC\C0702\Out"
+    objCR.CreateReports xml
 
 End Sub
 
