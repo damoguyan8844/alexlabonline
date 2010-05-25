@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" href="$config_8h.html" title="Common configuration options &amp; declarations." alt="" coords="5,83,72,112"/>
+<area shape="rect" href="$Socket_8h.html" title="Public interface for the Socket facility." alt="" coords="357,83,429,112"/>
+<area shape="rect" href="$Log_8h.html" title="Public interface for the Log facility." alt="" coords="453,83,528,112"/>
+<area shape="rect" href="$Thread_8h.html" title="Public interface for class Thread." alt="" coords="552,83,645,112"/>
+<area shape="rect" href="$Timeout_8h.html" title="Public interface for the Timeout facility." alt="" coords="669,83,768,112"/>
+</map>

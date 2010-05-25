@@ -10,6 +10,14 @@ Begin VB.Form frmCommand
    ScaleHeight     =   4395
    ScaleWidth      =   10710
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command1 
+      Caption         =   "Command1"
+      Height          =   375
+      Left            =   8160
+      TabIndex        =   5
+      Top             =   840
+      Width           =   1335
+   End
    Begin VB.TextBox Text1 
       Height          =   2775
       Left            =   1320
@@ -56,3 +64,10 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Private Sub Command1_Click()
+Dim cmdSender As New CommandSender, ssResult As String
+    
+Dim status
+status = cmdSender.GetQueueResult(318383663, ssResult, "192.168.0.174")
+      
+End Sub

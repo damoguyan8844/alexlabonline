@@ -1,0 +1,90 @@
+Structure of a "generic client" application, as implemented by the
+GenericClient class.
+
+------------------
+
+The GenericClass instance is always in one of the two STATEs below:
+
+state
+   NOT_CONNECTED
+   CONNECTED_IDLE
+
+------------------
+
+The GenericClass can receive the following COMMANDs:
+
+command
+   CONNECT
+   SEND
+   RECV
+   CLOSE
+
+------------------
+
+The execution of a COMMAND causes the framework to emmit an EVENT:
+
+event
+
+   CONNECTION_CREATED
+   CONNECTION_DESTROYED
+   CONNECT_ERROR
+
+   RECV_COMPLETE
+   RECV_TIMEOUT
+
+   SEND_COMPLETE
+
+
+------------------
+
+Here is a description of the state machine that drives a generic
+client application, written in pseudo-code:
+
+state NOT_CONNECTED
+
+   (cmd CONNECT)
+
+      do connect
+
+      if OK
+         state = CONNECTED_IDLE
+         return CONNECTION_CREATED
+
+      else
+         return event CONNECT_ERROR
+
+state CONNECTED_IDLE
+
+   (cmd SEND)
+
+      do send
+
+      if OK
+         return event SEND_COMPLETE
+
+      else
+         state = NOT_CONNECTED
+         return event CONNECTION_DESTROYED
+
+   (cmd RECV)
+
+      do recv
+
+      if OK
+         return event RECV_COMPLETE
+
+      else if TIMEOUT
+         return event RECV_TIMEOUT
+
+      else
+         state = NOT_CONNECTED
+         return event CONNECTION_DESTROYED
+
+   (cmd CLOSE)
+
+      do close
+
+      state = NOT_CONNECTED
+      return event CONNECTION_DESTROYED
+
+------------------------------------

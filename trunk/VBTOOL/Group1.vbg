@@ -1,0 +1,3 @@
+VBGROUP 5.0
+StartupProject=VBTOOL.vbp
+Project=..\..\..\THC\C0702\TCom2\TAnalysis\TAnalysis.vbp

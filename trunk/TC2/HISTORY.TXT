@@ -1,0 +1,8 @@
+A C-Language Library for Writing Generic TCP Client Applications
+
+VERSION HISTORY
+
+1.00 - May 09, 2010
+       Initial version.
+
+oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO

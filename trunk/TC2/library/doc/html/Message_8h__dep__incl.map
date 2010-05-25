@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" href="$Client_8h.html" title="Public interface for class Client." alt="" coords="28,83,92,112"/>
+<area shape="rect" href="$Message_8c.html" title="Implementation of class Message." alt="" coords="116,83,201,112"/>
+<area shape="rect" href="$GenericClient_8c.html" title="Implementation of class GenericClient." alt="" coords="5,160,115,189"/>
+</map>

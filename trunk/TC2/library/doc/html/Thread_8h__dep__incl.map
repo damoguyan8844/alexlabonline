@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" href="$Client_8h.html" title="Public interface for class Client." alt="" coords="28,83,92,112"/>
+<area shape="rect" href="$Socket_8c.html" title="Implementation of the Socket facility." alt="" coords="116,83,188,112"/>
+<area shape="rect" href="$Log_8c.html" title="Implementation of the Log facility." alt="" coords="212,83,287,112"/>
+<area shape="rect" href="$Thread_8c.html" title="Implementation of class Thread." alt="" coords="335,83,428,112"/>
+<area shape="rect" href="$GenericClient_8c.html" title="Implementation of class GenericClient." alt="" coords="5,160,115,189"/>
+</map>
