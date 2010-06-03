@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinsockSkeleton", "WinsockSkeleton\WinsockSkeleton.vcproj", "{F3DB3B45-91AF-47F2-83F0-98BCCC8E1DB3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpServer", "TcpServer\TcpServer.vcproj", "{01909B6F-509C-4B65-A9BA-9061B4BD7959}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpClient", "TcpClient\TcpClient.vcproj", "{D748E512-DB84-4F4F-A118-FF5D9BBFC18E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpReceiver", "TcpReceiver\TcpReceiver.vcproj", "{27D1A7BF-3557-4856-AEC8-8FFE2ED352D0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpSender", "TcpSender\TcpSender.vcproj", "{330FAEC9-BB3C-4DF1-A51B-7E2E6A44A4A0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDPReceiver", "UDPReceiver\UDPReceiver.vcproj", "{7261CC2B-E608-4421-A4BD-84F5C9A3E20C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDPSender", "UDPSender\UDPSender.vcproj", "{375E6A20-227C-42F4-902C-335B2403C510}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3DB3B45-91AF-47F2-83F0-98BCCC8E1DB3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3DB3B45-91AF-47F2-83F0-98BCCC8E1DB3}.Debug|Win32.Build.0 = Debug|Win32
+		{F3DB3B45-91AF-47F2-83F0-98BCCC8E1DB3}.Release|Win32.ActiveCfg = Release|Win32
+		{F3DB3B45-91AF-47F2-83F0-98BCCC8E1DB3}.Release|Win32.Build.0 = Release|Win32
+		{01909B6F-509C-4B65-A9BA-9061B4BD7959}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01909B6F-509C-4B65-A9BA-9061B4BD7959}.Debug|Win32.Build.0 = Debug|Win32
+		{01909B6F-509C-4B65-A9BA-9061B4BD7959}.Release|Win32.ActiveCfg = Release|Win32
+		{01909B6F-509C-4B65-A9BA-9061B4BD7959}.Release|Win32.Build.0 = Release|Win32
+		{D748E512-DB84-4F4F-A118-FF5D9BBFC18E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D748E512-DB84-4F4F-A118-FF5D9BBFC18E}.Debug|Win32.Build.0 = Debug|Win32
+		{D748E512-DB84-4F4F-A118-FF5D9BBFC18E}.Release|Win32.ActiveCfg = Release|Win32
+		{D748E512-DB84-4F4F-A118-FF5D9BBFC18E}.Release|Win32.Build.0 = Release|Win32
+		{27D1A7BF-3557-4856-AEC8-8FFE2ED352D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27D1A7BF-3557-4856-AEC8-8FFE2ED352D0}.Debug|Win32.Build.0 = Debug|Win32
+		{27D1A7BF-3557-4856-AEC8-8FFE2ED352D0}.Release|Win32.ActiveCfg = Release|Win32
+		{27D1A7BF-3557-4856-AEC8-8FFE2ED352D0}.Release|Win32.Build.0 = Release|Win32
+		{330FAEC9-BB3C-4DF1-A51B-7E2E6A44A4A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{330FAEC9-BB3C-4DF1-A51B-7E2E6A44A4A0}.Debug|Win32.Build.0 = Debug|Win32
+		{330FAEC9-BB3C-4DF1-A51B-7E2E6A44A4A0}.Release|Win32.ActiveCfg = Release|Win32
+		{330FAEC9-BB3C-4DF1-A51B-7E2E6A44A4A0}.Release|Win32.Build.0 = Release|Win32
+		{7261CC2B-E608-4421-A4BD-84F5C9A3E20C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7261CC2B-E608-4421-A4BD-84F5C9A3E20C}.Debug|Win32.Build.0 = Debug|Win32
+		{7261CC2B-E608-4421-A4BD-84F5C9A3E20C}.Release|Win32.ActiveCfg = Release|Win32
+		{7261CC2B-E608-4421-A4BD-84F5C9A3E20C}.Release|Win32.Build.0 = Release|Win32
+		{375E6A20-227C-42F4-902C-335B2403C510}.Debug|Win32.ActiveCfg = Debug|Win32
+		{375E6A20-227C-42F4-902C-335B2403C510}.Debug|Win32.Build.0 = Debug|Win32
+		{375E6A20-227C-42F4-902C-335B2403C510}.Release|Win32.ActiveCfg = Release|Win32
+		{375E6A20-227C-42F4-902C-335B2403C510}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
