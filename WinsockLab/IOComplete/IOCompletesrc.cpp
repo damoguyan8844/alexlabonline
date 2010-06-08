@@ -200,7 +200,7 @@ DWORD WINAPI ServerWorkerThread(LPVOID CompletionPortID)
 		else
 			printf("GetQueuedCompletionStatus() is OK!\n");
 		
-		// First check to see if an error has occured on the socket and if so
+		// First check to see if an error has occurred on the socket and if so
 		// then close the socket and cleanup the SOCKET_INFORMATION structure
 		// associated with the socket
 		if (BytesTransferred == 0)
