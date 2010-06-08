@@ -138,48 +138,46 @@ int main(int argc, char **argv)
 			printf("GlobalAlloc() failed with error %d\n", GetLastError());
 		else
 			printf("GlobalAlloc() for LPPER_HANDLE_DATA is OK!\n");
+		// Associate the accepted socket with the original completion port
+		printf("Socket number %d got connected...\n", Accept);
+		PerHandleData->Socket = Accept;
 
-		return 1;
-	}
-	
-	// Associate the accepted socket with the original completion port
-	printf("Socket number %d got connected...\n", Accept);
-	PerHandleData->Socket = Accept;
-	
-	if (CreateIoCompletionPort((HANDLE) Accept, CompletionPort, (DWORD) PerHandleData, 0) == NULL)
-	{
-		printf("CreateIoCompletionPort() failed with error %d\n", GetLastError());
-		return 1;
-	}
-	else
-		printf("CreateIoCompletionPort() is OK!\n");
-	
-	// Create per I/O socket information structure to associate with the WSARecv call below
-	if ((PerIoData = (LPPER_IO_OPERATION_DATA) GlobalAlloc(GPTR, sizeof(PER_IO_OPERATION_DATA))) == NULL)
-	{
-		printf("GlobalAlloc() failed with error %d\n", GetLastError());
-		return 1;
-	}
-	else
-		printf("GlobalAlloc() for LPPER_IO_OPERATION_DATA is OK!\n");
-	
-	ZeroMemory(&(PerIoData->Overlapped), sizeof(OVERLAPPED));
-	PerIoData->BytesSEND = 0;
-	PerIoData->BytesRECV = 0;
-	PerIoData->DataBuf.len = DATA_BUFSIZE;
-	PerIoData->DataBuf.buf = PerIoData->Buffer;
-	
-	Flags = 0;
-	if (WSARecv(Accept, &(PerIoData->DataBuf), 1, &RecvBytes, &Flags, &(PerIoData->Overlapped), NULL) == SOCKET_ERROR)
-	{
-		if (WSAGetLastError() != ERROR_IO_PENDING)
+		if (CreateIoCompletionPort((HANDLE) Accept, CompletionPort, (DWORD) PerHandleData, 0) == NULL)
 		{
-			printf("WSARecv() failed with error %d\n", WSAGetLastError());
+			printf("CreateIoCompletionPort() failed with error %d\n", GetLastError());
 			return 1;
 		}
+		else
+			printf("CreateIoCompletionPort() is OK!\n");
+
+		// Create per I/O socket information structure to associate with the WSARecv call below
+		if ((PerIoData = (LPPER_IO_OPERATION_DATA) GlobalAlloc(GPTR, sizeof(PER_IO_OPERATION_DATA))) == NULL)
+		{
+			printf("GlobalAlloc() failed with error %d\n", GetLastError());
+			return 1;
+		}
+		else
+			printf("GlobalAlloc() for LPPER_IO_OPERATION_DATA is OK!\n");
+
+		ZeroMemory(&(PerIoData->Overlapped), sizeof(OVERLAPPED));
+		PerIoData->BytesSEND = 0;
+		PerIoData->BytesRECV = 0;
+		PerIoData->DataBuf.len = DATA_BUFSIZE;
+		PerIoData->DataBuf.buf = PerIoData->Buffer;
+
+		Flags = 0;
+		if (WSARecv(Accept, &(PerIoData->DataBuf), 1, &RecvBytes, &Flags, &(PerIoData->Overlapped), NULL) == SOCKET_ERROR)
+		{
+			if (WSAGetLastError() != ERROR_IO_PENDING)
+			{
+				printf("WSARecv() failed with error %d\n", WSAGetLastError());
+				return 1;
+			}
+		}
+		else
+			printf("WSARecv() is OK!\n");
 	}
-	else
-		printf("WSARecv() is OK!\n");
+	return 1;
 }
 
 DWORD WINAPI ServerWorkerThread(LPVOID CompletionPortID)
