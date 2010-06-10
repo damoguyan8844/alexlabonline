@@ -829,8 +829,8 @@ void HandleIo(ULONG_PTR key, BUFFER_OBJ *buf, HANDLE CompPort, DWORD BytesTransf
             FreeBufferObj(buf);
         }
 
-                if (error != NO_ERROR)
-                {
+        if (error != NO_ERROR)
+        {
             // Check for socket closure
             EnterCriticalSection(&clientobj->SockCritSec);
             if ( (clientobj->OutstandingSend == 0) &&
@@ -847,7 +847,7 @@ void HandleIo(ULONG_PTR key, BUFFER_OBJ *buf, HANDLE CompPort, DWORD BytesTransf
             LeaveCriticalSection(&clientobj->SockCritSec);
 
             error = NO_ERROR;
-                }
+        }
 
         InterlockedIncrement(&listenobj->RepostCount);
         SetEvent(listenobj->RepostAccept);
