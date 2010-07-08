@@ -10,6 +10,14 @@ Begin VB.Form frmRealTimeTask
    ScaleHeight     =   5205
    ScaleWidth      =   11655
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command3 
+      Caption         =   "Command3"
+      Height          =   735
+      Left            =   5520
+      TabIndex        =   14
+      Top             =   3240
+      Width           =   2055
+   End
    Begin VB.CommandButton Command2 
       Caption         =   "Command2"
       Height          =   615
@@ -191,7 +199,7 @@ On Error GoTo eh:
     
     InitRltimeSecurity Date, s
     
-    If Me.chkCalibrateOAS.Value = 1 Then
+    If Me.chkCalibrateOAS.value = 1 Then
         EnableCalcOAS (True)
     Else
         EnableCalcOAS (False)
@@ -204,10 +212,10 @@ On Error GoTo eh:
     
     MsgBox "res:" & CStr(res)
     
-    Dim id As Variant, pr As Variant, ytm As Variant, oass As Variant
+    Dim ID As Variant, pr As Variant, ytm As Variant, oass As Variant
     Dim tid As Long
     
-    SaveRltimeSecurityResults tid, id, pr, ytm, oass
+    SaveRltimeSecurityResults tid, ID, pr, ytm, oass
     
     'MsgBox id
     
@@ -227,6 +235,17 @@ Private Sub Command2_Click()
     'objCR.CreateReportsAsSchedule xml, "G:\THC\C0702\Out"
     objCR.CreateReports xml
 
+End Sub
+
+Private Sub Command3_Click()
+On Error GoTo eh:
+Dim pfid As Long
+pfid = 4189946
+Dim otemp As New Portfolio
+otemp.LoadID pfid, True, True
+Exit Sub
+eh:
+    MsgBox Err.Description
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)

@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmSpread 
    Caption         =   "Form1"
    ClientHeight    =   5700
@@ -10,6 +11,18 @@ Begin VB.Form frmSpread
    ScaleHeight     =   5700
    ScaleWidth      =   11895
    WindowState     =   2  'Maximized
+   Begin MSComCtl2.DTPicker dtEDate 
+      Height          =   375
+      Left            =   5520
+      TabIndex        =   4
+      Top             =   840
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   661
+      _Version        =   393216
+      Format          =   21299201
+      CurrentDate     =   40339
+   End
    Begin VB.CommandButton Command2 
       Caption         =   "Command2"
       Height          =   615
@@ -60,7 +73,7 @@ Dim obj As New SpreadCal
 Set obj.valSec = objSecs
 
 Dim et As ERROR_TYPE
-et = obj.calibrate(#3/31/2010#, "All")
+et = obj.calibrate(dtEDate.value, "All")
 
 If et <> ERROR_NULL Then
     MsgBox "Error:" & CStr(et)
@@ -77,8 +90,9 @@ Dim content As String
 content = ReadFromFile("C:\1.xml")
 
 Dim objXML As New CGroupXML
-objXML.LoadXML content
+objXML.LoadXMLFile "C:\1.xml"
 
-MsgBox CStr(objXML.IsItemEnable("Test", 1, content))
+Dim value As Long
+MsgBox CStr(objXML.IsItemEnable("AGENCY&MUNI", 112, content, value))
 
 End Sub
