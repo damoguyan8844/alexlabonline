@@ -1,0 +1,124 @@
+[Root]
+Most Recent Package=标准安装软件包 1
+
+
+[Package|标准安装软件包 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\包
+
+[Package|标准安装软件包 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|标准安装软件包 1|Files Found]
+
+[Package|标准安装软件包 1|Files Released]
+
+[Package|标准安装软件包 1|Missing Dependency Information]
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+
+[Package|标准安装软件包 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\mscomctl.ocx=
+
+[Package|标准安装软件包 1|Files Added]
+
+[Package|标准安装软件包 1|Files Removed]
+c:\windows\system32\cmdlgchs.dll=
+c:\windows\system32\comdlg32.ocx=
+c:\windows\system32\inetchs.dll=
+c:\program files\common files\system\ado\msado25.tlb=
+c:\windows\system32\mscmcchs.dll=
+c:\windows\system32\msinet.ocx=
+c:\windows\system32\mscomctl.ocx=
+c:\windows\system32\vb6chs.dll=
+c:\windows\system32\msvbvm60.dll=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\oleaut32.dll=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\olepro32.dll=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\asycfilt.dll=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\stdole2.tlb=
+d:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|标准安装软件包 1|Files In Project]
+D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\sqlin.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINDOWS\system32\VB6CHS.DLL=No
+C:\WINDOWS\system32\MSINET.OCX=No
+C:\WINDOWS\system32\INETCHS.DLL=No
+C:\WINDOWS\system32\mscomctl.ocx=No
+C:\WINDOWS\system32\MSCMCCHS.DLL=No
+C:\WINDOWS\system32\comdlg32.ocx=No
+C:\WINDOWS\system32\CMDLGCHS.DLL=No
+C:\Program Files\Common Files\System\ado\msado25.tlb=No
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|标准安装软件包 1|Configure Registry Files]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure Remote Servers]
+Applicable=No
+
+[Package|标准安装软件包 1|Install Locations]
+D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\sqlin.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6CHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSINET.OCX=$(WinSysPath)
+C:\WINDOWS\system32\INETCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\CMDLGCHS.DLL=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|标准安装软件包 1|Configure Shared Files]
+Applicable=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\sqlin.exe=No
+
+[Package|标准安装软件包 1|Distribution]
+Type=single
+Size=
+Title=工程1
+
+[Package|标准安装软件包 1|Package]
+PackageFolder=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\包
+ProjectFolder=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn
+ServerSideCab=
+File1=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\包\setup.exe
+File2=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\包\Setup.Lst
+File3=D:\Program Files\Microsoft Visual Studio\VB98\User\SqlIn\包\sqlin.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|标准安装软件包 1|IconGroups]
+Group0=工程1
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|标准安装软件包 1|工程1]
+Icon1=sqlin.exe
+Title1=工程1
+StartIn1=$(AppPath)
+Key1=Icon1
+Icon2=$(WinPath)ST6UNST.EXE -n "$(AppPath)ST6UNST.LOG"
+Title2=Icon4
+StartIn2=$(WinPath)
+Key2=Icon4

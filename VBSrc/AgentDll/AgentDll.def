@@ -1,0 +1,26 @@
+LIBRARY AgentDll
+EXPORTS
+APIBind_Transmitter
+APIGet_Sequence_Number
+APIOn_Bind_Receiver_Resp
+APIOn_Bind_Transceiver_Resp
+APIOn_Bind_Transmitter_Resp
+APIOn_Cancel_Sm_Resp		
+APIOn_Data_Sm
+APIOn_Data_Sm_Resp
+APIOn_Deliver_Sm
+APIOn_Enquire_Link
+APIOn_Enquire_Link_Resp
+APIOn_Generic_Nack
+APIOn_Outbind
+APIOn_Query_Sm_Resp
+APIOn_Replace_Sm_Resp		
+APIOn_Submit_Multi_Resp	
+APIOn_Submit_Sm_Resp			
+APIOn_Unbind_Resp
+APIRecvMsg
+APISubmit_Sm
+APIUSSDCloseConnect
+APIUSSDConnect
+APIUnix_Format1
+APIUnix_Format2

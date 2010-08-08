@@ -1,0 +1,5 @@
+CVBAPIHooker = 132, 132, 662, 485, Z
+CVBMemoryAllocator = 154, 154, 668, 492, 
+CVBMiniWindow = 0, 0, 543, 338, 
+CVBPEFnLocator = 154, 154, 697, 492, 
+frmMain = 44, 44, 558, 382, , 0, 0, 514, 338, C

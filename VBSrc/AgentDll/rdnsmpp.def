@@ -1,0 +1,27 @@
+LIBRARY rdnsmpp
+EXPORTS
+Bind_Receiver
+Bind_Transmitter
+Get_Sequence_Number
+On_Bind_Receiver_Resp
+On_Bind_Transceiver_Resp
+On_Bind_Transmitter_Resp
+On_Cancel_Sm_Resp
+On_Data_Sm
+On_Data_Sm_Resp
+On_Deliver_Sm
+On_Enquire_Link
+On_Enquire_Link_Resp
+On_Generic_Nack
+On_Outbind
+On_Query_Sm_Resp
+On_Replace_Sm_Resp
+On_Submit_Multi_Resp
+On_Submit_Sm_Resp
+On_Unbind_Resp
+RecvMsg
+Submit_Sm
+USSDCloseConnect
+USSDConnect
+Unix_Format1
+Unix_Format2

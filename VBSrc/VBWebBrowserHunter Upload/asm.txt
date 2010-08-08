@@ -1,0 +1,134 @@
+		pushad
+		pushfd
+
+		mov ebp,esp
+		sub esp,30h
+
+		mov ebx,123456h;ebx=lpStart
+		lea edi,[ebp-08h]
+		push edi
+		lea edi,[ebx+1Ch];edi=IID_IServiceProvider 
+		push edi
+		mov eax,[ebx+64h];eax=psb
+		mov ecx,[eax]
+		push eax
+		call [ecx];psb->QueryInterface(IID_IServiceProvider,(void**)&psp)
+		cmp eax,0
+		jl setokflag
+
+		lea edi,[ebp-0Ch]
+		push edi
+		lea edi,[ebx+1Ch]
+		push edi
+		lea edi,[ebx+2Ch]
+		push edi
+		mov eax,[ebp-08h];eax=psp
+		mov ecx,[eax]
+		push eax
+		call [ecx+0Ch];psp->QueryService(SID_STopLevelBrowser,IID_IServiceProvider,(void**)&psptb)
+		cmp eax,0
+		jl releasepsp
+
+		lea edi,[ebp-10h]
+		push edi
+		lea edi,[ebx+4Ch]
+		push edi
+		lea edi,[ebx+3Ch]
+		push edi
+		mov eax,[ebp-08h];eax=psp
+		mov ecx,[eax]
+		push eax
+		call [ecx+0Ch];psptb->QueryService(IID_IWebBrowserApp,IID_IWebBrowser2,(void**)&pwb);
+		cmp eax,0
+		jl releasepsptb
+
+		push 0
+		push 0
+		push 0
+		push [ebp-10h]
+		lea edi,[ebx+4Ch]
+		push edi
+		lea edi,[ebp-14h]
+		push edi
+		call [ebx];CoGetMarshalSizeMax (&ulSize, IID_IWebBrowser2,pwb, MSHCTX_LOCAL, NULL, MSHLFLAGS_NORMAL);
+		cmp eax,0
+		jl setokflag
+
+		lea edi,[ebp-14h]
+		push edi
+		push 2
+		call [ebx+0Ch];GlobalAlloc (GMEM_MOVEABLE, (DWORD) ulSize);
+		cmp eax,0
+		je setokflag
+		lea ecx,[ebp-18h]
+		mov [ecx],eax;hGlobal=GlobalAlloc;
+
+		lea edi,[ebp-1Ch]
+		push edi
+		push 1
+		mov edi,[ebp-18h]
+		push edi
+		call [ebx+8h];CreateStreamOnHGlobal (hGlobal, TRUE, &pStream);
+		cmp eax,0
+		jge go1
+
+		mov edi,[ebp-18h]
+		push edi
+		call [ebx+10h];GlobalFree (hGlobal);
+		jmp releasepsptb
+
+		go1:
+		push 0
+		push 0
+		push 0
+		push [ebp-10h]
+		lea edi,[ebx+4Ch]
+		push edi
+		push [ebp-1Ch]
+		call [ebx+4];CoMarshalInterface (pStream, IID_IWebBrowser2, pwb, MSHCTX_LOCAL, NULL, MSHLFLAGS_NORMAL);
+		cmp eax,0
+		jl releasestream;
+
+		lea edi,[ebx+5Ch]
+		lea esi,[ebp-14h]
+		movsd;cbData=ulSize;
+
+		mov edi,[ebp-18h]
+		push edi
+		call [ebx+14h]
+		mov [ebx+60h],eax;lpData=GlobalLock (hGlobal);
+
+		mov edi,[ebp-18h]
+		push edi
+		call [ebx+18h];GlobalUnlock (hGlobal);
+
+		mov [ebx+68h],dword ptr 1
+loop1:
+		cmp dword ptr [ebx+68h],0
+		jne loop1
+
+releasepsptb:
+		mov eax,[ebp-0Ch];eax=psptb
+		mov ecx,[eax]
+		push eax
+		call [ecx+8];psptb->Release();
+releasepsp:
+		mov eax,[ebp-08h];eax=psp
+		mov ecx,[eax]
+		push eax
+		call [ecx+8];psp->Release();
+releasestream:
+		mov eax,[ebp-1Ch]
+		mov ecx,[eax]
+		push eax
+		call [ecx+8h];pStream->Release ();
+
+setokflag:
+		mov [ebx+68h],dword ptr 2
+			
+		mov esp,ebp
+		popfd
+		popad
+
+		push 123456h;push reteip
+		ret

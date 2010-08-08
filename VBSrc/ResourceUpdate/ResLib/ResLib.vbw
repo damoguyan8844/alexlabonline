@@ -1,0 +1,14 @@
+CResLib = 44, 44, 606, 362, Z
+mduResLib = 66, 66, 628, 383, 
+mduErrorModule = 132, 132, 694, 449, 
+CResEntry = 44, 44, 606, 361, 
+CResEntries = 66, 66, 628, 383, 
+mduResPackage = 44, 44, 562, 436, 
+CResPackage = 0, 0, 562, 317, 
+CIconLib = 66, 66, 606, 384, 
+mduIconLib = 0, 0, 0, 0, C
+CIconEntries = 0, 0, 0, 0, C
+CIconEntry = 44, 44, 584, 362, 
+CIconPackage = 0, 0, 0, 0, C
+mduIconPackage = 0, 0, 581, 338, 
+mduVersionInfo = 0, 0, 0, 0, C
