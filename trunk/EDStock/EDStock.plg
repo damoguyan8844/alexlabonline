@@ -1,0 +1,114 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EDStock - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ALEXZH~1\LOCALS~1\Temp\RSP2D5.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/EDStock.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\EDStock\EDStock.cpp"
+"D:\EDStock\EDStockView.cpp"
+"D:\EDStock\GridCell.cpp"
+"D:\EDStock\GridCellBase.cpp"
+"D:\EDStock\GridCtrl.cpp"
+"D:\EDStock\GridDropTarget.cpp"
+"D:\EDStock\InPlaceEdit.cpp"
+"D:\EDStock\InPlaceList.cpp"
+"D:\EDStock\SListView.cpp"
+"D:\EDStock\TitleTip.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ALEXZH~1\LOCALS~1\Temp\RSP2D5.tmp" 
+Creating temporary file "C:\DOCUME~1\ALEXZH~1\LOCALS~1\Temp\RSP2D6.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/EDStock.pdb" /debug /machine:I386 /out:"Debug/EDStock.exe" /pdbtype:sept 
+.\Debug\AfxCore.obj
+.\Debug\Alarm.obj
+.\Debug\BaseData.obj
+.\Debug\CommFuns.obj
+.\Debug\Container.obj
+.\Debug\Database.obj
+.\Debug\DrawTech.obj
+.\Debug\DRData.obj
+.\Debug\EDStock.obj
+.\Debug\EDStockDoc.obj
+.\Debug\EDStockView.obj
+.\Debug\Express.obj
+.\Debug\GraphView.obj
+.\Debug\GridCell.obj
+.\Debug\GridCellBase.obj
+.\Debug\GridCtrl.obj
+.\Debug\GridDropTarget.obj
+.\Debug\IMCode.obj
+.\Debug\InPlaceEdit.obj
+.\Debug\InPlaceList.obj
+.\Debug\KData.obj
+.\Debug\MainFrm.obj
+.\Debug\MathParser.obj
+.\Debug\Minute.obj
+.\Debug\Outline.obj
+.\Debug\Packets.obj
+.\Debug\Profile.obj
+.\Debug\QianLong.obj
+.\Debug\RealTime.obj
+.\Debug\RealTimeView.obj
+.\Debug\Report.obj
+.\Debug\SelfDB.obj
+.\Debug\ShengLong.obj
+.\Debug\SListView.obj
+.\Debug\SpArchive.obj
+.\Debug\SpAssert.obj
+.\Debug\SpColl.obj
+.\Debug\SpDebug.obj
+.\Debug\SpFile.obj
+.\Debug\SpMemory.obj
+.\Debug\SpObject.obj
+.\Debug\SpString.obj
+.\Debug\SpTime.obj
+.\Debug\SpValid.obj
+.\Debug\StdAfx.obj
+.\Debug\STKDRV.obj
+.\Debug\StkReceiver.obj
+.\Debug\Stock.obj
+.\Debug\StockGraph.obj
+.\Debug\Strategy.obj
+.\Debug\Strings.obj
+.\Debug\StStore.obj
+.\Debug\TechCLK.obj
+.\Debug\TechEnergy.obj
+.\Debug\TechKLine.obj
+.\Debug\Technique.obj
+.\Debug\TechOther.obj
+.\Debug\TechSwing.obj
+.\Debug\TechTrend.obj
+.\Debug\TechUser.obj
+.\Debug\TitleTip.obj
+.\Debug\Tongshi.obj
+.\Debug\EDStock.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ALEXZH~1\LOCALS~1\Temp\RSP2D6.tmp"
+<h3>Output Window</h3>
+Compiling...
+EDStock.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+EDStockView.cpp
+GridCell.cpp
+GridCellBase.cpp
+GridCtrl.cpp
+GridDropTarget.cpp
+InPlaceEdit.cpp
+InPlaceList.cpp
+SListView.cpp
+TitleTip.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+EDStock.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
