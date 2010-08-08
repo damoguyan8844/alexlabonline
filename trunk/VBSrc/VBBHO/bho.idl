@@ -1,0 +1,37 @@
+[
+uuid(ffff1000-2A82-401B-1381-11AA003743D3),
+helpstring("Browser Helper Object Lib"),
+version(1.0)
+]
+
+
+library BHOLib
+{
+
+	[
+	uuid(00000000-0000-0000-C000-000000000046),
+	helpstring("VB IUnknown Interface"),
+	odl
+	]
+	interface IUnknownVB
+	{
+			HRESULT QueryInterface(
+			  [in]  long refiid,        
+			  [in,out] long *ppvObject
+			);
+			long AddRef();
+			long Release();
+	}
+	
+	[
+	    uuid(FC4801A3-2BA9-11CF-A229-00AA003D7352),
+	    helpstring("IObjectWithSite Interface"),
+	    odl
+	]
+	interface IObjectWithSite : IUnknownVB
+	{
+	    HRESULT SetSite([in] IUnknownVB * pSite);
+	    HRESULT GetSite([in] long priid,
+	                    [in, out] long * ppvObj);
+	}
+};

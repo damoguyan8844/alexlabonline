@@ -1,0 +1,122 @@
+[
+uuid(ffff1000-2A82-401B-1381-11AA003743D5),
+helpstring("URLMon Lib"),
+version(1.0)
+]
+
+library URLMonLib
+{
+
+	[
+	uuid(00000000-0000-0000-C000-000000000046),
+	helpstring("VB IUnknown Interface"),
+	odl
+	]
+	interface IUnknownVB
+	{
+			HRESULT QueryInterface(
+			  [in]  long refiid,        
+			  [in,out] long *ppvObject
+			);
+			long AddRef();
+			long Release();
+	}
+
+	[
+	        uuid(79eac9c0-baf9-11ce-8c82-00aa004ba90b),
+		helpstring("IBinding Interface"),
+	        odl
+	]
+	
+	interface IBinding: IUnknownVB
+	{
+	        HRESULT Abort();
+	
+	        HRESULT Suspend();
+	
+	        HRESULT Resume();
+	
+	        HRESULT SetPriority(
+	                [in] long nPriority);
+	
+	        HRESULT GetPriority(
+	                [in,out] long * pnPriority);
+	
+	        HRESULT GetBindResult(
+	                [in,out]       long *pclsidProtocol,
+	                [in,out]       long *pdwResult,
+	                [in,out]       long *pszResult,
+	                [in, out]      long *pdwReserved);
+	
+	        HRESULT RemoteGetBindResult(
+	                [out]   long       *pclsidProtocol,
+	                [out]   long       *pdwResult,
+	                [out]   long       *pszResult,
+	                [in]    long       dwReserved);
+	
+	}
+
+	[
+        uuid(79eac9c1-baf9-11ce-8c82-00aa004ba90b),
+	helpstring("IBindStatusCallback Interface"),
+        odl
+	]
+
+	interface IBindStatusCallback: IUnknownVB
+	{
+
+	        HRESULT OnStartBinding(
+	                [in] long dwReserved,
+	                [in] IBinding * pib);
+	
+	        HRESULT GetPriority(
+	                [in,out] long * pnPriority);
+	
+	        HRESULT OnLowResource(
+	                [in] long reserved);
+	
+	        HRESULT OnProgress(
+	                [in] long ulProgress,
+	                [in] long ulProgressMax,
+	                [in] long ulStatusCode,
+	                [in] long szStatusText);
+	
+	        HRESULT OnStopBinding(
+	                [in] long hresult,
+	                [in] long szError
+	                );
+	
+	        HRESULT GetBindInfo(
+	                [in,out] long *grfBINDF,
+	                [in, out] long * pbindinfo
+	                );
+	
+	        HRESULT RemoteGetBindInfo(
+	                [in,out] long *grfBINDF,
+	                [in, out] long * pbindinfo,
+	                [in, out] long * pstgmed
+	                );
+	
+	        HRESULT OnDataAvailable(
+	                [in] long grfBSCF,
+	                [in] long dwSize,
+	                [in] long * pformatetc,
+	                [in] long * pstgmed
+	                );
+	
+	        HRESULT RemoteOnDataAvailable(
+	                [in] long grfBSCF,
+	                [in] long dwSize,
+	                [in] long * pformatetc,
+	                [in] long * pstgmed
+	                );
+	
+	        HRESULT OnObjectAvailable(
+	                [in] long riid,
+	                [in] IUnknownVB* punk
+	                );
+	
+	}
+
+};
+

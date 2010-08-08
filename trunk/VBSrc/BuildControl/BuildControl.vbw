@@ -1,0 +1,6 @@
+frmFunctions = 44, 44, 608, 410, Z, 0, 0, 564, 366, C
+Connect = 44, 44, 608, 410, , 66, 66, 513, 756, C
+CVBBuildHook = 132, 132, 696, 498, 
+mduBuildControl = 154, 154, 718, 520, 
+mduExceptionHandler = 110, 110, 674, 476, 
+frmAbout = 132, 132, 696, 483, , 110, 110, 674, 461, C

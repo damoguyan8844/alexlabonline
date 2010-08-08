@@ -1,0 +1,5 @@
+CVBWebBrowserHunter = 0, 0, 0, 0, C
+CVBMemoryAllocator = 0, 0, 0, 0, C
+CVBPEFnLocator = 0, 0, 0, 0, C
+CVBIEWindows = 22, 22, 559, 290, Z
+frmGetIEWindows = 88, 88, 625, 356, , 66, 66, 603, 334, C

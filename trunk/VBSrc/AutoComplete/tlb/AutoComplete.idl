@@ -1,0 +1,202 @@
+[
+uuid(23af1000-2A82-401B-1381-11AA003743D5),
+helpstring("AutoComplete Lib"),
+version(1.0)
+]
+
+library AutoComplete
+{
+	importlib("stdole2.tlb");
+	
+	typedef enum{
+		S_OK = 0,
+		S_FALSE = 1,
+		E_POINTER = 0x80000005,
+		E_NOTIMPL = 0x80004001
+	}HRESULTS;
+
+	typedef struct {
+		long Data1;
+		short Data2;
+		short Data3;
+		unsigned char Data4[8];
+	}VBGUID;
+	
+	[
+	uuid(00000000-0000-0000-C000-000000000046),
+	helpstring("VB IUnknown Interface"),
+	odl
+	]
+	interface IUnknownVB
+	{
+			HRESULT QueryInterface(
+			  [in] void* refiid,        
+			  [in,out] void*ppvObject
+			);
+			HRESULT AddRef();
+			HRESULT Release();
+	}
+
+	[
+	        uuid(00000101-0000-0000-C000-000000000046),
+		helpstring("IEnumString Interface"),
+	        odl
+	]
+	
+	interface IEnumString: IUnknownVB
+	{
+		HRESULT Next(
+		  [in] long celt,           
+		  [in] long rgelt,     
+		  [in] long pceltFetched  
+		);
+		 
+		HRESULT Skip(
+		  [in] long celt  
+		);
+		 
+		HRESULT Reset(void);
+		 
+		HRESULT Clone(
+		  [in] long ppenum  
+		);
+	
+	}
+
+	[
+	        uuid(00bb2762-6a77-11d0-a535-00c04fd7d062),
+		helpstring("IAutoComplete Interface"),
+	        odl
+	]
+	
+	interface IAutoComplete: IUnknownVB
+	{
+		HRESULT Init(
+		    [in] long hwndEdit,
+		    [in] IUnknownVB *punkACL,
+		    [in] long pwszRegKeyPath,
+		    [in] long pwszQuickComplete
+		);
+	
+		HRESULT Enable(
+		    [in] long fEnable
+		);
+	}
+
+	[
+	        uuid(EAC04BC0-3791-11d2-BB95-0060977B464C),
+		helpstring("IAutoComplete2 Interface"),
+	        odl
+	]
+	
+	interface IAutoComplete2: IUnknownVB
+	{
+		HRESULT Init(
+		    [in] long hwndEdit,
+		    [in] IUnknownVB *punkACL,
+		    [in] long pwszRegKeyPath,
+		    [in] long pwszQuickComplete
+		);
+	
+		HRESULT Enable(
+		    [in] long fEnable
+		);
+		HRESULT SetOptions(
+		    [in] long dwFlag
+		);
+
+		HRESULT GetOptions(
+		    [in,out] long *pdwFlag
+		);
+	}
+	
+	typedef enum {
+		  ACO_NONE = 0,
+		  ACO_AUTOSUGGEST = 0x1, 
+		  ACO_AUTOAPPEND = 0x2, 
+		  ACO_SEARCH = 0x4, 
+		  ACO_FILTERPREFIXES = 0x8, 
+		  ACO_USETAB = 0x10, 
+		  ACO_UPDOWNKEYDROPSLIST = 0x20, 
+		  ACO_RTLREADING = 0x40 
+  	}AutoCompleteOptions;
+
+	[
+	        uuid(77A130B0-94FD-11D0-A544-00C04FD7d062),
+		helpstring("IACList Interface"),
+	        odl
+	]
+	
+	interface IACList: IUnknownVB
+	{
+		HRESULT Expand(
+		    [in] long pszExpand
+		);
+	}
+
+	[
+	        uuid(470141a0-5186-11d2-bbb6-0060977b464c),
+		helpstring("IACList2 Interface"),
+	        odl
+	]
+	
+	interface IACList2: IUnknownVB
+	{
+		HRESULT Expand(
+		    [in] long pszExpand
+		);
+		
+		HRESULT SetOptions(
+		    [in] long dwFlag
+		);
+
+		HRESULT GetOptions(
+		    [in,out] long *pdwFlag
+		);
+	}
+	
+	typedef enum{
+	  ACLO_NONE = 0,
+	  ACLO_CURRENTDIR = 1,
+	  ACLO_MYCOMPUTER = 2,
+	  ACLO_DESKTOP = 4,
+	  ACLO_FAVORITES = 8,
+	  ACLO_FILESYSONLY = 16
+	}ACLListOptions;
+	
+	[
+	        uuid(00BB2761-6A77-11D0-A535-00C04FD7D062),
+		helpstring("IObjMgr Interface"),
+	        odl
+	]
+	
+	interface IObjMgr: IUnknownVB
+	{
+		HRESULT Append(
+		    [in] IUnknownVB *punk
+		);
+		
+		HRESULT Remove(
+		    [in] IUnknownVB *punk
+		);
+	}
+	
+	[
+	    uuid(5234564a-1234-1234-1234-a2345678932C),
+	    dllname("IIDs")
+	] 
+	module IIDs{
+	  const LPSTR CLSID_ACLHistoryStr = "{00BB2764-6A77-11D0-A535-00C04FD7D062}"; 
+	  const LPSTR CLSID_ACListISFStr = "{03C036F1-A186-11D0-824A-00AA005B4383}"; 
+	  const LPSTR CLSID_ACLMRUStr = "{6756a641-de71-11d0-831b-00aa005b4383}"; 
+	  const LPSTR CLSID_IAutoCompleteStr = "{00BB2763-6A77-11D0-A535-00C04FD7D062}"; 
+	  const LPSTR CLSID_ACLMultiStr = "{00BB2765-6A77-11D0-A535-00C04FD7D062}";
+	  const LPSTR IID_IAutoCompleteStr = "{00bb2762-6a77-11d0-a535-00c04fd7d062}"; 
+	  const LPSTR IID_IAutoComplete2Str = "{EAC04BC0-3791-11d2-BB95-0060977B464C}"; 
+	  const LPSTR IID_IACListStr = "{77A130B0-94FD-11D0-A544-00C04FD7d062}"; 
+	  const LPSTR IID_IACList2Str = "{470141a0-5186-11d2-bbb6-0060977b464c}"; 
+	  const LPSTR IID_IObjMgrStr = "{00BB2761-6A77-11D0-A535-00C04FD7D062}";
+	  const LPSTR IID_IUnknownStr = "{00000000-0000-0000-C000-000000000046}"; 
+  	}
+};
+

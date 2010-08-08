@@ -1,0 +1,4 @@
+frm = 110, 110, 634, 448, Z, 66, 66, 590, 404, C
+CVBWebBrowserHunter = 132, 132, 656, 470, 
+CVBMemoryAllocator = 0, 0, 0, 0, C
+CVBPEFnLocator = 0, 0, 0, 0, C
