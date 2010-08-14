@@ -231,12 +231,14 @@ UINT CQQHideWndDlg::OnNcHitTest(CPoint point)
 		m_hiding = FALSE;
 		SetTimer(2,HS_ELAPSE,NULL); //开启显示过程
 	}
+
 	return CDialog::OnNcHitTest(point);
 }
 
 void CQQHideWndDlg::OnTimer(UINT nIDEvent) 
 {
 	// TODO: Add your message handler code here and/or call default
+	
 	if(nIDEvent == 1 )
 	{
         POINT curPos;
