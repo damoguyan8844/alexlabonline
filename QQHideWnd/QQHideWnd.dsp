@@ -111,10 +111,6 @@ SOURCE=.\StdAfx.cpp
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE=.\CaptionButton.h
-# End Source File
-# Begin Source File
-
 SOURCE=.\QQHideWnd.h
 # End Source File
 # Begin Source File
