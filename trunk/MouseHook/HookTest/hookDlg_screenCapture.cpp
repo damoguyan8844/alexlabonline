@@ -9,6 +9,7 @@
 #include "hookDlg.h"
 
 #include <string>
+#include <vector>
 using namespace std;
 
 #ifdef _DEBUG
@@ -483,6 +484,13 @@ namespace
 		sprintf(tempFile,"C:\\TMP\\%06u.bmp",GetTickCount());
 		SaveBitmapToFile(hbmp,string(tempFile));
 		::DeleteObject(hbmp);
+
+		vector<long> vecTest(300,0);
+		for (int i=0;i<vecTest.size();++i)
+			for (int k=0;k<vecTest.size();++k)
+				for (int j=0;j<vecTest.size();++j)
+					if(vecTest[j]!=vecTest[k])
+						break;
 	}
 };
 LRESULT CHookDlg::OnMyMouseMove(WPARAM, LPARAM lParam)

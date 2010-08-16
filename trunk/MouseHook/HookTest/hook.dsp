@@ -103,7 +103,7 @@ SOURCE=.\hook.rc
 # End Source File
 # Begin Source File
 
-SOURCE=.\hookDlg.cpp
+SOURCE=.\hookDlg_screenCapture.cpp
 # End Source File
 # Begin Source File
 
