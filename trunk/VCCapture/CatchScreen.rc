@@ -1,0 +1,309 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CatchScreen.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CatchScreen.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\Smiley1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 207, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 截屏软件"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,21
+    LTEXT           "CatchScreen 1.0 版",IDC_STATIC,40,10,89,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,150,7,50,14,WS_GROUP
+    LTEXT           "我的邮箱：yangt1100@163.com",IDC_STATIC,34,46,123,19,
+                    SS_CENTERIMAGE
+END
+
+IDD_CATCHSCREEN_DIALOG DIALOGEX 0, 0, 301, 182
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "截屏软件"
+MENU IDR_MENU1
+FONT 12, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,0,0,301,
+                    1
+    GROUPBOX        "截图区域",IDC_STATIC,11,13,125,104
+    CONTROL         "全屏截取",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,44,33,60,21,WS_EX_STATICEDGE
+    CONTROL         "活动区域",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,44,60,
+                    60,21,WS_EX_STATICEDGE
+    CONTROL         "自选区域",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,44,87,
+                    60,21,WS_EX_STATICEDGE
+    GROUPBOX        "欢迎使用屏幕截图软件",IDC_STATIC,156,13,135,104,
+                    BS_CENTER
+    LTEXT           "Static",IDC_SHOW,168,30,115,74
+    DEFPUSHBUTTON   "开始截图",IDC_START,11,137,77,25
+    PUSHBUTTON      "退出软件",IDC_EXIT,213,137,77,25
+    PUSHBUTTON      "最小化到托盘",IDC_HIDE,112,137,77,25
+END
+
+IDD_AXTIVE DIALOG DISCARDABLE  0, 0, 192, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "活动区域截图"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,129,7,56,16
+    LTEXT           "      鼠 标 左 键 点 击 对 话 框 不 放 ， 移 动 鼠 标 到 需 要 截 取 的 区 域。放 开 鼠 标 即 可 截 取 该 区 域 ! ",
+                    IDC_STATIC,24,40,117,49
+END
+
+IDD_SELF DIALOGEX 0, 0, 310, 230
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自选区域"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,41,25,141,123,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY,WS_EX_CLIENTEDGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CatchScreen Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CatchScreen\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CatchScreen.EXE\0"
+            VALUE "ProductName", "CatchScreen 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_CATCHSCREEN_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_AXTIVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_SELF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "  系统  "
+    BEGIN
+        MENUITEM "开始截图",                    ID_START
+        MENUITEM SEPARATOR
+        MENUITEM "隐藏窗口",                    IDM_HIDE
+        MENUITEM SEPARATOR
+        MENUITEM "退出软件",                    ID_EXIT
+    END
+    POPUP "  截取范围  "
+    BEGIN
+        MENUITEM "全屏",                        ID_FULL
+        MENUITEM "活动区域",                    ID_AXTIVE
+        MENUITEM "自选区域",                    ID_SELF
+    END
+    POPUP "  帮助  "
+    BEGIN
+        MENUITEM "关于",                        ID_ABOUT
+    END
+END
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP " 系统 "
+    BEGIN
+        MENUITEM "截取全屏幕",                  ID_FULL_SCREEN
+        MENUITEM "截取活动区域",                ID_AXTIVE_WINDOW
+        MENUITEM "截取自选区域",                ID_SELF_WINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "显示窗口",                    ID_SHOW
+        MENUITEM "退出软件",                    ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\arrow_m.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\back.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 CatchScreen(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CatchScreen.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
