@@ -44,19 +44,13 @@
 #define _MAILMSG_H_
 
 #include "stdafx.h"
-
-#include <windows.h>
-typedef unsigned long ULONG_PTR,*PULONG_PTR; 
-#define __out_ecount_opt(x)
-#include <dbghelp.h>
-
 #include <xcmc.h>          // CMC function defs
 #include <mapi.h>          // MAPI function defs
 
 #include <map>
 #include <string>
 
-typedef std::map<std::string, std::string> STD_TStrStrMap;
+typedef std::map<std::string, std::string> Mail_TStrStrMap;
 
 //
 // Define CMC entry points
@@ -113,7 +107,7 @@ protected:
 
    std::string    m_from;                       // From <address,name>
    std::string    m_to;                         // To <address,name>
-   STD_TStrStrMap     m_attachments;                // Attachment <file,title>
+   Mail_TStrStrMap     m_attachments;                // Attachment <file,title>
    std::string    m_sSubject;                   // EMail subject
    std::string    m_sMessage;                   // EMail message
 

@@ -21,6 +21,11 @@ typedef unsigned long ULONG_PTR,*PULONG_PTR;
 #include "maindlg.h"
 #include "process.h"
 #include "mailmsg.h"
+#include "SimSmtp.h"
+
+#include <vector>
+#include <string>
+using namespace std;
 
 // global app module
 CAppModule _Module;
@@ -110,6 +115,7 @@ void CCrashHandler::GenerateErrorReport(PEXCEPTION_POINTERS pExInfo)
    CString           sTempFileName = CUtility::getTempFileName();
    unsigned int      i;
 
+   sTempFileName.Replace(_T(".tmp"),_T(".zip"));
    // let client add application specific files to report
    if (m_lpfnCallback && !m_lpfnCallback(this))
       return;
@@ -141,6 +147,7 @@ void CCrashHandler::GenerateErrorReport(PEXCEPTION_POINTERS pExInfo)
       if (m_sTo.IsEmpty() || 
           !MailReport(rpt, sTempFileName, mainDlg.m_sEmail, mainDlg.m_sDescription))
       {
+		 ::MessageBox(0,"Failed to send email! Please send zip file to THC manually, Thanks.","Error",MB_OK| MB_ICONERROR);
          SaveReport(rpt, sTempFileName);
       }
    }
@@ -154,15 +161,82 @@ BOOL CCrashHandler::SaveReport(CExceptionReport&, LPCTSTR lpcszFile)
    return (CopyFile(lpcszFile, CUtility::getSaveFileName(), TRUE));
 }
 
-BOOL CCrashHandler::MailReport(CExceptionReport&, LPCTSTR lpcszFile,
-                               LPCTSTR lpcszEmail, LPCTSTR lpcszDesc)
+namespace 
 {
-   CMailMsg msg;
-   msg.SetTo(m_sTo);
-   msg.SetFrom(lpcszEmail);
-   msg.SetSubject(m_sSubject.IsEmpty()?_T("Incident Report"):m_sSubject);
-   msg.SetMessage(lpcszDesc);
-   msg.AddAttachment(lpcszFile, CUtility::getAppName() + _T(".zip"));
+	vector<string> SplitAddress(char * mailTo)
+	{
+		vector<string> retVec;
+		if (strlen(mailTo) <= 0)
+			return retVec;
+		else
+		{
+			char * s = strtok(mailTo, ";");
+			while (s != 0) {
+				retVec.push_back(s);
+				s = strtok(0, ";");
+			}
+			return retVec;
+		}
+	}
+}
 
-   return (msg.Send());
+BOOL CCrashHandler::MailReport(CExceptionReport& rpt, LPCTSTR lpcszFile,
+                               LPCTSTR lpcszEmail, LPCTSTR body)
+{
+	int ret = 0;
+
+	WSADATA wsaData;
+	if (WSAStartup(MAKEWORD(2,0), &wsaData) != 0) {
+		ret = -1;
+	}
+	else {
+		string sBody(body);
+
+		CString userMail(lpcszEmail);
+		if(!userMail.IsEmpty())
+			sBody += string("\n\n Email from User: ") + lpcszEmail;
+
+		CSimSmtp mail;
+		mail.m_strUser = "updsvc";
+		mail.m_strPass = "thc2008*";
+		int port=25;
+		if (!mail.Connect(_T("mail.thc.net.cn"),port) ) {
+			ret = -1;
+		}
+		else
+		{
+			vector<string> mailAddr = SplitAddress(m_sTo.GetBuffer(0));
+			CSmtpMessage message;
+            CSmtpMessageBody cmbody = sBody.c_str();
+			message.Message.Add(cmbody);
+			message.Sender = _T("updsvc@thc.net.cn");
+			message.Recipient = mailAddr[0];
+			message.Subject = m_sSubject.IsEmpty()?_T("Incident Report"):m_sSubject; 
+
+			CSmtpAttachment attach(lpcszFile);
+			message.Attachments.Add(attach);
+
+			for (int i=1; i<mailAddr.size(); i++)
+			{
+				CSmtpAddress addr(mailAddr[i].c_str());
+	            message.CC.Add(addr);
+            }
+			ret = mail.SendMessage(message);
+            if (ret != 0) {
+				ret = -1;
+			}
+		}
+
+		WSACleanup();
+	}
+//    CMailMsg msg;
+//    msg.SetTo(m_sTo);
+//    msg.SetFrom(lpcszEmail);
+//    msg.SetSubject(m_sSubject.IsEmpty()?_T("Incident Report"):m_sSubject);
+//    msg.SetMessage(lpcszDesc);
+//    msg.AddAttachment(lpcszFile, CUtility::getAppName() + _T(".zip"));
+
+//   return (msg.Send());
+
+	return ret==0;
 }

@@ -104,6 +104,10 @@ PostBuild_Cmds=mkdir ..\include	copy crashrpt.h ..\include
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
+SOURCE=.\Base64.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\CrashHandler.cpp
 # End Source File
 # Begin Source File
@@ -121,6 +125,14 @@ SOURCE=.\excprpt.cpp
 # Begin Source File
 
 SOURCE=.\MailMsg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\SimSmtp.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\SimSmtp.h
 # End Source File
 # Begin Source File
 

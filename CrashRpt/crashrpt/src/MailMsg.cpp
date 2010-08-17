@@ -204,7 +204,7 @@ BOOL CMailMsg::MAPISend()
   if(m_lpMapiSendMail==NULL)
       return FALSE;
 
-   STD_TStrStrMap::iterator p;
+   Mail_TStrStrMap::iterator p;
    int                  nIndex = 0;   
    MapiRecipDesc*       pRecipients = NULL;
    int                  nAttachments = 0;
@@ -216,7 +216,7 @@ BOOL CMailMsg::MAPISend()
      return FALSE;
    
    LHANDLE hMapiSession = 0;
-   status = m_lpMapiLogon(NULL, "hwzhang", "zhw8856775*", MAPI_LOGON_UI|MAPI_PASSWORD_UI, NULL, &hMapiSession);
+   status = m_lpMapiLogon(NULL, NULL, NULL, MAPI_LOGON_UI|MAPI_PASSWORD_UI, NULL, &hMapiSession);
    if(status!=SUCCESS_SUCCESS)
    {
      m_sErrorMsg.Format(_T("MAPILogon has failed with code %X."), status);
@@ -265,7 +265,6 @@ BOOL CMailMsg::MAPISend()
       pAttachments[nIndex].ulReserved        = 0;
       pAttachments[nIndex].flFlags           = 0;
       pAttachments[nIndex].nPosition         = 0xFFFFFFFF;
-	 
 	    pAttachments[nIndex].lpszPathName      = (LPSTR)p->first.c_str();
 	    pAttachments[nIndex].lpszFileName      = (LPSTR)p->second.c_str();
       pAttachments[nIndex].lpFileType        = NULL;
@@ -304,7 +303,7 @@ BOOL CMailMsg::MAPISend()
 
 BOOL CMailMsg::CMCSend()
 {
-  STD_TStrStrMap::iterator p;
+  Mail_TStrStrMap::iterator p;
   int                  nIndex = 0;
   CMC_recipient*       pRecipients;
   CMC_attachment*      pAttachments;
