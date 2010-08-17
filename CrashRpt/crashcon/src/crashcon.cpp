@@ -27,8 +27,9 @@ int main(int argc, char* argv[])
    printf("Press a ENTER to simulate a null pointer exception...\n");
    getchar();
    __try {
-      RaiseException(EXCEPTION_BREAKPOINT, 0, 0, NULL);
-   } __except(GenerateErrorReport(lpvState, GetExceptionInformation())){}
+      RaiseException(EXCEPTION_INT_DIVIDE_BY_ZERO, 0, 0, NULL);
+   } 
+   __except(GenerateErrorReport(lpvState, GetExceptionInformation())){}
 #else
    printf("Press a ENTER to generate a null pointer exception...\n");
    getchar();
