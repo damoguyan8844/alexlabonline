@@ -1,7 +1,7 @@
 /* zip.h -- IO for compress .zip files using zlib 
-   Version 0.15 alpha, Mar 19th, 1998,
+   Version 0.20, September 01th, 2002
 
-   Copyright (C) 1998 Gilles Vollant
+   Copyright (C) 1998-2002 Gilles Vollant
 
    This unzip package allow creates .ZIP file, compatible with PKZip 2.04g
      WinZip, InfoZip tools and compatible.
@@ -10,10 +10,9 @@
 
   For uncompress .zip file, look at unzip.h
 
-   THIS IS AN ALPHA VERSION. AT THIS STAGE OF DEVELOPPEMENT, SOMES API OR STRUCTURE
-   CAN CHANGE IN FUTURE VERSION !!
+
    I WAIT FEEDBACK at mail info@winimage.com
-   Visit also http://www.winimage.com/zLibDll/zip.htm for evolution
+   Visit also http://www.winimage.com/zLibDll/unzip.html for evolution
 
    Condition of use and distribution are the same than zlib :
 
@@ -37,7 +36,8 @@
 */
 
 /* for more info about .ZIP format, see 
-      ftp://ftp.cdrom.com/pub/infozip/doc/appnote-970311-iz.zip
+      http://www.info-zip.org/pub/infozip/doc/appnote-981119-iz.zip
+      http://www.info-zip.org/pub/infozip/doc/
    PkWare has also a specification at :
       ftp://ftp.pkware.com/probdesc.zip
 */
@@ -51,6 +51,10 @@ extern "C" {
 
 #ifndef _ZLIB_H
 #include "zlib.h"
+#endif
+
+#ifndef _ZLIBIOAPI_H
+#include "ioapi.h"
 #endif
 
 #if defined(STRICTZIP) || defined(STRICTZIPUNZIP)
@@ -88,19 +92,25 @@ typedef struct
     uLong       external_fa;    /* external file attributes        4 bytes */
 } zip_fileinfo;
 
+typedef const char* zipcharpc;
+
+
 extern zipFile ZEXPORT zipOpen OF((const char *pathname, int append));
 /*
   Create a zipfile.
-	 pathname contain on Windows NT a filename like "c:\\zlib\\zlib111.zip" or on
-	   an Unix computer "zlib/zlib111.zip".
+	 pathname contain on Windows XP a filename like "c:\\zlib\\zlib113.zip" or on
+	   an Unix computer "zlib/zlib113.zip".
 	 if the file pathname exist and append=1, the zip will be created at the end
 	   of the file. (useful if the file contain a self extractor code)
 	 If the zipfile cannot be opened, the return value is NULL.
      Else, the return value is a zipFile Handle, usable with other function
 	   of this zip package.
-
-
 */
+
+extern zipFile ZEXPORT zipOpen2 OF((const char *pathname, 
+                                   int append,
+                                   zipcharpc* globalcomment,
+                                   zlib_filefunc_def* pzlib_filefunc_def));
 
 extern int ZEXPORT zipOpenNewFileInZip OF((zipFile file,
 					   const char* filename,
@@ -125,8 +135,25 @@ extern int ZEXPORT zipOpenNewFileInZip OF((zipFile file,
   level contain the level of compression (can be Z_DEFAULT_COMPRESSION)
 */
 
+
+extern int ZEXPORT zipOpenNewFileInZip2 OF((zipFile file,
+					   const char* filename,
+					   const zip_fileinfo* zipfi,
+					   const void* extrafield_local,
+					   uInt size_extrafield_local,
+					   const void* extrafield_global,
+					   uInt size_extrafield_global,
+					   const char* comment,
+					   int method,
+					   int level,
+                       int raw));
+
+/*
+  Same than zipOpenNewFileInZip, except if raw=1, we write raw file
+ */
+
 extern int ZEXPORT zipWriteInFileInZip OF((zipFile file,
-					   const voidp buf,
+					   const void* buf,
 					   unsigned len));
 /*
   Write data in the zipfile
@@ -135,6 +162,16 @@ extern int ZEXPORT zipWriteInFileInZip OF((zipFile file,
 extern int ZEXPORT zipCloseFileInZip OF((zipFile file));
 /*
   Close the current file in the zipfile
+*/
+
+
+extern int ZEXPORT zipCloseFileInZipRaw OF((zipFile file,
+                                            uLong uncompressed_size,
+                                            uLong crc32));
+/*
+  Close the current file in the zipfile, for fiel opened with 
+    parameter raw=1 in zipOpenNewFileInZip2
+  uncompressed_size and crc32 are value for the uncompressed size
 */
 
 extern int ZEXPORT zipClose OF((zipFile file,
