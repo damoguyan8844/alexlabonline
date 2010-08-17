@@ -182,18 +182,18 @@ public:
 	{
       HWND     hWndEmail = GetDlgItem(IDC_EMAIL);
       HWND     hWndDesc = GetDlgItem(IDC_DESCRIPTION);
-	   int      nEmailLen = ::GetWindowTextLength(hWndEmail);
+	  int      nEmailLen = ::GetWindowTextLength(hWndEmail);
       int      nDescLen = ::GetWindowTextLength(hWndDesc);
 
-      LPTSTR lpStr = m_sEmail.GetBufferSetLength(nEmailLen);
-      ::GetWindowText(hWndEmail, lpStr, nEmailLen);
+      LPTSTR lpStr = m_sEmail.GetBufferSetLength(nEmailLen+1);
+      ::GetWindowText(hWndEmail, lpStr, nEmailLen+1);
       m_sEmail.ReleaseBuffer();
 
-      lpStr = m_sDescription.GetBufferSetLength(nDescLen);
-      ::GetWindowText(hWndDesc, lpStr, nDescLen);
+      lpStr = m_sDescription.GetBufferSetLength(nDescLen+1);
+      ::GetWindowText(hWndDesc, lpStr, nDescLen+1);
       m_sDescription.ReleaseBuffer();
 
-      //
+      
       // If an email address was entered, verify that
       // it [1] contains a @ and [2] the last . comes
       // after the @.
