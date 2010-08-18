@@ -1,0 +1,88 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="robots" content="all">
+<meta name="author" content="www.sqlite.com.cn | 林轩" />
+<meta name="description" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<meta name="keywords" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<link href="../../POPstyle.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../POPinc/POPtitle.js"></script>
+<title>SQLite语法 CREATE TRIGGER --SQLite 中文社区-- http://www.sqlite.com.cn/</title>
+</head>
+<body>
+					<span id="ContentBody" style="display:block;padding:10px 10px"><H1>SQLite的SQL语法</H1>
+<a href="39.Html">[目录] </a> 
+<H2>CREATE TRIGGER</H2>
+<TABLE cellPadding=10 id="table1">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>sql-statement</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>CREATE </FONT></B>[<B><FONT color=#2c2cf0>TEMP </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> TEMPORARY</FONT></B>]<B><FONT color=#2c2cf0> TRIGGER </FONT></B><I><FONT color=#ff3434>trigger-name</FONT></I><B><FONT color=#2c2cf0> </FONT></B>[<B><FONT color=#2c2cf0> BEFORE </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> AFTER </FONT></B>]<B><FONT color=#2c2cf0><BR></FONT></B><I><FONT color=#ff3434>database-event</FONT></I><B><FONT color=#2c2cf0> ON </FONT></B>[<I><FONT color=#ff3434>database-name</FONT></I><B><FONT color=#2c2cf0> <BIG>.</BIG></FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>table-name</FONT></I><B><FONT color=#2c2cf0><BR></FONT></B><I><FONT color=#ff3434>trigger-action</FONT></I></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=10 id="table2">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>sql-statement</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>CREATE </FONT></B>[<B><FONT color=#2c2cf0>TEMP </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> TEMPORARY</FONT></B>]<B><FONT color=#2c2cf0> TRIGGER </FONT></B><I><FONT color=#ff3434>trigger-name</FONT></I><B><FONT color=#2c2cf0> INSTEAD OF<BR></FONT></B><I><FONT color=#ff3434>database-event</FONT></I><B><FONT color=#2c2cf0> ON </FONT></B>[<I><FONT color=#ff3434>database-name</FONT></I><B><FONT color=#2c2cf0> <BIG>.</BIG></FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>view-name</FONT></I><B><FONT color=#2c2cf0><BR></FONT></B><I><FONT color=#ff3434>trigger-action</FONT></I></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=10 id="table3">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>database-event</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>DELETE </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>INSERT </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>UPDATE </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>UPDATE OF </FONT></B><I><FONT color=#ff3434>column-list</FONT></I></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=10 id="table4">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>trigger-action</FONT></I>&nbsp;::=</TD>
+<TD>[<B><FONT color=#2c2cf0> FOR EACH ROW </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> FOR EACH STATEMENT </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B>[<B><FONT color=#2c2cf0> WHEN </FONT></B><I><FONT color=#ff3434>expression</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> <BR>BEGIN <BR>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B><I><FONT color=#ff3434>trigger-step</FONT></I><B><FONT color=#2c2cf0> ; </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>trigger-step</FONT></I><B><FONT color=#2c2cf0> ; </FONT></B>]<BIG>*</BIG><B><FONT color=#2c2cf0><BR>END</FONT></B></TD></TR></TBODY></TABLE>
+<TABLE cellPadding=10 id="table5">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>trigger-step</FONT></I>&nbsp;::=</TD>
+<TD><I><FONT color=#ff3434>update-statement</FONT></I><B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>insert-statement</FONT></I><B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR></FONT></B><I><FONT color=#ff3434>delete-statement</FONT></I><B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>select-statement</FONT></I></TD></TR></TBODY></TABLE>
+<P>CREATE TRIGGER语句用于向数据库schema中添加触发器。触发器是一些在特定的数据库事件(<I>database-event</I>) 发生时自动进行的数据库操作(<I>trigger-action</I>). </P>
+<P>触发器可由在特殊表上执行的DELETE, INSERT, UPDATE等语句触发，或UPDATE表中特定的字段时触发。</P>
+<P>现在SQLite仅支持FOR EACH ROW触发器，不支持FOR EACH STATEMENT触发。因此可以不用明确说明FOR EACH ROW .FOR EACH ROW的意思是由<I>trigger-steps</I>说明的SQL语句可能在(由WHEN子句决定的)数据库插入，更改或删除的每一行触发trigger.</P>
+<P>WHEN子句和<I>trigger-steps</I>可以使用"NEW.<I>column-name</I>"和"OLD.<I>column-name</I>"的引用形式访问正在被插入，更改或 删除的行的元素，<I>column-name</I>是触发器关联的表中的字段名。OLD 和 NEW 引用只在触发器与之相关的<I>trigger-event</I>处可用，例如：</P>
+<TABLE cellPadding=10 border=0 id="table6">
+<TBODY>
+<TR>
+<TD vAlign=top align=right width=120><I>INSERT</I></TD>
+<TD vAlign=top>NEW可用</TD></TR>
+<TR>
+<TD vAlign=top align=right width=120><I>UPDATE</I></TD>
+<TD vAlign=top>NEW和OLD均可用</TD></TR>
+<TR>
+<TD vAlign=top align=right width=120><I>DELETE</I></TD>
+<TD vAlign=top>OLD可用</TD></TR></TBODY></TABLE>
+<P></P>
+<P>当使用WHEN子句，<I>trigger-steps</I>只在WHEN子句为真的行执行。不使用WHEN时则在所有行执行。</P>
+<P><I>trigger-time</I>决定了<I>trigger-steps</I>执行的时间，它是相对于关联行的插入，删除和修改而言的。</P>
+<P>作为的一部分<I>trigger-step</I>的UPDATE 或 INSERT可以使用ON CONFLICT子句。 但若触发trigger的语句使用了ON CONFLICT子句，则覆盖前述的ON CONFLICT子句所定义的冲突处理方法。</P>
+<P>关联表被撤销时触发器被自动删除。</P>
+<P>不仅在表上，在视图上一样可以创建触发器，在CREATE TRIGGER语句中使用INSTEAD OF即可。 若视图上定义了一个或多个ON INSERT, ON DELETE, ON UPDATE触发器，则相应地对视图执行INSERT,DELETE 或UPDATE语句 不会出错，而会触发关联的触发器。视图关联的表不会被修改。(除了由触发器进行的修改操作)。</P>
+<P><B>Example:</B></P>
+<P>假设"customers"表存储了客户信息，"orders"表存储了订单信息，下面的触发器确保当用户改变地址时所有的 关联订单地址均进行相应改变：</P>
+<BLOCKQUOTE><PRE> 
+CREATE TRIGGER update_customer_address UPDATE OF address ON customers  
+  BEGIN 
+    UPDATE orders SET address = new.address WHERE customer_name = old.name; 
+  END; 
+</PRE></BLOCKQUOTE>
+<P>定义了该触发器后执行如下语句：</P>
+<BLOCKQUOTE><PRE> 
+UPDATE customers SET address = ’1 Main St.’ WHERE name = ’Jack Jones’; 
+</PRE></BLOCKQUOTE>
+<P>会使下面的语句自动执行：</P>
+<BLOCKQUOTE><PRE> 
+UPDATE orders SET address = ’1 Main St.’ WHERE customer_name = ’Jack Jones’; 
+</PRE></BLOCKQUOTE>
+<P>注意，目前在有INTEGER PRIMARY KEY域的表上触发器可能工作不正常。若BEFORE触发器修改了一行的 INTEGER PRIMARY KEY域，而该域将由触发该触发器的语句进行修改，则可能根本不会修改该域。 可以用PRIMARY KEY字段代替INTEGER PRIMARY KEY字段来解决上述问题。</P>
+<P>一个特殊的SQL函数RAISE()可用于触发器程序，使用如下语法：</P>
+<TABLE cellPadding=10 id="table7">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>raise-function</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>RAISE <BIG>(</BIG> ABORT<BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>error-message</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>RAISE <BIG>(</BIG> FAIL<BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>error-message</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>RAISE <BIG>(</BIG> ROLLBACK<BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>error-message</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> <BR>RAISE <BIG>(</BIG> IGNORE <BIG>)</BIG></FONT></B></TD></TR></TBODY></TABLE>
+<P>当触发器程序执行中调用了上述前三个之一的形式时，则执行指定的ON CONFLICT进程(ABORT, FAIL或者ROLLBACK) 且终止当前查询，返回一个SQLITE_CONSTRAINT错误并说明错误信息。</P>
+<P>当调用RAISE(IGNORE)，当前触发器程序的余下部分，触发该触发器的语句和任何之后的触发器程序被忽略并且 不恢复对数据库的已有改变。 若触发触发器的语句是一个触发器程序本身的一部分，则原触发器程序从下一步起继续执行。 </P>
+<P>使用<A href="66.html"><FONT color=#ff3434>DROP TRIGGER</FONT></A>删除触发器。</P></span>
+					</body>
+</html>
