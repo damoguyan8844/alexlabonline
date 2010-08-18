@@ -1,0 +1,10 @@
+uses
+  Unit1;
+begin
+  Form1 := TForm1.Create(nil);              
+  Form1.UniTable1.Connection := CursqlDb.Connection;
+  Form1.UniTable1.tableName := 'AreaInfo'; 
+  Form1.Unitable1.Open; 
+  Form1.ShowModal;  
+  Form1.Free;
+end.
