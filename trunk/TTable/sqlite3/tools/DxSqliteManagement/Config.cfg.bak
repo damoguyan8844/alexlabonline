@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="gbk"?>
-<SysConfig SaveAllRegDbInfo="True" ShowTableValuesLimit="True" ShowMemoryDb="False" ShowSysTable="True" ShowSkinHint="True" DllPath="G:\THC\C0702\TCom2\TTable\sqlite3\tools\DxSqliteManagement\sqlite3.dll">
+<SysConfig SaveAllRegDbInfo="True" ShowTableValuesLimit="True" ShowMemoryDb="False" ShowSysTable="True" ShowSkinHint="True" DllPath="">
   <DataTypeNodes>
     <Blob MaxLen="0" MinLen="0" DefaultLen="0" HasJD="False"/>
     <BigInt MaxLen="8" MinLen="8" DefaultLen="8" HasJD="False"/>
@@ -20,6 +20,5 @@
   <SearchDirs>G:\THC\C0702\TCom2\TTable\sqlite3\tools\DxSqliteManagement\ScriptInfos;G:\THC\C0702\TCom2\TTable\sqlite3\tools\DxSqliteManagement\ScriptInfos\窗口实例</SearchDirs>
   <RegisterDb>
     <Database DbFile="C:\Test.db" DbName="Test" HasPwd="True"/>
-    <Database DbFile="C:\SQLTest.db" DbName="SQLTest" HasPwd="True"/>
   </RegisterDb>
 </SysConfig>
