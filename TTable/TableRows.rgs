@@ -1,0 +1,26 @@
+HKCR
+{
+	TTable.TableRows.1 = s 'TableRows Class'
+	{
+		CLSID = s '{B170F253-D70F-4AD6-8AA6-FE826FCE5296}'
+	}
+	TTable.TableRows = s 'TableRows Class'
+	{
+		CLSID = s '{B170F253-D70F-4AD6-8AA6-FE826FCE5296}'
+		CurVer = s 'TTable.TableRows.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B170F253-D70F-4AD6-8AA6-FE826FCE5296} = s 'TableRows Class'
+		{
+			ProgID = s 'TTable.TableRows.1'
+			VersionIndependentProgID = s 'TTable.TableRows'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{F1056590-F751-4CA6-B6B6-C281EA297280}'
+		}
+	}
+}
