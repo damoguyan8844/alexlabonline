@@ -2,7 +2,7 @@
 
 
 /* File created by MIDL compiler version 5.01.0164 */
-/* at Tue Aug 24 00:49:52 2010
+/* at Wed Aug 25 23:30:37 2010
  */
 /* Compiler settings for E:\AlexLabOnline\TTable\TTable.idl:
     Oicf (OptLev=i2), W1, Zp8, env=Win32, ms_ext, c_ext
@@ -764,7 +764,7 @@ EXTERN_C const IID IID_ITableManager;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE LoadDataOnCondition( 
             /* [in] */ BSTR tableName,
             /* [in] */ BSTR whereState,
-            /* [out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal) = 0;
+            /* [retval][out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal) = 0;
         
     };
     
@@ -854,7 +854,7 @@ EXTERN_C const IID IID_ITableManager;
             ITableManager __RPC_FAR * This,
             /* [in] */ BSTR tableName,
             /* [in] */ BSTR whereState,
-            /* [out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal);
+            /* [retval][out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal);
         
         END_INTERFACE
     } ITableManagerVtbl;
@@ -1030,7 +1030,7 @@ void __RPC_STUB ITableManager_RemoveTableColumn_Stub(
     ITableManager __RPC_FAR * This,
     /* [in] */ BSTR tableName,
     /* [in] */ BSTR whereState,
-    /* [out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal);
+    /* [retval][out] */ ITableRows __RPC_FAR *__RPC_FAR *pVal);
 
 
 void __RPC_STUB ITableManager_LoadDataOnCondition_Stub(
@@ -1755,6 +1755,22 @@ EXTERN_C const IID IID_ITableRow;
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE LoadXML( 
             /* [in] */ BSTR xml) = 0;
         
+        virtual /* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE get_TableName( 
+            /* [retval][out] */ BSTR __RPC_FAR *pVal) = 0;
+        
+        virtual /* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE put_TableName( 
+            /* [in] */ BSTR newVal) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Update( 
+            /* [defaultvalue][in] */ long TransactionLevel = 0) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Add( 
+            /* [in] */ BSTR tableName,
+            /* [retval][out] */ long __RPC_FAR *NewId) = 0;
+        
+        virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE Delete( 
+            /* [defaultvalue][in] */ long TransactionLevel = 0) = 0;
+        
     };
     
 #else 	/* C style interface */
@@ -1873,6 +1889,27 @@ EXTERN_C const IID IID_ITableRow;
             ITableRow __RPC_FAR * This,
             /* [in] */ BSTR xml);
         
+        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *get_TableName )( 
+            ITableRow __RPC_FAR * This,
+            /* [retval][out] */ BSTR __RPC_FAR *pVal);
+        
+        /* [helpstring][id][propput] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *put_TableName )( 
+            ITableRow __RPC_FAR * This,
+            /* [in] */ BSTR newVal);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *Update )( 
+            ITableRow __RPC_FAR * This,
+            /* [defaultvalue][in] */ long TransactionLevel);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *Add )( 
+            ITableRow __RPC_FAR * This,
+            /* [in] */ BSTR tableName,
+            /* [retval][out] */ long __RPC_FAR *NewId);
+        
+        /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE __RPC_FAR *Delete )( 
+            ITableRow __RPC_FAR * This,
+            /* [defaultvalue][in] */ long TransactionLevel);
+        
         END_INTERFACE
     } ITableRowVtbl;
 
@@ -1953,6 +1990,21 @@ EXTERN_C const IID IID_ITableRow;
 
 #define ITableRow_LoadXML(This,xml)	\
     (This)->lpVtbl -> LoadXML(This,xml)
+
+#define ITableRow_get_TableName(This,pVal)	\
+    (This)->lpVtbl -> get_TableName(This,pVal)
+
+#define ITableRow_put_TableName(This,newVal)	\
+    (This)->lpVtbl -> put_TableName(This,newVal)
+
+#define ITableRow_Update(This,TransactionLevel)	\
+    (This)->lpVtbl -> Update(This,TransactionLevel)
+
+#define ITableRow_Add(This,tableName,NewId)	\
+    (This)->lpVtbl -> Add(This,tableName,NewId)
+
+#define ITableRow_Delete(This,TransactionLevel)	\
+    (This)->lpVtbl -> Delete(This,TransactionLevel)
 
 #endif /* COBJMACROS */
 
@@ -2145,6 +2197,67 @@ void __RPC_STUB ITableRow_SaveXML_Stub(
 
 
 void __RPC_STUB ITableRow_LoadXML_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id][propget] */ HRESULT STDMETHODCALLTYPE ITableRow_get_TableName_Proxy( 
+    ITableRow __RPC_FAR * This,
+    /* [retval][out] */ BSTR __RPC_FAR *pVal);
+
+
+void __RPC_STUB ITableRow_get_TableName_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id][propput] */ HRESULT STDMETHODCALLTYPE ITableRow_put_TableName_Proxy( 
+    ITableRow __RPC_FAR * This,
+    /* [in] */ BSTR newVal);
+
+
+void __RPC_STUB ITableRow_put_TableName_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ITableRow_Update_Proxy( 
+    ITableRow __RPC_FAR * This,
+    /* [defaultvalue][in] */ long TransactionLevel);
+
+
+void __RPC_STUB ITableRow_Update_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ITableRow_Add_Proxy( 
+    ITableRow __RPC_FAR * This,
+    /* [in] */ BSTR tableName,
+    /* [retval][out] */ long __RPC_FAR *NewId);
+
+
+void __RPC_STUB ITableRow_Add_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [helpstring][id] */ HRESULT STDMETHODCALLTYPE ITableRow_Delete_Proxy( 
+    ITableRow __RPC_FAR * This,
+    /* [defaultvalue][in] */ long TransactionLevel);
+
+
+void __RPC_STUB ITableRow_Delete_Stub(
     IRpcStubBuffer *This,
     IRpcChannelBuffer *_pRpcChannelBuffer,
     PRPC_MESSAGE _pRpcMessage,

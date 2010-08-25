@@ -3,6 +3,8 @@
 
 #include "TTableInc.h"
 #include <string>
+#include <functional>
+#include <map>
 
 inline std::string GetSQLiteTypeString(DATA_TYPE dataType)
 {
@@ -14,6 +16,14 @@ inline std::string GetSQLiteTypeString(DATA_TYPE dataType)
 	}
 	return "";
 }
+
+struct KeyComp: std::binary_function<std::string,std::string,bool>
+{
+	bool operator()(const std::string& k1, const std::string& k2) const
+	{
+		return stricmp(k1.c_str(),k2.c_str()) < 0;                                        
+	}
+};
 
 // struct AnyValue
 // {

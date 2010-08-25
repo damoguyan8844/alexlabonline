@@ -56,9 +56,9 @@ STDMETHODIMP CTableColumns::LoadByTableName(BSTR tabName)
 		CppSQLite3DB db;
         db.open(OLE2A(DBFile));
 		
-		if(!db.tableExists("UserTableColumns"))
+		if(!db.tableExists("usertablecolumns"))
 		{
-			db.execDML("create table UserTableColumns\
+			db.execDML("create table usertablecolumns\
 				(id  integer primary key autoincrement, tablename varchar(64) not null,colindex int not null,coltype int not null,colname varchar(64) not null );");
 
 			return S_OK;
@@ -66,7 +66,7 @@ STDMETHODIMP CTableColumns::LoadByTableName(BSTR tabName)
 		
 		this->RemoveAll();
 
-		CppSQLite3Query q = db.execQueryEx("select * from UserTableColumns where tablename='%s';",OLE2A(tabName));
+		CppSQLite3Query q = db.execQueryEx("select * from usertablecolumns where tablename='%s';",OLE2A(tabName));
         while (!q.eof())
         {
 			CComPtr<ITableColumn> piColumn;

@@ -46,7 +46,7 @@ library TTABLELib
 		[id(8), helpstring("method AddColumn")] HRESULT AddTableColumn([in] BSTR tableName,[in] BSTR columnName,[in] DATA_TYPE Type);
 		[id(9), helpstring("method RemoveColumn")] HRESULT RemoveTableColumn([in] BSTR tableName,[in] BSTR columnName);
 
-		[id(10), helpstring("method LoadDataOnCondition")] HRESULT LoadDataOnCondition([in] BSTR tableName,[in] BSTR whereState, [out] ITableRows ** pVal);
+		[id(10), helpstring("method LoadDataOnCondition")] HRESULT LoadDataOnCondition([in] BSTR tableName,[in] BSTR whereState, [out,retval] ITableRows ** pVal);
 	};
 	[
 		object,
@@ -135,6 +135,14 @@ library TTABLELib
 
 		[id(8), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
 		[id(9), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+		[propget, id(10), helpstring("property TableName")] HRESULT TableName([out, retval] BSTR *pVal);
+		[propput, id(10), helpstring("property TableName")] HRESULT TableName([in] BSTR newVal);
+
+		//database
+		[id(601), helpstring("method Update")] HRESULT Update([in, defaultvalue(0)] long TransactionLevel);
+		[id(602), helpstring("method Add")] HRESULT Add([in] BSTR tableName, [out, retval] long *NewId);
+		[id(603), helpstring("method Delete")] HRESULT Delete([in, defaultvalue(0)] long TransactionLevel);
+
 	};
 	[
 		object,
