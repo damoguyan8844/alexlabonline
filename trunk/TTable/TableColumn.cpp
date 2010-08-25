@@ -59,9 +59,9 @@ STDMETHODIMP CTableColumn::Add(BSTR tableName, long *NewId)
 		CppSQLite3DB db;
 		db.open(OLE2A(DBFile));
 
-		db.execDMLEx("insert into UserTableColumns(tablename,colindex,coltype,colname) values('%s',%d,%d,'%s');",OLE2A(tableName),m_lngIndex,m_lngType,OLE2A(m_bstrName));
+		db.execDMLEx("insert into usertablecolumns(tablename,colindex,coltype,colname) values('%s',%d,%d,'%s');",OLE2A(tableName),m_lngIndex,m_lngType,OLE2A(m_bstrName));
 
-		m_ID = db.execScalarEx("select ID from UserTableColumns where tablename='%s' and colname = '%s' ;",OLE2A(tableName),OLE2A(m_bstrName));
+		m_ID = db.execScalarEx("select id from usertablecolumns where tablename='%s' and colname = '%s' ;",OLE2A(tableName),OLE2A(m_bstrName));
 
 	}
 	_CATCH_XXX()
@@ -85,7 +85,7 @@ STDMETHODIMP CTableColumn::Update(long TransactionLevel = 0)
 		CppSQLite3DB db;
 		db.open(OLE2A(DBFile));
 		
-		db.execDMLEx("update UserTableColumns set colindex=%d,coltype=%d,colname='%s' where ID=%d;",m_lngIndex,m_lngType,OLE2A(m_bstrName),m_ID);
+		db.execDMLEx("update usertablecolumns set colindex=%d,coltype=%d,colname='%s' where id=%d;",m_lngIndex,m_lngType,OLE2A(m_bstrName),m_ID);
 	}
 	_CATCH_XXX()
 	return S_OK;
@@ -104,7 +104,7 @@ STDMETHODIMP  CTableColumn::Delete(long TransactionLevel = 0)
 		CppSQLite3DB db;
 		db.open(OLE2A(DBFile));
 		
-		db.execDMLEx("Delete from UserTableColumns where ID=%d;",m_ID);
+		db.execDMLEx("delete from usertablecolumns where id=%d;",m_ID);
 	}
 	_CATCH_XXX()
 	return S_OK;

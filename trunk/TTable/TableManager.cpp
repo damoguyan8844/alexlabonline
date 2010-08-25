@@ -54,9 +54,9 @@ STDMETHODIMP CTableManager::put_DBFile(BSTR newVal)
 		CppSQLite3DB db;
 		db.open(OLE2A(m_bstrDBFile));
 		
-		if(!db.tableExists("UserTableColumns"))
+		if(!db.tableExists("usertablecolumns"))
 		{
-			db.execDML("create table UserTableColumns\
+			db.execDML("create table usertablecolumns\
 				(id  integer primary key autoincrement, tablename varchar(64) not null,colindex int not null,coltype int not null, colname varchar(64) not null );");
 		}		
 	}
@@ -74,8 +74,8 @@ STDMETHODIMP CTableManager::AddTable(BSTR tableName, ITableColumns *piCols)
 		CppSQLite3DB db;
 		db.open(OLE2A(m_bstrDBFile));
 		
-		db.execDMLEx("DROP TABLE IF EXISTS %s",OLE2A(tableName));
-		db.execDMLEx("delete from UserTableColumns where tablename='%s';",OLE2A(tableName));
+		db.execDMLEx("drop table if exists %s",OLE2A(tableName));
+		db.execDMLEx("delete from usertablecolumns where tablename='%s';",OLE2A(tableName));
 
 		db.execDMLEx("create table %s(id  integer primary key autoincrement);",OLE2A(tableName));	
 
@@ -121,8 +121,8 @@ STDMETHODIMP CTableManager::RemoveTable(BSTR tableName)
 		CppSQLite3DB db;
 		db.open(OLE2A(m_bstrDBFile));
 		
-		db.execDMLEx("DROP TABLE IF EXISTS %s",OLE2A(tableName));
-		db.execDMLEx("delete from UserTableColumns where tablename='%s';",OLE2A(tableName));
+		db.execDMLEx("drop table if exists %s",OLE2A(tableName));
+		db.execDMLEx("delete from usertablecolumns where tablename='%s';",OLE2A(tableName));
 	}
 	_CATCH_XXX()
 	return S_OK;
@@ -139,18 +139,18 @@ STDMETHODIMP CTableManager::AddTableColumn(BSTR tableName,BSTR columnName, DATA_
 		
 		if(db.tableExists(OLE2A(tableName)))
 		{
-			long lastIndex=db.execScalarEx(" select Max(colindex) from UserTableColumns where tableName='%s';",OLE2A(tableName));
+			long lastIndex=db.execScalarEx(" select max(colindex) from usertablecolumns where tableName='%s';",OLE2A(tableName));
 
 			CComPtr<ITableColumn> piColumn;
 			piColumn.CoCreateInstance(CLSID_TableColumn);
 			
-			long newID=0;
+			long newID=-1;
 			piColumn->put_Name(columnName);
 			piColumn->put_Type(Type);
 			piColumn->put_Index(lastIndex+1);
 			piColumn->Add(tableName,&newID);
 
-			db.execDMLEx("ALTER TABLE %s Add Column %s %s;",OLE2A(tableName),OLE2A(columnName),GetSQLiteTypeString(Type).c_str());	
+			db.execDMLEx("alter table %s add Column %s %s;",OLE2A(tableName),OLE2A(columnName),GetSQLiteTypeString(Type).c_str());	
 		}
 	}
 	_CATCH_XXX()
@@ -203,10 +203,20 @@ STDMETHODIMP CTableManager::LoadDataOnCondition(BSTR tableName,BSTR whereState, 
 		
 		CComPtr<ITableRows> pRows;
 		pRows.CoCreateInstance(CLSID_TableRows);
+		
+		std::map<std::string,long,KeyComp> mapFieldIndex;
 
 		CppSQLite3Query q = db.execQueryEx("select * from %s where 1=1 and %s;",OLE2A(tableName),OLE2A(whereState));
 		while (!q.eof())
 		{
+			if(mapFieldIndex.empty())
+			{
+				for(int i=0;i<q.numFields();i++)
+				{
+					mapFieldIndex[q.fieldName(i)]=i; 
+				}
+			}
+
 			CComPtr<ITableRow> piRow;
 			piRow.CoCreateInstance(CLSID_TableRow);
 
@@ -220,21 +230,35 @@ STDMETHODIMP CTableManager::LoadDataOnCondition(BSTR tableName,BSTR whereState, 
 				{	
 					piColumn->get_Name(&tmpName);
 					piColumn->get_Type(&dataType);
-					switch(dataType)
+
+					if(mapFieldIndex.find(OLE2A(tmpName)) !=mapFieldIndex.end())
 					{
-					case DATA_INT:
-						piRow->put_IntField(tmpName,q.getIntField(OLE2A(tmpName),0));
-						break;
-					case DATA_DOUBLE:
-						piRow->put_DblField(tmpName,q.getFloatField(OLE2A(tmpName),0.0));
-						break;
-					case DATA_STRING:
-						piRow->put_StrField(tmpName,CComBSTR(q.getStringField(OLE2A(tmpName), "")));
-						break;
+						switch(dataType)
+						{
+						case DATA_INT:
+							piRow->put_IntField(tmpName,q.getIntField(mapFieldIndex[OLE2A(tmpName)],0));
+							break;
+						case DATA_DOUBLE:
+							piRow->put_DblField(tmpName,q.getFloatField(mapFieldIndex[OLE2A(tmpName)],0.0));
+							break;
+						case DATA_STRING:
+							piRow->put_StrField(tmpName,CComBSTR(q.getStringField(mapFieldIndex[OLE2A(tmpName)], "")));
+							break;
+						}
+						
+						tmpName.ToLower();
+						if(tmpName=="id")
+						{
+							piRow->put_ID(q.getIntField(mapFieldIndex[OLE2A(tmpName)],-1));
+						}
+					}
+					else
+					{
+						LOG_INFO("Table %s , Column %s Removed ",OLE2A(tableName),OLE2A(tmpName));
 					}
 				}
 			}
-
+			piRow->put_TableName(tableName);
 			pRows->Add(piRow);
 			q.nextRow();
 		}

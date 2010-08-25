@@ -18,9 +18,9 @@ class ATL_NO_VTABLE CTableColumn :
 public:
 	CTableColumn()
 	{
-		m_lngIndex=0;
+		m_lngIndex=-1;
 		m_lngType=DATA_INT;
-		m_ID=0;
+		m_ID=-1;
 	}
 	
 DECLARE_XML_ELEMENT_NAME(TableColumn)
