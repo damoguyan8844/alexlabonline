@@ -1,21 +1,77 @@
 VERSION 5.00
 Begin VB.Form frmCommand 
    Caption         =   "Net Command"
-   ClientHeight    =   4395
+   ClientHeight    =   6075
    ClientLeft      =   60
    ClientTop       =   450
-   ClientWidth     =   10710
+   ClientWidth     =   11085
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   4395
-   ScaleWidth      =   10710
+   ScaleHeight     =   6075
+   ScaleWidth      =   11085
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command14 
+      Caption         =   "Command14"
+      Height          =   615
+      Left            =   3240
+      TabIndex        =   18
+      Top             =   4680
+      Width           =   1455
+   End
+   Begin VB.CommandButton Command13 
+      Caption         =   "THCMQ.GetResult"
+      Height          =   615
+      Left            =   480
+      TabIndex        =   17
+      Top             =   4680
+      Width           =   2055
+   End
+   Begin VB.CommandButton Command12 
+      Caption         =   "CompressFileContent"
+      Height          =   495
+      Left            =   8160
+      TabIndex        =   16
+      Top             =   5400
+      Width           =   1575
+   End
+   Begin VB.CommandButton Command11 
+      Caption         =   "WinZip"
+      Height          =   495
+      Left            =   8160
+      TabIndex        =   15
+      Top             =   4800
+      Width           =   1575
+   End
+   Begin VB.CommandButton Command10 
+      Caption         =   "QueueCommand"
+      Height          =   495
+      Left            =   8160
+      TabIndex        =   14
+      Top             =   4320
+      Width           =   1575
+   End
+   Begin VB.CommandButton Command9 
+      Caption         =   "Compress File"
+      Height          =   615
+      Left            =   8160
+      TabIndex        =   13
+      Top             =   3720
+      Width           =   1575
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "SendCommand"
+      Height          =   495
+      Left            =   8160
+      TabIndex        =   12
+      Top             =   3240
+      Width           =   1575
+   End
    Begin VB.CommandButton Command7 
       Caption         =   "ResetQueueCommand"
       Height          =   495
       Left            =   8160
       TabIndex        =   11
-      Top             =   3600
+      Top             =   2760
       Width           =   1575
    End
    Begin VB.CommandButton Command6 
@@ -23,7 +79,7 @@ Begin VB.Form frmCommand
       Height          =   495
       Left            =   8160
       TabIndex        =   10
-      Top             =   2880
+      Top             =   2280
       Width           =   1575
    End
    Begin VB.CommandButton Command5 
@@ -31,7 +87,7 @@ Begin VB.Form frmCommand
       Height          =   495
       Left            =   8160
       TabIndex        =   9
-      Top             =   2280
+      Top             =   1800
       Width           =   1575
    End
    Begin VB.CommandButton Command4 
@@ -39,7 +95,7 @@ Begin VB.Form frmCommand
       Height          =   495
       Left            =   8160
       TabIndex        =   8
-      Top             =   1680
+      Top             =   1320
       Width           =   1575
    End
    Begin VB.Timer Timer1 
@@ -53,7 +109,7 @@ Begin VB.Form frmCommand
       Height          =   375
       Left            =   8160
       TabIndex        =   7
-      Top             =   1200
+      Top             =   960
       Width           =   1575
    End
    Begin VB.CommandButton Command2 
@@ -61,7 +117,7 @@ Begin VB.Form frmCommand
       Height          =   375
       Left            =   8160
       TabIndex        =   6
-      Top             =   720
+      Top             =   600
       Width           =   1575
    End
    Begin VB.CommandButton Command1 
@@ -123,19 +179,85 @@ Attribute VB_Exposed = False
 Private Declare Function ProcessCommand Lib "G:\THC\C0702\out\Plugins\tpl_web.dll" (ByVal commandText As String, ByVal inStr As String, ByVal hStopEvent As Long) As String
 Private index As Long
 Private Sub Command1_Click()
-Dim cmdSender As New CommandSender, ssResult As Variant
+Dim cmdSender As New TActiveMQLib.CommandSender, ssresult As Variant
     
 Dim status
-status = cmdSender.GetQueueResult(CLng(Me.txtMessageID), ssResult, Me.txtIP)
+status = cmdSender.GetQueueResult(Me.txtMessageID, ssresult)
+
+MsgBox CStr(status) & ssresult
+
+End Sub
+
+Private Sub Command10_Click()
+    
+    Dim cmdSender As New TActiveMQLib.CommandSender
+    
+    index = index + 1
+    
+    Dim res As String
+    res = cmdSender.QueueCommand(Me.txtMessageID, "Test Description " & CStr(index), ReadFromFile(Me.txtResult), 0, True, True)
+    
+    MsgBox CStr(res)
+    
+End Sub
+
+Private Sub Command11_Click()
+
+Dim objZip As New TZIPLib.Utility
+
+Dim strContent As String
+objZip.WinZip Me.txtMessageID, Me.txtMessageID + ".tmp"
+'strContent = objZip.ReadFileContent(Me.txtMessageID + ".tmp", False)
+
+strContent = ReadFromFile(Me.txtMessageID + ".tmp")
+
+Call OutPutToFile(Me.txtMessageID + ".tzip", strContent)
+
+End Sub
+
+Private Sub Command12_Click()
+
+
+Dim objZip As New TZIPLib.Utility
+
+Dim strContent As String
+
+objZip.CompressFileContent Me.txtMessageID, strContent
+objZip.DecompressFileContent strContent, Me.txtMessageID + ".tzip"
+
+End Sub
+
+Private Sub Command13_Click()
+Dim objOld As New TNETCMDLib.CommandSender
+Dim res As Long
+Dim pnRes
+res = objOld.GetResult(Me.txtIP, CLng(Me.txtMessageID), pnRes)
+
+MsgBox CStr(res)
+
+End Sub
+
+Private Sub Command14_Click()
+Dim objFir As New TPORTFOLIOLib.FIREBalanceSheet
+Dim id As Boolean
+id = objFir.LoadByInstitutionID(2, #3/31/2010#)
+
+objFir.Loans = 3.33
+objFir.Add
+
+objFir.Loans = 4.33
+objFir.Update
 
 End Sub
 
 Private Sub Command2_Click()
 
-Dim cmdSender As New TActiveMQLib.CommandSender, ssResult As Variant
+Dim cmdSender As New TActiveMQLib.CommandSender, ssresult As Variant
     
 Dim status
-status = cmdSender.GetQueueInput(Me.txtMessageID, ssResult, Me.txtIP)
+status = cmdSender.GetQueueInput(Me.txtMessageID, ssresult, Me.txtIP)
+
+MsgBox CStr(status) & ssresult
 
 End Sub
 
@@ -143,7 +265,7 @@ End Sub
 Private Sub Command3_Click()
     
     
-Dim cmdSender As New CommandSender, ssResult As Variant
+Dim cmdSender As New CommandSender, ssresult As Variant
     
 Dim status As Variant
 status = cmdSender.GetAvailablePCList("PortfolioHelper", 3) & vbLf
@@ -178,14 +300,14 @@ Private Sub Command5_Click()
     index = index + 1
     
     Dim res As String
-    res = cmdSender.QueueCommand(Me.txtMessageID, "Test Description " & CStr(index), Me.txtResult, 0, True)
+    res = cmdSender.QueueCommand(Me.txtMessageID, "Test Description " & CStr(index), Me.txtResult, 0, True, True)
     
     MsgBox CStr(res)
     
 End Sub
 
 Private Sub Command6_Click()
-Dim cmdSender As New TActiveMQLib.CommandSender, ssResult As Variant
+Dim cmdSender As New TActiveMQLib.CommandSender, ssresult As Variant
     
 Dim status
 status = cmdSender.CancelQueueCommand(Me.txtMessageID)
@@ -193,10 +315,30 @@ status = cmdSender.CancelQueueCommand(Me.txtMessageID)
 End Sub
 
 Private Sub Command7_Click()
-Dim cmdSender As New TActiveMQLib.CommandSender, ssResult As Variant
+Dim cmdSender As New TActiveMQLib.CommandSender, ssresult As Variant
     
 Dim status
-status = cmdSender.ResetQueueCommand(Me.txtMessageID, ssResult)
+status = cmdSender.ResetQueueCommand(Me.txtMessageID, ssresult)
+
+End Sub
+
+Private Sub Command8_Click()
+Dim cmdSender As New TActiveMQLib.CommandSender, ssresult As Variant
+    
+Dim status
+status = cmdSender.SendCommand("PortfolioHelper", "<Request cmd='ShowTaskResult' isPortfolio='1' ><pId val='4196222' /><gId val='5410239' /><Key val='npv' /><recursive val='1' /><optionvalue val='' /><page val='1' /><pageSize val='21' /><edate val='2010-3-31' /><SecIdList><sec Id='-68254688' quantity='1' /></SecIdList></Request>", 1200, ssresult)
+
+End Sub
+
+Private Sub Command9_Click()
+
+Dim objZip As New TZIPLib.Utility
+
+Dim strContent As String
+objZip.CompressFile Me.txtMessageID, Me.txtMessageID + ".tmp"
+strContent = objZip.ReadFileContent(Me.txtMessageID + ".tmp", False)
+
+Call OutPutToFile(Me.txtMessageID + ".tzip", strContent)
 
 End Sub
 
@@ -206,7 +348,7 @@ End Sub
 
 Private Sub Timer1_Timer()
     
-Dim cmdSender As New CommandSender, ssResult As Variant
+Dim cmdSender As New CommandSender, ssresult As Variant
     
 Dim status As Variant
 status = cmdSender.GetAvailablePCList("PortfolioHelper", 3)

@@ -11,6 +11,30 @@ Begin VB.Form frmSpread
    ScaleHeight     =   5700
    ScaleWidth      =   11895
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command5 
+      Caption         =   "StrategySettings"
+      Height          =   495
+      Left            =   8400
+      TabIndex        =   7
+      Top             =   3000
+      Width           =   1935
+   End
+   Begin VB.CommandButton Command4 
+      Caption         =   "Institution"
+      Height          =   495
+      Left            =   8400
+      TabIndex        =   6
+      Top             =   2160
+      Width           =   1935
+   End
+   Begin VB.CommandButton Command3 
+      Caption         =   "FIREBalanceSheet"
+      Height          =   615
+      Left            =   8400
+      TabIndex        =   5
+      Top             =   1080
+      Width           =   1935
+   End
    Begin MSComCtl2.DTPicker dtEDate 
       Height          =   375
       Left            =   5520
@@ -20,8 +44,8 @@ Begin VB.Form frmSpread
       _ExtentX        =   2355
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   21299201
-      CurrentDate     =   40339
+      Format          =   21430273
+      CurrentDate     =   40359
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Command2"
@@ -94,5 +118,38 @@ objXML.LoadXMLFile "C:\1.xml"
 
 Dim value As Long
 MsgBox CStr(objXML.IsItemEnable("AGENCY&MUNI", 112, content, value))
+
+End Sub
+
+Private Sub Command3_Click()
+    
+    Dim objFBS As New TPORTFOLIOLib.FIREBalanceSheet
+    'objFBS.ROA = 3#
+    'objFBS.Add
+    objFBS.LoadByInstitutionID 1, dtEDate.value
+    
+End Sub
+
+Private Sub Command4_Click()
+    Dim objInstitution As New TPORTFOLIOLib.Institution
+    objInstitution.name = "Test"
+'    objInstitution.Add
+    Dim pfid As Long
+    pfid = objInstitution.LoadPortfolioIDByInstitutionID(1, dtEDate.value)
+    
+    Dim objInstitutions As New Institutions
+    
+    objInstitutions.Add objInstitution
+    objInstitutions.LoadAllInstitutions
+End Sub
+
+Private Sub Command5_Click()
+    Dim objSetting As New TPORTFOLIOLib.InstStrategySetting
+    objSetting.PreparerName = "Test"
+    
+    Dim objSettings As New TPORTFOLIOLib.InstStrategySettings
+    objSettings.Add objSetting
+    
+    objSettings.LoadStrategySettingsByPortfolioID 10
 
 End Sub

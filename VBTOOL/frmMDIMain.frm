@@ -58,6 +58,12 @@ Begin VB.MDIForm frmMDIMain
          Caption         =   "RealTimeTaskCalculate"
       End
    End
+   Begin VB.Menu mnuTable 
+      Caption         =   "Table"
+      Begin VB.Menu mnuTableTest 
+         Caption         =   "TableTest"
+      End
+   End
 End
 Attribute VB_Name = "frmMDIMain"
 Attribute VB_GlobalNameSpace = False
@@ -173,4 +179,13 @@ Private Sub mnuRealTimeTaskCalculate_Click()
         frm.Show
         frm.Caption = GetFormCaption("frmRealTimeTask")
     End If
+End Sub
+
+Private Sub mnuTableTest_Click()
+
+  If Not FormExist("frmTable") Then
+        Dim frm As New frmTable
+        frm.Show
+        frm.Caption = GetFormCaption("frmTable")
+End If
 End Sub
