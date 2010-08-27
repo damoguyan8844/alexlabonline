@@ -1,0 +1,213 @@
+// ZTable.idl : IDL source for ZTable.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ZTable.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(F1056590-F751-4CA6-B6B6-C281EA297280),
+	version(1.0),
+	helpstring("ZTable 1.0 Type Library")
+]
+library ZTableLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	interface ITableColumns;
+	interface ITableRows;
+
+	typedef [uuid(45C1AD45-2D1E-4D5B-8197-F50433E45E1D)]
+	enum{
+		DATA_INT				=1,
+		DATA_DOUBLE				=2,
+		DATA_STRING				=3
+	} DATA_TYPE;
+
+	[
+		object,
+		uuid(C59A4E33-1A3E-4A3D-A748-2DCE4AD733EA),
+		dual,
+		helpstring("ITableManager Interface"),
+		pointer_default(unique)
+	]
+	interface ITableManager : IDispatch
+	{
+		[propget, id(1), helpstring("property DBFile")] HRESULT DBFile([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property DBFile")] HRESULT DBFile([in] BSTR newVal);
+		[id(4), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(5), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+		[id(6), helpstring("method AddTable")] HRESULT AddTable([in] BSTR tableName,[in] ITableColumns * pCols);
+		[id(7), helpstring("method RemoveTable")] HRESULT RemoveTable([in] BSTR tableName);
+
+		[id(8), helpstring("method AddColumn")] HRESULT AddTableColumn([in] BSTR tableName,[in] BSTR columnName,[in] DATA_TYPE Type);
+		[id(9), helpstring("method RemoveColumn")] HRESULT RemoveTableColumn([in] BSTR tableName,[in] BSTR columnName);
+
+		[id(10), helpstring("method LoadDataOnCondition")] HRESULT LoadDataOnCondition([in] BSTR tableName,[in] BSTR whereState, [out,retval] ITableRows ** pVal);
+	};
+	[
+		object,
+		uuid(FD8087CD-D239-431A-8C16-DF9C2F5E4AFD),
+		dual,
+		helpstring("ITable Interface"),
+		pointer_default(unique)
+	]
+	interface ITable : IDispatch
+	{
+		[propget, id(1), helpstring("property Columns")] HRESULT Columns([out, retval] ITableColumns * *pVal);
+		[propputref, id(1), helpstring("property Columns")] HRESULT Columns([in] ITableColumns * newVal);
+		[propget, id(2), helpstring("property Name")] HRESULT Name([out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property Name")] HRESULT Name([in] BSTR newVal);
+
+		[id(4), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(5), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+
+	};
+	[
+		object,
+		uuid(C7598C54-DFCD-48D5-A740-6F057534474B),
+		dual,
+		helpstring("ITableColumn Interface"),
+		pointer_default(unique)
+	]
+	interface ITableColumn : IDispatch
+	{
+		[propget, id(1), helpstring("property Name")] HRESULT Name([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property Name")] HRESULT Name([in] BSTR newVal);
+		[propget, id(2), helpstring("property Type")] HRESULT Type([out, retval] DATA_TYPE *pVal);
+		[propput, id(2), helpstring("property Type")] HRESULT Type([in] DATA_TYPE newVal);
+		[propget, id(3), helpstring("property Index")] HRESULT Index([out, retval] long *pVal);
+		[propput, id(3), helpstring("property Index")] HRESULT Index([in] long newVal);
+
+		[id(4), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(5), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+		[propget, id(6), helpstring("property ID")] HRESULT ID([out, retval] long *pVal);
+		[propput, id(6), helpstring("property ID")] HRESULT ID([in] long newVal);
+
+		//database
+		[id(601), helpstring("method Update")] HRESULT Update([in, defaultvalue(0)] long TransactionLevel);
+		[id(602), helpstring("method Add")] HRESULT Add([in] BSTR tableName, [out, retval] long *NewId);
+		[id(603), helpstring("method Delete")] HRESULT Delete([in, defaultvalue(0)] long TransactionLevel);
+	};
+	[
+		object,
+		uuid(0D80605A-40EB-4957-8B07-04B3D48C75F8),
+		dual,
+		helpstring("ITableColumns Interface"),
+		pointer_default(unique)
+	]
+	interface ITableColumns : IDispatch
+	{
+		[propget, id(1)]HRESULT Count([out,retval] long * pVal);
+		[id(2)] HRESULT Add([in] ITableColumn* inItem);
+		[id(3)] HRESULT Remove([in] long inIndex);
+		[propget, id(DISPID_VALUE)] HRESULT Item([in] long inIndex,[out, retval]ITableColumn** outChart);
+		[propget, id(DISPID_NEWENUM)] HRESULT _NewEnum([out, retval]LPUNKNOWN *pVal);
+		[id(5), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(6), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+		[id(7), helpstring("method LoadByTableName")] HRESULT LoadByTableName([in] BSTR tabName);
+	};
+	[
+		object,
+		uuid(235A716F-DA1B-4B46-AD85-98132DB9B708),
+		dual,
+		helpstring("ITableRow Interface"),
+		pointer_default(unique)
+	]
+	interface ITableRow : IDispatch
+	{
+		[propget, id(1), helpstring("property IntField")] HRESULT IntField([in] BSTR columnName, [out, retval] long *pVal);
+		[propput, id(1), helpstring("property IntField")] HRESULT IntField([in] BSTR columnName, [in] long newVal);
+		[propget, id(2), helpstring("property StrField")] HRESULT StrField([in] BSTR columnName, [out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property StrField")] HRESULT StrField([in] BSTR columnName, [in] BSTR newVal);
+		[propget, id(3), helpstring("property DblField")] HRESULT DblField([in] BSTR columnName, [out, retval] double *pVal);
+		[propput, id(3), helpstring("property DblField")] HRESULT DblField([in] BSTR columnName, [in] double newVal);
+		[propget, id(4), helpstring("property DateField")] HRESULT DateField([in] BSTR columnName, [out, retval] DATE *pVal);
+		[propput, id(4), helpstring("property DateField")] HRESULT DateField([in] BSTR columnName, [in] DATE newVal);
+		[propget, id(5), helpstring("property ID")] HRESULT ID([out, retval] long *pVal);
+		[propput, id(5), helpstring("property ID")] HRESULT ID([in] long newVal);
+		[propget, id(6), helpstring("property Value")] HRESULT Value(ITableColumns *pCols,[out, retval] BSTR *pVal);
+		[propput, id(6), helpstring("property Value")] HRESULT Value(ITableColumns *pCols,[in] BSTR newVal);
+		[id(7), helpstring("method ReBuildValue")] HRESULT ReBuildValue(ITableColumns *pCols);
+
+		[id(8), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(9), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+		[propget, id(10), helpstring("property TableName")] HRESULT TableName([out, retval] BSTR *pVal);
+		[propput, id(10), helpstring("property TableName")] HRESULT TableName([in] BSTR newVal);
+
+		//database
+		[id(601), helpstring("method Update")] HRESULT Update([in, defaultvalue(0)] long TransactionLevel);
+		[id(602), helpstring("method Add")] HRESULT Add([in] BSTR tableName, [out, retval] long *NewId);
+		[id(603), helpstring("method Delete")] HRESULT Delete([in, defaultvalue(0)] long TransactionLevel);
+
+	};
+	[
+		object,
+		uuid(73FE3D4F-25FA-42B2-93E1-904202055048),
+		dual,
+		helpstring("ITableRows Interface"),
+		pointer_default(unique)
+	]
+	interface ITableRows : IDispatch
+	{
+		[propget, id(1)]HRESULT Count([out,retval] long * pVal);
+		[id(2)] HRESULT Add([in] ITableRow* inItem);
+		[id(3)] HRESULT Remove([in] long inIndex);
+		[propget, id(DISPID_VALUE)] HRESULT Item([in] long inIndex,[out, retval]ITableRow** outChart);
+		[propget, id(DISPID_NEWENUM)] HRESULT _NewEnum([out, retval]LPUNKNOWN *pVal);
+		[id(5), helpstring("method SaveXML")] HRESULT SaveXML([out,retval] BSTR *xml);
+		[id(6), helpstring("method LoadXML")] HRESULT LoadXML([in] BSTR xml);
+	};
+
+	[
+		uuid(C92F93F5-7D8A-46F4-9960-8B11A30742A9),
+		helpstring("TableManager Class")
+	]
+	coclass TableManager
+	{
+		[default] interface ITableManager;
+	};
+	[
+		uuid(E7EE0D3E-384E-4A5E-B223-1D8A81B65EAA),
+		helpstring("Table Class")
+	]
+	coclass Table
+	{
+		[default] interface ITable;
+	};
+	[
+		uuid(A534BCE0-8C70-46FA-A6ED-F044640E6B6A),
+		helpstring("TableColumn Class")
+	]
+	coclass TableColumn
+	{
+		[default] interface ITableColumn;
+	};
+	[
+		uuid(E1F8986D-B1D7-4D9B-80B7-15195579EA07),
+		helpstring("TableColumns Class")
+	]
+	coclass TableColumns
+	{
+		[default] interface ITableColumns;
+	};
+	[
+		uuid(657747F5-AE21-44C5-B3DD-1241B51F5B1B),
+		helpstring("TableRow Class")
+	]
+	coclass TableRow
+	{
+		[default] interface ITableRow;
+	};
+	[
+		uuid(B170F253-D70F-4AD6-8AA6-FE826FCE5296),
+		helpstring("TableRows Class")
+	]
+	coclass TableRows
+	{
+		[default] interface ITableRows;
+	};
+};

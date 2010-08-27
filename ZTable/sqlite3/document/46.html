@@ -1,0 +1,28 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="robots" content="all">
+<meta name="author" content="www.sqlite.com.cn | 林轩" />
+<meta name="description" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<meta name="keywords" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<link href="../../POPstyle.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../POPinc/POPtitle.js"></script>
+<title>SQLite语法 COPY --SQLite 中文社区-- http://www.sqlite.com.cn/</title>
+</head>
+<body>
+					<span id="ContentBody" style="display:block;padding:10px 10px"><H1>SQLite的SQL语法</H1>
+<a href="39.Html">[目录] </a> 
+<H2>COPY</H2>
+<TABLE cellPadding=10 id="table1">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>sql-statement</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>COPY </FONT></B>[<B><FONT color=#2c2cf0> OR </FONT></B><I><FONT color=#ff3434>conflict-algorithm</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B>[<I><FONT color=#ff3434>database-name</FONT></I><B><FONT color=#2c2cf0> <BIG>.</BIG></FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>table-name</FONT></I><B><FONT color=#2c2cf0> FROM </FONT></B><I><FONT color=#ff3434>filename</FONT></I><B><FONT color=#2c2cf0><BR></FONT></B>[<B><FONT color=#2c2cf0> USING DELIMITERS </FONT></B><I><FONT color=#ff3434>delim</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]</TD></TR></TBODY></TABLE>
+<P>COPY命令在SQLite 2.8及更早的版本中可用。SQLite 3.0 删除了这一命令，因为在混合的UTF-8/16环境中对它进行支持是很复杂的。 在3.0版本中，<A href="#"><FONT color=#ff3434>命令行解释器</FONT></A>包含新的<B>.import</B>命令，用以替代COPY。 </P>
+<P>COPY命令是用于将大量数据插入表的一个插件。它模仿PostgreSQL中的相同命令而来。事实上，SQLite的COPY 命令就是为了能够读取PostgreSQL的备份工具<B>pg_dump</B>的输出从而能够将PostgreSQL的数据轻松转换到SQLite中而设计的。</P>
+<P>table-name是将要导入数据的一个已存在的表的名字。filename是一个字符串或标识符，用于说明作为数据来源的文件。 filename可以使用<B>STDIN</B>从标准输入流中获取数据。</P>
+<P>输入文件的每一行被转换成一条单独的记录导入表中。字段用制表符分开。若某个字段的数据中出现制表符， 则前面被添加反斜线"\"符号。数据中的反斜线则被替换为两条反斜线。可选的USING DELIMITERS子句可给出一个与制表符不同 的分界符。</P>
+<P>若字段由"\N"组成，则被赋以空值NULL.</P>
+<P>使用这一命令时，利用可选的ON CONFLICT子句可以定义替代的约束冲突判定算法。更多信息，参见 <A href="72.html"><FONT color=#ff3434>ON CONFLICT</FONT></A>。</P>
+<P>当输入数据源是STDIN，输入将终止于一行仅包含一个反斜线和一个点的输入: "<FONT color=#2c2cf0><BIG>\.</BIG></FONT>".</P></span>
+					</body>
+</html>
