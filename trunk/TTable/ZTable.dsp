@@ -1,28 +1,28 @@
-# Microsoft Developer Studio Project File - Name="TTable" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="ZTable" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** DO NOT EDIT **
 
 # TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
 
-CFG=TTable - Win32 Debug
+CFG=ZTable - Win32 Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
-!MESSAGE NMAKE /f "TTable.mak".
+!MESSAGE NMAKE /f "ZTable.mak".
 !MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "TTable.mak" CFG="TTable - Win32 Debug"
+!MESSAGE NMAKE /f "ZTable.mak" CFG="ZTable - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "TTable - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "TTable - Win32 Unicode Debug" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "TTable - Win32 Release MinSize" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "TTable - Win32 Release MinDependency" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "TTable - Win32 Unicode Release MinSize" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "TTable - Win32 Unicode Release MinDependency" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Unicode Debug" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Release MinSize" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Release MinDependency" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Unicode Release MinSize" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "ZTable - Win32 Unicode Release MinDependency" (based on "Win32 (x86) Dynamic-Link Library")
 !MESSAGE 
 
 # Begin Project
@@ -33,7 +33,7 @@ CPP=cl.exe
 MTL=midl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "TTable - Win32 Debug"
+!IF  "$(CFG)" == "ZTable - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -55,11 +55,11 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 SQLiteVC6.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /out:"../../out/TTable.dll" /pdbtype:sept /libpath:"./sqlite3/lib"
+# ADD LINK32 SQLiteVC6.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /out:"../../out/ZTable.dll" /pdbtype:sept /libpath:"./sqlite3/lib"
 # Begin Custom Build - Performing registration
 OutDir=.\Debug
-TargetPath=\out\TTable.dll
-InputPath=\out\TTable.dll
+TargetPath=\out\ZTable.dll
+InputPath=\out\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -68,7 +68,7 @@ SOURCE="$(InputPath)"
 	
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "TTable - Win32 Unicode Debug"
+!ELSEIF  "$(CFG)" == "ZTable - Win32 Unicode Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -92,8 +92,8 @@ LINK32=link.exe
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
 # Begin Custom Build - Performing registration
 OutDir=.\DebugU
-TargetPath=.\DebugU\TTable.dll
-InputPath=.\DebugU\TTable.dll
+TargetPath=.\DebugU\ZTable.dll
+InputPath=.\DebugU\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -108,7 +108,7 @@ SOURCE="$(InputPath)"
 	
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "TTable - Win32 Release MinSize"
+!ELSEIF  "$(CFG)" == "ZTable - Win32 Release MinSize"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -130,11 +130,11 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
-# ADD LINK32 SQLiteVC6.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386 /out:"../../out//TTable.dll" /libpath:"./sqlite3/lib"
+# ADD LINK32 SQLiteVC6.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386 /out:"../../out//ZTable.dll" /libpath:"./sqlite3/lib"
 # Begin Custom Build - Performing registration
 OutDir=.\ReleaseMinSize
-TargetPath=\out\TTable.dll
-InputPath=\out\TTable.dll
+TargetPath=\out\ZTable.dll
+InputPath=\out\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -143,7 +143,7 @@ SOURCE="$(InputPath)"
 	
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "TTable - Win32 Release MinDependency"
+!ELSEIF  "$(CFG)" == "ZTable - Win32 Release MinDependency"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -167,8 +167,8 @@ LINK32=link.exe
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # Begin Custom Build - Performing registration
 OutDir=.\ReleaseMinDependency
-TargetPath=.\ReleaseMinDependency\TTable.dll
-InputPath=.\ReleaseMinDependency\TTable.dll
+TargetPath=.\ReleaseMinDependency\ZTable.dll
+InputPath=.\ReleaseMinDependency\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -177,7 +177,7 @@ SOURCE="$(InputPath)"
 	
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "TTable - Win32 Unicode Release MinSize"
+!ELSEIF  "$(CFG)" == "ZTable - Win32 Unicode Release MinSize"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -201,8 +201,8 @@ LINK32=link.exe
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # Begin Custom Build - Performing registration
 OutDir=.\ReleaseUMinSize
-TargetPath=.\ReleaseUMinSize\TTable.dll
-InputPath=.\ReleaseUMinSize\TTable.dll
+TargetPath=.\ReleaseUMinSize\ZTable.dll
+InputPath=.\ReleaseUMinSize\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -217,7 +217,7 @@ SOURCE="$(InputPath)"
 	
 # End Custom Build
 
-!ELSEIF  "$(CFG)" == "TTable - Win32 Unicode Release MinDependency"
+!ELSEIF  "$(CFG)" == "ZTable - Win32 Unicode Release MinDependency"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -241,8 +241,8 @@ LINK32=link.exe
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /machine:I386
 # Begin Custom Build - Performing registration
 OutDir=.\ReleaseUMinDependency
-TargetPath=.\ReleaseUMinDependency\TTable.dll
-InputPath=.\ReleaseUMinDependency\TTable.dll
+TargetPath=.\ReleaseUMinDependency\ZTable.dll
+InputPath=.\ReleaseUMinDependency\ZTable.dll
 SOURCE="$(InputPath)"
 
 "$(OutDir)\regsvr32.trg" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
@@ -261,12 +261,12 @@ SOURCE="$(InputPath)"
 
 # Begin Target
 
-# Name "TTable - Win32 Debug"
-# Name "TTable - Win32 Unicode Debug"
-# Name "TTable - Win32 Release MinSize"
-# Name "TTable - Win32 Release MinDependency"
-# Name "TTable - Win32 Unicode Release MinSize"
-# Name "TTable - Win32 Unicode Release MinDependency"
+# Name "ZTable - Win32 Debug"
+# Name "ZTable - Win32 Unicode Debug"
+# Name "ZTable - Win32 Release MinSize"
+# Name "ZTable - Win32 Release MinDependency"
+# Name "ZTable - Win32 Unicode Release MinSize"
+# Name "ZTable - Win32 Unicode Release MinDependency"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -317,20 +317,20 @@ SOURCE=.\TableRows.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\TTable.cpp
+SOURCE=.\ZTable.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\TTable.def
+SOURCE=.\ZTable.def
 # End Source File
 # Begin Source File
 
-SOURCE=.\TTable.idl
-# ADD MTL /tlb ".\TTable.tlb" /h "TTable.h" /iid "TTable_i.c" /Oicf
+SOURCE=.\ZTable.idl
+# ADD MTL /tlb ".\ZTable.tlb" /h "ZTable.h" /iid "ZTable_i.c" /Oicf
 # End Source File
 # Begin Source File
 
-SOURCE=.\TTable.rc
+SOURCE=.\ZTable.rc
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -382,7 +382,7 @@ SOURCE=.\TableRows.h
 # End Source File
 # Begin Source File
 
-SOURCE=.\TTableInc.h
+SOURCE=.\ZTableInc.h
 # End Source File
 # End Group
 # Begin Group "Resource Files"

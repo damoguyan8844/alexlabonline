@@ -1,20 +1,20 @@
 HKCR
 {
-	TTable.TableManager.1 = s 'TableManager Class'
+	ZTable.TableManager.1 = s 'TableManager Class'
 	{
 		CLSID = s '{C92F93F5-7D8A-46F4-9960-8B11A30742A9}'
 	}
-	TTable.TableManager = s 'TableManager Class'
+	ZTable.TableManager = s 'TableManager Class'
 	{
 		CLSID = s '{C92F93F5-7D8A-46F4-9960-8B11A30742A9}'
-		CurVer = s 'TTable.TableManager.1'
+		CurVer = s 'ZTable.TableManager.1'
 	}
 	NoRemove CLSID
 	{
 		ForceRemove {C92F93F5-7D8A-46F4-9960-8B11A30742A9} = s 'TableManager Class'
 		{
-			ProgID = s 'TTable.TableManager.1'
-			VersionIndependentProgID = s 'TTable.TableManager'
+			ProgID = s 'ZTable.TableManager.1'
+			VersionIndependentProgID = s 'ZTable.TableManager'
 			ForceRemove 'Programmable'
 			InprocServer32 = s '%MODULE%'
 			{

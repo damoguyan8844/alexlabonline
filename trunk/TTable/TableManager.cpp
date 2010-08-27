@@ -1,6 +1,6 @@
 // TableManager.cpp : Implementation of CTableManager
-#include "TTableInc.h"
-#include "TTable.h"
+#include "ZTableInc.h"
+#include "ZTable.h"
 #include "TableManager.h"
 #include "HelpFunctions.h"
 

@@ -1,6 +1,6 @@
 // TableColumn.cpp : Implementation of CTableColumn
-#include "TTableInc.h"
-#include "TTable.h"
+#include "ZTableInc.h"
+#include "ZTable.h"
 #include "TableColumn.h"
 
 /////////////////////////////////////////////////////////////////////////////

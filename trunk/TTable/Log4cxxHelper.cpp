@@ -1,7 +1,7 @@
 // Log4cxxWrapper.cpp: implementation of the Log4cxxWrapper class.
 //
 //////////////////////////////////////////////////////////////////////
-#include "TTableInc.h"
+#include "ZTableInc.h"
 #include "Log4cxxHelper.h"
 #	pragma warning( disable : 4250 )
 #	pragma  warning( disable : 4251 )

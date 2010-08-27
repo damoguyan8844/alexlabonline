@@ -1,5 +1,5 @@
-#ifndef TTABLEINC_H_
-#define TTABLEINC_H_
+#ifndef ZTableINC_H_
+#define ZTableINC_H_
 
 #include "StdAfx.h"
 #include <comdef.h>

@@ -1,5 +1,5 @@
 
-LIBRARY      "TTablePS"
+LIBRARY      "ZTablePS"
 
 DESCRIPTION  'Proxy/Stub DLL'
 

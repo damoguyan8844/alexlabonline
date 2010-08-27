@@ -1,6 +1,6 @@
 // TableRow.cpp : Implementation of CTableRow
-#include "TTableInc.h"
-#include "TTable.h"
+#include "ZTableInc.h"
+#include "ZTable.h"
 #include "TableRow.h"
 
 /////////////////////////////////////////////////////////////////////////////

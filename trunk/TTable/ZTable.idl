@@ -1,8 +1,8 @@
-// TTable.idl : IDL source for TTable.dll
+// ZTable.idl : IDL source for ZTable.dll
 //
 
 // This file will be processed by the MIDL tool to
-// produce the type library (TTable.tlb) and marshalling code.
+// produce the type library (ZTable.tlb) and marshalling code.
 
 import "oaidl.idl";
 import "ocidl.idl";
@@ -10,9 +10,9 @@ import "ocidl.idl";
 [
 	uuid(F1056590-F751-4CA6-B6B6-C281EA297280),
 	version(1.0),
-	helpstring("TTable 1.0 Type Library")
+	helpstring("ZTable 1.0 Type Library")
 ]
-library TTABLELib
+library ZTableLib
 {
 	importlib("stdole32.tlb");
 	importlib("stdole2.tlb");

@@ -64,7 +64,7 @@ END
 
 3 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "1 TYPELIB ""TTable.tlb""\r\n"
+    "1 TYPELIB ""ZTable.tlb""\r\n"
     "\0"
 END
 
@@ -95,12 +95,12 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "TTable Module\0"
+            VALUE "FileDescription", "ZTable Module\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "TTable\0"
+            VALUE "InternalName", "ZTable\0"
             VALUE "LegalCopyright", "Copyright 2010\0"
-            VALUE "OriginalFilename", "TTable.DLL\0"
-            VALUE "ProductName", "TTable Module\0"
+            VALUE "OriginalFilename", "ZTable.DLL\0"
+            VALUE "ProductName", "ZTable Module\0"
             VALUE "ProductVersion", "1, 0, 0, 1\0"
             VALUE "OLESelfRegister", "\0"
         END
@@ -121,7 +121,7 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    IDS_PROJNAME            "TTable"
+    IDS_PROJNAME            "ZTable"
 END
 
 #endif    // English (U.S.) resources
@@ -134,7 +134,7 @@ END
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-1 TYPELIB "TTable.tlb"
+1 TYPELIB "ZTable.tlb"
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED

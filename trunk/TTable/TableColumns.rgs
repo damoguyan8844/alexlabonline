@@ -1,20 +1,20 @@
 HKCR
 {
-	TTable.TableColumns.1 = s 'TableColumns Class'
+	ZTable.TableColumns.1 = s 'TableColumns Class'
 	{
 		CLSID = s '{E1F8986D-B1D7-4D9B-80B7-15195579EA07}'
 	}
-	TTable.TableColumns = s 'TableColumns Class'
+	ZTable.TableColumns = s 'TableColumns Class'
 	{
 		CLSID = s '{E1F8986D-B1D7-4D9B-80B7-15195579EA07}'
-		CurVer = s 'TTable.TableColumns.1'
+		CurVer = s 'ZTable.TableColumns.1'
 	}
 	NoRemove CLSID
 	{
 		ForceRemove {E1F8986D-B1D7-4D9B-80B7-15195579EA07} = s 'TableColumns Class'
 		{
-			ProgID = s 'TTable.TableColumns.1'
-			VersionIndependentProgID = s 'TTable.TableColumns'
+			ProgID = s 'ZTable.TableColumns.1'
+			VersionIndependentProgID = s 'ZTable.TableColumns'
 			ForceRemove 'Programmable'
 			InprocServer32 = s '%MODULE%'
 			{
