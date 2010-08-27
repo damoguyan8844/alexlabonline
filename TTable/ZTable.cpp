@@ -1,21 +1,21 @@
-// TTable.cpp : Implementation of DLL Exports.
+// ZTable.cpp : Implementation of DLL Exports.
 
 
 // Note: Proxy/Stub Information
 //      To build a separate proxy/stub DLL, 
-//      run nmake -f TTableps.mk in the project directory.
+//      run nmake -f ZTableps.mk in the project directory.
 
-#include "TTableInc.h"
+#include "ZTableInc.h"
 #include "resource.h"
 #include <initguid.h>
-#include "TTable.h"
+#include "ZTable.h"
 #include <sys/stat.h>
 #include <log4cxx/appenderskeleton.h>
 #include <log4cxx/defaultcategoryfactory.h>
 #include <log4cxx/helpers/properties.h>
 #include <log4cxx/propertyconfigurator.h>
 
-#include "TTable_i.c"
+#include "ZTable_i.c"
 #include "TableManager.h"
 #include "Table.h"
 #include "TableColumn.h"
@@ -45,10 +45,10 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID /*lpReserved*/)
 {
     if (dwReason == DLL_PROCESS_ATTACH)
     {
-        _Module.Init(ObjectMap, hInstance, &LIBID_TTABLELib);
+        _Module.Init(ObjectMap, hInstance, &LIBID_ZTableLib);
         DisableThreadLibraryCalls(hInstance);
 
-		Log4cxxHelper::configure("TTable", 2000);
+		Log4cxxHelper::configure("ZTable", 2000);
     }
     else if (dwReason == DLL_PROCESS_DETACH)
     {

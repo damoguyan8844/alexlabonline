@@ -1,7 +1,7 @@
-#ifndef TTABLE_HELP_FUNCTION_
-#define TTABLE_HELP_FUNCTION_
+#ifndef ZTable_HELP_FUNCTION_
+#define ZTable_HELP_FUNCTION_
 
-#include "TTableInc.h"
+#include "ZTableInc.h"
 #include <string>
 #include <functional>
 #include <map>

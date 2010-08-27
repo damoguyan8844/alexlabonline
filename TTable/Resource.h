@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Developer Studio generated include file.
-// Used by TTable.rc
+// Used by ZTable.rc
 //
 #define IDS_PROJNAME                    100
 #define IDR_TABLEMANAGER                101

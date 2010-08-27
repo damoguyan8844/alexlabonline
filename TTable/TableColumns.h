@@ -12,7 +12,7 @@
 class ATL_NO_VTABLE CTableColumns: 
 	public CComObjectRoot,
 	public ISupportErrorInfo,
-	public CComCollect<ITableColumns,&IID_ITableColumns,&LIBID_TTABLELib,
+	public CComCollect<ITableColumns,&IID_ITableColumns,&LIBID_ZTableLib,
 	CTableColumns,&CLSID_TableColumns,ITableColumn,&IID_ITableColumn>, 
 	public IPersistVarXMLImpl<CTableColumns>
 {

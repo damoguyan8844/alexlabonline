@@ -1,6 +1,6 @@
 // Table.cpp : Implementation of CTable
-#include "TTableInc.h"
-#include "TTable.h"
+#include "ZTableInc.h"
+#include "ZTable.h"
 #include "Table.h"
 
 /////////////////////////////////////////////////////////////////////////////

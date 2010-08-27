@@ -12,7 +12,7 @@ class ATL_NO_VTABLE CTableManager :
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CTableManager, &CLSID_TableManager>,
 	public ISupportErrorInfo,
-	public IDispatchImpl<ITableManager, &IID_ITableManager, &LIBID_TTABLELib>,
+	public IDispatchImpl<ITableManager, &IID_ITableManager, &LIBID_ZTableLib>,
 	public IPersistVarXMLImpl<CTableManager>
 {
 public:

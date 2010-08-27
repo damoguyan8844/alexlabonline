@@ -15,7 +15,7 @@ class ATL_NO_VTABLE CTableRow :
 	public CComObjectRootEx<CComSingleThreadModel>,
 	public CComCoClass<CTableRow, &CLSID_TableRow>,
 	public ISupportErrorInfo,
-	public IDispatchImpl<ITableRow, &IID_ITableRow, &LIBID_TTABLELib>,
+	public IDispatchImpl<ITableRow, &IID_ITableRow, &LIBID_ZTableLib>,
 	public IPersistVarXMLImpl<CTableRow>
 {
 public:

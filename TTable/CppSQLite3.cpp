@@ -25,7 +25,7 @@
 // V3.1		16/09/2004	-Implemented getXXXXField using sqlite3 functions
 //						-Added CppSQLiteDB3::tableExists()
 ////////////////////////////////////////////////////////////////////////////////
-#include "../../TTableInc.h"
+#include "../../ZTableInc.h"
 #include "CppSQLite3.h"
 #include <cstdlib>
 

@@ -1,6 +1,6 @@
-; TTable.def : Declares the module parameters.
+; ZTable.def : Declares the module parameters.
 
-LIBRARY      "TTable.DLL"
+LIBRARY      "ZTable.DLL"
 
 EXPORTS
 	DllCanUnloadNow     @1 PRIVATE
