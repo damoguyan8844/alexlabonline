@@ -1,0 +1,26 @@
+HKCR
+{
+	ZTable.Table.1 = s 'Table Class'
+	{
+		CLSID = s '{E7EE0D3E-384E-4A5E-B223-1D8A81B65EAA}'
+	}
+	ZTable.Table = s 'Table Class'
+	{
+		CLSID = s '{E7EE0D3E-384E-4A5E-B223-1D8A81B65EAA}'
+		CurVer = s 'ZTable.Table.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E7EE0D3E-384E-4A5E-B223-1D8A81B65EAA} = s 'Table Class'
+		{
+			ProgID = s 'ZTable.Table.1'
+			VersionIndependentProgID = s 'ZTable.Table'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{F1056590-F751-4CA6-B6B6-C281EA297280}'
+		}
+	}
+}

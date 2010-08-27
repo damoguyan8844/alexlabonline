@@ -1,0 +1,52 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="robots" content="all">
+<meta name="author" content="www.sqlite.com.cn | 林轩" />
+<meta name="description" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<meta name="keywords" content="sqlite,sqlite3,SQLite,SQLite database,SQLite 开发,SQLite 数据库,SQLite 数据库引擎,SQLite 中文,SQLite 中文社区,SQLite 中文论坛,SQLite 编程,SQLite 语法,SQLite 下载,SQLite 资料,SQLite 嵌入式数据,林轩,数据库,嵌入式" />
+<link href="../../POPstyle.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../../POPinc/POPtitle.js"></script>
+<title>SQLite语法 CREATE TABLE --SQLite 中文社区-- http://www.sqlite.com.cn/</title>
+</head>
+<body>
+					<span id="ContentBody" style="display:block;padding:10px 10px"><H1>SQLite的SQL语法</H1>
+<a href="39.Html">[目录] </a> 
+<H2>CREATE TABLE</H2>
+<TABLE cellPadding=10 id="table1">
+<TBODY>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>sql-command</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>CREATE </FONT></B>[<B><FONT color=#2c2cf0>TEMP </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> TEMPORARY</FONT></B>]<B><FONT color=#2c2cf0> TABLE </FONT></B>[<B><FONT color=#2c2cf0>IF NOT EXISTS</FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>table-name</FONT></I><B><FONT color=#2c2cf0> <BIG>(</BIG><BR>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B><I><FONT color=#ff3434>column-def</FONT></I><B><FONT color=#2c2cf0> </FONT></B>[<B><FONT color=#2c2cf0><BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>column-def</FONT></I>]<BIG>*</BIG><B><FONT color=#2c2cf0><BR>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B>[<B><FONT color=#2c2cf0><BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>constraint</FONT></I>]<BIG>*</BIG><B><FONT color=#2c2cf0><BR><BIG>)</BIG></FONT></B></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>sql-command</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>CREATE </FONT></B>[<B><FONT color=#2c2cf0>TEMP </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0> TEMPORARY</FONT></B>]<B><FONT color=#2c2cf0> TABLE </FONT></B>[<I><FONT color=#ff3434>database-name</FONT></I><B><FONT color=#2c2cf0><BIG>.</BIG></FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>table-name</FONT></I><B><FONT color=#2c2cf0> AS </FONT></B><I><FONT color=#ff3434>select-statement</FONT></I></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>column-def</FONT></I>&nbsp;::=</TD>
+<TD><I><FONT color=#ff3434>name</FONT></I><B><FONT color=#2c2cf0> </FONT></B>[<I><FONT color=#ff3434>type</FONT></I>]<B><FONT color=#2c2cf0> </FONT></B>[[<B><FONT color=#2c2cf0>CONSTRAINT </FONT></B><I><FONT color=#ff3434>name</FONT></I>]<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>column-constraint</FONT></I>]<BIG>*</BIG></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>type</FONT></I>&nbsp;::=</TD>
+<TD><I><FONT color=#ff3434>typename</FONT></I><B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR></FONT></B><I><FONT color=#ff3434>typename</FONT></I><B><FONT color=#2c2cf0> <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>number</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR></FONT></B><I><FONT color=#ff3434>typename</FONT></I><B><FONT color=#2c2cf0> <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>number</FONT></I><B><FONT color=#2c2cf0> <BIG>,</BIG> </FONT></B><I><FONT color=#ff3434>number</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG></FONT></B></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>column-constraint</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>NOT NULL </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>conflict-clause</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>PRIMARY KEY </FONT></B>[<I><FONT color=#ff3434>sort-order</FONT></I>]<B><FONT color=#2c2cf0> </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>conflict-clause</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B>[<B><FONT color=#2c2cf0>AUTOINCREMENT</FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>UNIQUE </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>conflict-clause</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>CHECK <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>expr</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>DEFAULT </FONT></B><I><FONT color=#ff3434>value</FONT></I><B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>COLLATE </FONT></B><I><FONT color=#ff3434>collation-name</FONT></I></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>constraint</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>PRIMARY KEY <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>column-list</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>conflict-clause</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>UNIQUE <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>column-list</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG> </FONT></B>[<B><FONT color=#2c2cf0> </FONT></B><I><FONT color=#ff3434>conflict-clause</FONT></I><B><FONT color=#2c2cf0> </FONT></B>]<B><FONT color=#2c2cf0> </FONT></B><BIG>|</BIG><B><FONT color=#2c2cf0><BR>CHECK <BIG>(</BIG> </FONT></B><I><FONT color=#ff3434>expr</FONT></I><B><FONT color=#2c2cf0> <BIG>)</BIG></FONT></B></TD></TR>
+<TR>
+<TD vAlign=top align=right><I><FONT color=#ff3434>conflict-clause</FONT></I>&nbsp;::=</TD>
+<TD><B><FONT color=#2c2cf0>ON CONFLICT </FONT></B><I><FONT color=#ff3434>conflict-algorithm</FONT></I></TD></TR></TBODY></TABLE>
+<P>CREATE TABLE语句基本上就是"CREATE TABLE"关键字后跟一个新的表名以及括号内的一堆 定义和约束。 表名可以是字符串或者标识符。以"<B>sqlite_</B>"开头的表名是留给数据库引擎使用的。 </P>
+<P>每个字段的定义是字段名后跟字段的数据类型，接着是一个或多个的字段约束。字段的 数据类型并不限制 字段中可以存放的数据。可以查看<A href="http://localhost/Htmleditor.asp#"><FONT color=#ff3434>SQLite3的数据类型</FONT></A>获取 更多信息。 UNIQUE约束为指定的字段创建索引，该索引须含有唯一键。COLLATE子句说明在比较字段的 文字记录时所使用的<A href="#"><FONT color=#ff3434>排序函数</FONT></A>。缺省使用内嵌的BINARY排序函数。 
+<P>DEFAULT约束说明在使用INSERT插入字段时所使用的缺省值。 该值可以是NULL，字符串常量或一个数。从3.1.0版开始，缺省值也可以是以下特殊的与事件无关的关键字CURRENT_TIME, CURRENT_DATE或CURRENT_TIMESTAMP.若缺省值为NULL,字符串常量或数，在执行未指明字段值的INSERT语句的时候它被插入字段。 若缺省值是CURRENT_TIME, CURRENT_DATE或CURRENT_TIMESTAMP,则当前UTC日期和/或时间被插入字段。CURRENT_TIME的 格式为HH:MM:SS，CURRENT_DATE为YYYY-MM-DD，而CURRENT_TIMESTAMP是"YYYY-MM-DD HH:MM:SS". </P>
+<P>正常情况下定义PRIMARY KEY只是在相应字段上创建一个UNIQUE索引。然而，若主键定义在单一的INTEGER类型的字段上， 则该字段在内部被用作表的B-Tree键。这即是说字段仅能容纳唯一整数值。(在除此之外的其它情况下，SQLite忽略数据类型的说明 ，允许任何类型的数据放入字段中，不管该字段被声明为什么数据类型。) 若一个表中不含一个INTEGER PRIMARY KEY字段，则B-Tree键 为自动产生的整数。一行的B-Tree键可以通过如下特殊的名字"<B>ROWID</B>", "<B>OID</B>", 或 "<B>_ROWID_</B>"进行访问，不论是否有INTEGER PRIMARY KEY存在。INTEGER PRIMARY KEY字段可以使用关键字AUTOINCREMENT声明。AUTOINCREMENT关键字修改了B-Tree键自动产生的方式。B-Tree键的生成的其它信息可以在<A href="#">这里</A>找到。</P>
+<P>若"TEMP"或"TEMPORARY"关键字出现在"CREATE"和"TABLE"之间，则所建立的表仅在当前数据库连接可见，并在断开连接时自动被删除。在临时表上建立的任何索引也是临时的。临时表和索引单独存储在与主数据库文件不同的文件中。</P>
+<P>若说明了<DATABASE-NAME>，则表在该数据库中被创建。同时声明和TEMP关键字会出错，除非 是"temp".若不声明数据库名，也不使用TEMP关键字，则表创建于主数据库中。</P>
+<P>在每个约束后跟可选的ON CONFLICT子句可以定义替代的约束冲突判定算法。 缺省为ABORT。同一个表中的不同约束可以使用不同的缺省冲突判定算法。若一条COPY, INSERT, 或 UPDATE 命令指定了不同的冲突判定算法，则该算法将替代CREATE TABLE语句中说明的缺省算法。 更多信息，参见<A href="72.html"><FONT color=#ff3434>ON CONFLICT</FONT></A>.</P>
+<P>3.3.0版支持CHECK约束。在3.3.0之前，CHECK约束被解析但不执行。</P>
+<P>表中的字段数或约束数没有任何限制。在2.8版中，单行数据的总数被限制为小于1 megabytes。而在3.0中则消除了限制。</P>
+<P>CREATE TABLE AS形式定义表为一个查询的结果集。表的字段名字即是结果中的字段名字。</P>
+<P>每条CREATE TABLE语句的文本都储存在<B>sqlite_master</B>表中。每当数据库被打开，所有的CREATE TABLE语句从 <B>sqlite_master</B>表中读出，构成表结构的SQLite内部实现。若原始命令为CREATE TABLE AS则合成出等效的 CREATE TABLE语句并储存于<B>sqlite_master</B>表中代替原命令。CREATE TEMPORARY TABLE语句文本储存于 <B>sqlite_temp_master</B>表中。 </P>
+<P>若在命令中使用可选的IF NOT EXISTS子句且存在同名的另一个表，则当前的命令无效。</P>
+<P>删除表可以使用<A href="65.html"><FONT color=#ff3434>DROP TABLE</FONT></A>语句。</P></span>
+					</body>
+</html>
