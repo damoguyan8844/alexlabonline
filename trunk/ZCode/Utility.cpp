@@ -11,6 +11,7 @@
 #include <string.h>
 #include <vector>
 #include <fstream>
+#include <map>
 
 #define TEST_BASExx(base,str,expected) \
     printf( "TEST_BASE%s('%s')='%s'", #base, str, expected ); \
@@ -425,6 +426,60 @@ STDMETHODIMP CUtility::DecompressWithBase64(BSTR Source, BSTR *pVal)
 STDMETHODIMP CUtility::CodeReplace(BSTR inTable, BSTR toTable, BSTR src, BSTR *pVal)
 {
 	// TODO: Add your implementation code here
+
+	unsigned long nInTable = ::SysStringLen(inTable);
+	if (nInTable <= 8)
+		return S_OK;
+	char * pInTable = new char[nInTable+1];
+	if (pInTable == 0)
+		return reportError(E_OUTOFMEMORY, L"ZCode::CodeReplace() - inTable - new %d bytes failed", nInTable+1);
+	Destroyer dInTable(pInTable);
+	
+	::ZeroMemory(pInTable, sizeof(pInTable));
+	nInTable = ::WideCharToMultiByte(CP_ACP, 0, inTable, -1, pInTable, nInTable+1, 0, 0);
+	if (nInTable > 0) nInTable--;
+
+	
+	unsigned long nToTable = ::SysStringLen(toTable);
+	if (nToTable <= 8)
+		return S_OK;
+	char * pToTable = new char[nToTable+1];
+	if (pToTable == 0)
+		return reportError(E_OUTOFMEMORY, L"ZCode::CodeReplace() - ToTable - new %d bytes failed", nToTable+1);
+	Destroyer dToTable(pToTable);
+	
+	::ZeroMemory(pToTable, sizeof(pToTable));
+	nToTable = ::WideCharToMultiByte(CP_ACP, 0, toTable, -1, pToTable, nToTable+1, 0, 0);
+	if (nToTable > 0) nToTable--;
+	
+	unsigned long nSrc = ::SysStringLen(src);
+	if (nSrc <= 8)
+		return S_OK;
+	char * pSrc = new char[nSrc+1];
+	if (pSrc == 0)
+		return reportError(E_OUTOFMEMORY, L"ZCode::CodeReplace() - Src - new %d bytes failed", nSrc+1);
+	Destroyer dSrc(pSrc);
+	::ZeroMemory(pSrc, sizeof(pSrc));
+	
+	nSrc = ::WideCharToMultiByte(CP_ACP, 0, src, -1, pSrc, nSrc+1, 0, 0);
+	if (nSrc > 0) nSrc--;
+	
+	std::map<char,char> replacer;
+	for(long index=0; index <nToTable && index< nInTable; index++)
+		replacer[*(pInTable+index)]=*(pToTable+index);
+	
+	std::map<char,char>::iterator iter;
+	for(long i=0; i<nSrc; i++)
+	{
+		iter=replacer.find(*(pSrc+i));
+		if(iter!=replacer.end())
+			*(pSrc+i)=iter->second;
+	}
+
+	*pVal=CComBSTR(pSrc).Detach();
+
+	if (*pVal == 0)
+		return reportError(E_OUTOFMEMORY, L"ZCode::CodeReplace() - A2WBSTR() returns 0 for %d bytes string", nSrc);
 
 	return S_OK;
 }
