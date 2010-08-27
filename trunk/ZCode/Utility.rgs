@@ -1,0 +1,26 @@
+HKCR
+{
+	ZCode.Utility.1 = s 'Utility Class'
+	{
+		CLSID = s '{774BD14F-D14D-4CF3-8243-19A189073929}'
+	}
+	ZCode.Utility = s 'Utility Class'
+	{
+		CLSID = s '{774BD14F-D14D-4CF3-8243-19A189073929}'
+		CurVer = s 'ZCode.Utility.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {774BD14F-D14D-4CF3-8243-19A189073929} = s 'Utility Class'
+		{
+			ProgID = s 'ZCode.Utility.1'
+			VersionIndependentProgID = s 'ZCode.Utility'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{FB9FDC13-A31C-48FE-A97F-FEEC19ED493E}'
+		}
+	}
+}

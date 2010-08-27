@@ -218,11 +218,19 @@ End Sub
 Private Sub Command12_Click()
 
 
-Dim objZip As New TZIPLib.Utility
+'Dim objZip As New TZIPLib.Utility
+
+Dim objZip As New ZCODELib.Utility
 
 Dim strContent As String
 
+strContent = objZip.CompressWithBase32("A wise man speaks when he has something to say")
+strContent = objZip.DecompressWithBase32(strContent)
+
 objZip.CompressFileContent Me.txtMessageID, strContent
+
+Call OutPutToFile("C:\Out.txt", strContent)
+
 objZip.DecompressFileContent strContent, Me.txtMessageID + ".tzip"
 
 End Sub

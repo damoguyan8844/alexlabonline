@@ -1,0 +1,51 @@
+// ZCode.idl : IDL source for ZCode.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ZCode.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(FB9FDC13-A31C-48FE-A97F-FEEC19ED493E),
+	version(1.0),
+	helpstring("ZCode 1.0 Type Library")
+]
+library ZCODELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		object,
+		uuid(02B8D2B1-CC2B-487B-84D0-59B0A8362E59),
+		dual,
+		helpstring("IUtility Interface"),
+		pointer_default(unique)
+	]
+	interface IUtility : IDispatch
+	{
+		[propget, id(1), helpstring("property Base16Table")] HRESULT Base16Table([out, retval] BSTR *pVal);
+		[propget, id(2), helpstring("property Base32Table")] HRESULT Base32Table([out, retval] BSTR *pVal);
+		[propget, id(3), helpstring("property Base64Table")] HRESULT Base64Table([out, retval] BSTR *pVal);
+		[id(4), helpstring("method CompressWithBase16")] HRESULT CompressWithBase16([in] BSTR  src, [out,retval] BSTR * pVal);
+		[id(5), helpstring("method CompressWithBase32")] HRESULT CompressWithBase32([in] BSTR  src, [out,retval] BSTR * pVal);
+		[id(6), helpstring("method CompressWithBase64")] HRESULT CompressWithBase64([in] BSTR  src, [out,retval] BSTR * pVal);
+
+		[id(7), helpstring("method DecompressWithBase16")] HRESULT DecompressWithBase16([in] BSTR  src, [out,retval] BSTR * pVal);
+		[id(8), helpstring("method DecompressWithBase32")] HRESULT DecompressWithBase32([in] BSTR  src, [out,retval] BSTR * pVal);
+		[id(9), helpstring("method DecompressWithBase64")] HRESULT DecompressWithBase64([in] BSTR  src, [out,retval] BSTR * pVal);
+
+		[id(10), helpstring("method CodeReplace")] HRESULT CodeReplace([in] BSTR inTable,[in] BSTR toTable,[in] BSTR src,[out,retval] BSTR * pVal);
+	};
+
+	[
+		uuid(774BD14F-D14D-4CF3-8243-19A189073929),
+		helpstring("Utility Class")
+	]
+	coclass Utility
+	{
+		[default] interface IUtility;
+	};
+};
