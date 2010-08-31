@@ -31,13 +31,32 @@ public:
 
 // Implementation
 protected:
+
+	//修正移动时窗口的大小
+	void FixMoving(UINT fwSide, LPRECT pRect);
+	//修正改改变窗口大小时窗口的大小
+	void FixSizing(UINT fwSide, LPRECT pRect);
+	//从收缩状态显示窗口
+	void DoShow();
+	//从显示状态收缩窗口
+	void DoHide();
+	//重载函数,只是为了方便调用
+	BOOL SetWindowPos(const CWnd* pWndInsertAfter,
+		LPCRECT pCRect, UINT nFlags = SWP_SHOWWINDOW);
+
 	HICON m_hIcon;
 
 	// Generated message map functions
 	//{{AFX_MSG(CDaemonManagerDlg)
 	virtual BOOL OnInitDialog();
+	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+	afx_msg UINT OnNcHitTest(CPoint point);
+	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnSizing(UINT fwSide, LPRECT pRect);
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnMoving(UINT fwSide, LPRECT pRect);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
