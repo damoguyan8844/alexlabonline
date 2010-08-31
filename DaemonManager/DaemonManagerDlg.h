@@ -59,6 +59,20 @@ protected:
 	afx_msg void OnMoving(UINT fwSide, LPRECT pRect);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+
+private:
+	BOOL m_isSizeChanged;   //窗口大小是否改变了 
+	BOOL m_isSetTimer;      //是否设置了检测鼠标的Timer
+	
+	INT  m_oldWndHeight;    //旧的窗口宽度
+	INT  m_taskBarHeight;   //任务栏高度
+	INT  m_edgeHeight;      //边缘高度
+	INT  m_edgeWidth;       //边缘宽度
+	
+	INT  m_hideMode;        //隐藏模式
+	BOOL m_hsFinished;      //隐藏或显示过程是否完成
+    BOOL m_hiding;          //该参数只有在!m_hsFinished才有效
+
 };
 
 //{{AFX_INSERT_LOCATION}}
