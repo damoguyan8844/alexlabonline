@@ -19,13 +19,15 @@ static char THIS_FILE[] = __FILE__;
 #define HM_TOP      1  
 
 #define CM_ELAPSE   200 //检测鼠标是否离开窗口的时间间隔
-#define HS_ELAPSE   5   //隐藏或显示过程每步的时间间隔
+#define HS_ELAPSE   30   //隐藏或显示过程每步的时间间隔
 #define HS_STEPS    10  //隐藏或显示过程分成多少步
 
 #define INTERVAL    20  //触发粘附时鼠标与屏幕边界的最小间隔,单位为象素
 #define INFALTE     10  //触发收缩时鼠标与窗口边界的最小间隔,单位为象素
 #define MINCX       100 //窗口最小宽度
 #define MINCY       400 //窗口最小高度
+
+#define SLIP_RATE  0.01
 
 CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CDaemonManagerDlg::IDD, pParent)
@@ -46,7 +48,9 @@ CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	m_taskBarHeight = 30;
 	m_edgeHeight = 0;
 	m_edgeWidth  =0;
-	m_hideMode = HM_NONE;
+	m_hideMode = HM_TOP;
+
+	m_initialed=FALSE;
 }
 
 void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
@@ -84,8 +88,8 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 
 	// Set the icon for this dialog.  The framework does this automatically
 	//  when the application's main window is not a dialog
-	SetIcon(m_hIcon, TRUE);			// Set big icon
-	SetIcon(m_hIcon, FALSE);		// Set small icon
+//	SetIcon(m_hIcon, TRUE);			// Set big icon
+//	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
 	// TODO: Add extra initialization here
 	
@@ -110,7 +114,7 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 	points[1].x=0+rect.Width();
 	points[1].y=0;
 	
-	int slip=(int)(cxIcon*0.03);
+	int slip=(int)(cxIcon*SLIP_RATE);
 
 	points[2].x=rect.Width()-slip;
 	points[2].y=rect.Height();
@@ -121,6 +125,15 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 	rgn.CreatePolygonRgn(points,4,ALTERNATE);
 
 	SetWindowRgn(rgn,TRUE);
+
+	if(!m_initialed)
+	{
+		CPoint point;
+		point.x=x;
+		point.y=0;
+
+		OnNcHitTest(point);
+	}
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -183,15 +196,21 @@ UINT CDaemonManagerDlg::OnNcHitTest(CPoint point)
 	
 	if(m_hideMode != HM_NONE && !m_isSetTimer)
 	{   
+		int firOpenPlus=0;
+		if(!m_initialed)
+		{
+			firOpenPlus=1000;
+		}
+
 		//鼠标进入时,如果是从收缩状态到显示状态则开启Timer
-		SetTimer(1,CM_ELAPSE,NULL);
+		SetTimer(1,CM_ELAPSE+firOpenPlus,NULL);
 		m_isSetTimer = TRUE;
 		
 		m_hsFinished = FALSE;
 		m_hiding = FALSE;
 		SetTimer(2,HS_ELAPSE,NULL); //开启显示过程
 	}
-
+	m_initialed=TRUE;
 	return CDialog::OnNcHitTest(point);
 }
 

@@ -72,7 +72,7 @@ private:
 	INT  m_hideMode;        //隐藏模式
 	BOOL m_hsFinished;      //隐藏或显示过程是否完成
     BOOL m_hiding;          //该参数只有在!m_hsFinished才有效
-
+	BOOL m_initialed;
 };
 
 //{{AFX_INSERT_LOCATION}}
