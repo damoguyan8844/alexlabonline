@@ -15,11 +15,8 @@ static char THIS_FILE[] = __FILE__;
 // CDaemonManagerDlg dialog
 
 //收缩模式
-#define HM_NONE     0   //不收缩
-#define HM_TOP      1   //向上收缩
-#define HM_BOTTOM   2   //向下收缩
-#define HM_LEFT     3   //向左收缩
-#define HM_RIGHT    4   //向右收缩
+#define HM_NONE     0 
+#define HM_TOP      1  
 
 #define CM_ELAPSE   200 //检测鼠标是否离开窗口的时间间隔
 #define HS_ELAPSE   5   //隐藏或显示过程每步的时间间隔
@@ -27,9 +24,8 @@ static char THIS_FILE[] = __FILE__;
 
 #define INTERVAL    20  //触发粘附时鼠标与屏幕边界的最小间隔,单位为象素
 #define INFALTE     10  //触发收缩时鼠标与窗口边界的最小间隔,单位为象素
-#define MINCX       200 //窗口最小宽度
+#define MINCX       100 //窗口最小宽度
 #define MINCY       400 //窗口最小高度
-
 
 CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CDaemonManagerDlg::IDD, pParent)
@@ -39,6 +35,18 @@ CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	//}}AFX_DATA_INIT
 	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+
+	
+	m_isSizeChanged = FALSE;
+	m_isSetTimer = FALSE;
+	m_hsFinished = TRUE;
+    m_hiding = FALSE;
+	
+	m_oldWndHeight = MINCY;
+	m_taskBarHeight = 30;
+	m_edgeHeight = 0;
+	m_edgeWidth  =0;
+	m_hideMode = HM_NONE;
 }
 
 void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
@@ -51,13 +59,24 @@ void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CDaemonManagerDlg, CDialog)
 	//{{AFX_MSG_MAP(CDaemonManagerDlg)
+	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_NCHITTEST()
+	ON_WM_TIMER()
+	ON_WM_SIZING()
+	ON_WM_CREATE()
+	ON_WM_MOVING()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDaemonManagerDlg message handlers
+
+void CDaemonManagerDlg::OnSysCommand(UINT nID, LPARAM lParam)
+{
+	CDialog::OnSysCommand(nID, lParam);
+}
 
 BOOL CDaemonManagerDlg::OnInitDialog()
 {
@@ -161,10 +180,10 @@ UINT CDaemonManagerDlg::OnNcHitTest(CPoint point)
 	CString str;
 	str.Format("Mouse (%d,%d)",point.x,point.y);
 	GetDlgItem(IDC_CURSOR)->SetWindowText(str);
-	if(m_hideMode != HM_NONE && !m_isSetTimer &&
-		//防止鼠标超出屏幕右边时向右边收缩造成闪烁
-		point.x < GetSystemMetrics(SM_CXSCREEN) + INFALTE)
-	{   //鼠标进入时,如果是从收缩状态到显示状态则开启Timer
+	
+	if(m_hideMode != HM_NONE && !m_isSetTimer)
+	{   
+		//鼠标进入时,如果是从收缩状态到显示状态则开启Timer
 		SetTimer(1,CM_ELAPSE,NULL);
 		m_isSetTimer = TRUE;
 		
@@ -176,7 +195,7 @@ UINT CDaemonManagerDlg::OnNcHitTest(CPoint point)
 	return CDialog::OnNcHitTest(point);
 }
 
-void CQQHideWndDlg::OnTimer(UINT nIDEvent) 
+void CDaemonManagerDlg::OnTimer(UINT nIDEvent) 
 {
 	// TODO: Add your message handler code here and/or call default
 	
@@ -218,7 +237,7 @@ void CQQHideWndDlg::OnTimer(UINT nIDEvent)
 	CDialog::OnTimer(nIDEvent);
 }
 
-void CQQHideWndDlg::DoHide()
+void CDaemonManagerDlg::DoHide()
 {
 	if(m_hideMode == HM_NONE)
 		return;
@@ -244,40 +263,6 @@ void CQQHideWndDlg::DoHide()
 		}
 		tRect.top = tRect.bottom - height; 
 		break;
-	case HM_BOTTOM:
-		steps = height/HS_STEPS;
-		tRect.top += steps;
-		if(tRect.top >= (GetSystemMetrics(SM_CYSCREEN) - m_edgeWidth))
-		{
-            tRect.top = GetSystemMetrics(SM_CYSCREEN) - m_edgeWidth;
-			m_hsFinished = TRUE;
-		}
-		tRect.bottom = tRect.top + height;
-		break;
-	case HM_LEFT:
-		steps = width/HS_STEPS;
-		tRect.right -= steps;
-		if(tRect.right <= m_edgeWidth)
-		{
-            tRect.right = m_edgeWidth;
-			m_hsFinished = TRUE;
-		}
-		tRect.left = tRect.right - width;
-		tRect.top = -m_edgeHeight;
-		tRect.bottom = GetSystemMetrics(SM_CYSCREEN) - m_taskBarHeight;
-		break;
-	case HM_RIGHT:
-		steps = width/HS_STEPS;
-		tRect.left += steps;
-		if(tRect.left >= (GetSystemMetrics(SM_CXSCREEN) - m_edgeWidth))
-		{
-            tRect.left = GetSystemMetrics(SM_CXSCREEN) - m_edgeWidth;
-			m_hsFinished = TRUE;
-		}		
-		tRect.right = tRect.left + width;
-		tRect.top = -m_edgeHeight;
-		tRect.bottom = GetSystemMetrics(SM_CYSCREEN) - m_taskBarHeight;
-		break;
 	default:
 		break;
 	}
@@ -285,7 +270,7 @@ void CQQHideWndDlg::DoHide()
 	SetWindowPos(&wndTopMost,tRect);
 }
 
-void CQQHideWndDlg::DoShow()
+void CDaemonManagerDlg::DoShow()
 {
     if(m_hideMode == HM_NONE)
 		return;
@@ -310,40 +295,6 @@ void CQQHideWndDlg::DoShow()
 		}
 		tRect.bottom = tRect.top + height;
 		break;
-	case HM_BOTTOM:
-		steps = height/HS_STEPS;
-		tRect.top -= steps;
-		if(tRect.top <= (GetSystemMetrics(SM_CYSCREEN) - height))
-		{
-            tRect.top = GetSystemMetrics(SM_CYSCREEN) - height;
-			m_hsFinished = TRUE;
-		}
-        tRect.bottom = tRect.top + height;
-		break;
-	case HM_LEFT:
-		steps = width/HS_STEPS;
-		tRect.right += steps;
-		if(tRect.right >= width)
-		{
-            tRect.right = width;
-			m_hsFinished = TRUE;
-		}
-		tRect.left = tRect.right - width;
-		tRect.top = -m_edgeHeight;
-		tRect.bottom = GetSystemMetrics(SM_CYSCREEN) - m_taskBarHeight;
-		break;
-	case HM_RIGHT:
-		steps = width/HS_STEPS;
-		tRect.left -= steps;
-		if(tRect.left <= (GetSystemMetrics(SM_CXSCREEN) - width))
-		{
-            tRect.left = GetSystemMetrics(SM_CXSCREEN) - width;
-			m_hsFinished = TRUE;
-		}
-		tRect.right = tRect.left + width;
-		tRect.top = -m_edgeHeight;
-		tRect.bottom = GetSystemMetrics(SM_CYSCREEN) - m_taskBarHeight;
-		break;
 	default:
 		break;
 	}
@@ -351,13 +302,13 @@ void CQQHideWndDlg::DoShow()
 	SetWindowPos(&wndTopMost,tRect);
 }
 
-BOOL CQQHideWndDlg::SetWindowPos(const CWnd* pWndInsertAfter, LPCRECT pCRect, UINT nFlags)
+BOOL CDaemonManagerDlg::SetWindowPos(const CWnd* pWndInsertAfter, LPCRECT pCRect, UINT nFlags)
 {
 	return CDialog::SetWindowPos(pWndInsertAfter,pCRect->left, pCRect->top,
 		pCRect->right - pCRect->left, pCRect->bottom - pCRect->top, nFlags);
 }
 
-void CQQHideWndDlg::FixMoving(UINT fwSide, LPRECT pRect)
+void CDaemonManagerDlg::FixMoving(UINT fwSide, LPRECT pRect)
 {
 	POINT curPos;
 	GetCursorPos(&curPos);
@@ -371,42 +322,6 @@ void CQQHideWndDlg::FixMoving(UINT fwSide, LPRECT pRect)
 		pRect->bottom = height - m_edgeHeight;
 		pRect->top = -m_edgeHeight;
 		m_hideMode = HM_TOP;
-	}
-	else if(curPos.y >= (screenHeight - INTERVAL - m_taskBarHeight))
-	{   //粘附在下边
-        pRect->top = screenHeight - m_taskBarHeight - height;
-        pRect->bottom = screenHeight - m_taskBarHeight;
-		m_hideMode = HM_BOTTOM;
-	}
-	else if (curPos.x < INTERVAL)
-	{	//粘附在左边	
-		if(!m_isSizeChanged)
-		{
-			CRect tRect;
-			GetWindowRect(tRect);
-			m_oldWndHeight = tRect.Height();			
-		}
-		pRect->right = width;
-		pRect->left = 0;
-		pRect->top = -m_edgeHeight;
-		pRect->bottom = screenHeight - m_taskBarHeight;
-		m_isSizeChanged = TRUE;
-		m_hideMode = HM_LEFT;
-	}
-	else if(curPos.x >= (screenWidth - INTERVAL))
-	{   //粘附在右边
-		if(!m_isSizeChanged)
-		{
-			CRect tRect;
-			GetWindowRect(tRect);
-			m_oldWndHeight = tRect.Height();						
-		}
-		pRect->left = screenWidth - width;
-		pRect->right = screenWidth;
-		pRect->top = -m_edgeHeight;
-		pRect->bottom = screenHeight - m_taskBarHeight;
-		m_isSizeChanged = TRUE;
-		m_hideMode = HM_RIGHT;
 	}
 	else
 	{   //不粘附
@@ -426,7 +341,7 @@ void CQQHideWndDlg::FixMoving(UINT fwSide, LPRECT pRect)
 	}
 }
 
-void CQQHideWndDlg::FixSizing(UINT fwSide, LPRECT pRect)
+void CDaemonManagerDlg::FixSizing(UINT fwSide, LPRECT pRect)
 {
     CRect curRect(pRect);
 
@@ -474,7 +389,7 @@ void CQQHideWndDlg::FixSizing(UINT fwSide, LPRECT pRect)
 	}
 }
 
-int CQQHideWndDlg::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+int CDaemonManagerDlg::OnCreate(LPCREATESTRUCT lpCreateStruct) 
 {
 	if (CDialog::OnCreate(lpCreateStruct) == -1)
 		return -1;
