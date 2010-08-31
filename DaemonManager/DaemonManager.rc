@@ -67,6 +67,8 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DaemonManager.ico"
+IDI_ICON_FIX            ICON    DISCARDABLE     "res\\FixWnd.ico"
+IDI_ICON_HIDE           ICON    DISCARDABLE     "res\\AutiHide.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -78,13 +80,14 @@ STYLE WS_POPUP | WS_VISIBLE | WS_THICKFRAME
 EXSTYLE WS_EX_APPWINDOW
 FONT 8, "MS Sans Serif"
 BEGIN
-    PUSHBUTTON      "OK",IDOK,593,3,49,14
+    CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | 
+                    WS_TABSTOP,593,3,18,14
     PUSHBUTTON      "Cancel",IDCANCEL,592,22,50,14
     LTEXT           "TODO: Place dialog controls here.",IDC_STATIC,47,25,200,
                     8
     CTEXT           "Static",IDC_CURSOR,236,14,75,8
     CTEXT           "Timer Off",IDC_TIMER,169,14,75,8
-    PUSHBUTTON      "Button2",IDC_BUTTON_FIX,47,1,15,11,BS_ICON | BS_FLAT
+    PUSHBUTTON      "Button2",IDC_BUTTON_FIX,47,1,13,14,BS_ICON | BS_FLAT
 END
 
 
@@ -148,6 +151,19 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CLOSE_N             BITMAP  DISCARDABLE     "res\\CloseButton_Normal.bmp"
+IDB_CLOSE_D             BITMAP  DISCARDABLE     "res\\CloseButton_Down.bmp"
+IDB_CLOSE_H             BITMAP  DISCARDABLE     "res\\CloseButton_Hover.bmp"
+IDB_CLOSE_F             BITMAP  DISCARDABLE     "res\\CloseButton_Focus.bmp"
+IDB_MIN_N               BITMAP  DISCARDABLE     "res\\MinButton_Normal.bmp"
+IDB_MIN_D               BITMAP  DISCARDABLE     "res\\MinButton_Down.bmp"
+IDB_MIN_H               BITMAP  DISCARDABLE     "res\\MinButton_Hover.bmp"
 #endif    // English (U.S.) resources
 /////////////////////////////////////////////////////////////////////////////
 

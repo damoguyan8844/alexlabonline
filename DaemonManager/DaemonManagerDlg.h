@@ -20,7 +20,7 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CDaemonManagerDlg)
 	enum { IDD = IDD_DAEMONMANAGER_DIALOG };
-		// NOTE: the ClassWizard will add data members here
+	CButton	m_btFix;
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
@@ -45,6 +45,8 @@ protected:
 		LPCRECT pCRect, UINT nFlags = SWP_SHOWWINDOW);
 
 	HICON m_hIcon;
+	HICON m_hIconFix;
+	HICON m_hIconHide;
 
 	// Generated message map functions
 	//{{AFX_MSG(CDaemonManagerDlg)
@@ -57,6 +59,7 @@ protected:
 	afx_msg void OnSizing(UINT fwSide, LPRECT pRect);
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnMoving(UINT fwSide, LPRECT pRect);
+	afx_msg void OnButtonFix();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
@@ -73,6 +76,11 @@ private:
 	BOOL m_hsFinished;      //隐藏或显示过程是否完成
     BOOL m_hiding;          //该参数只有在!m_hsFinished才有效
 	BOOL m_initialed;
+	
+	BOOL m_isFix;
+
+	CBitmapButton m_btClose;
+
 };
 
 //{{AFX_INSERT_LOCATION}}
