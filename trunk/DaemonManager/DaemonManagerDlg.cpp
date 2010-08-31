@@ -33,11 +33,11 @@ CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CDaemonManagerDlg::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CDaemonManagerDlg)
-		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	// Note that LoadIcon does not require a subsequent DestroyIcon in Win32
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
-
+	m_hIconHide=AfxGetApp()->LoadIcon(IDI_ICON_HIDE);
+	m_hIconFix=AfxGetApp()->LoadIcon(IDI_ICON_FIX);
 	
 	m_isSizeChanged = FALSE;
 	m_isSetTimer = FALSE;
@@ -51,13 +51,14 @@ CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	m_hideMode = HM_TOP;
 
 	m_initialed=FALSE;
+	m_isFix=FALSE;
 }
 
 void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CDaemonManagerDlg)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
+	DDX_Control(pDX, IDC_BUTTON_FIX, m_btFix);
 	//}}AFX_DATA_MAP
 }
 
@@ -71,6 +72,7 @@ BEGIN_MESSAGE_MAP(CDaemonManagerDlg, CDialog)
 	ON_WM_SIZING()
 	ON_WM_CREATE()
 	ON_WM_MOVING()
+	ON_BN_CLICKED(IDC_BUTTON_FIX, OnButtonFix)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -133,7 +135,20 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 		point.y=0;
 
 		OnNcHitTest(point);
+
+		m_btClose.SubclassDlgItem(IDOK,this);
+		m_btClose.LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_F,IDB_CLOSE_D);
+		m_btClose.Invalidate(true);
+		m_btClose.SizeToContent();
+		
+	
+		m_btFix.SetIcon(m_hIconHide);
+
+//		m_btFix.SubclassDlgItem(IDC_BUTTON_FIX,this);
+// 		HICON   hIcon=AfxGetApp()->LoadIcon(IDI_ICON_HIDE);
+// 		m_btFix.SetIcon(hIcon);
 	}
+	
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -258,6 +273,8 @@ void CDaemonManagerDlg::OnTimer(UINT nIDEvent)
 
 void CDaemonManagerDlg::DoHide()
 {
+	if(m_isFix)
+		return;
 	if(m_hideMode == HM_NONE)
 		return;
 	
@@ -436,5 +453,25 @@ int CDaemonManagerDlg::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 	//可以在这里读取上次关闭后保存的大小
 
+//	((CBitmapButton *)GetDlgItem(IDOK))->LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_F,IDB_CLOSE_D);
+ //   ((CBitmapButton *)GetDlgItem(IDOK))->Invalidate(false);
+//	((CBitmapButton *)GetDlgItem(IDOK))->SizeToContent();
+	
 	return 0;
+}
+
+
+void CDaemonManagerDlg::OnButtonFix() 
+{
+	// TODO: Add your control notification handler code here
+	m_isFix=!m_isFix;
+
+	if(m_isFix)
+	{
+		m_btFix.SetIcon(m_hIconFix);
+	}
+	else
+	{
+		m_btFix.SetIcon(m_hIconHide);
+	}
 }
