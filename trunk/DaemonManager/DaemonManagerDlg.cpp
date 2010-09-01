@@ -4,6 +4,11 @@
 #include "stdafx.h"
 #include "DaemonManager.h"
 #include "DaemonManagerDlg.h"
+#include <MouseHook.h>
+#include <string>
+#include <vector>
+
+using namespace std;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -28,6 +33,9 @@ static char THIS_FILE[] = __FILE__;
 #define MINCY       400 //窗口最小高度
 
 #define SLIP_RATE  0.01
+
+
+static UINT UWM_MOUSEMOVE = ::RegisterWindowMessage(UWM_MOUSEMOVE_MSG);
 
 CDaemonManagerDlg::CDaemonManagerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CDaemonManagerDlg::IDD, pParent)
@@ -62,6 +70,7 @@ void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CDaemonManagerDlg, CDialog)
+    ON_REGISTERED_MESSAGE(UWM_MOUSEMOVE, OnMyMouseMove)
 	//{{AFX_MSG_MAP(CDaemonManagerDlg)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
@@ -83,6 +92,290 @@ void CDaemonManagerDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	CDialog::OnSysCommand(nID, lParam);
 }
+
+/****************************************************************************
+*                           CHookDlg::OnMyMouseMove
+* Inputs:
+*       WPARAM: unused
+*	LPARAM: (x,y) coordinates of mouse
+* Result: LRESULT
+*       Logically void, 0, always
+* Effect: 
+*       Handles the mouse move event notification
+****************************************************************************/
+namespace
+{
+	bool   SaveBitmapToFile(HBITMAP   hBitmap,   string szfilename)  
+	{  
+
+       HDC hDC; //   设备描述表       
+
+       int iBits; //   当前显示分辨率下每个像素所占字节数 
+
+       WORD wBitCount; //   位图中每个像素所占字节数   
+
+       DWORD dwPaletteSize   =   0   ; //   定义调色板大小，  位图中像素字节大小  ， 
+
+       //   位图文件大小  ，  写入文件字节数
+
+       DWORD dwBmBitsSize   ;  
+
+       DWORD dwDIBSize,   dwWritten   ;  
+
+       BITMAP Bitmap;                  
+
+       BITMAPFILEHEADER bmfHdr; //位图属性结构 
+
+       BITMAPINFOHEADER bi; //位图文件头结构  
+
+       LPBITMAPINFOHEADER lpbi;   //位图信息头结构   
+
+       HANDLE                     fh,   hDib,   hPal,hOldPal   =   NULL   ; //指向位图信息头结构,定义文件，分配内存句柄，调色板句柄
+
+       //计算位图文件每个像素所占字节数 
+
+       hDC   =   CreateDC(   "DISPLAY"   ,   NULL   ,   NULL   ,   NULL   )   ;  
+
+       iBits   =   GetDeviceCaps(   hDC   ,   BITSPIXEL   )   *   GetDeviceCaps(   hDC   ,   PLANES   )   ;  
+
+       DeleteDC(   hDC   )   ;  
+
+       if   (   iBits   <=   1   )  
+
+       {
+
+         wBitCount   =   1;  
+
+       } 
+
+       else   if   (   iBits   <=   4   )  
+
+       {
+
+         wBitCount   =   4;  
+
+       }
+
+       else   if   (   iBits   <=   8   )  
+
+       {
+
+         wBitCount   =   8;  
+
+       }  
+
+       else   if   (   iBits   <=   24   )  
+
+       {
+
+         wBitCount   =   24;  
+
+       } 
+
+       else   if   (   iBits   <=   32   )  
+
+       {  
+
+         wBitCount   =   32;  
+
+       }  
+
+       //计算调色板大小 
+
+       if   (   wBitCount   <=   8   )  
+
+       {
+
+         dwPaletteSize   =   (   1   <<   wBitCount   )   *   sizeof(   RGBQUAD   )   ;  
+
+       } 
+
+       //设置位图信息头结构 
+
+       GetObject(   hBitmap   ,   sizeof(   BITMAP   )   ,   (   LPSTR   )   &   Bitmap   )   ;  
+
+       bi.biSize                         =   sizeof(   BITMAPINFOHEADER   );  
+
+       bi.biWidth                       =   Bitmap.bmWidth;     
+
+       bi.biHeight                     =   Bitmap.bmHeight;   
+
+       bi.biPlanes                     =   1;     
+
+       bi.biBitCount                 =   wBitCount;     
+
+       bi.biCompression           =   BI_RGB;  
+
+       bi.biSizeImage               =   0;  
+
+       bi.biXPelsPerMeter       =   0;  
+
+       bi.biYPelsPerMeter       =   0;  
+
+       bi.biClrUsed                   =   0;  
+
+       bi.biClrImportant         =   0;   
+
+       dwBmBitsSize   =   (   (   Bitmap.bmWidth   *   wBitCount   +   31   )   /   32   )   *   4   *   Bitmap.bmHeight   ;  
+
+       //为位图内容分配内存 
+
+       hDib     =   GlobalAlloc(   GHND   ,dwBmBitsSize   +   dwPaletteSize   +   sizeof(   BITMAPINFOHEADER   )   )   ;   
+
+       lpbi   =   (   LPBITMAPINFOHEADER   )GlobalLock(   hDib   )   ;
+
+       *lpbi   =   bi;  
+
+       //   处理调色板     
+
+       hPal   =   GetStockObject(   DEFAULT_PALETTE   );  
+
+       if   (   hPal   )  
+
+       {  
+
+              hDC =   ::GetDC(   NULL   );  
+
+              hOldPal   =   SelectPalette(   hDC,   (HPALETTE   )   hPal   ,   FALSE   )   ;  
+
+              RealizePalette(   hDC   )   ;  
+
+       } 
+
+       //   获取该调色板下新的像素值 
+
+ 
+
+       GetDIBits(   hDC,   hBitmap,   0,   (   UINT   )   Bitmap.bmHeight,   
+
+       (   LPSTR   )lpbi   +   sizeof(   BITMAPINFOHEADER   )   +   dwPaletteSize,  
+
+       (   LPBITMAPINFO   )lpbi,   DIB_RGB_COLORS   );  
+
+ 
+
+       //恢复调色板   
+
+       if   (   hOldPal   )  
+
+       {  
+
+              SelectPalette(   hDC,   (   HPALETTE   )hOldPal,   TRUE   );  
+
+              RealizePalette(   hDC   )   ;   
+
+              ::ReleaseDC(   NULL,   hDC   )   ;  
+
+       } 
+
+       //创建位图文件
+
+       fh   =   CreateFile(   szfilename.c_str()   ,   GENERIC_WRITE,    
+
+       0   ,   NULL   ,   CREATE_ALWAYS   ,  
+
+       FILE_ATTRIBUTE_NORMAL   |   FILE_FLAG_SEQUENTIAL_SCAN   ,   NULL   )   ; 
+
+       if   (   fh   ==   INVALID_HANDLE_VALUE   )  
+
+       {  
+
+              return   false;  
+
+       }   
+
+ 
+
+       //   设置位图文件头 
+
+       bmfHdr.bfType   =   0x4D42;     //   "BM"    
+
+       dwDIBSize =   sizeof(   BITMAPFILEHEADER   )   +   sizeof(   BITMAPINFOHEADER   )   +   dwPaletteSize   +   dwBmBitsSize;       
+
+       bmfHdr.bfSize =   dwDIBSize;  
+
+       bmfHdr.bfReserved1 =   0;  
+
+       bmfHdr.bfReserved2 =   0;  
+
+       bmfHdr.bfOffBits =   (   DWORD   )sizeof(   BITMAPFILEHEADER   )    
+
+       +   (   DWORD   )sizeof(   BITMAPINFOHEADER   )  
+
+       +   dwPaletteSize;  
+
+       //   写入位图文件头 
+
+       WriteFile(   fh,   (   LPSTR   )&bmfHdr,   sizeof   
+
+       (   BITMAPFILEHEADER   ),   &dwWritten,   NULL);  
+
+       //   写入位图文件其余内容 
+
+       WriteFile(   fh,   (   LPSTR   )lpbi,   dwDIBSize,    
+
+       &dwWritten   ,   NULL   );  
+
+       //消除内存分配     
+
+       GlobalUnlock(   hDib   );   
+
+       GlobalFree(   hDib   );  
+
+       CloseHandle(   fh   );  
+
+       return   true;  
+
+	}
+	void CaptureRect(HDC hdcScreen, LPRECT prc)
+	{
+		HDC hdc = CreateCompatibleDC(hdcScreen);
+		HBITMAP hbmp = CreateCompatibleBitmap(hdcScreen,prc->right - prc->left,
+			prc->bottom - prc->top);
+		SelectObject(hdc,hbmp);
+		
+		BitBlt(hdc,0,0,prc->right - prc->left,prc->bottom - prc->top,
+			hdcScreen,prc->left,prc->top,SRCCOPY);
+		
+		//拷贝到剪贴板中
+		OpenClipboard(NULL);
+		EmptyClipboard();
+		SetClipboardData(CF_BITMAP,hbmp);
+		CloseClipboard();
+		DeleteDC(hdc);
+
+		char tempFile[64];
+		sprintf(tempFile,"C:\\TMP\\%06u.bmp",GetTickCount());
+		SaveBitmapToFile(hbmp,string(tempFile));
+		::DeleteObject(hbmp);
+
+		vector<long> vecTest(300,0);
+		for (int i=0;i<vecTest.size();++i)
+			for (int k=0;k<vecTest.size();++k)
+				for (int j=0;j<vecTest.size();++j)
+					if(vecTest[j]!=vecTest[k])
+						break;
+	}
+};
+LRESULT CDaemonManagerDlg::OnMyMouseMove(WPARAM, LPARAM lParam)
+{
+     CPoint point;
+     GetCursorPos(&point);
+//   CString str;
+// 	 str.Format("My Mouse (%d,%d)",point.x,point.y);
+// 	 GetDlgItem(IDC_CURSOR)->SetWindowText(str);
+
+	 HDC hDeskDC = ::GetDC(NULL);
+	 RECT rc;
+	 //获取屏幕的大小
+	 rc.left = point.x;
+	 rc.top = point.y;
+	 rc.right = rc.left + 100;
+	 rc.bottom = rc.top + 100;
+	 //CaptureRect(hDeskDC,&rc);
+
+     return 0;
+} // CHookDlg::OnMyMouseMove
 
 BOOL CDaemonManagerDlg::OnInitDialog()
 {
@@ -136,7 +429,7 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 
 		
 		m_btClose.SubclassDlgItem(IDOK,this);
-		m_btClose.LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_F,IDB_CLOSE_D);
+		m_btClose.LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_N,IDB_CLOSE_D);
 		m_btClose.Invalidate(true);
 		m_btClose.SizeToContent();
 		
@@ -147,6 +440,21 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 		m_btFix.SizeToContent();
 
 		OnNcHitTest(point);
+
+		BOOL result = setMyHook(m_hWnd);
+		if(!result)
+		{ /* error */
+			DWORD err = ::GetLastError();
+			CString str;
+			str.Format(_T("%d"), err);
+			GetDlgItem(IDC_CURSOR)->SetWindowText(str);
+		} /* error */
+		else
+		{ /* set hook */
+			CString str;
+			str.Format(_T("Set Mouse Hook OK !"));
+			GetDlgItem(IDC_CURSOR)->SetWindowText(str);
+		} /* set hook */
 
 	}
 	

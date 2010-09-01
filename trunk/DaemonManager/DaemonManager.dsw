@@ -3,7 +3,7 @@ Microsoft Developer Studio Workspace File, Format Version 6.00
 
 ###############################################################################
 
-Project: "DaemonManager"=".\DaemonManager.dsp" - Package Owner=<4>
+Project: "DaemonManager"=.\DaemonManager.dsp - Package Owner=<4>
 
 Package=<5>
 {{{
@@ -15,7 +15,31 @@ Package=<4>
 
 ###############################################################################
 
-Project: "QQHideWnd"="..\..\..\Work\AlexLabOnline\QQHideWnd\QQHideWnd.dsp" - Package Owner=<4>
+Project: "MouseHook"=..\MouseHook\MouseHook\MouseHook.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "QQHideWnd"=..\QQHideWnd\QQHideWnd.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hook"=..\MouseHook\HookTest\hook.dsp - Package Owner=<4>
 
 Package=<5>
 {{{
