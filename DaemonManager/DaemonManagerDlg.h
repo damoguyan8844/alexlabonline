@@ -20,7 +20,6 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CDaemonManagerDlg)
 	enum { IDD = IDD_DAEMONMANAGER_DIALOG };
-	CButton	m_btFix;
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
@@ -60,6 +59,7 @@ protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnMoving(UINT fwSide, LPRECT pRect);
 	afx_msg void OnButtonFix();
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
@@ -79,8 +79,8 @@ private:
 	
 	BOOL m_isFix;
 
-	CBitmapButton m_btClose;
-
+	CBitmapButton   m_btClose;
+	CBitmapButton	m_btFix;
 };
 
 //{{AFX_INSERT_LOCATION}}

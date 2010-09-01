@@ -131,6 +131,10 @@ SOURCE=.\StdAfx.h
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
+SOURCE=.\res\AutiHide.bmp
+# End Source File
+# Begin Source File
+
 SOURCE=.\res\AutiHide.ico
 # End Source File
 # Begin Source File
@@ -156,6 +160,10 @@ SOURCE=.\res\DaemonManager.ico
 # Begin Source File
 
 SOURCE=.\res\DaemonManager.rc2
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\FixWnd.bmp
 # End Source File
 # Begin Source File
 
