@@ -46,6 +46,8 @@ protected:
 	HICON m_hIcon;
 	HICON m_hIconFix;
 	HICON m_hIconHide;
+	
+	afx_msg LRESULT OnMyMouseMove(WPARAM, LPARAM);
 
 	// Generated message map functions
 	//{{AFX_MSG(CDaemonManagerDlg)
