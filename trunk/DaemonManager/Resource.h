@@ -13,6 +13,8 @@
 #define IDB_MIN_H                       137
 #define IDI_ICON_FIX                    138
 #define IDI_ICON_HIDE                   139
+#define IDB_BITMAP_HIDE                 140
+#define IDB_BITMAP_FIX                  141
 #define IDC_BUTTON_FIX                  1001
 #define IDC_CURSOR                      1002
 #define IDC_TIMER                       1003
@@ -21,7 +23,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        140
+#define _APS_NEXT_RESOURCE_VALUE        142
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1002
 #define _APS_NEXT_SYMED_VALUE           101

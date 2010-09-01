@@ -58,7 +58,6 @@ void CDaemonManagerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CDaemonManagerDlg)
-	DDX_Control(pDX, IDC_BUTTON_FIX, m_btFix);
 	//}}AFX_DATA_MAP
 }
 
@@ -73,6 +72,7 @@ BEGIN_MESSAGE_MAP(CDaemonManagerDlg, CDialog)
 	ON_WM_CREATE()
 	ON_WM_MOVING()
 	ON_BN_CLICKED(IDC_BUTTON_FIX, OnButtonFix)
+	ON_WM_MOUSEMOVE()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -134,19 +134,20 @@ BOOL CDaemonManagerDlg::OnInitDialog()
 		point.x=x;
 		point.y=0;
 
-		OnNcHitTest(point);
-
+		
 		m_btClose.SubclassDlgItem(IDOK,this);
 		m_btClose.LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_F,IDB_CLOSE_D);
 		m_btClose.Invalidate(true);
 		m_btClose.SizeToContent();
 		
-	
-		m_btFix.SetIcon(m_hIconHide);
+		
+		m_btFix.SubclassDlgItem(IDC_BUTTON_FIX,this);
+		m_btFix.LoadBitmaps(IDB_BITMAP_HIDE,IDB_BITMAP_HIDE,IDB_BITMAP_HIDE,IDB_BITMAP_HIDE);
+		m_btFix.Invalidate(true);
+		m_btFix.SizeToContent();
 
-//		m_btFix.SubclassDlgItem(IDC_BUTTON_FIX,this);
-// 		HICON   hIcon=AfxGetApp()->LoadIcon(IDI_ICON_HIDE);
-// 		m_btFix.SetIcon(hIcon);
+		OnNcHitTest(point);
+
 	}
 	
 
@@ -453,9 +454,6 @@ int CDaemonManagerDlg::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 	//可以在这里读取上次关闭后保存的大小
 
-//	((CBitmapButton *)GetDlgItem(IDOK))->LoadBitmaps(IDB_CLOSE_N,IDB_CLOSE_H,IDB_CLOSE_F,IDB_CLOSE_D);
- //   ((CBitmapButton *)GetDlgItem(IDOK))->Invalidate(false);
-//	((CBitmapButton *)GetDlgItem(IDOK))->SizeToContent();
 	
 	return 0;
 }
@@ -468,10 +466,17 @@ void CDaemonManagerDlg::OnButtonFix()
 
 	if(m_isFix)
 	{
-		m_btFix.SetIcon(m_hIconFix);
+		m_btFix.LoadBitmaps(IDB_BITMAP_FIX,IDB_BITMAP_FIX,IDB_BITMAP_FIX,IDB_BITMAP_FIX);
 	}
 	else
 	{
-		m_btFix.SetIcon(m_hIconHide);
+		m_btFix.LoadBitmaps(IDB_BITMAP_HIDE,IDB_BITMAP_HIDE,IDB_BITMAP_HIDE,IDB_BITMAP_HIDE);
 	}
+	m_btFix.RedrawWindow();
+}
+
+void CDaemonManagerDlg::OnMouseMove(UINT nFlags, CPoint point) 
+{
+	// TODO: Add your message handler code here and/or call default
+	CDialog::OnMouseMove(nFlags, point);
 }

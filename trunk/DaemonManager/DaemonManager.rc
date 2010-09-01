@@ -82,12 +82,12 @@ FONT 8, "MS Sans Serif"
 BEGIN
     CONTROL         "OK",IDOK,"Button",BS_OWNERDRAW | BS_BITMAP | BS_FLAT | 
                     WS_TABSTOP,593,3,18,14
-    PUSHBUTTON      "Cancel",IDCANCEL,592,22,50,14
     LTEXT           "TODO: Place dialog controls here.",IDC_STATIC,47,25,200,
                     8
     CTEXT           "Static",IDC_CURSOR,236,14,75,8
     CTEXT           "Timer Off",IDC_TIMER,169,14,75,8
-    PUSHBUTTON      "Button2",IDC_BUTTON_FIX,47,1,13,14,BS_ICON | BS_FLAT
+    CONTROL         "Fix&Hide",IDC_BUTTON_FIX,"Button",BS_OWNERDRAW | 
+                    BS_BITMAP | BS_FLAT | WS_TABSTOP,47,1,15,14
 END
 
 
@@ -164,6 +164,8 @@ IDB_CLOSE_F             BITMAP  DISCARDABLE     "res\\CloseButton_Focus.bmp"
 IDB_MIN_N               BITMAP  DISCARDABLE     "res\\MinButton_Normal.bmp"
 IDB_MIN_D               BITMAP  DISCARDABLE     "res\\MinButton_Down.bmp"
 IDB_MIN_H               BITMAP  DISCARDABLE     "res\\MinButton_Hover.bmp"
+IDB_BITMAP_HIDE         BITMAP  DISCARDABLE     "res\\AutiHide.bmp"
+IDB_BITMAP_FIX          BITMAP  DISCARDABLE     "res\\FixWnd.bmp"
 #endif    // English (U.S.) resources
 /////////////////////////////////////////////////////////////////////////////
 
