@@ -1,0 +1,513 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\EIM02.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\EIM02.ico"
+IDR_CHATDLG             ICON    DISCARDABLE     "res\\chat.ico"
+IDI_USER_SETTING        ICON    DISCARDABLE     "res\\edit_user.ico"
+IDI_HISTORY             ICON    DISCARDABLE     "res\\history.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 173, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 FreeEIM"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,17,15,20,20
+    LTEXT           "FreeEIM 网络飞鸽传书 v3.58 beta",IDC_STATIC,50,14,116,8,
+                    SS_NOPREFIX
+    DEFPUSHBUTTON   "确定",IDOK,116,99,50,14,WS_GROUP
+    LTEXT           "http://www.freeeim.com/",IDC_STATIC,50,25,116,8
+    EDITTEXT        IDC_EDIT1,7,48,159,42,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+IDD_EIM02_DIALOG DIALOGEX 0, 0, 127, 246
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "FreeEIM"
+MENU IDR_MENU1
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "FreeEIM v3.58",IDC_STATIC,4,235,93,8
+    CONTROL         "",IDC_LOADGIF,"Static",SS_BLACKFRAME,46,77,27,22
+    LTEXT           "正在查找在线用户,请稍侯...",IDC_LOADING,9,117,107,8
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",WS_TABSTOP,0,26,127,
+                    169
+    LTEXT           "在线聊天",IDC_STATIC_OL,19,11,34,8
+    CONTROL         148,IDC_STATIC_GROUP,"Static",SS_BITMAP,6,8,11,11
+    CONTROL         149,IDC_STATIC_LINE,"Static",SS_BITMAP,0,22,125,1
+    CONTROL         "",IDC_EXPLORER1,"{8856F961-340A-11D0-A96B-00C04FD705A2}",
+                    WS_TABSTOP,115,6,6,6
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 269, 246
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_BORDER | 
+                    WS_VSCROLL,5,5,257,118,WS_EX_STATICEDGE
+    PUSHBUTTON      "关闭(&C)",IDC_BUTTON1,158,223,50,14
+    PUSHBUTTON      "发送(&S)",IDC_BUTTON2,218,223,50,14
+    PUSHBUTTON      "发送文件(&F)",IDC_BUTTON_FILE,81,223,50,14
+    LTEXT           ".",IDC_STATIC_PROMPT,5,231,15,8
+    PUSHBUTTON      "语音对话(&V)",IDC_VOICECHAT,24,223,50,14
+    PUSHBUTTON      "抖",IDC_SHAKE,137,223,15,14
+    CONTROL         "",IDC_RICHEDIT2,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,5,139,257,78
+    LTEXT           "Static",IDC_STATIC_FACE,5,123,258,16
+END
+
+IDD_USER_SETTING DIALOG DISCARDABLE  0, 0, 198, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "显示名称"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,43,103,50,14
+    PUSHBUTTON      "取消",IDCANCEL,118,103,50,14
+    ICON            IDI_USER_SETTING,IDC_STATIC,16,16,21,21
+    EDITTEXT        IDC_EDIT1,88,21,91,12,ES_AUTOHSCROLL
+    LTEXT           "显示名称：",IDC_STATIC,42,23,42,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,16,49,21,21
+    COMBOBOX        IDC_COMBO1,88,53,91,110,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "所在分组：",IDC_STATIC,42,56,42,8
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 190, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "个人属性"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭(&C)",IDOK,133,81,50,14
+    ICON            IDI_USER_SETTING,IDC_STATIC,19,15,20,20
+    LTEXT           "名称:",IDC_STATIC1,52,16,24,8
+    LTEXT           "计算机名:",IDC_STATIC2,52,30,39,8
+    LTEXT           "IP地址:",IDC_STATIC3,52,45,31,8
+    LTEXT           "MAC地址:",IDC_STATIC,52,60,35,8
+    EDITTEXT        IDC_EDIT1,91,15,92,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT2,92,30,91,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT3,92,46,91,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    EDITTEXT        IDC_EDIT4,92,60,91,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+END
+
+IDD_SENDFILE_DIALOG DIALOGEX 0, 0, 120, 110
+STYLE DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_STATICEDGE
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,86,24,21,11
+    ICON            IDR_MAINFRAME,IDC_STATIC_ICON,3,2,20,20
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,
+                    27,15,57,7
+    LTEXT           "0.00%",IDC_STATIC_PERCENT,88,15,23,8
+    LTEXT           "发送已完成！",IDC_STATIC_COMPLETED,28,15,49,8
+    LTEXT           "Status",IDC_STATIC_PROMPT,5,26,77,8
+    EDITTEXT        IDC_STATIC_FILE_NAME,27,3,85,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "Button1",IDC_BUTTON1,27,69,64,16
+END
+
+IDD_FILERECV_DIALOG DIALOGEX 0, 0, 120, 106
+STYLE DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_STATICEDGE
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC_ICON,3,2,20,20
+    EDITTEXT        IDC_STATIC_FILE_NAME,27,3,85,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,
+                    27,15,57,7
+    LTEXT           "0.00%",IDC_STATIC_PERCENT,88,15,23,8
+    PUSHBUTTON      "取消",IDCANCEL,86,24,21,11
+    LTEXT           "Static",IDC_STATIC_PROMPT,5,26,77,8
+    LTEXT           "接收已完成！",IDC_STATIC_COMPLETED,28,15,48,8
+    PUSHBUTTON      "另存为",IDC_BUTTON_SAVE_AS,32,19,28,11
+    PUSHBUTTON      "拒收",IDC_BUTTON_DENY,74,19,34,11
+END
+
+IDD_VOICE1 DIALOG DISCARDABLE  0, 0, 264, 28
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "不接听(&N)",IDC_DENY,204,6,50,14
+    PUSHBUTTON      "接听(&A)",IDC_ACCEPT,148,6,50,14
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    45,10,96,7
+    LTEXT           "语音对话",IDC_STATIC8,6,10,36,8
+    LTEXT           "",IDC_STATIC6,47,1,80,8
+END
+
+IDD_VOICE2 DIALOG DISCARDABLE  0, 0, 264, 26
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "挂机(&N)",IDC_CANCEL,204,6,50,14
+    LTEXT           "语音对话    正在等待对方接受，请稍候",IDC_STATIC6,7,10,
+                    145,8
+    LTEXT           "",IDC_STATIC8,154,10,41,8
+END
+
+IDD_VIEWHISTORY DIALOGEX 0, 0, 288, 260
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查看历史记录"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "提示: 可选择其他""用户名""与其他""日期""查看记录。",
+                    IDC_STATIC,7,243,184,10
+    LTEXT           "用户名：",IDC_STATIC,168,8,32,8
+    LTEXT           "日期：",IDC_STATIC,168,26,28,8
+    LTEXT           "",IDC_STATIC,166,20,115,1,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC,7,46,274,1,0,WS_EX_STATICEDGE
+    COMBOBOX        IDC_COMBO1,203,5,72,196,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,203,22,72,14
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,7,53,274,183
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,5,0,1
+ PRODUCTVERSION 3,5,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "FreeEIM\0"
+            VALUE "CompanyName", "FEIM Studios\0"
+            VALUE "FileDescription", "A Free Enterprise Instant Messenger\0"
+            VALUE "FileVersion", "3, 5, 0, 1\0"
+            VALUE "InternalName", "freeeim\0"
+            VALUE "LegalCopyright", "Copyright (C) 2010 FEIM Studios\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "freeeim.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "FreeEIM\0"
+            VALUE "ProductVersion", "3, 5, 0, 1\0"
+            VALUE "SpecialBuild", "Simple Chinese\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        VERTGUIDE, 50
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+        HORZGUIDE, 22
+        HORZGUIDE, 33
+    END
+
+    IDD_EIM02_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_USER_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        VERTGUIDE, 52
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_SENDFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_FILERECV_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_VIEWHISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        BOTTOMMARGIN, 253
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "刷新(&F)",                    IDM_RELESH
+        MENUITEM "群发(&A)",                    IDM_SENDALL
+        MENUITEM "查看记录(&V)",                IDM_VIEWHISTORY
+        MENUITEM "退出(&Q)",                    IDM_QUITEIM
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        MENUITEM "个人设置(&N)",                IDM_SHOWNAME
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 FreeEIM(&A)",            IDM_ABOUTEIM
+    END
+END
+
+IDR_SYSTEMTRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "还原",                        ID_TRAYRESTORE
+        MENUITEM "退出",                        ID_TRAYQUIT
+    END
+END
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP "MENU"
+    BEGIN
+        MENUITEM "复制(&C)",                    IDM_REDIT_COPY
+        MENUITEM "全选(&A)",                    IDM_REDIT_SELECTALL
+        MENUITEM "粘贴(&P)",                    IDM_REDIT_PASTE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIFLOADING          GIF     DISCARDABLE     "res\\i_animated_loading_32_2.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\usericon.bmp"
+IDB_LIST                BITMAP  DISCARDABLE     "res\\List.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\MAINFRAME_CONTACT.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\MAINFRAME_LINE.bmp"
+IDR_TOOLBAR_FACE        BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "res\\Toolbar256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "res\\default1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_FACE TOOLBAR DISCARDABLE  17, 17
+BEGIN
+    BUTTON      ID_BUTTON32794
+    BUTTON      ID_BUTTON32795
+    BUTTON      ID_BUTTON32796
+    BUTTON      ID_BUTTON32797
+    BUTTON      ID_BUTTON32798
+    BUTTON      ID_BUTTON32799
+    BUTTON      ID_BUTTON32800
+    BUTTON      ID_BUTTON32801
+    BUTTON      ID_BUTTON32802
+    BUTTON      ID_BUTTON32803
+    BUTTON      ID_BUTTON32804
+    BUTTON      ID_BUTTON32805
+    BUTTON      ID_BUTTON32806
+    BUTTON      ID_BUTTON32807
+    BUTTON      ID_BUTTON32808
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EIM02_DIALOG DLGINIT
+BEGIN
+    IDC_EXPLORER1, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x00ee, 0x0000, 0x00ee, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 FreeEIM"
+    IDS_STRING_TITLE        "FreeEIM"
+    IDS_STRING_DESCRIPTION  "网络飞鸽传书是一款很实用的局域网聊天工具，可以发送文字、文件、文件夹，语言对话等。软件是开源软件，开发者可以自行定制更适合自己的软件。"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\EIM02.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

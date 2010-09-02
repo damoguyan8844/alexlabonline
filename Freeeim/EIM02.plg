@@ -1,0 +1,143 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EIM02 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/EIM02.res" /d "NDEBUG" /d "_AFXDLL" "G:\Freeeim\EIM02.rc"" 
+Creating temporary file "D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/EIM02.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"G:\Freeeim\EIM02.cpp"
+"G:\Freeeim\EIM02Dlg.cpp"
+"G:\Freeeim\EIM_ViewHistory.cpp"
+"G:\Freeeim\EIMChatingWaiter.cpp"
+"G:\Freeeim\em\EM_FileReceiving.cpp"
+"G:\Freeeim\em\EM_FileSendingDlg.cpp"
+"G:\Freeeim\em\EM_GroupInfo.cpp"
+"G:\Freeeim\EM_MsgDlg.cpp"
+"G:\Freeeim\EM_RecvChat.cpp"
+"G:\Freeeim\EM_SendChat.cpp"
+"G:\Freeeim\em\EM_UserInfo.cpp"
+"G:\Freeeim\em\EM_UserLogin.cpp"
+"G:\Freeeim\EM_UserProperty.cpp"
+"G:\Freeeim\em\EM_UserTree.cpp"
+"G:\Freeeim\em\EMRichEdit.cpp"
+"G:\Freeeim\freeeim_config.cpp"
+"G:\Freeeim\freeeim_history.cpp"
+"G:\Freeeim\freeeim_message_logic.cpp"
+"G:\Freeeim\freeeim_package.cpp"
+"G:\Freeeim\freeeim_user_logic.cpp"
+"G:\Freeeim\thirdpartclass\GetHardSoftInfo.cpp"
+"G:\Freeeim\ImageDataObject.cpp"
+"G:\Freeeim\thirdpartclass\INI.cpp"
+"G:\Freeeim\MSGReceiver.cpp"
+"G:\Freeeim\thirdpartclass\PictureEx.cpp"
+"G:\Freeeim\em\stdemdef.cpp"
+"G:\Freeeim\thirdpartclass\SystemTray.cpp"
+"G:\Freeeim\UserSettingDlg.cpp"
+"G:\Freeeim\WaveIn.cpp"
+"G:\Freeeim\WaveOut.cpp"
+"G:\Freeeim\webbrowser2.cpp"
+"G:\Freeeim\thirdpartclass\WinAppEx.cpp"
+"G:\Freeeim\XEIM_Database.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D3.tmp" 
+Creating temporary file "D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/EIM02.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"G:\Freeeim\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D4.tmp" 
+Creating temporary file "D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D5.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/freeeim.pdb" /machine:I386 /out:"Release/freeeim.exe" 
+.\Release\EIM02.obj
+.\Release\EIM02Dlg.obj
+.\Release\EIM_ViewHistory.obj
+.\Release\EIMChatingWaiter.obj
+.\Release\EM_FileReceiving.obj
+.\Release\EM_FileSendingDlg.obj
+.\Release\EM_GroupInfo.obj
+.\Release\EM_MsgDlg.obj
+.\Release\EM_RecvChat.obj
+.\Release\EM_SendChat.obj
+.\Release\EM_UserInfo.obj
+.\Release\EM_UserLogin.obj
+.\Release\EM_UserProperty.obj
+.\Release\EM_UserTree.obj
+.\Release\EMRichEdit.obj
+.\Release\freeeim_config.obj
+.\Release\freeeim_history.obj
+.\Release\freeeim_message_logic.obj
+.\Release\freeeim_package.obj
+.\Release\freeeim_user_logic.obj
+.\Release\GetHardSoftInfo.obj
+.\Release\ImageDataObject.obj
+.\Release\INI.obj
+.\Release\MSGReceiver.obj
+.\Release\PictureEx.obj
+.\Release\StdAfx.obj
+.\Release\stdemdef.obj
+.\Release\SystemTray.obj
+.\Release\UserSettingDlg.obj
+.\Release\WaveIn.obj
+.\Release\WaveOut.obj
+.\Release\webbrowser2.obj
+.\Release\WinAppEx.obj
+.\Release\XEIM_Database.obj
+.\Release\EIM02.res
+]
+Creating command line "link.exe @D:\DOCUME~1\HWZHAN~1.THC\LOCALS~1\Temp\RSP82D5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+EIM02.cpp
+EIM02Dlg.cpp
+EIM_ViewHistory.cpp
+EIMChatingWaiter.cpp
+EM_FileReceiving.cpp
+EM_FileSendingDlg.cpp
+EM_GroupInfo.cpp
+EM_MsgDlg.cpp
+EM_RecvChat.cpp
+EM_SendChat.cpp
+EM_UserInfo.cpp
+EM_UserLogin.cpp
+EM_UserProperty.cpp
+EM_UserTree.cpp
+EMRichEdit.cpp
+freeeim_config.cpp
+freeeim_history.cpp
+freeeim_message_logic.cpp
+freeeim_package.cpp
+freeeim_user_logic.cpp
+Generating Code...
+Compiling...
+GetHardSoftInfo.cpp
+ImageDataObject.cpp
+INI.cpp
+MSGReceiver.cpp
+PictureEx.cpp
+stdemdef.cpp
+SystemTray.cpp
+UserSettingDlg.cpp
+WaveIn.cpp
+WaveOut.cpp
+webbrowser2.cpp
+WinAppEx.cpp
+XEIM_Database.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+freeeim.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
