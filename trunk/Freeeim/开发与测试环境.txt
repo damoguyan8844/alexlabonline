@@ -1,0 +1,19 @@
+【开发环境】
+
+- 系统:	Windows XP sp2
+- CPU:	P4 2.4
+- 内存:	512MB
+- 开发工具: Microsoft Visual C++ 6.0
+- SDK:	Windows 2003 SDK(February 2001 Edition)
+
+【测试环境】
+
+- 系统:	Windows XP sp2
+- CPU:	P4 2.4
+- 内存:	512MB
+- 内存检测: Compuware BoundsChecker
+- 文件发送模块检测: Araxis Merge
+
+【测试目的】
+- 文件传输完整性/可靠性
+- 文件传输速度

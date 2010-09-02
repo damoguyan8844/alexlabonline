@@ -1,0 +1,47 @@
+2008-2-27
+写 FreeEIM 时，在判断新用户是否本机用户时，犯了一个语法问题：
+用到的函数：
+1. BOOL IsMyself(EM_USERINFO &ui);
+如果新用户是本机时，返回TRUE，当新用户不是本机时，返回FALSE。
+2. BOOL IsNewUser(EM_USERINFO &ui);
+如果新用户已存在返回FALSE，新用户不存在返回TRUE。
+
+然后在函数BOOL AddNewUser(EM_USERINFO &ui)；中判断错了，我开始时这样写的：
+BOOL AddNewUser(EM_USERINFO &ui)
+{
+        // 不是新用户或是本机用户就返回
+        if (!IsNewUser(ui) && IsMyself(ui))
+                return FALSE;
+	else
+                AddUserToList();//虚代码
+}
+
+但代码不能达到预期的效果，测试了一下，发现问题出在 if 里的 && 上。
+这是逻辑与运算符，逻辑‘与’运算符的用法如下：
+1 && 1 = 1
+1 && 0 = 0
+当 IsNewUser 返回TRUE，IsMyself 返回FALSE，才执行后面的 return 语句。
+
+研究了一下，我应该用 || 逻辑‘或’运算符，代码改成：
+BOOL AddNewUser(EM_USERINFO &ui)
+{
+        // 不是新用户或是本机用户就返回
+        if (!IsNewUser(ui) || IsMyself(ui))
+                return FALSE;
+	else
+                AddUserToList();//虚代码
+}
+
+这样就能达到预期的效果了。
+
+总结：
+逻辑运算符使用简单，但写代码是常常会犯逻辑错误。
+写逻辑算法是，最好先把预期的返回值写出来然后这样对比一下：
+1 && 1 = 1
+1 && 0 = 0
+1 || 1 = 1
+1 || 0 = 0
+这样，可能就知道那里逻辑有错误。
+
+注：
+在网友荆人的建议下，我们决定 FreeEIM 在登录后
