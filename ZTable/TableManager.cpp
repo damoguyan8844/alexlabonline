@@ -251,8 +251,7 @@ STDMETHODIMP CTableManager::LoadDataOnCondition(BSTR tableName,BSTR whereState, 
 							break;
 						}
 						
-						tmpName.ToLower();
-						if(tmpName=="id")
+						if(stricmp(OLE2A(tmpName),"ID")==0)
 						{
 							piRow->put_ID(q.getIntField(mapFieldIndex[OLE2A(tmpName)],-1));
 						}
