@@ -24,7 +24,8 @@ library ZTableLib
 	enum{
 		DATA_INT				=1,
 		DATA_DOUBLE				=2,
-		DATA_STRING				=3
+		DATA_STRING				=3,
+		DATA_BIN				=4
 	} DATA_TYPE;
 
 	[
@@ -47,6 +48,8 @@ library ZTableLib
 		[id(9), helpstring("method RemoveColumn")] HRESULT RemoveTableColumn([in] BSTR tableName,[in] BSTR columnName);
 
 		[id(10), helpstring("method LoadDataOnCondition")] HRESULT LoadDataOnCondition([in] BSTR tableName,[in] BSTR whereState, [out,retval] ITableRows ** pVal);
+		[id(11), helpstring("method ReadBin")] HRESULT ReadFile([in] BSTR fileName,[out,retval] BSTR * pval);
+		[id(12), helpstring("method WriteBin")] HRESULT WriteFile([in] BSTR fileName,[in] BSTR binVal);
 	};
 	[
 		object,
@@ -142,6 +145,8 @@ library ZTableLib
 		[id(601), helpstring("method Update")] HRESULT Update([in, defaultvalue(0)] long TransactionLevel);
 		[id(602), helpstring("method Add")] HRESULT Add([in] BSTR tableName, [out, retval] long *NewId);
 		[id(603), helpstring("method Delete")] HRESULT Delete([in, defaultvalue(0)] long TransactionLevel);
+		[propget, id(604), helpstring("property BinField")] HRESULT BinField([in] BSTR columnName, [out, retval] BSTR *pVal);
+		[propput, id(604), helpstring("property BinField")] HRESULT BinField([in] BSTR columnName, [in] BSTR newVal);
 
 	};
 	[

@@ -51,6 +51,8 @@ END_XML_CONTENT_MAP()
 
 // ITableRow
 public:
+	STDMETHOD(get_BinField)(/*[in]*/BSTR columnName, /*[out, retval]*/ BSTR *pVal);
+	STDMETHOD(put_BinField)(/*[in]*/BSTR columnName, /*[in]*/ BSTR newVal);
 	STDMETHOD(get_TableName)(/*[out, retval]*/ BSTR *pVal);
 	STDMETHOD(put_TableName)(/*[in]*/ BSTR newVal);
 	STDMETHOD(ReBuildValue)(ITableColumns *pCols);
@@ -78,6 +80,8 @@ public:
 	
 	HRESULT IPersistVarXML_SaveContent (ISAXContentHandler* pISAXContentHandler);
 	unsigned m_bRequiresSave:1;
+
+	HRESULT reportError(HRESULT hr, const wchar_t * fmt, ...);
 
 private:
 	long m_ID;

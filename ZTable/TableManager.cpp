@@ -244,6 +244,11 @@ STDMETHODIMP CTableManager::LoadDataOnCondition(BSTR tableName,BSTR whereState, 
 						case DATA_STRING:
 							piRow->put_StrField(tmpName,CComBSTR(q.getStringField(mapFieldIndex[OLE2A(tmpName)], "")));
 							break;
+						case DATA_BIN:
+							CppSQLite3Binary blob;
+							blob.setEncoded(reinterpret_cast<const unsigned char *>(q.fieldValue(mapFieldIndex[OLE2A(tmpName)])));
+							piRow->put_BinField(tmpName,CComBSTR(reinterpret_cast<const char *>(blob.getBinary())));
+							break;
 						}
 						
 						tmpName.ToLower();
@@ -262,8 +267,118 @@ STDMETHODIMP CTableManager::LoadDataOnCondition(BSTR tableName,BSTR whereState, 
 			pRows->Add(piRow);
 			q.nextRow();
 		}
+
+		q.finalize();
+		
 		pRows.CopyTo(pVal);
 	}
 	_CATCH_XXX()
+	return S_OK;
+}
+
+
+HRESULT CTableManager::reportError(HRESULT hr, const wchar_t * fmt, ...)
+{
+	va_list args;
+	va_start(args, fmt);
+	
+	wchar_t temp[300];
+	memset(temp, 0, sizeof(temp));
+	_vsnwprintf(temp, sizeof(temp)/sizeof(wchar_t)-1, fmt, args);
+	if (hr == E_OUTOFMEMORY) {
+		MEMORYSTATUS stat;
+		GlobalMemoryStatus (&stat);
+		wchar_t buf[100];
+		swprintf(buf, L"[vm: %d/%d]", stat.dwAvailVirtual, stat.dwTotalVirtual);
+		wcscat(temp, buf);
+	}
+	AtlReportError(GetObjectCLSID(), temp, GUID_NULL, hr);
+	
+	va_end(args);
+	
+	return hr;
+}
+
+STDMETHODIMP CTableManager::ReadFile(BSTR fileName, BSTR *pVal)
+{
+	// TODO: Add your implementation code here
+
+	unsigned long nInFile = ::SysStringLen(fileName);
+	if (nInFile <= 8)
+		return S_OK;
+	char * pInFile = new char[nInFile+1];
+	if (pInFile == 0)
+		return reportError(E_OUTOFMEMORY, L"ZTable::ReadFile() - InFile - new %d bytes failed", nInFile+1);
+	Destroyer dInFile(pInFile);
+	
+	::ZeroMemory(pInFile, sizeof(pInFile));
+	nInFile = ::WideCharToMultiByte(CP_ACP, 0, fileName, -1, pInFile, nInFile+1, 0, 0);
+	if (nInFile > 0) nInFile--;
+
+	FILE *fp=0;
+	long filesize = 0;
+	char * ffile=0;
+	fp = fopen(pInFile, "rb");
+	if(fp != NULL)
+	{
+		fseek(fp, 0, SEEK_END);
+		filesize = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
+		ffile = new char[filesize+1];
+
+		if (ffile == 0)
+			return reportError(E_OUTOFMEMORY, L"ZTable::ReadFile() - new %d bytes failed", filesize+1);
+		Destroyer ddest(ffile);
+
+		size_t sz = fread(ffile, sizeof(char), filesize+1, fp);		
+		fclose(fp);
+
+		CComBSTR(ffile).CopyTo(pVal);
+		if (*pVal == 0)
+			return reportError(E_OUTOFMEMORY, L"ZTable::ReadFile() - A2WBSTR() returns 0 for %d bytes string", filesize);
+
+	}
+
+	return S_OK;
+}
+
+STDMETHODIMP CTableManager::WriteFile(BSTR fileName, BSTR binVal)
+{
+	// TODO: Add your implementation code here
+
+	unsigned long nInFile = ::SysStringLen(fileName);
+	if (nInFile <= 8)
+		return S_OK;
+	char * pInFile = new char[nInFile+1];
+	if (pInFile == 0)
+		return reportError(E_OUTOFMEMORY, L"ZTable::WriteFile() - InFile - new %d bytes failed", nInFile+1);
+	Destroyer dInFile(pInFile);
+	
+	::ZeroMemory(pInFile, sizeof(pInFile));
+	nInFile = ::WideCharToMultiByte(CP_ACP, 0, fileName, -1, pInFile, nInFile+1, 0, 0);
+	if (nInFile > 0) nInFile--;
+	
+
+	unsigned long nInContent = ::SysStringLen(binVal);
+	if (nInContent <= 8)
+		return S_OK;
+	char * pInContent = new char[nInContent+1];
+	if (pInContent == 0)
+		return reportError(E_OUTOFMEMORY, L"ZTable::WriteFile() - InContent - new %d bytes failed", nInContent+1);
+	Destroyer dInContent(pInContent);
+	
+	::ZeroMemory(pInContent, sizeof(pInContent));
+	nInContent = ::WideCharToMultiByte(CP_ACP, 0, binVal, -1, pInContent, nInContent+1, 0, 0);
+	if (nInContent > 0) nInContent--;
+	
+
+	FILE *fp2;
+	fp2 = fopen(pInFile, "wb");
+	if(fp2 != NULL)
+	{
+		size_t ret = fwrite(pInContent, sizeof(char), nInContent, fp2);
+		fclose(fp2);
+	}
+
 	return S_OK;
 }

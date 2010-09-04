@@ -123,6 +123,29 @@ STDMETHODIMP CTableRow::put_ID(long newVal)
 	return S_OK;
 }
 
+
+HRESULT CTableRow::reportError(HRESULT hr, const wchar_t * fmt, ...)
+{
+	va_list args;
+	va_start(args, fmt);
+	
+	wchar_t temp[300];
+	memset(temp, 0, sizeof(temp));
+	_vsnwprintf(temp, sizeof(temp)/sizeof(wchar_t)-1, fmt, args);
+	if (hr == E_OUTOFMEMORY) {
+		MEMORYSTATUS stat;
+		GlobalMemoryStatus (&stat);
+		wchar_t buf[100];
+		swprintf(buf, L"[vm: %d/%d]", stat.dwAvailVirtual, stat.dwTotalVirtual);
+		wcscat(temp, buf);
+	}
+	AtlReportError(GetObjectCLSID(), temp, GUID_NULL, hr);
+	
+	va_end(args);
+	
+	return hr;
+}
+
 STDMETHODIMP CTableRow::get_Value(ITableColumns *piColumns, BSTR *pVal)
 {
 	// TODO: Add your implementation code here
@@ -137,7 +160,7 @@ STDMETHODIMP CTableRow::get_Value(ITableColumns *piColumns, BSTR *pVal)
 		double	dataDbl=0.0;
 		long	dataInt=0;
 
-		char datatmp[1024];
+		char datatmp[102400];
 		char split=' ';
 		std::string strRet;
 
@@ -166,6 +189,23 @@ STDMETHODIMP CTableRow::get_Value(ITableColumns *piColumns, BSTR *pVal)
 					this->get_StrField(tmpName,&dataStr);
 					sprintf(datatmp,"%c%s",split,OLE2A(dataStr));
 					break;
+				case DATA_BIN:
+					this->get_BinField(tmpName,&dataStr);
+
+					unsigned long nInFile = ::SysStringLen(dataStr);
+					if (nInFile <= 8)
+						return S_OK;
+					char * pInFile = new char[nInFile+1];
+					if (pInFile == 0)
+						return reportError(E_OUTOFMEMORY, L"ZTable::get_Value() - InFile - new %d bytes failed", nInFile+1);
+					Destroyer dInFile(pInFile);
+					
+					::ZeroMemory(pInFile, sizeof(pInFile));
+					nInFile = ::WideCharToMultiByte(CP_ACP, 0, dataStr, -1, pInFile, nInFile+1, 0, 0);
+					if (nInFile > 0) nInFile--;
+
+					sprintf(datatmp,"%c%s",split,pInFile);	
+					break;
 				}
 				split=',';
 
@@ -188,12 +228,26 @@ STDMETHODIMP CTableRow::put_Value(ITableColumns *piColumns,BSTR newVal)
 {
 	// TODO: Add your implementation code here
 	if(piColumns==0) return S_OK;
-		try{	
-		USES_CONVERSION;
+	try{	
+		//USES_CONVERSION;
 
 		m_mapValues.clear();
 		m_bstrValue=newVal;
-		std::string  newStr=OLE2A(newVal);
+
+		unsigned long nInFile = ::SysStringLen(newVal);
+		if (nInFile <= 8)
+			return S_OK;
+		char * pInFile = new char[nInFile+1];
+		if (pInFile == 0)
+			return reportError(E_OUTOFMEMORY, L"ZTable::put_Value() - InFile - new %d bytes failed", nInFile+1);
+		Destroyer dInFile(pInFile);
+				
+		
+		::ZeroMemory(pInFile, sizeof(pInFile));
+		nInFile = ::WideCharToMultiByte(CP_ACP, 0, newVal, -1, pInFile, nInFile+1, 0, 0);
+		if (nInFile > 0) nInFile--;
+
+		std::string  newStr=pInFile;
 
 		double	dataDbl=0.0;
 		long	dataInt=0;
@@ -236,6 +290,9 @@ STDMETHODIMP CTableRow::put_Value(ITableColumns *piColumns,BSTR newVal)
 					break;
 				case DATA_STRING:
 					this->put_StrField(tmpName,CComBSTR(ptoken));
+					break;
+				case DATA_BIN:
+					this->put_BinField(tmpName,CComBSTR(ptoken));
 					break;
 				}
 			}
@@ -292,7 +349,7 @@ STDMETHODIMP CTableRow::Add(BSTR tableName, long *NewId)
 		CComBSTR colName;
 		DATA_TYPE dataType=DATA_INT;
 		
-		char tmpValue[1024];
+		char tmpValue[102400];
 
 		for(long index=1;index<=count;index++)
 		{
@@ -326,6 +383,23 @@ STDMETHODIMP CTableRow::Add(BSTR tableName, long *NewId)
 					case DATA_STRING:
 						this->get_StrField(colName, &tmpBSTR);
 						sprintf(tmpValue,"'%s'",OLE2A(tmpBSTR));
+						break;
+					case DATA_BIN:
+						{
+							this->get_BinField(colName, &tmpBSTR);
+
+							unsigned long nInFile = ::SysStringLen(tmpBSTR);
+							if (nInFile <= 8)
+								return S_OK;
+							char * pInFile = new char[nInFile+1];
+							if (pInFile == 0)
+								return reportError(E_OUTOFMEMORY, L"ZTable::get_Value() - InFile - new %d bytes failed", nInFile+1);
+							Destroyer dInFile(pInFile);		
+
+							CppSQLite3Binary blob;			
+							blob.setBinary(reinterpret_cast<unsigned char *>(pInFile),nInFile);
+							sprintf(tmpValue,"%Q", blob.getEncoded());
+						}
 						break;
 					default:
 						LOG_ERROR("Undefined Type %d",dataType);
@@ -423,6 +497,23 @@ STDMETHODIMP CTableRow::Update(long TransactionLevel = 0)
 						this->get_StrField(colName, &tmpBSTR);
 						sprintf(tmpValue,"'%s'",OLE2A(tmpBSTR));
 						break;
+					case DATA_BIN:
+						{
+							this->get_BinField(colName, &tmpBSTR);
+							
+							unsigned long nInFile = ::SysStringLen(tmpBSTR);
+							if (nInFile <= 8)
+								return S_OK;
+							char * pInFile = new char[nInFile+1];
+							if (pInFile == 0)
+								return reportError(E_OUTOFMEMORY, L"ZTable::Update() - InFile - new %d bytes failed", nInFile+1);
+							Destroyer dInFile(pInFile);		
+							
+							CppSQLite3Binary blob;			
+							blob.setBinary(reinterpret_cast<const unsigned char *>(pInFile), nInFile);
+							sprintf(tmpValue,"%Q", blob.getEncoded());
+						}
+						break;
 					default:
 						LOG_ERROR("Undefined Type %d",dataType);
 					}
@@ -458,3 +549,25 @@ STDMETHODIMP  CTableRow::Delete(long TransactionLevel = 0)
 	return S_OK;
 }
 
+
+STDMETHODIMP CTableRow::get_BinField(BSTR columnName, BSTR *pVal)
+{
+	// TODO: Add your implementation code here
+
+	*pVal=0;
+	USES_CONVERSION;
+
+	std::map<std::string,_variant_t,KeyComp>::iterator iter=m_mapValues.find(OLE2A(columnName));
+	if(iter!=m_mapValues.end())
+		*pVal=CComBSTR(iter->second.bstrVal).Detach();
+
+	return S_OK;
+}
+
+STDMETHODIMP CTableRow::put_BinField(BSTR columnName, BSTR newVal)
+{
+	// TODO: Add your implementation code here
+	USES_CONVERSION;
+	m_mapValues[OLE2A(columnName)]=newVal;
+	return S_OK;
+}
