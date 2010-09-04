@@ -49,6 +49,8 @@ END_XML_CONTENT_MAP()
 
 // ITableManager
 public:
+	STDMETHOD(WriteFile)(/*[in]*/ BSTR fileName,/*[in]*/ BSTR binVal);
+	STDMETHOD(ReadFile)(/*[in]*/ BSTR fileName,/*[out,retval]*/ BSTR * pval);
 	STDMETHOD(LoadDataOnCondition)(/*[in]*/ BSTR tableName,/*[in]*/ BSTR  whereState, /*[out]*/ ITableRows ** pVal);
 
 	STDMETHOD(RemoveTableColumn)(/*[in]*/ BSTR tableName,/*[in]*/ BSTR columnName);
@@ -66,6 +68,9 @@ public:
 	STDMETHOD(SaveXML)(/*[out,retval]*/ BSTR * xml);
 	HRESULT IPersistVarXML_SaveContent (ISAXContentHandler* pISAXContentHandler);
 	unsigned m_bRequiresSave:1;
+
+	
+	HRESULT reportError(HRESULT hr, const wchar_t * fmt, ...);
 
 private:
 	CComBSTR m_bstrDBFile;
