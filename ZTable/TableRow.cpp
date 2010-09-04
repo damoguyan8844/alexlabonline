@@ -365,8 +365,8 @@ STDMETHODIMP CTableRow::Add(BSTR tableName, long *NewId)
 				long tmpLong=0;
 				double tmpDbl=0.0;
 				CComBSTR tmpBSTR;
-
-				if(colName!=L"id") 
+				
+				if(stricmp(OLE2A(colName),"ID")!=0) 
 				{
 					tmpValue[0]='\0';
 					
@@ -389,16 +389,19 @@ STDMETHODIMP CTableRow::Add(BSTR tableName, long *NewId)
 							this->get_BinField(colName, &tmpBSTR);
 
 							unsigned long nInFile = ::SysStringLen(tmpBSTR);
-							if (nInFile <= 8)
-								return S_OK;
 							char * pInFile = new char[nInFile+1];
 							if (pInFile == 0)
 								return reportError(E_OUTOFMEMORY, L"ZTable::get_Value() - InFile - new %d bytes failed", nInFile+1);
 							Destroyer dInFile(pInFile);		
 
+							::ZeroMemory(pInFile, sizeof(pInFile));
+							nInFile = ::WideCharToMultiByte(CP_ACP, 0, tmpBSTR, -1, pInFile, nInFile+1, 0, 0);
+							if (nInFile > 0) nInFile--;
+
 							CppSQLite3Binary blob;			
 							blob.setBinary(reinterpret_cast<unsigned char *>(pInFile),nInFile);
-							sprintf(tmpValue,"%Q", blob.getEncoded());
+	
+							sprintf(tmpValue," '%s' ", blob.getEncoded());
 						}
 						break;
 					default:
@@ -473,13 +476,12 @@ STDMETHODIMP CTableRow::Update(long TransactionLevel = 0)
 			{
 				piCol->get_Name(&colName);
 				piCol->get_Type(&dataType);
-				colName.ToLower();
 				
 				long tmpLong=0;
 				double tmpDbl=0.0;
 				CComBSTR tmpBSTR;
 				
-				if(colName!=L"id") 
+				if(stricmp(OLE2A(colName),"ID")!=0) 
 				{
 					tmpValue[0]='\0';
 					
@@ -502,16 +504,18 @@ STDMETHODIMP CTableRow::Update(long TransactionLevel = 0)
 							this->get_BinField(colName, &tmpBSTR);
 							
 							unsigned long nInFile = ::SysStringLen(tmpBSTR);
-							if (nInFile <= 8)
-								return S_OK;
 							char * pInFile = new char[nInFile+1];
 							if (pInFile == 0)
 								return reportError(E_OUTOFMEMORY, L"ZTable::Update() - InFile - new %d bytes failed", nInFile+1);
 							Destroyer dInFile(pInFile);		
 							
+							::ZeroMemory(pInFile, sizeof(pInFile));
+							nInFile = ::WideCharToMultiByte(CP_ACP, 0, tmpBSTR, -1, pInFile, nInFile+1, 0, 0);
+							if (nInFile > 0) nInFile--;
+
 							CppSQLite3Binary blob;			
 							blob.setBinary(reinterpret_cast<const unsigned char *>(pInFile), nInFile);
-							sprintf(tmpValue,"%Q", blob.getEncoded());
+							sprintf(tmpValue," '%s' ", blob.getEncoded());
 						}
 						break;
 					default:
