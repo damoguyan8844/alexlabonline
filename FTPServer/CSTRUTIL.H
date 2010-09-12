@@ -1,0 +1,12 @@
+BOOL WORDINFILE2CSL(char filename[255],CStringList* CSL);
+BOOL NormalizeSentence(char *str);
+void FILE2CSLNLIST(char* finame,CStringList* CSL,LPVOID plist);
+void FILE2CSL(char* finame,CStringList* CSL);
+void CSL2LIST(CStringList* CSL,LPVOID plist);
+void CSL2FILE(CStringList* CSL,char* finame);
+BOOL removenontext(char* str,long size);
+BOOL GETITEMFROMCS(int index,CString* CSTARGET,CString* CSITEM,char sep);
+BOOL GETITEMSFROMCS(CString* CSTARGET,CStringList* CSITEM,char sep);
+void LIST2CSL(LPVOID plist,CStringList* CSL);
+BOOL quickGETITEMFROMCS(int index,CString* CSTARGET,CString* CSITEM,char sep);
+BOOL wideGETITEMFROMCS(int index,char* source,char* dest,char* sep);

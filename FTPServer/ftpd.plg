@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ftpd - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x404 /fo"Release/ftpd.res" /d "NDEBUG" /d "_AFXDLL" "E:\AlexLabOnline\FTPServer\ftpd.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ftpd.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\AlexLabOnline\FTPServer\blocksock.cpp"
+"E:\AlexLabOnline\FTPServer\CFtpd.cpp"
+"E:\AlexLabOnline\FTPServer\ftpd.cpp"
+"E:\AlexLabOnline\FTPServer\ftpdDlg.cpp"
+"E:\AlexLabOnline\FTPServer\FtpdPasvSrv.cpp"
+"E:\AlexLabOnline\FTPServer\FtpdPi.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/ftpd.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\AlexLabOnline\FTPServer\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA4.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA5.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ftpd.pdb" /machine:I386 /out:"Release/ftpd.exe" 
+.\Release\blocksock.obj
+.\Release\CFtpd.obj
+.\Release\ftpd.obj
+.\Release\ftpdDlg.obj
+.\Release\FtpdPasvSrv.obj
+.\Release\FtpdPi.obj
+.\Release\StdAfx.obj
+.\Release\ftpd.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+blocksock.cpp
+CFtpd.cpp
+ftpd.cpp
+ftpdDlg.cpp
+E:\AlexLabOnline\FTPServer\ftpdDlg.cpp(271) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\AlexLabOnline\FTPServer\ftpdDlg.cpp(272) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\AlexLabOnline\FTPServer\ftpdDlg.cpp(273) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\AlexLabOnline\FTPServer\ftpdDlg.cpp(274) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\AlexLabOnline\FTPServer\ftpdDlg.cpp(276) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+FtpdPasvSrv.cpp
+FtpdPi.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ftpd.exe - 0 error(s), 5 warning(s)
+</pre>
+</body>
+</html>
