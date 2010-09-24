@@ -5,7 +5,7 @@
         <file>images/demobg.png</file>
         <file>images/qtlogo_small.png</file>
     </qresource>
-    <qresource prefix="/qml(qml)">
+    <qresource prefix="/qml" lang="qml">
         <file>qmlShell.qml</file>
     </qresource>
 </RCC>
